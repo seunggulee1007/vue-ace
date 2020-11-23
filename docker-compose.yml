@@ -1,0 +1,11 @@
+version : "3"
+services:
+  ace:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports :
+      - "7989:7989"
+      - ./:/usr/src/app
+    environment:
+      CHOKIDAR_USEPOLLING: 'true'
