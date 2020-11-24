@@ -3,7 +3,7 @@ module.exports = {
 		overlay: false,
 		disableHostCheck: true ,
 	},
-	// outputDir: 'F:\\DEV\\spring-workspace\\RWS\\src\\main\\resources\\static',
+	outputDir: 'F:\\DEV\\spring-workspace\\ace\\src\\main\\resources\\static',
 	configureWebpack: {
 		entry: ['babel-polyfill', '@/main.js'],
 	},

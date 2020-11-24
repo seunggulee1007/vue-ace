@@ -1,7 +1,7 @@
 <template>
 	<header class="header admin-header" v-if="isUserLogin">
 		<div>
-			<h1 class="logo">
+			<h1 class="logo logo-vertical">
 				<p class="mark">
 					<span>A</span>
 				</p>
@@ -10,36 +10,32 @@
 					<span>Agile Centric Efficiency</span>
 				</p>
 			</h1>
-			<h2 class="page-title">슈퍼관리자센터</h2>
+			<h2 class="page-title">관리자센터</h2>
 			<nav class="gnb">
 				<ul class="lst-gnb">
 					<li class="lst-gnb__title">
-						<p>메뉴</p>
+						<p>부서/사용자</p>
 					</li>
 					<li class="lst-gnb__item on">
-						<a href="/menu/module" class="lst-gnb__link">모듈 등록</a>
+						<a href="/admin/dept-registration" class="lst-gnb__link">부서 등록</a>
 					</li>
 					<li class="lst-gnb__item">
-						<a href="/menu/program" class="lst-gnb__link">프로그램 등록</a>
-					</li>
-					<li class="lst-gnb__item">
-						<a href="/menu/systemCode" class="lst-gnb__link">시스템 코드 등록</a>
+						<a href="/admin/user-registration" class="lst-gnb__link">사용자 등록</a>
 					</li>
 					<li class="lst-gnb__title">
-						<p>계약관리</p>
+						<p>권한</p>
 					</li>
 					<li class="lst-gnb__item">
-<<<<<<< HEAD
-						<a href="client" class="lst-gnb__link">고객사 등록</a>
+						<a href="/admin/permissions-group" class="lst-gnb__link">권한그룹 등록</a>
 					</li>
 					<li class="lst-gnb__item">
-						<a href="client-module" class="lst-gnb__link">고객사 모듈 등록</a>
-=======
-						<a href="/contract/client" class="lst-gnb__link">고객사 등록</a>
+						<a href="/admin/permissions" class="lst-gnb__link">권한 등록</a>
+					</li>
+					<li class="lst-gnb__title">
+						<p>휴일</p>
 					</li>
 					<li class="lst-gnb__item">
-						<a href="/contract/clientModule" class="lst-gnb__link">고객사 모듈 등록</a>
->>>>>>> 6f4644c4de128f15f609276d06e27e96f1fd81a0
+						<a href="/admin/holiday" class="lst-gnb__link">휴일 등록</a>
 					</li>
 				</ul>
 			</nav>

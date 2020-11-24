@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 const routes = [
 	{
 		path: '/',
-		redirect: '/menu/module',
+		redirect: '/admin/deptRegistration',
 	},
 	{
 		path: '/login',
@@ -15,27 +15,24 @@ const routes = [
 		component: () => import('@/views/Login.vue'),
 	},
 	{
-		path: '/menu/module',
-		component: () => import('@/views/menu/Module.vue'),
+		path: '/admin/deptRegistration',
+		component: () => import('@/views/admin/DeptRegistration.vue'),
 	},
 	{
-		path: '/menu/program',
-		component: () => import('@/views/menu/Program.vue'),
+		path: '/admin/holiday',
+		component: () => import('@/views/admin/Holiday.vue'),
 	},
 	{
-<<<<<<< HEAD
-=======
-		path: '/contract/client',
-		component: () => import('@/views/contract/Client.vue'),
+		path: '/admin/permission',
+		component: () => import('@/views/admin/Permission.vue'),
 	},
 	{
-		path: '/contract/clientModule',
-		component: () => import('@/views/contract/ClientModule.vue'),
+		path: '/admin/permissionGroup',
+		component: () => import('@/views/admin/PermissionsGroup.vue'),
 	},
 	{
->>>>>>> 6f4644c4de128f15f609276d06e27e96f1fd81a0
-		path: '/menu/systemCode',
-		component: () => import('@/views/menu/SystemCode.vue'),
+		path: '/admin/userRegistration',
+		component: () => import('@/views/admin/UserRegistration.vue'),
 	},
 	{
 		path: '*',

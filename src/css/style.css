@@ -3,7 +3,7 @@
 @import "template.css";
 @import "template_icon.css";
 @import "login.css";
-@import "admin-super-sub.css";
+@import "admin-user-sub.css";
 
 
 /* common class */
@@ -53,13 +53,13 @@
 	color: #fff;
 	font-weight: 800;
 }
+
 .logo p:last-child{
 	letter-spacing: 0.025em;
-}
-.logo p:last-child{
 	display: flex;
 	flex-direction: column;
 }
+
 .logo p:last-child > span:first-child{
 	padding-bottom: 2px;
 }

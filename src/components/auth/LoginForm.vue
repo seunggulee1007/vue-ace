@@ -21,6 +21,7 @@
 						placeholder="아이디"
 						v-model="userId"
 						ref="userId"
+						@keyup.enter="login"
 					/>
 				</div>
 				<div class="input-box input-box-icon">
@@ -31,6 +32,7 @@
 						placeholder="비밀번호"
 						ref="password"
 						v-model="password"
+						@keyup.enter="login"
 					/>
 				</div>
 				<div class="login-option">
@@ -89,11 +91,7 @@ export default {
 				let res = await this.LOGIN(params);
 				console.log(res);
 				if (res.result == 0) {
-<<<<<<< HEAD
-					this.$router.push('/settings/module');
-=======
 					this.$router.push('/menu/module');
->>>>>>> 6f4644c4de128f15f609276d06e27e96f1fd81a0
 				} else {
 					this.sAlert(res.resultMsg);
 				}

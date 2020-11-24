@@ -1,0 +1,20 @@
+/* ========== 부서등록 ========== */
+
+
+
+
+/* ========== 사용자등록 ========== */
+.lst-user .table-wrap .table.table-data{
+	height: 50vh;
+}
+
+/* ========== 휴일등록 ========== */
+.lst-holiday{
+	width: 720px;
+}
+.lst-holiday .tab-area-top{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+}

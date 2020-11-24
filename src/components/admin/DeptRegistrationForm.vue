@@ -2,38 +2,32 @@
 	<div class="container admin-container">
 		<section class="section__tree">
 			<h4 class="section-title">
-				<span>모듈</span>
+				<span>조직도</span>
 			</h4>
 			<div class="tree-area">
 				<ul class="tree-container tree__module">
-					<li class="tree-item">
-						<a href="#" class="tree-item__link">
-							<span class="icon-tree"></span>
-							영업CRM
-						</a>
-					</li>
 					<li class="tree-item on">
 						<a href="#" class="tree-item__link">
 							<span class="icon-tree"></span>
-							유연근무
+							컨설팅 본부
 						</a>
 						<ul class="tree-sub-container">
 							<li class="tree-item">
 								<a href="#" class="tree-item__link tree-item__no-icon">
 									<span class="icon-tree"></span>
-									유연근무유형
+									고객전략 및 마케팅
 								</a>
 							</li>
 							<li class="tree-item">
 								<a href="#" class="tree-item__link tree-item__no-icon">
 									<span class="icon-tree"></span>
-									근태관리
+									M&A
 								</a>
 							</li>
 							<li class="tree-item">
 								<a href="#" class="tree-item__link tree-item__no-icon">
 									<span class="icon-tree"></span>
-									승인처리
+									기업금융
 								</a>
 							</li>
 						</ul>
@@ -41,25 +35,7 @@
 					<li class="tree-item">
 						<a href="#" class="tree-item__link">
 							<span class="icon-tree"></span>
-							비용정산
-						</a>
-					</li>
-					<li class="tree-item">
-						<a href="#" class="tree-item__link">
-							<span class="icon-tree"></span>
-							WEB주문
-						</a>
-					</li>
-					<li class="tree-item">
-						<a href="#" class="tree-item__link">
-							<span class="icon-tree"></span>
-							구매SCM
-						</a>
-					</li>
-					<li class="tree-item">
-						<a href="#" class="tree-item__link">
-							<span class="icon-tree"></span>
-							EIS
+							개발 본부
 						</a>
 					</li>
 				</ul>
@@ -68,31 +44,31 @@
 		<section class="section__contents">
 			<div class="inner-wrap">
 				<div class="section-top">
-					<h3 class="section-title">모듈 등록</h3>
+					<h3 class="section-title">부서 등록</h3>
 					<div class="buttons">
 						<button type="button" class="button button__add">
 							<span class="icon icon-add"></span>
-							상위모듈 추가
+							상위부서 추가
 						</button>
 						<button type="button" class="button button__delete">
 							<span class="icon icon-delete"></span>선택 삭제
 						</button>
 					</div>
 				</div>
-				<div class="articles-wrap lst-cards lst-modules lst-depts">
-					<article class="article lst-module__item">
+				<div class="articles-wrap lst-cards lst-depts">
+					<article class="article lst-dept__item">
 						<div class="article-top">
 							<div class="input-box">
 								<span class="input-checkbox">
 									<input type="checkbox" id="checkboxCheck1" />
 									<label for="checkboxCheck1" class="input-checkbox__label icon-checkbox-purple">
-										<span class="content-title">유연근무</span>
+										<span class="content-title">컨설팅 본부</span>
 									</label>
 								</span>
 							</div>
 							<button type="button" class="button button__add">
 								<span class="icon icon-add"></span>
-								하위모듈 추가
+								하위부서 추가
 							</button>
 						</div>
 						<div class="article-content">
@@ -113,8 +89,7 @@
 													</span>
 												</div>
 											</th>
-											<th>모듈명</th>
-											<th>내부코드</th>
+											<th>부서명</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -132,8 +107,7 @@
 													</span>
 												</div>
 											</td>
-											<td>유연근무유형</td>
-											<td>20190101</td>
+											<td>고객전략 및 마케팅</td>
 										</tr>
 										<tr class="row">
 											<td class="column-check">
@@ -149,8 +123,7 @@
 													</span>
 												</div>
 											</td>
-											<td>근태관리</td>
-											<td>20190201</td>
+											<td>M&A</td>
 										</tr>
 										<tr class="row">
 											<td class="column-check">
@@ -166,27 +139,26 @@
 													</span>
 												</div>
 											</td>
-											<td>승인처리</td>
-											<td>20190301</td>
+											<td>기업금융</td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
 						</div>
 					</article>
-					<article class="article lst-module__item">
+					<article class="article lst-dept__item">
 						<div class="article-top">
 							<div class="input-box">
 								<span class="input-checkbox">
 									<input type="checkbox" id="checkboxCheck2" />
 									<label for="checkboxCheck2" class="input-checkbox__label icon-checkbox-purple">
-										<span class="content-title">영업CRM</span>
+										<span class="content-title">개발 본부</span>
 									</label>
 								</span>
 							</div>
 							<button type="button" class="button button__add">
 								<span class="icon icon-add"></span>
-								하위모듈 추가
+								하위부서 추가
 							</button>
 						</div>
 						<div class="article-content">
@@ -207,8 +179,7 @@
 													</span>
 												</div>
 											</th>
-											<th>모듈명</th>
-											<th>내부코드</th>
+											<th>부서명</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -226,8 +197,7 @@
 													</span>
 												</div>
 											</td>
-											<td>거래처 등록</td>
-											<td>20190101</td>
+											<td>개발1팀</td>
 										</tr>
 										<tr class="row">
 											<td class="column-check">
@@ -243,16 +213,57 @@
 													</span>
 												</div>
 											</td>
-											<td>거래처 조회</td>
-											<td>20190201</td>
+											<td>개발2팀</td>
 										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</article>
+					<article class="article lst-dept__item">
+						<div class="article-top">
+							<div class="input-box">
+								<span class="input-checkbox">
+									<input type="checkbox" id="checkboxCheck3" />
+									<label for="checkboxCheck3" class="input-checkbox__label icon-checkbox-purple">
+										<span class="content-title"><input type="text" placeholder="상위부서명"/></span>
+									</label>
+								</span>
+							</div>
+							<button type="button" class="button button__add">
+								<span class="icon icon-add"></span>
+								하위부서 추가
+							</button>
+						</div>
+						<div class="article-content">
+							<div class="table-wrap lst-card-sub">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th class="column-check">
+												<div class="input-box">
+													<span class="input-checkbox">
+														<input type="checkbox" id="checkboxSelectAll3" />
+														<label
+															for="checkboxSelectAll3"
+															class="input-checkbox__label icon-checkbox-purple"
+														>
+															<span class="blind">선택</span>
+														</label>
+													</span>
+												</div>
+											</th>
+											<th>부서명</th>
+										</tr>
+									</thead>
+									<tbody>
 										<tr class="row">
 											<td class="column-check">
 												<div class="input-box">
 													<span class="input-checkbox">
-														<input type="checkbox" id="checkboxSelect2-3" />
+														<input type="checkbox" id="checkboxSelect3-1" />
 														<label
-															for="checkboxSelect2-3"
+															for="checkboxSelect3-1"
 															class="input-checkbox__label icon-checkbox-purple"
 														>
 															<span class="blind">선택</span>
@@ -260,25 +271,7 @@
 													</span>
 												</div>
 											</td>
-											<td>영업기회 등록</td>
-											<td>20190301</td>
-										</tr>
-										<tr class="row">
-											<td class="column-check">
-												<div class="input-box">
-													<span class="input-checkbox">
-														<input type="checkbox" id="checkboxSelect2-4" />
-														<label
-															for="checkboxSelect2-4"
-															class="input-checkbox__label icon-checkbox-purple"
-														>
-															<span class="blind">선택</span>
-														</label>
-													</span>
-												</div>
-											</td>
-											<td>영업기회 현황</td>
-											<td>20190401</td>
+											<td><input type="text" placeholder="하위부서명을 입력하세요" /></td>
 										</tr>
 									</tbody>
 								</table>

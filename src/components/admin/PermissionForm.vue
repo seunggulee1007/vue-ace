@@ -2,7 +2,7 @@
 	<div class="container admin-container">
 		<section class="section__tree">
 			<h4 class="section-title">
-				<span>모듈</span>
+				<span>메뉴</span>
 			</h4>
 			<div class="tree-area">
 				<ul class="tree-container tree__module">
@@ -68,9 +68,10 @@
 		<section class="section__contents">
 			<div class="inner-wrap">
 				<div class="section-top">
-					<h3 class="section-title">프로그램 등록</h3>
+					<h3 class="section-title">권한 등록</h3>
 				</div>
-				<article class="article">
+
+				<article class="article lst-user">
 					<div class="article-content">
 						<div class="table-wrap">
 							<table class="table table-hover">
@@ -91,13 +92,13 @@
 													</label> -->
 										</th>
 										<th>No.</th>
-										<th>상위모듈</th>
-										<th>하위모듈</th>
+										<th>프로그램ID</th>
 										<th>프로그램명</th>
-										<th>사용유무</th>
-										<th>비고</th>
-										<th>등록일자</th>
-										<th>URL</th>
+										<th>프로그램ID</th>
+										<th>권한그룹#1</th>
+										<th>권한그룹#2</th>
+										<th>권한그룹#3</th>
+										<th>권한그룹#4</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -117,18 +118,13 @@
 														</label> -->
 										</td>
 										<td>1</td>
-										<td>유연근무</td>
-										<td>유연근무유형</td>
-										<td>유연근무 등록</td>
-										<td>
-											<button type="button" class="button-state">
-												<span class="button-txt button-txt__true on">사용</span>
-												<span class="button-txt button-txt__false">미사용</span>
-											</button>
-										</td>
+										<td>프로그램ID</td>
+										<td>프로그램명</td>
+										<td>프로그램ID</td>
 										<td></td>
-										<td>20200101</td>
-										<td>URL</td>
+										<td></td>
+										<td></td>
+										<td></td>
 									</tr>
 									<tr class="row">
 										<td class="column-check">
@@ -146,18 +142,13 @@
 														</label> -->
 										</td>
 										<td>2</td>
-										<td>유연근무</td>
-										<td>유연근무유형</td>
-										<td>유연근무 조회</td>
-										<td>
-											<button type="button" class="button-state">
-												<span class="button-txt button-txt__true on">사용</span>
-												<span class="button-txt button-txt__false">미사용</span>
-											</button>
-										</td>
+										<td>프로그램ID</td>
+										<td>프로그램명</td>
+										<td>프로그램ID</td>
 										<td></td>
-										<td>20200102</td>
-										<td>URL</td>
+										<td></td>
+										<td></td>
+										<td></td>
 									</tr>
 									<tr class="row">
 										<td class="column-check">
@@ -175,18 +166,13 @@
 														</label> -->
 										</td>
 										<td>3</td>
-										<td>유연근무</td>
-										<td>유연근무유형</td>
+										<td>프로그램ID</td>
 										<td>프로그램명</td>
-										<td>
-											<button type="button" class="button-state">
-												<span class="button-txt button-txt__true">사용</span>
-												<span class="button-txt button-txt__false on">미사용</span>
-											</button>
-										</td>
+										<td>프로그램ID</td>
 										<td></td>
-										<td>20200103</td>
-										<td>URL</td>
+										<td></td>
+										<td></td>
+										<td></td>
 									</tr>
 								</tbody>
 							</table>
