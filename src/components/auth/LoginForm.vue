@@ -89,7 +89,11 @@ export default {
 				let res = await this.LOGIN(params);
 				console.log(res);
 				if (res.result == 0) {
+<<<<<<< HEAD
 					this.$router.push('/settings/module');
+=======
+					this.$router.push('/menu/module');
+>>>>>>> 6f4644c4de128f15f609276d06e27e96f1fd81a0
 				} else {
 					this.sAlert(res.resultMsg);
 				}

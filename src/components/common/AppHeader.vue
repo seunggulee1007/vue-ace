@@ -29,10 +29,17 @@
 						<p>계약관리</p>
 					</li>
 					<li class="lst-gnb__item">
+<<<<<<< HEAD
 						<a href="client" class="lst-gnb__link">고객사 등록</a>
 					</li>
 					<li class="lst-gnb__item">
 						<a href="client-module" class="lst-gnb__link">고객사 모듈 등록</a>
+=======
+						<a href="/contract/client" class="lst-gnb__link">고객사 등록</a>
+					</li>
+					<li class="lst-gnb__item">
+						<a href="/contract/clientModule" class="lst-gnb__link">고객사 모듈 등록</a>
+>>>>>>> 6f4644c4de128f15f609276d06e27e96f1fd81a0
 					</li>
 				</ul>
 			</nav>

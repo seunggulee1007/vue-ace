@@ -23,6 +23,17 @@ const routes = [
 		component: () => import('@/views/menu/Program.vue'),
 	},
 	{
+<<<<<<< HEAD
+=======
+		path: '/contract/client',
+		component: () => import('@/views/contract/Client.vue'),
+	},
+	{
+		path: '/contract/clientModule',
+		component: () => import('@/views/contract/ClientModule.vue'),
+	},
+	{
+>>>>>>> 6f4644c4de128f15f609276d06e27e96f1fd81a0
 		path: '/menu/systemCode',
 		component: () => import('@/views/menu/SystemCode.vue'),
 	},
