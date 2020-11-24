@@ -1,0 +1,53 @@
+/* login */
+.article.section__login{
+	padding: 56px;
+	box-sizing: border-box;
+}
+.section__login .section-title{
+	font-size: 2.4em;
+	margin: 40px 0 28px;
+}
+
+.form__login > .input-box{
+	margin-bottom: 8px;
+}
+.form__login .input{
+	width: 100%;
+}
+.form__login .login-option{
+	margin: 8px 0 32px;
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.form__login .login-option > div{
+	display: flex;
+	align-items: center;
+}
+.form__login .login-option .input-box + .input-box{
+	margin-left: 16px;
+}
+
+.form__login .login-option > .link{
+	position: relative;
+	padding-bottom: 3px;
+}
+.form__login .login-option > .link:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	background-color: #9ba4b4;
+	opacity: 30%;
+}
+
+.form__login .button__login{
+	font-size: 1.2em;
+	font-weight: 700;
+	width: 416px;
+	padding: 14px 0;
+	justify-content: center;
+}

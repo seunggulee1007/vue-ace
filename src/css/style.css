@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import "reset.css";
+@import "template.css";
+@import "template_icon.css";
+@import "login.css";
+@import "admin-super-sub.css";
+
+
+/* common class */
+.blind {
+	position: absolute;
+	top: 0;
+	left: -99999px;
+	text-indent: -99999px;
+	width: 1px;
+	height: 1px;
+	line-height: 0;
+	font-size: 0;
+	overflow: hidden;
+}
+
+.text-align__left{
+	text-align: left;
+}
+.text-align__center{
+	text-align: center;
+}
+.text-align__right{
+	text-align: right;
+}
+
+/* logo-temp */
+.logo {
+	padding: 0 24px;
+	/* display: flex;
+	align-items: center; */
+}
+.logo .mark{
+	border-radius: 50%;
+	background-color: #6a197d;
+	width: 32px;
+	height: 32px;
+	font-size: 1.8em;
+	line-height: 1;
+	margin-bottom: 6px;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.logo p.mark span{
+	margin-top: -2px;
+	color: #fff;
+	font-weight: 800;
+}
+.logo p:last-child{
+	letter-spacing: 0.025em;
+}
+.logo p:last-child{
+	display: flex;
+	flex-direction: column;
+}
+.logo p:last-child > span:first-child{
+	padding-bottom: 2px;
+}
+.logo p:last-child > span:first-child > span{
+	color: #6a197d;
+}
+.logo p:last-child > span:last-child{
+	font-size: 11px;
+	display: block;
+	color: #666;
+}
+
+.logo.logo-rec {
+	display: flex;
+	padding: 0;	
+}
+.logo.logo-rec .mark{
+	font-size: 2.6em;
+	width: 48px;
+	height: 48px;
+	margin-right: 16px;
+}
+.logo.logo-rec p:last-child > span:first-child{
+	font-size: 20px;
+}
+.logo.logo-rec p:last-child > span:last-child{
+	font-size: 14px;
+}
