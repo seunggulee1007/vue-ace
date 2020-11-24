@@ -23,11 +23,11 @@ const routes = [
 		component: () => import('@/views/admin/Holiday.vue'),
 	},
 	{
-		path: '/admin/permission',
+		path: '/admin/permissions',
 		component: () => import('@/views/admin/Permission.vue'),
 	},
 	{
-		path: '/admin/permissionGroup',
+		path: '/admin/permissionsGroup',
 		component: () => import('@/views/admin/PermissionsGroup.vue'),
 	},
 	{

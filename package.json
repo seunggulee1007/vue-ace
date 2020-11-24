@@ -1,5 +1,5 @@
 {
-  "name": "vue-ace-admin",
+  "name": "vue-ace",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -40,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://www.tpsg.co.kr:30000/inno/vue-ace-admin.git"
+    "url": "http://www.tpsg.co.kr:30000/inno/vue-ace.git"
   },
   "author": "",
   "license": "ISC"

@@ -17,16 +17,16 @@
 						<p>부서/사용자</p>
 					</li>
 					<li class="lst-gnb__item on">
-						<a href="/admin/dept-registration" class="lst-gnb__link">부서 등록</a>
+						<a href="/admin/deptRegistration" class="lst-gnb__link">부서 등록</a>
 					</li>
 					<li class="lst-gnb__item">
-						<a href="/admin/user-registration" class="lst-gnb__link">사용자 등록</a>
+						<a href="/admin/userRegistration" class="lst-gnb__link">사용자 등록</a>
 					</li>
 					<li class="lst-gnb__title">
 						<p>권한</p>
 					</li>
 					<li class="lst-gnb__item">
-						<a href="/admin/permissions-group" class="lst-gnb__link">권한그룹 등록</a>
+						<a href="/admin/permissionsGroup" class="lst-gnb__link">권한그룹 등록</a>
 					</li>
 					<li class="lst-gnb__item">
 						<a href="/admin/permissions" class="lst-gnb__link">권한 등록</a>
