@@ -1,5 +1,5 @@
 {
-  "name": "vue-ace",
+  "name": "vue-ace-admin",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
+    "vue-sweetalert2": "^4.1.1",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
@@ -30,5 +31,16 @@
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^1.19.1",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.tpsg.co.kr:30000/inno/vue-ace-admin.git"
+  },
+  "author": "",
+  "license": "ISC"
 }

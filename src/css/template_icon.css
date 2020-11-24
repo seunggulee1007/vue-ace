@@ -1,0 +1,103 @@
+.icon{
+	display: block;
+	width: 14px;
+	height: 14px;
+	margin-right: 6px;
+	background-image: url("../images/sprites_icons.jpg");
+}
+
+.icon-add{
+	background-position: 0 -14px;
+}
+.icon-arrow {
+	background-position: -14px 0;
+}
+.icon-calendar{
+	background-position: -56px -14px;
+}
+.icon-clock{
+	background-position: -70px -14px;
+}
+.icon-close {
+	background-position: 0 0;
+}
+.icon-check{
+	background-position: -84px -14px;
+}
+.icon-delete{
+	background-position: -14px -14px;
+}
+.icon-dept__large{
+	width: 16px;
+	height: 16px;
+	background-position: -48px -28px;
+}
+.icon-import{
+	background-position: -98px -14px;
+}
+.icon-list{
+	background-position: -112px -14px;
+}
+.icon-list__large{
+	width: 16px;
+	height: 16px;
+	background-position: -80px -28px;
+}
+.icon-logout{
+	width: 16px;
+	height: 16px;
+	background-position: 0px -28px;
+}
+.icon-module__large{
+	width: 16px;
+	height: 16px;
+	background-position: -64px -28px;
+}
+.icon-more-vertical{
+	background-position: -126px -14px
+}
+.icon-search{
+	background-position: -28px -14px;
+}
+
+.icon-triangle{
+	background-position: -42px -14px;
+}
+.icon-user{
+	width: 16px;
+	height: 16px;
+	background-position: -16px -28px;
+}
+.icon-pw{
+	width: 16px;
+	height: 16px;
+	background-position: -32px -28px;
+}
+
+.icon-checkbox-blue:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 14px;
+	height:14px;
+	background-image: url("../images/sprites_icons.jpg");
+	background-position: -28px 0;
+}
+input[type='checkbox']:checked + .icon-checkbox-blue:before{
+	background-position: -42px 0;
+}
+.input-checkbox__label:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 14px;
+	height:14px;
+	background-image: url("../images/sprites_icons.jpg");
+	background-position: -28px 0;
+}
+input[type='checkbox']:checked + .icon-checkbox-purple:before{
+	background-position: -56px 0;
+}

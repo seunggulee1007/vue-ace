@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { setInterceptors } from '@/api/common';
 import { deleteCookie } from '@/utils/cookies';
-import router from '@/routes/routes';
+import router from '@/router/router';
 import store from '@/store/store';
 
 function createInstance() {
