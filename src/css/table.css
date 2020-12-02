@@ -1,0 +1,19 @@
+/* vue-good-table */
+
+.table-wrap .vgt-table{
+	font-size: 14px;
+	border: 0;
+}
+.table-wrap .vgt-table thead th {
+	font-size: 0.86em;
+	color: #67707c;
+	font-weight: 400;
+}
+.table-wrap .vgt-table td{
+	padding: 16px  12px;
+}
+
+.table-wrap .vgt-table tbody tr:hover{
+	box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	transition: box-shadow 0.2s;
+}
