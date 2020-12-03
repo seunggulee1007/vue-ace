@@ -75,439 +75,15 @@
 					</div>
 					<div class="article-content">
 						<div class="table-wrap">
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelectAll1" />
-													<label
-														for="checkboxSelectAll1"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-											<!-- <label class="form-checkbox">
-														<input type="checkbox" v-model="selectAll" @click="select">
-														<i class="form-icon"></i>
-													</label> -->
-										</th>
-										<th>No.</th>
-										<th>부서명</th>
-										<th>사원명</th>
-										<th>사원번호</th>
-										<th>휴대폰번호</th>
-										<th>Email</th>
-										<th>직위</th>
-										<th>재직여부</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect1" />
-													<label
-														for="checkboxSelect1"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-											<!-- <label class="form-checkbox">
-															<input type="checkbox" :value="i.id" v-model="selected">
-															<i class="form-icon"></i>
-														</label> -->
-										</td>
-										<td>1</td>
-										<td>컨설팅본부</td>
-										<td>
-											<div class="user-name">
-												<div class="img-user">
-													<img src="images/sample1.jpeg" alt="" />
-												</div>
-												<p>홍길동</p>
-											</div>
-										</td>
-										<td>20190101</td>
-										<td>010-0000-0000</td>
-										<td>abcde123@inno-soft.co.kr</td>
-										<td>
-											<select name="" id="">
-												<option value="사원">사원</option>
-												<option value="주임">주임</option>
-												<option value="대리">대리</option>
-												<option value="과장">과장</option>
-												<option value="차장" selected>차장</option>
-											</select>
-										</td>
-										<td>
-											<select name="" id="">
-												<option value="재직" selected>재직</option>
-												<option value="휴직">휴직</option>
-												<option value="퇴직">퇴직</option>
-											</select>
-										</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect2" />
-													<label
-														for="checkboxSelect2"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>2</td>
-										<td>컨설팅본부</td>
-										<td>
-											<div class="user-name">
-												<div class="img-user">
-													<img src="images/sample2.jpeg" alt="" />
-												</div>
-												<p>최수현</p>
-											</div>
-										</td>
-										<td>20190101</td>
-										<td>010-0000-0000</td>
-										<td>fgin2@inno-soft.co.kr</td>
-										<td>
-											<select name="" id="">
-												<option value="사원">사원</option>
-												<option value="주임">주임</option>
-												<option value="대리">대리</option>
-												<option value="과장" selected>과장</option>
-												<option value="차장">차장</option>
-											</select>
-										</td>
-										<td>
-											<select name="" id="">
-												<option value="재직" selected>재직</option>
-												<option value="휴직">휴직</option>
-												<option value="퇴직">퇴직</option>
-											</select>
-										</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect3" />
-													<label
-														for="checkboxSelect3"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>3</td>
-										<td>컨설팅본부</td>
-										<td>
-											<div class="user-name">
-												<div class="img-user">
-													<img src="images/sample3.jpeg" alt="" />
-												</div>
-												<p>김우중</p>
-											</div>
-										</td>
-										<td>20190101</td>
-										<td>010-0000-0000</td>
-										<td>123456x@inno-soft.co.kr</td>
-										<td>
-											<select name="" id="">
-												<option value="사원">사원</option>
-												<option value="주임">주임</option>
-												<option value="대리" selected>대리</option>
-												<option value="과장">과장</option>
-												<option value="차장">차장</option>
-											</select>
-										</td>
-										<td>
-											<select name="" id="">
-												<option value="재직" selected>재직</option>
-												<option value="휴직">휴직</option>
-												<option value="퇴직">퇴직</option>
-											</select>
-										</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect4" />
-													<label
-														for="checkboxSelect4"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>4</td>
-										<td>컨설팅본부</td>
-										<td>
-											<div class="user-name">
-												<div class="img-user">
-													<img src="images/sample1.jpeg" alt="" />
-												</div>
-												<p>홍길동</p>
-											</div>
-										</td>
-										<td>20190401</td>
-										<td>010-0000-0000</td>
-										<td>abcde123@inno-soft.co.kr</td>
-										<td>
-											<select name="" id="">
-												<option value="사원">사원</option>
-												<option value="주임">주임</option>
-												<option value="대리">대리</option>
-												<option value="과장">과장</option>
-												<option value="차장" selected>차장</option>
-											</select>
-										</td>
-										<td>
-											<select name="" id="">
-												<option value="재직" selected>재직</option>
-												<option value="휴직">휴직</option>
-												<option value="퇴직">퇴직</option>
-											</select>
-										</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect5" />
-													<label
-														for="checkboxSelect5"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>5</td>
-										<td>컨설팅본부</td>
-										<td>
-											<div class="user-name">
-												<div class="img-user">
-													<img src="images/sample2.jpeg" alt="" />
-												</div>
-												<p>최수현</p>
-											</div>
-										</td>
-										<td>20190501</td>
-										<td>010-0000-0000</td>
-										<td>fgin2@inno-soft.co.kr</td>
-										<td>
-											<select name="" id="">
-												<option value="사원">사원</option>
-												<option value="주임">주임</option>
-												<option value="대리">대리</option>
-												<option value="과장" selected>과장</option>
-												<option value="차장">차장</option>
-											</select>
-										</td>
-										<td>
-											<select name="" id="">
-												<option value="재직" selected>재직</option>
-												<option value="휴직">휴직</option>
-												<option value="퇴직">퇴직</option>
-											</select>
-										</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect6" />
-													<label
-														for="checkboxSelect6"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>6</td>
-										<td>컨설팅본부</td>
-										<td>
-											<div class="user-name">
-												<div class="img-user">
-													<img src="images/sample3.jpeg" alt="" />
-												</div>
-												<p>김우중</p>
-											</div>
-										</td>
-										<td>20190601</td>
-										<td>010-0000-0000</td>
-										<td>123456x@inno-soft.co.kr</td>
-										<td>
-											<select name="" id="">
-												<option value="사원">사원</option>
-												<option value="주임">주임</option>
-												<option value="대리" selected>대리</option>
-												<option value="과장">과장</option>
-												<option value="차장">차장</option>
-											</select>
-										</td>
-										<td>
-											<select name="" id="">
-												<option value="재직" selected>재직</option>
-												<option value="휴직">휴직</option>
-												<option value="퇴직">퇴직</option>
-											</select>
-										</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect7" />
-													<label
-														for="checkboxSelect7"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>7</td>
-										<td>컨설팅본부</td>
-										<td>
-											<div class="user-name">
-												<div class="img-user">
-													<img src="images/sample1.jpeg" alt="" />
-												</div>
-												<p>홍길동</p>
-											</div>
-										</td>
-										<td>20190701</td>
-										<td>010-0000-0000</td>
-										<td>abcde123@inno-soft.co.kr</td>
-										<td>
-											<select name="" id="">
-												<option value="사원">사원</option>
-												<option value="주임">주임</option>
-												<option value="대리">대리</option>
-												<option value="과장">과장</option>
-												<option value="차장" selected>차장</option>
-											</select>
-										</td>
-										<td>
-											<select name="" id="">
-												<option value="재직" selected>재직</option>
-												<option value="휴직">휴직</option>
-												<option value="퇴직">퇴직</option>
-											</select>
-										</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect8" />
-													<label
-														for="checkboxSelect8"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>8</td>
-										<td>컨설팅본부</td>
-										<td>
-											<div class="user-name">
-												<div class="img-user">
-													<img src="images/sample2.jpeg" alt="" />
-												</div>
-												<p>최수현</p>
-											</div>
-										</td>
-										<td>20190801</td>
-										<td>010-0000-0000</td>
-										<td>fgin2@inno-soft.co.kr</td>
-										<td>
-											<select name="" id="">
-												<option value="사원">사원</option>
-												<option value="주임">주임</option>
-												<option value="대리">대리</option>
-												<option value="과장" selected>과장</option>
-												<option value="차장">차장</option>
-											</select>
-										</td>
-										<td>
-											<select name="" id="">
-												<option value="재직" selected>재직</option>
-												<option value="휴직">휴직</option>
-												<option value="퇴직">퇴직</option>
-											</select>
-										</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect9" />
-													<label
-														for="checkboxSelect9"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>9</td>
-										<td>컨설팅본부</td>
-										<td>
-											<div class="user-name">
-												<div class="img-user">
-													<img src="images/sample3.jpeg" alt="" />
-												</div>
-												<p>김우중</p>
-											</div>
-										</td>
-										<td>20190901</td>
-										<td>010-0000-0000</td>
-										<td>123456x@inno-soft.co.kr</td>
-										<td>
-											<select name="" id="">
-												<option value="사원">사원</option>
-												<option value="주임">주임</option>
-												<option value="대리" selected>대리</option>
-												<option value="과장">과장</option>
-												<option value="차장">차장</option>
-											</select>
-										</td>
-										<td>
-											<select name="" id="">
-												<option value="재직" selected>재직</option>
-												<option value="휴직">휴직</option>
-												<option value="퇴직">퇴직</option>
-											</select>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+							<vue-good-table
+								:columns="columns"
+								:rows="rows"
+								:fixed-header="true"
+								max-height="50vh"
+								styleClass="vgt-table"
+								:select-options="{ enable: true }"
+								@on-selected-rows-change="selectionChanged"
+							/>
 						</div>
 					</div>
 				</article>
@@ -524,7 +100,89 @@
 </template>
 
 <script>
-export default {};
+export default {
+	import 'vue-good-table/dist/vue-good-table.css';
+import { VueGoodTable } from 'vue-good-table';
+export default {
+	data: function() {
+		return {
+			columns: [
+				{
+					label: 'No.',
+					field: 'num',
+				},
+				{
+					label: '부서명',
+					field: 'deptName',
+				},
+				{
+					label: '사원명',
+					field: 'name',
+				},
+				{
+					label: '사원번호',
+					field: 'id',
+				},
+				{
+					label: '휴대폰번호',
+					field: 'phone',
+				},
+				{
+					label: 'Email',
+					field: 'email',
+				},
+				{
+					label: '직위',
+					field: 'position',
+				},
+				{
+					label: '재직여부',
+					field: 'status',
+				},
+			],
+			rows: [
+				{
+					num: '1',
+					deptName: '컨설팅본부',
+					name: '홍길동',
+					id: '20190101',
+					phone: '010-0000-0000',
+					email: 'abcde123@inno-soft.co.kr',
+					position: '차장',
+					status: '재직',
+				},
+				{
+					num: '2',
+					deptName: '컨설팅본부',
+					name: '최수현',
+					id: '20190101',
+					phone: '010-0000-0000',
+					email: 'efgh9@inno-soft.co.kr',
+					position: '과장',
+					status: '재직',
+				},
+				{
+					num: '3',
+					deptName: '컨설팅본부',
+					name: '김우중',
+					id: '20190101',
+					phone: '010-0000-0000',
+					email: '123456x@inno-soft.co.kr',
+					position: '대리',
+					status: '재직',
+				},
+			],
+		};
+	},
+	components: {
+		VueGoodTable,
+	},
+	metohds: {
+		selectionChanged() {
+			// params.selectedRows - all rows that are selected (this page)
+		},
+	},
+};
 </script>
 
 <style></style>
