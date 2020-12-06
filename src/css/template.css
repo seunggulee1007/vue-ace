@@ -1,5 +1,136 @@
 @charset "UTF-8";
 
+/* ========== layout ========== */
+.wrap{
+	display: grid;
+	grid: 'header header'
+				'nav container';
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.header {
+	grid-area: header;
+	height: 56px;
+	padding: 0 24px;
+	border-bottom: 1px solid #e8e8e8;
+	box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	z-index: 500;
+}
+
+.gnb{
+	grid-area: nav;
+	padding: 24px 0;
+	background-color: #1a1a2e;
+	color: #fff;
+	
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	z-index: 300;
+}
+
+.container{
+	grid-area: container;
+	padding: 36px 48px;
+	background-color: #f5f6f8;
+	overflow: auto;
+}
+
+
+/* gnb */
+.lst-gnb .lst-gnb__title{
+	font-size: 0.86em;
+	font-weight: 700;
+	opacity: 30%;
+	padding: 12px 24px;
+	margin-top: 12px;
+}
+.lst-gnb .lst-gnb__title:first-of-type{
+	margin-top: 0;
+}
+
+.lst-gnb .lst-gnb__item{
+	display: flex;
+	align-items: center;
+	padding: 14px 48px 14px 24px;
+}
+.lst-gnb .lst-gnb__item > span{
+	opacity: 0.5;
+}
+.lst-gnb .lst-gnb__item > span.icon{
+	margin-right: 12px;
+}
+
+.lst-gnb .lst-gnb__item:hover > span{
+	opacity: 1;
+	transition: opacity 0.4s
+}
+.lst-gnb .lst-gnb__item:hover > .lst-lnb {
+	display: block;
+	opacity: 1;
+}
+.lst-gnb .lst-gnb__item .lst-lnb{
+	display: none;
+	opacity: 0;
+
+	position: absolute;
+	left: 100%;
+	top: 0;
+	min-width: 232px;
+	height: 100vh;
+	padding: 24px;
+	background-color: #16213e;
+}
+.lst-lnb .lst-lnb__title{
+	font-size: 0.86em;
+	opacity: 50%;
+	padding: 12px 0;
+	margin-top: 12px;
+}
+.lst-lnb .lst-lnb__item{
+	padding: 1px 0;
+}
+.lst-lnb .lst-lnb__item > a{
+	display: block;
+	padding: 8px 16px;
+	opacity: 0.5;
+	border-radius: 8px;
+}
+.lst-lnb .lst-lnb__item:hover > a{
+	background-color: rgba(255,255,255, 0.16);
+	opacity: 1;
+}
+
+.lst-gnb .lst-gnb__item.on > span{
+	position: relative;
+	opacity: 1;
+}
+.lst-gnb .lst-gnb__item.on > span.icon:before{
+	content: '';
+	position: absolute;
+	top: -14px;
+	left: -24px;
+	width: 4px;
+	height: 52px;
+	background-color: #fff;
+}
+.lst-lnb .lst-lnb__item.on > a{
+	opacity: 1;
+	background-color: rgba(255,255,255, 0.16);
+}
+
+
+
 /* common class */
 .blind {
 	position: absolute;
@@ -109,6 +240,62 @@
 }
 
 
+/* component */
+.component-area-wrap{
+	margin-bottom: 16px;
+}
+.component-area {
+	background-color: #fff;
+	border: 1px solid #ededed;
+	border-radius: 16px;
+	padding: 36px;
+	box-shadow: 4px 4px 16px rgba(0,0,0,0.08);
+}
+
+.component-area + .component-area{
+	margin-top: 16px;
+}
+
+.component-box + .component-box{
+	margin-top: 32px;
+}
+
+.component-box.component-box-top{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.component-box-top{
+	margin-bottom: 8px;
+	display: flex;
+	align-items: center;
+}
+
+.component__search{
+	display: flex;
+	align-items: center;
+}
+.component__search form{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.component__search form > * {
+	margin-left: 16px;
+}
+.component__search form > *:first-child{
+	margin-left: 0;
+}
+.component__search .input-box{
+	flex-grow: 1;
+}
+
+.component__search .result-search{
+	margin-left: 16px;
+}
+
+
 /* login common */
 .login-container{
 	display: flex;
@@ -144,7 +331,7 @@
 	font-weight: 700;
 }
 
-/* mssage */
+/* message */
 .msg-canceled {
 	text-align: center;
 	font-size: 0.86em;
@@ -264,6 +451,29 @@ a.link{
 }
 .lst-status-multiple .lst-status__item + .lst-status__item{
 	margin-left: 6px;
+}
+
+
+/* select-options */
+.select-options{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12%, auto));
+	gap: 16px;
+}
+.select-options .select-options__item{
+	border: 1px solid #e7ecf0;
+	border-radius: 8px;
+	padding: 11px 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.select-options .select-options__item.select{
+	border-color: #6a197d;
+	background-color: #6a197d;
+	color: #fff;
+	font-weight: 700;
 }
 
 
@@ -528,9 +738,9 @@ a.link{
 }
 
 .button__logout{
+	display: flex;
 	padding: 8px 24px;
 	width: 100%;
-	text-align: left;
 }
 
 

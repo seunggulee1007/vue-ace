@@ -34,7 +34,7 @@ select{
 button{
 		cursor: pointer;
 }
-input[type=checkbox], input[type=radio] {
+input[type=checkbox] {
 	overflow: hidden;
 	opacity: 0;
 	border: 0;

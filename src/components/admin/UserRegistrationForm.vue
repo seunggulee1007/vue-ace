@@ -100,7 +100,6 @@
 </template>
 
 <script>
-export default {
 import 'vue-good-table/dist/vue-good-table.css';
 import { VueGoodTable } from 'vue-good-table';
 export default {
