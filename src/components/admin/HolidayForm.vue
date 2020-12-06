@@ -3,14 +3,14 @@
 		<section class="section__contents">
 			<div class="inner-wrap">
 				<div class="section-top">
-					<h3 class="section-title">휴일 등록</h3>
+					<h3 class="section__title">휴일 등록</h3>
 				</div>
 
 				<article class="article lst-holiday">
 					<div class="article-top">
 						<div class="item item__input">
 							<div class="input-box">
-								<input class="input content-title" type="text" placeholder="기준년도를 입력하세요" />
+								<input class="input content__title" type="text" placeholder="기준년도를 입력하세요" />
 							</div>
 						</div>
 					</div>
@@ -18,14 +18,14 @@
 						<div class="tab-area-top">
 							<ul class="lst-tab">
 								<li class="lst-tab__item">
-									<button type="button" class="button">
+									<a href="#" class="lst-tab__link">
 										<span class="icon icon-calendar"></span>달력
-									</button>
+									</a>
 								</li>
 								<li class="lst-tab__item on">
-									<button type="button" class="button">
+									<a href="#" class="lst-tab__link">
 										<span class="icon icon-list"></span>리스트
-									</button>
+									</a>
 								</li>
 							</ul>
 							<div class="buttons">

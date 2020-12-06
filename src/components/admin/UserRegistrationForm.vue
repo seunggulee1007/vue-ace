@@ -1,7 +1,7 @@
 <template>
 	<div class="container admin-container">
 		<section class="section__tree">
-			<h4 class="section-title">
+			<h4 class="section__title">
 				<span>조직도</span>
 			</h4>
 			<div class="tree-area">
@@ -56,7 +56,7 @@
 		<section class="section__contents">
 			<div class="inner-wrap">
 				<div class="section-top">
-					<h3 class="section-title">사용자 등록</h3>
+					<h3 class="section__title">사용자 등록</h3>
 					<div class="buttons">
 						<button type="button" class="button button__add">
 							<span class="icon icon-add"></span>사용자 추가
@@ -69,7 +69,7 @@
 
 				<article class="article lst-user">
 					<div class="article-top">
-						<strong class="content-title">
+						<strong class="content__title">
 							컨설팅 본부
 						</strong>
 					</div>
@@ -101,7 +101,7 @@
 
 <script>
 export default {
-	import 'vue-good-table/dist/vue-good-table.css';
+import 'vue-good-table/dist/vue-good-table.css';
 import { VueGoodTable } from 'vue-good-table';
 export default {
 	data: function() {

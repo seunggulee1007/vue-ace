@@ -10,13 +10,13 @@
 					<span>Agile Centric Efficiency</span>
 				</p>
 			</h1>
-			<h2 class="page-title">관리자센터</h2>
-			<nav class="gnb">
+			<h2 class="page__title">관리자센터</h2>
+			<nav class="admin-gnb">
 				<ul class="lst-gnb">
 					<li class="lst-gnb__title">
 						<p>부서/사용자</p>
 					</li>
-					<li class="lst-gnb__item on">
+					<li class="lst-gnb__item">
 						<a href="/admin/deptRegistration" class="lst-gnb__link">부서 등록</a>
 					</li>
 					<li class="lst-gnb__item">

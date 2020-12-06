@@ -1,7 +1,7 @@
 <template>
 	<div class="container admin-container">
 		<section class="section__tree">
-			<h4 class="section-title">
+			<h4 class="section__title">
 				<span>조직도</span>
 			</h4>
 			<div class="tree-area">
@@ -44,7 +44,7 @@
 		<section class="section__contents">
 			<div class="inner-wrap">
 				<div class="section-top">
-					<h3 class="section-title">부서 등록</h3>
+					<h3 class="section__title">부서 등록</h3>
 					<div class="buttons">
 						<button type="button" class="button button__add">
 							<span class="icon icon-add"></span>
@@ -62,7 +62,7 @@
 								<span class="input-checkbox">
 									<input type="checkbox" id="checkboxCheck1" />
 									<label for="checkboxCheck1" class="input-checkbox__label icon-checkbox-purple">
-										<span class="content-title">컨설팅 본부</span>
+										<span class="content__title">컨설팅 본부</span>
 									</label>
 								</span>
 							</div>
@@ -152,7 +152,7 @@
 								<span class="input-checkbox">
 									<input type="checkbox" id="checkboxCheck2" />
 									<label for="checkboxCheck2" class="input-checkbox__label icon-checkbox-purple">
-										<span class="content-title">개발 본부</span>
+										<span class="content__title">개발 본부</span>
 									</label>
 								</span>
 							</div>
@@ -226,7 +226,7 @@
 								<span class="input-checkbox">
 									<input type="checkbox" id="checkboxCheck3" />
 									<label for="checkboxCheck3" class="input-checkbox__label icon-checkbox-purple">
-										<span class="content-title"><input type="text" placeholder="상위부서명"/></span>
+										<span class="content__title"><input type="text" placeholder="상위부서명"/></span>
 									</label>
 								</span>
 							</div>

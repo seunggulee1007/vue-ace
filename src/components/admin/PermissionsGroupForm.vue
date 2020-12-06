@@ -1,7 +1,7 @@
 <template>
 	<div class="container admin-container">
 		<section class="section__tree">
-			<h4 class="section-title">
+			<h4 class="section__title">
 				<span>권한그룹</span>
 			</h4>
 			<div class="tree-area">
@@ -50,14 +50,14 @@
 		<section class="section__contents">
 			<div class="inner-wrap">
 				<div class="section-top">
-					<h3 class="section-title">권한그룹</h3>
+					<h3 class="section__title">권한그룹</h3>
 				</div>
 				<article class="article ">
 					<div class="items-wrap">
 						<div class="item item__input">
 							<div class="item-top">
 								<div class="input-box">
-									<p class="item-title">그룹명</p>
+									<p class="component__title">그룹명</p>
 									<span class="input-checkbox">
 										<input type="checkbox" id="checkboxNotUse" />
 										<label for="checkboxNotUse" class="input-checkbox__label  icon-checkbox-purple">
@@ -77,7 +77,7 @@
 						</div>
 						<div class="item item__input">
 							<div class="item-top">
-								<p class="item-title">그룹코드</p>
+								<p class="component__title">그룹코드</p>
 							</div>
 							<div class="input-box">
 								<input class="input " type="text" placeholder="저장 시, 자동 생성" readonly />
@@ -85,7 +85,7 @@
 						</div>
 						<div class="item item__input">
 							<div class="item-top">
-								<p class="item-title">대상자</p>
+								<p class="component__title">대상자</p>
 								<div class="buttons">
 									<button type="button" class="button button__delete">
 										<span class="icon icon-delete"></span> 선택 삭제
@@ -187,7 +187,7 @@
 						</div>
 						<div class="item item__input">
 							<div class="item-top">
-								<p class="item-title">등록일자</p>
+								<p class="component__title">등록일자</p>
 							</div>
 							<div class="input-box">
 								<input class="input" type="text" placeholder="저장 시, 자동 생성" readonly />
