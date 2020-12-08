@@ -55,6 +55,7 @@
 	background-color: #fff;
 	border-right: 1px solid #e8e8e8;
 	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .admin-container .section__title{
@@ -69,15 +70,23 @@
 
 
 .admin-container .section__list{
+	min-width: 36vw;
 	height: 100vh;
 	padding: 40px 24px 0 24px;
 	background-color: #fff;
 	border-right: 1px solid #e8e8e8;
 	box-sizing: border-box;
+	overflow: hidden;
 }
-
-.section__list .lst-wrap .table-wrap{
-	margin-top: 8px;
+.admin-container .section__list .inner-wrap{
+	max-height: 84vh;
+	overflow-y: auto;
+}
+.admin-container .section__list .table-wrap{
+	margin-top: 16px;
+}
+.admin-container .section__list .component-box + .component-box{
+	margin-top: 16px;
 }
 
 .admin-container .section__contents{

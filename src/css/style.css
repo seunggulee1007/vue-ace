@@ -2,6 +2,7 @@
 @import "reset.css";
 @import "template.css";
 @import "template_icon.css";
+@import "table.css";
 @import "login.css";
 @import "common-admin.css";
-@import "admin-user-sub.css";
+@import "admin-super-sub.css";

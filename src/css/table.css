@@ -17,3 +17,13 @@
 	box-shadow: 0 0 20px rgba(0,0,0,0.2);
 	transition: box-shadow 0.2s;
 }
+
+.table-wrap .vgt-wrap__footer {
+	padding: .75em;
+	color: #67707c;
+	border: 0;
+}
+.table-wrap .vgt-wrap__footer .footer__row-count__label,
+.table-wrap .vgt-wrap__footer .footer__navigation{
+	font-size: 0.86em;
+}
