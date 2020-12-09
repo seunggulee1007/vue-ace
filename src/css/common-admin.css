@@ -63,7 +63,7 @@
 }
 .admin-container .section__tree .section__title,
 .admin-container .section__list .section__title{
-	font-size: 16px;
+	font-size: 20px;
 	display: flex;
 	align-items: center;
 }
@@ -85,7 +85,7 @@
 .admin-container .section__list .table-wrap{
 	margin-top: 16px;
 }
-.admin-container .section__list .component-box + .component-box{
+.admin-container .component-box + .component-box{
 	margin-top: 16px;
 }
 
