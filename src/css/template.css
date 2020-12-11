@@ -130,6 +130,35 @@
 }
 
 
+/* popup */
+.popup{
+	display: none;
+}
+.popup.show{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0, 0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup .component-area{
+	min-width: 16vw;
+}
+.popup-top{
+	margin-bottom: 16px;
+}
+
+.popup .button__close{
+	position: absolute;
+	right: 36px;
+	top: 36px;
+}
+.popup .button__close .icon-close{
+	margin-right: 0;
+}
 
 /* common class */
 .blind {
@@ -245,6 +274,7 @@
 	margin-bottom: 16px;
 }
 .component-area {
+	position: relative;
 	background-color: #fff;
 	border: 1px solid #ededed;
 	border-radius: 16px;
@@ -275,6 +305,10 @@
 	display: flex;
 	align-items: center;
 }
+.component-box-cnt > * + * {
+	margin-top: 8px;
+}
+
 
 .component__search{
 	display: flex;
@@ -297,16 +331,6 @@
 
 .component__search .result-search{
 	margin-left: 16px;
-}
-
-
-/* login common */
-.login-container{
-	display: flex;
-	align-items:center;
-	justify-content: center;
-	flex-grow: 1;
-	height: 100vh;
 }
 
 
@@ -339,6 +363,12 @@
 	font-weight: 700;
 }
 
+.popup__title{
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+
 /* message */
 .msg-canceled {
 	text-align: center;
@@ -346,6 +376,7 @@
 	padding-top: 6px;
 	color: #67707c;
 }
+
 
 /* link */
 a.link{
@@ -583,8 +614,11 @@ a.link{
 	justify-content: space-between;
 	align-items: center;
 }
-.input-box > .button{
+.input-box > * + *{
 	margin-left: 16px;
+}
+.input-box-icon .icon + .input{
+	margin-left: 0;
 }
 
 .input-box.input-box-icon{
@@ -848,3 +882,27 @@ a.link{
 }
 
 
+/* error */
+.error{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: #f5f6f8;
+}
+.error .inner-wrap{
+	margin-top: -16vh;
+}
+.error .error-code {
+	color: #ff6b81;
+	font-size: 7rem;
+	font-weight: 700;
+	text-align: center;
+}
+.error .msg-error {
+	color: #67707c;
+	font-size: 2.4rem;
+	font-weight: 700;
+	text-align: center;
+}

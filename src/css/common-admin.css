@@ -109,6 +109,17 @@
 	align-items: baseline
 }
 
+.admin-container .section__contents .flex-box{
+	margin: 16px 0;
+}
+.admin-container .section__contents .flex-box > *{
+	flex-grow: 1;
+}
+.admin-container .section__contents .flex-box .component-box + .component-box{
+	margin-top: 0;
+	margin-left: 24px;
+}
+
 
 /* admin-gnb */
  .admin-gnb .lst-gnb .lst-gnb__item{

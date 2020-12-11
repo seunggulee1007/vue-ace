@@ -1,11 +1,20 @@
 /* login */
-.article.section__login{
+.login-container{
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	flex-grow: 1;
+	height: 100vh;
+	padding: 0;
+}
+
+.section__login{
 	padding: 56px;
 	box-sizing: border-box;
 }
 .section__login .section-title{
 	font-size: 2.4em;
-	margin: 40px 0 28px;
+	margin: 24px 0 28px;
 }
 
 .form__login > .input-box{
@@ -15,7 +24,7 @@
 	width: 100%;
 }
 .form__login .login-option{
-	margin: 8px 0 32px;
+	margin: 12px 0 32px;
 	
 	display: flex;
 	align-items: center;

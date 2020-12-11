@@ -1,4 +1,51 @@
-/* vue-good-table */
+/* table */
+.table-wrap{
+	position: relative;
+	max-height: 50vh;
+	overflow-y: auto;
+}
+.table-wrap thead th{
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	box-shadow: inset 0 -1px 0 #e7ecf0;
+	padding: 12px 12px 13px 12px;
+}
+
+.table{
+	width: 100%;
+	text-align: left
+}
+
+.table .row:hover{
+	box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	transition: box-shadow 0.2s;
+}
+.table th{
+	padding: 12px;
+	/* border-bottom: 1px solid #e7ecf0; */
+	font-size: 0.86em;
+	color: #67707c;
+	font-weight: 400;
+}
+.table td {
+	padding: 12px;
+	border-bottom: 1px solid #e7ecf0;
+}
+
+.table .column-check{
+	width: 14px;
+}
+.table .column-check .input-checkbox {
+	justify-content: center;
+}
+
+
+
+
+
+
+/* vue-good-table 
 
 .table-wrap .vgt-table{
 	font-size: 14px;
@@ -74,3 +121,4 @@
 	color: #67707c;
 	font-size: 0.86em;
 }
+*/
