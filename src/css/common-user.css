@@ -1,13 +1,13 @@
 
 
 /* header */
-.header .util-menu{
+.user-header .util-menu{
 	display: flex;
 	align-items: center;
 	position: relative;
 }
 
-.header .util-menu .account-menu{
+.user-header .util-menu .account-menu{
 	position: absolute;
 	right: 0;
 	top: 110%;
@@ -16,45 +16,36 @@
 	background-color: #fff;
 	overflow: hidden;
 }
-.header .util-menu .util-menu__link{
+.user-header .util-menu .util-menu__link{
 	display: flex;
 	align-items: center;
 }
-.header .util-menu .util-menu__link + .util-menu__link{
+.user-header .util-menu .util-menu__link + .util-menu__link{
 	margin-left: 24px;
 }
 
-.header .util-menu .account-menu{
+.user-header .util-menu .account-menu{
 	display: none;
 	opacity: 0;
 }
-.header .util-menu .util-menu__link:last-child.show .account-menu{
+.user-header .util-menu .util-menu__link:last-child.show .account-menu{
 	display: block;
 	opacity: 1;
 	/* animation */
 }
 
-.header .util-menu .account-menu li{
+.user-header .util-menu .account-menu li{
 	padding: 8px 24px;
 	display: flex;
 }
-.header .util-menu .account-menu li:hover{
+.user-header .util-menu .account-menu li:hover{
 	background-color: #f5f6f8;
 }
-.header .util-menu .account-menu li > * {
+.user-header .util-menu .account-menu li > * {
 	display: block;
 	text-align: left;
 	width: 100%;
 	height: 100%;
-}
-
-
-/* section */
-.section-top{
-	margin-bottom: 24px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 }
 
 
@@ -100,47 +91,12 @@
 	border-left: 2px solid #6a197d;
 	padding-left: 12px;
 }
-.table-wrap thead th{
-	position: sticky;
-	top: 0;
-	background-color: #fff;
-	box-shadow: inset 0 -1px 0 #e7ecf0;
-	padding: 12px 12px 13px 12px;
-}
-
-.table{
-	width: 100%;
-	text-align: left
-}
-
-.table .row:hover{
-	box-shadow: 0 0 20px rgba(0,0,0,0.2);
-	transition: box-shadow 0.2s;
-}
-.table th{
-	padding: 12px;
-	font-size: 0.86em;
-	color: #67707c;
-	font-weight: 400;
-}
-.table td {
-	padding: 12px;
-	border-bottom: 1px solid #e7ecf0;
-}
-
 .table td .flex-box{
 	align-items: center;
 }
 .table td .flex-box .button{
 	margin-left: 16px;
 	padding: 4px 8px;
-}
-
-.table .column-check{
-	width: 14px;
-}
-.table .column-check .input-checkbox {
-	justify-content: center;
 }
 
 .table tfoot th{
