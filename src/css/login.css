@@ -60,3 +60,29 @@
 	padding: 14px 0;
 	justify-content: center;
 }
+
+/* mobile */
+@media (max-width: 768px) {
+	.section__login{
+		padding: 36px 24px;
+		margin-top: -16vh;
+	}
+	.section__login .logo.logo-rec{
+		justify-content: center;
+	}
+	.section__login .section-title{
+		font-size: 2em;
+		text-align: center;
+	}
+	.form__login .login-option{
+		flex-direction: column;
+		margin: 16px 0 24px; 
+	}
+	.form__login .login-option > div{
+		flex-direction: column;
+		margin-bottom: 16px;
+	}
+	.form__login .button__login{
+		width: 70vw;
+	}
+}

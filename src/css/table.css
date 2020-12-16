@@ -4,6 +4,9 @@
 	max-height: 50vh;
 	overflow-y: auto;
 }
+.table-wrap > * + *{
+	margin-top: 16px;
+}
 .table-wrap thead th{
 	position: sticky;
 	top: 0;
@@ -18,8 +21,9 @@
 }
 
 .table .row:hover{
-	box-shadow: 0 0 20px rgba(0,0,0,0.2);
-	transition: box-shadow 0.2s;
+	background-color: rgba(207, 213, 226, 0.15);
+	/* box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	transition: box-shadow 0.2s; */
 }
 .table th{
 	padding: 12px;

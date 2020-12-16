@@ -85,6 +85,18 @@
 	height: 16px;
 	background-position: -32px -28px;
 }
+.icon-prev-page{
+	width: 20px;
+	height: 20px;
+	background-position: -20px -68px;
+	margin-right: 0;
+}
+.icon-prev-page-white{
+	width: 20px;
+	height: 20px;
+	background-position: -40px -68px;
+	margin-right: 0;
+}
 
 .icon-checkbox-blue:before{
 	content: '';
