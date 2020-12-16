@@ -661,6 +661,7 @@ a.link{
 	left: 12px;
 	top: 50%;
 	transform: translateY(-50%);
+	margin-left: 0;
 }
 
 /* input */

@@ -89,12 +89,8 @@
 }
 
 
-/* table */
-.table-wrap{
-	position: relative;
-	max-height: 54vh;
-	overflow-y: auto;
-}
+/* table 
+
 .table-wrap + .table-wrap{
 	margin-top: 48px;
 }
@@ -123,7 +119,6 @@
 }
 .table th{
 	padding: 12px;
-	/* border-bottom: 1px solid #e7ecf0; */
 	font-size: 0.86em;
 	color: #67707c;
 	font-weight: 400;
@@ -155,3 +150,4 @@
 .group-header td .flex-box .icon-arrow{
 	margin-left: 16px;
 }
+*/
