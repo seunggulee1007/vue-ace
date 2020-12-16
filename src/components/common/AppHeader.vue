@@ -1,7 +1,7 @@
 <template>
-	<header class="header admin-header" v-if="isUserLogin">
-		<div>
-			<h1 class="logo logo-vertical">
+	<header class="header user-header">
+		<a href="/">
+			<h1 class="logo logo-line">
 				<p class="mark">
 					<span>A</span>
 				</p>
@@ -10,37 +10,34 @@
 					<span>Agile Centric Efficiency</span>
 				</p>
 			</h1>
-			<h2 class="page__title">관리자센터</h2>
-			<nav class="admin-gnb">
-				<ul class="lst-gnb">
-					<li class="lst-gnb__title">
-						<p>부서/사용자</p>
+		</a>
+		<ul class="util-menu">
+			<li class="util-menu__link">
+				<button type="button" class="button__alert">
+					<span class="icon icon-alert">
+						<span class="blind">알림</span>
+					</span>
+				</button>
+			</li>
+			<li class="util-menu__link">
+				<div class="user-name">
+					<div class="img-user">
+						<img src="/images/sample1.jpeg" alt="" />
+					</div>
+					<p>홍길동</p>
+				</div>
+				<span class="icon icon-arrow"></span>
+				<ul class="account-menu">
+					<li>
+						<a href="/mypage.html">마이페이지</a>
 					</li>
-					<li class="lst-gnb__item">
-						<a href="/admin/deptRegistration" class="lst-gnb__link">부서 등록</a>
-					</li>
-					<li class="lst-gnb__item">
-						<a href="/admin/userRegistration" class="lst-gnb__link">사용자 등록</a>
-					</li>
-					<li class="lst-gnb__title">
-						<p>권한</p>
-					</li>
-					<li class="lst-gnb__item">
-						<a href="/admin/permissionsGroup" class="lst-gnb__link">권한그룹 등록</a>
-					</li>
-					<li class="lst-gnb__item">
-						<a href="/admin/permissions" class="lst-gnb__link">권한 등록</a>
-					</li>
-					<li class="lst-gnb__title">
-						<p>휴일</p>
-					</li>
-					<li class="lst-gnb__item">
-						<a href="/admin/holiday" class="lst-gnb__link">휴일 등록</a>
+					<li>
+						<button class="button__logout">로그아웃</button>
 					</li>
 				</ul>
-			</nav>
-		</div>
-		<button class="button__logout" @click="logoutUser">로그아웃</button>
+				<button class="button" @click="goAdminView" v-if="this.$store.getters.isAdmin">관리자 페이지</button>
+			</li>
+		</ul>
 	</header>
 </template>
 
@@ -61,6 +58,10 @@ export default {
 				deleteCookie(process.env.VUE_APP_USER_ID);
 				this.$router.push('/login');
 			}
+		},
+		goAdminView() {
+			this.$store.commit('setAdminView');
+			this.$router.push('/admin/deptRegistration');
 		},
 	},
 };

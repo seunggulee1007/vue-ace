@@ -89,7 +89,6 @@ export default {
 			};
 			try {
 				let res = await this.LOGIN(params);
-				console.log(res);
 				if (res.result == 0) {
 					this.$router.push('/admin/deptRegistration');
 				} else {

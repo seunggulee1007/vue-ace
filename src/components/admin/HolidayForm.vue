@@ -6,26 +6,21 @@
 					<h3 class="section__title">휴일 등록</h3>
 				</div>
 
-				<article class="article lst-holiday">
-					<div class="article-top">
-						<div class="item item__input">
-							<div class="input-box">
-								<input class="input content__title" type="text" placeholder="기준년도를 입력하세요" />
-							</div>
+				<div class="component-area">
+					<div class="component-box">
+						<div class="input-box">
+							<input class="input" type="text" placeholder="기준년도를 입력하세요" />
+							<button class="button">조회</button>
 						</div>
 					</div>
-					<div class="article-content tab-area">
-						<div class="tab-area-top">
+					<div class="component-box">
+						<div class="component-box component-box-top">
 							<ul class="lst-tab">
 								<li class="lst-tab__item">
-									<a href="#" class="lst-tab__link">
-										<span class="icon icon-calendar"></span>달력
-									</a>
+									<a href="#" class="lst-tab__link"> <span class="icon icon-calendar"></span>달력 </a>
 								</li>
 								<li class="lst-tab__item on">
-									<a href="#" class="lst-tab__link">
-										<span class="icon icon-list"></span>리스트
-									</a>
+									<a href="#" class="lst-tab__link"> <span class="icon icon-list"></span>리스트 </a>
 								</li>
 							</ul>
 							<div class="buttons">
@@ -112,11 +107,10 @@
 							</div>
 						</div>
 					</div>
-				</article>
+				</div>
 				<div class="buttons-complete">
 					<div class="buttons">
 						<button type="submit" class="button button__save">저장</button>
-						<button type="button" class="button button__cancel">취소</button>
 					</div>
 				</div>
 			</div>

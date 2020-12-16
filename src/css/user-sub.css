@@ -1,0 +1,102 @@
+/* 출/퇴근 등록 */
+.time-recording-wrap{
+	display: flex;
+	flex-direction: column;
+}
+.time-recording-wrap > p:first-child{
+	font-size: 16px;
+	line-height: 1.4;
+}
+.time-recording-wrap > p:first-child .bold{
+	font-size: 20px;
+	letter-spacing: 0.08em;
+}
+
+.time-recording-wrap .clock{
+	font-size: 24px;
+	font-weight: 700;
+	color: #6a197d;
+	padding: 12px 0 10px;
+}
+.time-recording-wrap .buttons .button{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	flex-grow: 1;
+	font-size: 14px;
+	padding: 6px 0;
+	border-radius: 8px;
+}
+.time-recording-wrap .button .stamp-time{
+	font-size: 0.9em;
+	padding-top: 4px;
+}
+
+.component-box .status-time{
+	font-size: 18px;
+	padding: 12px 0 20px;;
+}
+.status-time .bold{
+	font-size: 24px;
+	letter-spacing: 0.08em;
+}
+
+.info-attendance .component-area:not(.stamp-time) .component-box:last-child{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.info-attendance .component-area .component-box:last-child > span{
+	font-size: 0.86em;
+	color: #67707c;
+}
+
+.lst-working{
+	display: flex;
+	margin-right: 24px;
+}
+.lst-working > ul{
+	display: none;
+}
+.lst-working.show > ul{
+	display: flex;
+	border: 1px solid #b2bbca;
+	border-radius: 4px;
+	margin-left: 8px;
+}
+.lst-working > ul li{
+	padding: 8px;
+	color: #666;
+	font-size: 0.86em;
+}
+
+
+/* 임시 progress-bar */
+.info-attendance .component-area:nth-child(2) .progress__bar1 .progress__bar{
+	width: 90%;
+}
+.info-attendance .component-area:nth-child(3) .progress__bar1 .progress__bar{
+	width: 100%;
+}
+.info-attendance .component-area:nth-child(3) .progress__bar2 .progress__bar{
+	width: 100%;
+}
+.info-attendance .component-area:nth-child(4) .progress__bar{
+	width: 70%;
+}
+
+
+/* 휴가 신청 */
+.lst-leave{
+	display: flex;
+	justify-content: space-between;
+}
+.lst-leave__item .status-leave{
+	font-size: 18px;
+	padding-top: 12px 
+}
+.lst-leave__item .status-leave .bold{
+	font-size: 24px;
+	letter-spacing: 0.08em;
+}

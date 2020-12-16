@@ -376,7 +376,11 @@
 	padding-top: 6px;
 	color: #67707c;
 }
-
+.msg-state{
+	font-size: 0.86em;
+	padding-top: 6px;
+	color: #e94560;
+}
 
 /* link */
 a.link{
@@ -478,7 +482,6 @@ a.link{
 	width: 8px;
 	background-color: #e8e8e8;
 }
-
 
 
 /* lst-cards */
@@ -626,7 +629,7 @@ a.link{
 }
 .input-box.input-box-icon .icon{
 	position: absolute;
-	left: 12px;
+	left: 0;
 	top: 50%;
 	transform: translateY(-50%);
 }

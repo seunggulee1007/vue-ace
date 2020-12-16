@@ -8,10 +8,16 @@ export default {
 	getUserId(state) {
 		return state.userId;
 	},
-	getSectionPush(state) {
+	sectionPush(state) {
 		return state.sectionPush;
 	},
-	getSpinnerStatus(state) {
+	spinnerStatus(state) {
 		return state.spinnerStatus;
+	},
+	isAdmin(state) {
+		return state.adminYn == 'Y';
+	},
+	adminView(state) {
+		return state.adminView;
 	},
 };

@@ -5,40 +5,7 @@
 				<span>조직도</span>
 			</h4>
 			<div class="tree-area">
-				<ul class="tree-container tree__module">
-					<li class="tree-item on">
-						<a href="#" class="tree-item__link">
-							<span class="icon-tree"></span>
-							컨설팅 본부
-						</a>
-						<ul class="tree-sub-container">
-							<li class="tree-item">
-								<a href="#" class="tree-item__link tree-item__no-icon">
-									<span class="icon-tree"></span>
-									고객전략 및 마케팅
-								</a>
-							</li>
-							<li class="tree-item">
-								<a href="#" class="tree-item__link tree-item__no-icon">
-									<span class="icon-tree"></span>
-									M&A
-								</a>
-							</li>
-							<li class="tree-item">
-								<a href="#" class="tree-item__link tree-item__no-icon">
-									<span class="icon-tree"></span>
-									기업금융
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li class="tree-item">
-						<a href="#" class="tree-item__link">
-							<span class="icon-tree"></span>
-							개발 본부
-						</a>
-					</li>
-				</ul>
+				<!-- tree menu -->
 			</div>
 		</section>
 		<section class="section__contents">
@@ -55,9 +22,9 @@
 						</button>
 					</div>
 				</div>
-				<div class="articles-wrap lst-cards lst-depts">
-					<article class="article lst-dept__item">
-						<div class="article-top">
+				<div class="component-area-wrap lst-cards lst-cards__2colums">
+					<div class="component-area">
+						<div class="component-box component-box-top">
 							<div class="input-box">
 								<span class="input-checkbox">
 									<input type="checkbox" id="checkboxCheck1" />
@@ -71,83 +38,81 @@
 								하위부서 추가
 							</button>
 						</div>
-						<div class="article-content">
-							<div class="table-wrap lst-card-sub">
-								<table class="table table-hover">
-									<thead>
-										<tr>
-											<th class="column-check">
-												<div class="input-box">
-													<span class="input-checkbox">
-														<input type="checkbox" id="checkboxSelectAll1" />
-														<label
-															for="checkboxSelectAll1"
-															class="input-checkbox__label icon-checkbox-purple"
-														>
-															<span class="blind">선택</span>
-														</label>
-													</span>
-												</div>
-											</th>
-											<th>부서명</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr class="row">
-											<td class="column-check">
-												<div class="input-box">
-													<span class="input-checkbox">
-														<input type="checkbox" id="checkboxSelect1-1" />
-														<label
-															for="checkboxSelect1-1"
-															class="input-checkbox__label icon-checkbox-purple"
-														>
-															<span class="blind">선택</span>
-														</label>
-													</span>
-												</div>
-											</td>
-											<td>고객전략 및 마케팅</td>
-										</tr>
-										<tr class="row">
-											<td class="column-check">
-												<div class="input-box">
-													<span class="input-checkbox">
-														<input type="checkbox" id="checkboxSelect1-2" />
-														<label
-															for="checkboxSelect1-2"
-															class="input-checkbox__label icon-checkbox-purple"
-														>
-															<span class="blind">선택</span>
-														</label>
-													</span>
-												</div>
-											</td>
-											<td>M&A</td>
-										</tr>
-										<tr class="row">
-											<td class="column-check">
-												<div class="input-box">
-													<span class="input-checkbox">
-														<input type="checkbox" id="checkboxSelect1-3" />
-														<label
-															for="checkboxSelect1-3"
-															class="input-checkbox__label icon-checkbox-purple"
-														>
-															<span class="blind">선택</span>
-														</label>
-													</span>
-												</div>
-											</td>
-											<td>기업금융</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+						<div class="table-wrap">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th class="column-check">
+											<div class="input-box">
+												<span class="input-checkbox">
+													<input type="checkbox" id="checkboxSelectAll1" />
+													<label
+														for="checkboxSelectAll1"
+														class="input-checkbox__label icon-checkbox-purple"
+													>
+														<span class="blind">선택</span>
+													</label>
+												</span>
+											</div>
+										</th>
+										<th>부서명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row">
+										<td class="column-check">
+											<div class="input-box">
+												<span class="input-checkbox">
+													<input type="checkbox" id="checkboxSelect1-1" />
+													<label
+														for="checkboxSelect1-1"
+														class="input-checkbox__label icon-checkbox-purple"
+													>
+														<span class="blind">선택</span>
+													</label>
+												</span>
+											</div>
+										</td>
+										<td>고객전략 및 마케팅</td>
+									</tr>
+									<tr class="row">
+										<td class="column-check">
+											<div class="input-box">
+												<span class="input-checkbox">
+													<input type="checkbox" id="checkboxSelect1-2" />
+													<label
+														for="checkboxSelect1-2"
+														class="input-checkbox__label icon-checkbox-purple"
+													>
+														<span class="blind">선택</span>
+													</label>
+												</span>
+											</div>
+										</td>
+										<td>M&A</td>
+									</tr>
+									<tr class="row">
+										<td class="column-check">
+											<div class="input-box">
+												<span class="input-checkbox">
+													<input type="checkbox" id="checkboxSelect1-3" />
+													<label
+														for="checkboxSelect1-3"
+														class="input-checkbox__label icon-checkbox-purple"
+													>
+														<span class="blind">선택</span>
+													</label>
+												</span>
+											</div>
+										</td>
+										<td>기업금융</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</article>
-					<article class="article lst-dept__item">
-						<div class="article-top">
+					</div>
+					<div class="component-area">
+						<div class="component-box component-box-top">
 							<div class="input-box">
 								<span class="input-checkbox">
 									<input type="checkbox" id="checkboxCheck2" />
@@ -161,72 +126,72 @@
 								하위부서 추가
 							</button>
 						</div>
-						<div class="article-content">
-							<div class="table-wrap lst-card-sub">
-								<table class="table table-hover">
-									<thead>
-										<tr>
-											<th class="column-check">
-												<div class="input-box">
-													<span class="input-checkbox">
-														<input type="checkbox" id="checkboxSelectAll2" />
-														<label
-															for="checkboxSelectAll2"
-															class="input-checkbox__label icon-checkbox-purple"
-														>
-															<span class="blind">선택</span>
-														</label>
-													</span>
-												</div>
-											</th>
-											<th>부서명</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr class="row">
-											<td class="column-check">
-												<div class="input-box">
-													<span class="input-checkbox">
-														<input type="checkbox" id="checkboxSelect2-1" />
-														<label
-															for="checkboxSelect2-1"
-															class="input-checkbox__label icon-checkbox-purple"
-														>
-															<span class="blind">선택</span>
-														</label>
-													</span>
-												</div>
-											</td>
-											<td>개발1팀</td>
-										</tr>
-										<tr class="row">
-											<td class="column-check">
-												<div class="input-box">
-													<span class="input-checkbox">
-														<input type="checkbox" id="checkboxSelect2-2" />
-														<label
-															for="checkboxSelect2-2"
-															class="input-checkbox__label icon-checkbox-purple"
-														>
-															<span class="blind">선택</span>
-														</label>
-													</span>
-												</div>
-											</td>
-											<td>개발2팀</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+						<div class="table-wrap">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th class="column-check">
+											<div class="input-box">
+												<span class="input-checkbox">
+													<input type="checkbox" id="checkboxSelectAll2" />
+													<label
+														for="checkboxSelectAll2"
+														class="input-checkbox__label icon-checkbox-purple"
+													>
+														<span class="blind">선택</span>
+													</label>
+												</span>
+											</div>
+										</th>
+										<th>부서명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row">
+										<td class="column-check">
+											<div class="input-box">
+												<span class="input-checkbox">
+													<input type="checkbox" id="checkboxSelect2-1" />
+													<label
+														for="checkboxSelect2-1"
+														class="input-checkbox__label icon-checkbox-purple"
+													>
+														<span class="blind">선택</span>
+													</label>
+												</span>
+											</div>
+										</td>
+										<td>개발1팀</td>
+									</tr>
+									<tr class="row">
+										<td class="column-check">
+											<div class="input-box">
+												<span class="input-checkbox">
+													<input type="checkbox" id="checkboxSelect2-2" />
+													<label
+														for="checkboxSelect2-2"
+														class="input-checkbox__label icon-checkbox-purple"
+													>
+														<span class="blind">선택</span>
+													</label>
+												</span>
+											</div>
+										</td>
+										<td>개발2팀</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</article>
-					<article class="article lst-dept__item">
-						<div class="article-top">
+					</div>
+					<div class="component-area">
+						<div class="component-box component-box-top">
 							<div class="input-box">
 								<span class="input-checkbox">
 									<input type="checkbox" id="checkboxCheck3" />
 									<label for="checkboxCheck3" class="input-checkbox__label icon-checkbox-purple">
-										<span class="content__title"><input type="text" placeholder="상위부서명"/></span>
+										<span class="content__title"
+											><input type="text" placeholder="상위부서명"
+										/></span>
 									</label>
 								</span>
 							</div>
@@ -235,49 +200,47 @@
 								하위부서 추가
 							</button>
 						</div>
-						<div class="article-content">
-							<div class="table-wrap lst-card-sub">
-								<table class="table table-hover">
-									<thead>
-										<tr>
-											<th class="column-check">
-												<div class="input-box">
-													<span class="input-checkbox">
-														<input type="checkbox" id="checkboxSelectAll3" />
-														<label
-															for="checkboxSelectAll3"
-															class="input-checkbox__label icon-checkbox-purple"
-														>
-															<span class="blind">선택</span>
-														</label>
-													</span>
-												</div>
-											</th>
-											<th>부서명</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr class="row">
-											<td class="column-check">
-												<div class="input-box">
-													<span class="input-checkbox">
-														<input type="checkbox" id="checkboxSelect3-1" />
-														<label
-															for="checkboxSelect3-1"
-															class="input-checkbox__label icon-checkbox-purple"
-														>
-															<span class="blind">선택</span>
-														</label>
-													</span>
-												</div>
-											</td>
-											<td><input type="text" placeholder="하위부서명을 입력하세요" /></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+						<div class="table-wrap">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th class="column-check">
+											<div class="input-box">
+												<span class="input-checkbox">
+													<input type="checkbox" id="checkboxSelectAll3" />
+													<label
+														for="checkboxSelectAll3"
+														class="input-checkbox__label icon-checkbox-purple"
+													>
+														<span class="blind">선택</span>
+													</label>
+												</span>
+											</div>
+										</th>
+										<th>부서명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row">
+										<td class="column-check">
+											<div class="input-box">
+												<span class="input-checkbox">
+													<input type="checkbox" id="checkboxSelect3-1" />
+													<label
+														for="checkboxSelect3-1"
+														class="input-checkbox__label icon-checkbox-purple"
+													>
+														<span class="blind">선택</span>
+													</label>
+												</span>
+											</div>
+										</td>
+										<td><input type="text" placeholder="하위부서명을 입력하세요" /></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</article>
+					</div>
 				</div>
 				<div class="buttons-complete">
 					<div class="buttons">
