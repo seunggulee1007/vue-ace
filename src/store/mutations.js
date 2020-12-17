@@ -22,6 +22,7 @@ export default {
 		state.token = '';
 		state.userNm = '';
 		state.adminYn = '';
+		state.adminView = false;
 	},
 	setSpinnerStatus(state) {
 		state.spinnerStatus = !state.spinnerStatus;

@@ -1,5 +1,5 @@
 <template>
-	<nav class="gnb">
+	<nav class="gnb" v-if="isUserLogin">
 		<ul class="lst-gnb">
 			<li class="lst-gnb__item">
 				<span class="icon icon-gnb1"></span>
@@ -299,7 +299,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+	computed: {
+		isUserLogin() {
+			return this.$store.getters.isLogin;
+		},
+	},
+};
 </script>
 
 <style></style>

@@ -1,5 +1,5 @@
 <template>
-	<header class="header user-header">
+	<header class="header user-header" v-if="isUserLogin">
 		<a href="/">
 			<h1 class="logo logo-line">
 				<p class="mark">
@@ -42,7 +42,6 @@
 </template>
 
 <script>
-import { deleteCookie } from '@/utils/cookies';
 export default {
 	computed: {
 		isUserLogin() {
@@ -53,9 +52,7 @@ export default {
 		async logoutUser() {
 			if (await this.sConfirm('로그아웃 하시겠습니까?')) {
 				this.$store.commit('clearLoginInfo');
-				deleteCookie(process.env.VUE_APP_USER_NM);
-				deleteCookie(process.env.VUE_APP_AUTH_TOKEN);
-				deleteCookie(process.env.VUE_APP_USER_ID);
+
 				this.$router.push('/login');
 			}
 		},

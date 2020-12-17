@@ -96,6 +96,7 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
+	console.log(store.getters.isAdmin);
 	if (to.meta.admin && !store.getters.isAdmin) {
 		store._vm.$message({
 			type: 'info',

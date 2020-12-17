@@ -13,6 +13,7 @@ export default new Vuex.Store({
 		userNm: getCookie(process.env.VUE_APP_USER_NM) || '',
 		token: getCookie(process.env.VUE_APP_AUTH_TOKEN) || '',
 		adminView: false,
+		adminYn: getCookie(process.env.VUE_APP_ADMIN_YN) || 'N',
 	},
 	getters,
 	mutations,

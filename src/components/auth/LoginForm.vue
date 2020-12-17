@@ -90,7 +90,7 @@ export default {
 			try {
 				let res = await this.LOGIN(params);
 				if (res.result == 0) {
-					this.$router.push('/admin/deptRegistration');
+					this.$router.push('/');
 				} else {
 					this.sAlert(res.resultMsg);
 				}
