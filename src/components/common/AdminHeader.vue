@@ -1,5 +1,5 @@
 <template>
-	<header class="header admin-header" v-if="isUserLogin">
+	<header class="header admin-header">
 		<div>
 			<h1 class="logo logo-vertical">
 				<p class="mark">
@@ -17,25 +17,25 @@
 						<p>부서/사용자</p>
 					</li>
 					<li class="lst-gnb__item">
-						<a href="/admin/deptRegistration" class="lst-gnb__link">부서 등록</a>
+						<router-link to="/admin/deptRegistration" class="lst-gnb__link">부서 등록</router-link>
 					</li>
 					<li class="lst-gnb__item">
-						<a href="/admin/userRegistration" class="lst-gnb__link">사용자 등록</a>
+						<router-link to="/admin/userRegistration" class="lst-gnb__link">사용자 등록</router-link>
 					</li>
 					<li class="lst-gnb__title">
 						<p>권한</p>
 					</li>
 					<li class="lst-gnb__item">
-						<a href="/admin/permissionsGroup" class="lst-gnb__link">권한그룹 등록</a>
+						<router-link to="/admin/permissionsGroup" class="lst-gnb__link">권한그룹 등록</router-link>
 					</li>
 					<li class="lst-gnb__item">
-						<a href="/admin/permissions" class="lst-gnb__link">권한 등록</a>
+						<router-link to="/admin/permissions" class="lst-gnb__link">권한 등록</router-link>
 					</li>
 					<li class="lst-gnb__title">
 						<p>휴일</p>
 					</li>
 					<li class="lst-gnb__item">
-						<a href="/admin/holiday" class="lst-gnb__link">휴일 등록</a>
+						<router-link to="/admin/holiday" class="lst-gnb__link">휴일 등록</router-link>
 					</li>
 				</ul>
 			</nav>
@@ -47,11 +47,6 @@
 
 <script>
 export default {
-	computed: {
-		isUserLogin() {
-			return this.$store.getters.isLogin;
-		},
-	},
 	methods: {
 		logoutUser() {
 			this.sConfirm('로그아웃 하시겠습니까?', () => {

@@ -15,7 +15,6 @@ export default {
 	 * @param {*} state
 	 */
 	clearLoginInfo(state) {
-		this._vm.$cookie.delete(process.env.VUE_APP_USER_NM);
 		this._vm.$cookie.delete(process.env.VUE_APP_AUTH_TOKEN);
 		this._vm.$cookie.delete(process.env.VUE_APP_USER_ID);
 		state.userId = '';
@@ -31,6 +30,7 @@ export default {
 		state.sectionPush = !state.sectionPush;
 	},
 	setAdminView(state) {
+		console.log('호출됨 !');
 		state.adminView = !state.adminView;
 	},
 };

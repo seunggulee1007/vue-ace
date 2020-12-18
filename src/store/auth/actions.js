@@ -1,5 +1,4 @@
 import { loginUser } from '@/api/auth';
-
 export default {
 	async LOGIN({ commit }, params) {
 		let res = await loginUser(params);
@@ -8,9 +7,7 @@ export default {
 			let data = res.data;
 			commit('setLoginInfo', data);
 			this._vm.$cookie.set(process.env.VUE_APP_AUTH_TOKEN, data.authToken);
-			this._vm.$cookie.set(process.env.VUE_APP_USER_NM, data.user.userNm);
 			this._vm.$cookie.set(process.env.VUE_APP_USER_ID, data.user.userId);
-			this._vm.$cookie.set(process.env.VUE_APP_ADMIN_YN, data.user.adminYn);
 		}
 
 		return res;

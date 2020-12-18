@@ -1,8 +1,8 @@
 <template>
 	<div id="app" class="wrap">
-		<app-header v-if="!this.$store.getters.adminView"></app-header>
-		<app-navi v-if="!this.$store.getters.adminView"></app-navi>
-		<admin-header v-if="this.$store.getters.adminView"></admin-header>
+		<app-header v-if="!this.$store.getters.adminView && isUserLogin"></app-header>
+		<app-navi v-if="!this.$store.getters.adminView && isUserLogin"></app-navi>
+		<admin-header v-if="this.$store.getters.adminView && isUserLogin"></admin-header>
 		<transition name="fade">
 			<router-view />
 		</transition>
@@ -13,7 +13,13 @@
 import AppHeader from '@/components/common/AppHeader.vue';
 import AdminHeader from '@/components/common/AdminHeader.vue';
 import AppNavi from '@/components/common/AppNavi.vue';
+
 export default {
+	computed: {
+		isUserLogin() {
+			return this.$store.getters.isLogin;
+		},
+	},
 	components: {
 		AppHeader,
 		AdminHeader,

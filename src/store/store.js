@@ -1,21 +1,19 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { getCookie } from '@/utils/cookies';
-import actions from './actions';
-import mutations from './mutations';
-import getters from './getters';
+import Auth from './auth/auth';
+import Menu from './menu/menu';
+import createPersistedState from 'vuex-persistedstate';
 
 Vue.use(Vuex);
-
 export default new Vuex.Store({
-	state: {
-		userId: getCookie(process.env.VUE_APP_USER_ID) || '',
-		userNm: getCookie(process.env.VUE_APP_USER_NM) || '',
-		token: getCookie(process.env.VUE_APP_AUTH_TOKEN) || '',
-		adminView: false,
-		adminYn: getCookie(process.env.VUE_APP_ADMIN_YN) || 'N',
+	modules: {
+		Auth,
+		Menu,
 	},
-	getters,
-	mutations,
-	actions,
+	plugins: [
+		createPersistedState({
+			//주목! : 여기에 쓴 모듈만 저장됩니다.
+			paths: ['Auth', 'Menu'],
+		}),
+	],
 });

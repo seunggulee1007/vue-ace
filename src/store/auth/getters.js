@@ -8,6 +8,9 @@ export default {
 	getUserId(state) {
 		return state.userId;
 	},
+	getUserNm(state) {
+		return state.userNm;
+	},
 	sectionPush(state) {
 		return state.sectionPush;
 	},
