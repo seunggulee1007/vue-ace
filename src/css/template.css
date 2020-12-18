@@ -101,7 +101,7 @@
 }
 .lst-lnb .lst-lnb__title{
 	font-size: 0.86em;
-	opacity: 50%;
+	opacity: 0.5;
 	padding: 12px 0;
 	margin-top: 12px;
 }
@@ -375,7 +375,7 @@
 }
 .content__title{
 	display: block;
-	font-size: 1.2em !important;
+	font-size: 1.4em !important;
 	margin-bottom: 24px;
 	font-weight: 700;
 }
@@ -469,8 +469,12 @@ a.link{
 .tree-area .el-tree-node__content{
 	height: auto;
 }
+.tree-area .el-tree-node.is-current > .el-tree-node__content > .el-tree-node__label{
+	font-weight: 700;
+	color: #16213e;
+}
 .tree-area .el-tree-node__content>.el-tree-node__expand-icon{
-	padding: 8px 6px;
+	padding: 10px 6px;
 }
 /* tree-vue
 .tree-area{
@@ -661,7 +665,6 @@ a.link{
 	left: 12px;
 	top: 50%;
 	transform: translateY(-50%);
-	margin-left: 0;
 }
 
 /* input */
@@ -868,6 +871,18 @@ a.link{
 	right: 6px;
 }
 
+.button-state__add .button-txt{
+	display: none;
+}
+.button-state__add.add .button-txt__add{
+	display: flex;
+	
+}
+.button-state__add.write .button-txt__write{
+	display: block;
+}
+
+
 .button-state{
 	display: block;
 	min-width: 48px;
@@ -875,6 +890,9 @@ a.link{
 	font-size: 0.86em;
 	padding: 6px;
 	border: 0;
+}
+.button-state:hover{
+	color: #fff;
 }
 .button-state.true{
 	background-color: #1e3799;
@@ -897,12 +915,21 @@ a.link{
 .button__logout{
 	display: flex;
 	padding: 8px 24px;
-	width: 100%;
 }
 
 .button__pagination{
 	padding: 8px;
 	margin: 0 6px;
+}
+
+
+/* switch-box */
+.switch-box{
+	display: flex;
+	align-items: center;
+}
+.switch-box .el-switch{
+	margin-left: 8px;
 }
 
 
@@ -1096,6 +1123,13 @@ a.link{
 		padding: 24px
 	}
 
+	/* popup */
+	.popup.show{
+		height: calc(100vh - 56px);
+	}
+	.popup-contents .vue-daum-postcode{
+		width: 100%;
+	}
 
 	/* logo temp */
 	.logo.logo-rec .mark{
