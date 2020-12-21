@@ -51,6 +51,7 @@ export default {
 		logoutUser() {
 			this.sConfirm('로그아웃 하시겠습니까?', () => {
 				this.$store.commit('clearLoginInfo');
+				this.$store.commit('clearUserInfo');
 				this.$router.push('/login');
 			});
 		},

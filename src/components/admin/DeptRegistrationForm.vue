@@ -6,247 +6,186 @@
 			</h4>
 			<div class="tree-area">
 				<!-- tree menu -->
+				<el-tree
+					:data="treeData"
+					node-key="deptId"
+					:default-expanded-keys="[0]"
+					:props="defaultProps"
+					accordion
+					@node-click="choiceDept"
+				>
+				</el-tree>
 			</div>
 		</section>
 		<section class="section__contents">
 			<div class="inner-wrap">
 				<div class="section-top">
-					<h3 class="section__title">부서 등록</h3>
-					<div class="buttons">
-						<button type="button" class="button button__add">
-							<span class="icon icon-add"></span>
-							상위부서 추가
+					<h3 class="section__title">
+						<button type="button" class="button__back">
+							<span class="icon icon-prev-page-white"></span>
+							<span class="blind">이전페이지</span>
 						</button>
-						<button type="button" class="button button__delete">
-							<span class="icon icon-delete"></span>선택 삭제
-						</button>
-					</div>
+						부서 등록
+					</h3>
 				</div>
-				<div class="component-area-wrap lst-cards lst-cards__2colums">
-					<div class="component-area">
-						<div class="component-box component-box-top">
-							<div class="input-box">
-								<span class="input-checkbox">
-									<input type="checkbox" id="checkboxCheck1" />
-									<label for="checkboxCheck1" class="input-checkbox__label icon-checkbox-purple">
-										<span class="content__title">컨설팅 본부</span>
-									</label>
-								</span>
-							</div>
-							<button type="button" class="button button__add">
-								<span class="icon icon-add"></span>
-								하위부서 추가
-							</button>
+				<div class="component-area">
+					<div class="component-box component-box-top">
+						<h5 class="content__title" v-if="!addFlag && parDeptNm">{{ parDeptNm }}</h5>
+						<h5 class="content__title" v-else>
+							{{ choiceDeptNm }}
+						</h5>
+						<button type="button" class="button button-state__add add" @click="addSubDept">
+							<span class="icon icon-add"></span>
+							하위 부서 추가
+						</button>
+						<button type="button" class="button button-red-full" v-if="parDeptNm" disabled>
+							하위 메뉴 등록 중
+						</button>
+					</div>
+					<div class="component-box">
+						<div class="component-box-top">
+							<p class="component__title">메뉴/페이지 명</p>
 						</div>
-						<div class="table-wrap">
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelectAll1" />
-													<label
-														for="checkboxSelectAll1"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</th>
-										<th>부서명</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect1-1" />
-													<label
-														for="checkboxSelect1-1"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>고객전략 및 마케팅</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect1-2" />
-													<label
-														for="checkboxSelect1-2"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>M&A</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect1-3" />
-													<label
-														for="checkboxSelect1-3"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>기업금융</td>
-									</tr>
-								</tbody>
-							</table>
+						<div class="component-box-cnt">
+							<div class="input-box">
+								<input
+									class="input"
+									type="text"
+									placeholder="입력하세요"
+									v-model="deptVO.deptNm"
+									ref="deptNm"
+								/>
+							</div>
 						</div>
 					</div>
-					<div class="component-area">
-						<div class="component-box component-box-top">
-							<div class="input-box">
-								<span class="input-checkbox">
-									<input type="checkbox" id="checkboxCheck2" />
-									<label for="checkboxCheck2" class="input-checkbox__label icon-checkbox-purple">
-										<span class="content__title">개발 본부</span>
-									</label>
-								</span>
-							</div>
-							<button type="button" class="button button__add">
-								<span class="icon icon-add"></span>
-								하위부서 추가
-							</button>
+					<div class="component-box">
+						<div class="component-box-top">
+							<p class="component__title">유형</p>
 						</div>
-						<div class="table-wrap">
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelectAll2" />
-													<label
-														for="checkboxSelectAll2"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</th>
-										<th>부서명</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect2-1" />
-													<label
-														for="checkboxSelect2-1"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>개발1팀</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect2-2" />
-													<label
-														for="checkboxSelect2-2"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>개발2팀</td>
-									</tr>
-								</tbody>
-							</table>
+						<div class="component-box-cnt">
+							<ul class="radio-options">
+								<li class="radio-options__item">
+									<input
+										type="radio"
+										name="pageTypePage"
+										id="pageTypePage"
+										value="2"
+										class="input input-radio"
+										v-model="deptVO.menuYn"
+									/>
+									<label for="pageTypePage">페이지</label>
+								</li>
+								<li class="radio-options__item">
+									<input
+										type="radio"
+										name="pageType"
+										value="1"
+										id="pageTypeGroup"
+										class="input input-radio"
+										v-model="deptVO.menuYn"
+									/>
+									<label for="pageTypeGroup">메뉴</label>
+								</li>
+							</ul>
 						</div>
 					</div>
-					<div class="component-area">
-						<div class="component-box component-box-top">
-							<div class="input-box">
-								<span class="input-checkbox">
-									<input type="checkbox" id="checkboxCheck3" />
-									<label for="checkboxCheck3" class="input-checkbox__label icon-checkbox-purple">
-										<span class="content__title"
-											><input type="text" placeholder="상위부서명"
-										/></span>
-									</label>
-								</span>
-							</div>
-							<button type="button" class="button button__add">
-								<span class="icon icon-add"></span>
-								하위부서 추가
-							</button>
+					<div class="component-box">
+						<div class="component-box-top">
+							<p class="component__title">페이지 URL</p>
 						</div>
-						<div class="table-wrap">
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelectAll3" />
-													<label
-														for="checkboxSelectAll3"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</th>
-										<th>부서명</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect3-1" />
-													<label
-														for="checkboxSelect3-1"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td><input type="text" placeholder="하위부서명을 입력하세요" /></td>
-									</tr>
-								</tbody>
-							</table>
+						<div class="component-box-cnt">
+							<div class="input-box">
+								<input class="input" type="text" placeholder="입력하세요" v-model="deptVO.pageUrl" />
+							</div>
+						</div>
+					</div>
+					<div class="component-box">
+						<div class="component-box-top">
+							<p class="component__title">컴포넌트</p>
+						</div>
+						<div class="component-box-cnt">
+							<div class="input-box">
+								<input class="input" type="text" placeholder="입력하세요" v-model="deptVO.component" />
+							</div>
+						</div>
+					</div>
+					<div class="component-box">
+						<div class="component-box-top">
+							<p class="component__title">메타정보</p>
+						</div>
+						<div class="component-box-cnt">
+							<div class="input-box">
+								<input class="input" type="text" placeholder="입력하세요" v-model="deptVO.metaInfo" />
+							</div>
+						</div>
+					</div>
+					<div class="component-box" v-if="deptVO.deptId">
+						<div class="component-box-top">
+							<p class="component__title">순서 변경</p>
+						</div>
+						<div class="component-box-cnt">
+							<div class="buttons">
+								<button type="button" class="button button__move-top" @click="moveTop">
+									최상단으로 올리기
+								</button>
+								<button type="button" class="button button__move-up" @click="moveUp">
+									한칸 위로 올리기
+								</button>
+								<button type="button" class="button button__move-down" @click="moveDown">
+									한칸 아래로 내리기
+								</button>
+								<button type="button" class="button button__move-bottom" @click="moveBottom">
+									최하단으로 내리기
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="component-box">
+						<div class="component-box-top">
+							<p class="component__title">사용여부</p>
+						</div>
+						<div class="component-box-cnt">
+							<ul class="radio-options">
+								<li class="radio-options__item">
+									<input
+										type="radio"
+										name="pageActive"
+										value="Y"
+										id="pageActiveY"
+										class="input input-radio"
+										v-model="deptVO.useYn"
+									/>
+									<label for="pageActiveY">사용</label>
+								</li>
+								<li class="radio-options__item">
+									<input
+										type="radio"
+										name="pageActive"
+										value="N"
+										id="pageActiveN"
+										class="input input-radio"
+										v-model="deptVO.useYn"
+									/>
+									<label for="pageActiveN">미사용</label>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="buttons-complete">
-					<div class="buttons">
-						<button type="submit" class="button button__save">저장</button>
-						<button type="button" class="button button__cancel">취소</button>
-						<button type="button" class="button button__temp-save">임시저장</button>
+					<div class="buttons" v-if="deptVO.deptId">
+						<button type="button" class="button button__submit" @click="modifyDept">
+							수정
+						</button>
+						<button type="button" class="button" @click="deleteDept">
+							삭제
+						</button>
+					</div>
+					<div class="buttons" v-else>
+						<button type="button" class="button button__submit" @click="addMenu">
+							추가
+						</button>
+						<button type="button" class="button button__cancel">초기화</button>
 					</div>
 				</div>
 			</div>
@@ -255,7 +194,139 @@
 </template>
 
 <script>
-export default {};
+import { selectDeptList, insertDept, updateDept, moveDept, deleteDept } from '@/api/admin/dept';
+export default {
+	methods: {
+		async selectDeptList() {
+			let res = await selectDeptList();
+			if (res.result == 0) {
+				this.treeData = res.data;
+				this.treeData.isOpen = true;
+			}
+		},
+		choiceAll() {
+			this.addFlag = false;
+			this.deptVO = {};
+		},
+		async addMenu() {
+			this.sConfirm('추가하시겠습니까?', async () => {
+				if (!this.deptVO.deptNm) {
+					this.sAlert('부서 명을 입력해 주세요.');
+					this.$refs.deptNm.focus();
+					return;
+				}
+				let res = await insertDept(this.deptVO);
+				if (res.result == 0) {
+					this.selectDeptList();
+					this.deptVO = res.data;
+				}
+				this.sAlert(res.resultMsg);
+			});
+		},
+		// 메뉴 선택 이벤트
+		choiceDept(data) {
+			if (data.deptId == 0) {
+				this.parDeptNm = '전체';
+				this.deptVO = { menuYn: 1, useYn: 'Y', parDeptId: 0, crtId: this.$store.getters.getUserId };
+			} else {
+				this.deptVO = JSON.parse(JSON.stringify(data));
+				this.choiceDeptNm = data.deptNm;
+				this.deptVO.chgId = this.$store.getters.getUserId;
+				this.childCnt = this.deptVO.children.length;
+				delete this.deptVO.children;
+			}
+		},
+		// 하위 메뉴 추가 버튼 클릭 이벤트
+		addSubDept() {
+			let parDeptId = this.deptVO.deptId;
+			this.parDeptNm = this.deptVO.deptNm;
+			this.deptVO = {
+				useYn: 'Y',
+				parDeptId,
+				crtId: this.$store.getters.getUserId,
+			};
+		},
+		modifyDept() {
+			this.sConfirm('수정하시겠습니까?', async () => {
+				if (!this.deptVO.deptNm) {
+					this.sAlert('부서 명을 입력해 주세요.');
+					this.$refs.deptNm.focus();
+					return;
+				}
+				this.deptVO.chgId = this.$store.getters.getUserId;
+				let res = await updateDept(this.deptVO);
+				this.sAlert(res.resultMsg);
+				if (res.result == 0) {
+					this.selectDeptList();
+					this.deptVO = res.data;
+				}
+			});
+		},
+		async deleteDept() {
+			this.sConfirm('삭제하시겠습니까?\n상위부서인 경우 하위 부서도 함께 삭제됩니다.', async () => {
+				let res = await deleteDept(this.deptVO.deptId);
+				if (res.result == 0) {
+					this.selectDeptList();
+					this.deptVO = {
+						parDeptId: 0,
+						menuYn: 1,
+						useYn: 'Y',
+						crtId: this.$store.getters.getUserId,
+					};
+				}
+				this.sAlert(res.resultMsg);
+			});
+		},
+		// 최상단으로 순서 변경
+		async moveTop() {
+			if (this.deptVO.ord == 1) {
+				return;
+			}
+			this.changeOrd(1);
+		},
+		// 상단으로 변경
+		async moveUp() {
+			this.changeOrd(2);
+		},
+		// 하단으로 순서 변경
+		async moveDown() {
+			this.changeOrd(3);
+		},
+		// 최하단으로 순서 변경
+		moveBottom() {
+			if (this.childCnt == this.deptVO.ord) {
+				return;
+			}
+			this.changeOrd(4);
+		},
+		async changeOrd(gu) {
+			let res = await moveDept(gu, this.deptVO.ord, this.deptVO.parDeptId);
+			if (res.result == 0) {
+				this.deptVO.ord = res.data + 1;
+			}
+			this.selectDeptList();
+		},
+	},
+	data() {
+		return {
+			treeData: [],
+			parDeptNm: '',
+			childCnt: 0,
+			choiceDeptNm: '',
+			addFlag: false,
+			deptVO: {
+				parDeptId: 0,
+				menuYn: 1,
+				useYn: 'Y',
+				crtId: this.$store.getters.getUserId,
+			},
+			defaultProps: {
+				children: 'children',
+				label: 'name',
+			},
+		};
+	},
+};
 </script>
 
 <style></style>

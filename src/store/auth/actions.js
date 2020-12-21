@@ -6,6 +6,7 @@ export default {
 		if (res.result == 0) {
 			let data = res.data;
 			commit('setLoginInfo', data);
+			commit('setUserInfo', data);
 			this._vm.$cookie.set(process.env.VUE_APP_AUTH_TOKEN, data.authToken);
 			this._vm.$cookie.set(process.env.VUE_APP_USER_ID, data.user.userId);
 		}
