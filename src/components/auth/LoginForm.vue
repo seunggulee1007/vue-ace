@@ -1,6 +1,6 @@
 <template>
 	<section class="container login-container">
-		<section class="article section__login">
+		<div class="component-area section__login">
 			<h1 class="logo logo-rec">
 				<!-- <img src="images/logo-login.png" alt="ACE Business Portal"> -->
 				<p class="mark">
@@ -58,7 +58,7 @@
 				</div>
 				<button type="button" class="button button-red-full button__login" @click="login">로그인</button>
 			</form>
-		</section>
+		</div>
 	</section>
 </template>
 
