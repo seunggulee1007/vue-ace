@@ -5,52 +5,15 @@
 				<span>조직도</span>
 			</h4>
 			<div class="tree-area">
-				<ul class="tree-container tree__module">
-					<li class="tree-item on">
-						<a href="#" class="tree-item__link">
-							<span class="icon-tree"></span>
-							컨설팅 본부
-						</a>
-						<ul class="tree-sub-container">
-							<li class="tree-item">
-								<a href="#" class="tree-item__link tree-item__no-icon">
-									<span class="icon-tree"></span>
-									고객전략 및 마케팅
-								</a>
-							</li>
-							<li class="tree-item">
-								<a href="#" class="tree-item__link tree-item__no-icon">
-									<span class="icon-tree"></span>
-									M&A
-								</a>
-							</li>
-							<li class="tree-item">
-								<a href="#" class="tree-item__link tree-item__no-icon">
-									<span class="icon-tree"></span>
-									기업금융
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li class="tree-item">
-						<a href="#" class="tree-item__link">
-							<span class="icon-tree"></span>
-							개발 본부
-						</a>
-					</li>
-					<li class="tree-item">
-						<a href="#" class="tree-item__link">
-							<span class="icon-tree"></span>
-							경영관리 본부
-						</a>
-					</li>
-					<li class="tree-item">
-						<a href="#" class="tree-item__link">
-							<span class="icon-tree"></span>
-							영업 사업부
-						</a>
-					</li>
-				</ul>
+				<el-tree
+					:data="treeData"
+					node-key="deptId"
+					:default-expanded-keys="[0]"
+					:props="defaultProps"
+					accordion
+					@node-click="choiceDept"
+				>
+				</el-tree>
 			</div>
 		</section>
 		<section class="section__contents">
@@ -67,26 +30,41 @@
 					</div>
 				</div>
 
-				<article class="article lst-user">
-					<div class="article-top">
+				<div class="component-area lst-user">
+					<div class="component-box">
 						<strong class="content__title">
 							컨설팅 본부
 						</strong>
 					</div>
-					<div class="article-content">
-						<div class="table-wrap">
-							<vue-good-table
-								:columns="columns"
-								:rows="rows"
-								:fixed-header="true"
-								max-height="50vh"
-								styleClass="vgt-table"
-								:select-options="{ enable: true }"
-								@on-selected-rows-change="selectionChanged"
-							/>
-						</div>
+					<div class="table-wrap">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>No.</th>
+									<th>부서명</th>
+									<th>사원명</th>
+									<th>사원번호</th>
+									<th>휴대폰번호</th>
+									<th>Email</th>
+									<th>직위</th>
+									<th>재직여부</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="row">
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
-				</article>
+				</div>
 				<div class="buttons-complete">
 					<div class="buttons">
 						<button type="submit" class="button button__save">저장</button>
@@ -100,86 +78,137 @@
 </template>
 
 <script>
-import 'vue-good-table/dist/vue-good-table.css';
-import { VueGoodTable } from 'vue-good-table';
+import { selectDeptList, insertDept, updateDept, moveDept, deleteDept } from '@/api/admin/dept';
 export default {
-	data: function() {
-		return {
-			columns: [
-				{
-					label: 'No.',
-					field: 'num',
-				},
-				{
-					label: '부서명',
-					field: 'deptName',
-				},
-				{
-					label: '사원명',
-					field: 'name',
-				},
-				{
-					label: '사원번호',
-					field: 'id',
-				},
-				{
-					label: '휴대폰번호',
-					field: 'phone',
-				},
-				{
-					label: 'Email',
-					field: 'email',
-				},
-				{
-					label: '직위',
-					field: 'position',
-				},
-				{
-					label: '재직여부',
-					field: 'status',
-				},
-			],
-			rows: [
-				{
-					num: '1',
-					deptName: '컨설팅본부',
-					name: '홍길동',
-					id: '20190101',
-					phone: '010-0000-0000',
-					email: 'abcde123@inno-soft.co.kr',
-					position: '차장',
-					status: '재직',
-				},
-				{
-					num: '2',
-					deptName: '컨설팅본부',
-					name: '최수현',
-					id: '20190101',
-					phone: '010-0000-0000',
-					email: 'efgh9@inno-soft.co.kr',
-					position: '과장',
-					status: '재직',
-				},
-				{
-					num: '3',
-					deptName: '컨설팅본부',
-					name: '김우중',
-					id: '20190101',
-					phone: '010-0000-0000',
-					email: '123456x@inno-soft.co.kr',
-					position: '대리',
-					status: '재직',
-				},
-			],
-		};
-	},
-	components: {
-		VueGoodTable,
-	},
-	metohds: {
-		selectionChanged() {
-			// params.selectedRows - all rows that are selected (this page)
+	methods: {
+		async selectDeptList() {
+			let res = await selectDeptList();
+			if (res.result == 0) {
+				this.treeData = res.data;
+				this.treeData.isOpen = true;
+			}
 		},
+		choiceAll() {
+			this.addFlag = false;
+			this.deptVO = {};
+		},
+		async addMenu() {
+			this.sConfirm('추가하시겠습니까?', async () => {
+				if (!this.deptVO.deptNm) {
+					this.sAlert('부서 명을 입력해 주세요.');
+					this.$refs.deptNm.focus();
+					return;
+				}
+				let res = await insertDept(this.deptVO);
+				if (res.result == 0) {
+					this.selectDeptList();
+					this.deptVO = res.data;
+				}
+				this.sAlert(res.resultMsg);
+			});
+		},
+		// 메뉴 선택 이벤트
+		choiceDept(data) {
+			if (data.deptId == 0) {
+				this.parDeptNm = '전체';
+				this.deptVO = { menuYn: 1, useYn: 'Y', parDeptId: 0, crtId: this.$store.getters.getUserId };
+			} else {
+				this.deptVO = JSON.parse(JSON.stringify(data));
+				this.choiceDeptNm = data.deptNm;
+				this.deptVO.chgId = this.$store.getters.getUserId;
+				this.childCnt = this.deptVO.children.length;
+				delete this.deptVO.children;
+			}
+		},
+		// 하위 메뉴 추가 버튼 클릭 이벤트
+		addSubDept() {
+			let parDeptId = this.deptVO.deptId;
+			this.parDeptNm = this.deptVO.deptNm;
+			this.deptVO = {
+				useYn: 'Y',
+				parDeptId,
+				crtId: this.$store.getters.getUserId,
+			};
+		},
+		modifyDept() {
+			this.sConfirm('수정하시겠습니까?', async () => {
+				if (!this.deptVO.deptNm) {
+					this.sAlert('부서 명을 입력해 주세요.');
+					this.$refs.deptNm.focus();
+					return;
+				}
+				this.deptVO.chgId = this.$store.getters.getUserId;
+				let res = await updateDept(this.deptVO);
+				this.sAlert(res.resultMsg);
+				if (res.result == 0) {
+					this.selectDeptList();
+					this.deptVO = res.data;
+				}
+			});
+		},
+		async deleteDept() {
+			this.sConfirm('삭제하시겠습니까?\n상위부서인 경우 하위 부서도 함께 삭제됩니다.', async () => {
+				let res = await deleteDept(this.deptVO.deptId);
+				if (res.result == 0) {
+					this.selectDeptList();
+					this.deptVO = {
+						parDeptId: 0,
+						menuYn: 1,
+						useYn: 'Y',
+						crtId: this.$store.getters.getUserId,
+					};
+				}
+				this.sAlert(res.resultMsg);
+			});
+		},
+		// 최상단으로 순서 변경
+		async moveTop() {
+			if (this.deptVO.ord == 1) {
+				return;
+			}
+			this.changeOrd(1);
+		},
+		// 상단으로 변경
+		async moveUp() {
+			this.changeOrd(2);
+		},
+		// 하단으로 순서 변경
+		async moveDown() {
+			this.changeOrd(3);
+		},
+		// 최하단으로 순서 변경
+		moveBottom() {
+			if (this.childCnt == this.deptVO.ord) {
+				return;
+			}
+			this.changeOrd(4);
+		},
+		async changeOrd(gu) {
+			let res = await moveDept(gu, this.deptVO.ord, this.deptVO.parDeptId);
+			if (res.result == 0) {
+				this.deptVO.ord = res.data + 1;
+			}
+			this.selectDeptList();
+		},
+	},
+	data() {
+		return {
+			treeData: [],
+			parDeptNm: '',
+			childCnt: 0,
+			choiceDeptNm: '',
+			addFlag: false,
+			deptVO: {
+				parDeptId: 0,
+				menuYn: 1,
+				useYn: 'Y',
+				crtId: this.$store.getters.getUserId,
+			},
+			defaultProps: {
+				children: 'children',
+				label: 'name',
+			},
+		};
 	},
 };
 </script>
