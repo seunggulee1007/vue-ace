@@ -48,6 +48,35 @@
 	height: 100%;
 }
 
+/* user-gnb */
+.gnb .lst-gnb__item{
+	position: relative;
+}
+.gnb .gnb-sub{
+	display: none;
+}
+.gnb .lst-gnb__item:hover .gnb-sub{
+	display: block;
+	position: absolute;
+	top: 52px;
+	left: 0;
+	width: 240px;
+	padding: 12px 0;
+	background-color: #16213e
+}
+.gnb-sub .lst-sub__item:hover{
+	background-color: rgba(255,255,255, 0.12);
+}
+.gnb-sub .lst-sub__title{
+	display: block;
+	padding: 12px 24px;
+	font-size: 0.9em;
+	color: rgba(255,255,255,0.6);
+}
+.gnb-sub .lst-sub__link{
+	display: block;
+	padding: 12px 24px 12px 36px;
+}
 
 /* ========== elements ========== */
 
