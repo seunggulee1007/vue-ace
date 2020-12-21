@@ -1,9 +1,449 @@
 <template>
 	<div class="lnb">
 		<ul class="lst-lnb lst-lnb__crm">
-			<li class="lst-lnb__title">
-				영업 CRM
+			<li class="lst-lnb__item">
+				<div>
+					영업 CRM
+					<span>-</span>
+				</div>
+				<ul>
+					<li class="lst-lnb__item">
+						<div>
+							영업 기회
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>거래처 등록</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>거래처 조회</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>영업 기회 등록</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>영업 기회 현황</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							영업 활동
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>영업 활동 등록</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>영업 활동 현황</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							고객
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>고객 등록</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>고객 현황</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</li>
+		</ul>
+
+		<ul class="lst-lnb lst-lnb__agile">
+			<li class="lst-lnb__item">
+				<div>
+					유연 근무
+					<span>-</span>
+				</div>
+				<ul>
+					<li class="lst-lnb__item">
+						<div>
+							유연 근무 유형
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="/flexibleWork/agile/agileWorking" class="lst-lnb__link">
+										<span>유연 근무 등록</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="/flexibleWork/agile/agileWorkingList" class="lst-lnb__link">
+										<span>유연 근무 조회</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							근태 관리
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="/flexibleWork/punctuality/attendance" class="lst-lnb__link">
+										<span>출/퇴근 등록</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="/flexibleWork/punctuality/workingTime" class="lst-lnb__link">
+										<span>근무 실적 조회</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="/flexibleWork/punctuality/workingPattern" class="lst-lnb__link">
+										<span>근무 계획 변경 신청</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="/flexibleWork/punctuality/overtime" class="lst-lnb__link">
+										<span>연장 근무 신청</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="/flexibleWork/punctuality/fieldWork" class="lst-lnb__link">
+										<span>외근 신청</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="/flexibleWork/punctuality/leave" class="lst-lnb__link">
+										<span>휴가 신청</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="/flexibleWork/punctuality/businessTrip" class="lst-lnb__link">
+										<span>출장 신청</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							승인 처리
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="/flexibleWork/approval/approvalChange" class="lst-lnb__link">
+										<span>승인 처리 (근무 계획 변경)</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="/flexibleWork/approval/approvalStatus" class="lst-lnb__link">
+										<span>승인 처리 (연장/휴가/외근/출장)</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<ul class="lst-lnb lst-lnb__expense">
+			<li class="lst-lnb__item">
+				<div>
+					비용 정산
+					<span>+</span>
+				</div>
+				<ul>
+					<li class="lst-lnb__item">
+						<div>
+							법인 카드
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>카드 정산 신청</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>카드 정산 내역</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							일반 비용
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>비용 정산 신청</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>비용 정산 내역</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<ul class="lst-lnb lst-lnb__order">
+			<li class="lst-lnb__item">
+				<div>
+					WEB 주문
+					<span>+</span>
+				</div>
+				<ul>
+					<li class="lst-lnb__item">
+						<div>
+							<router-link to="" class="lst-lnb__link">
+								<span>품목 등록</span>
+							</router-link>
+						</div>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							<router-link to="" class="lst-lnb__link">
+								<span>품목 조회</span>
+							</router-link>
+						</div>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							<router-link to="" class="lst-lnb__link">
+								<span>주문 등록</span>
+							</router-link>
+						</div>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							<router-link to="" class="lst-lnb__link">
+								<span>장바구니</span>
+							</router-link>
+						</div>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							<router-link to="" class="lst-lnb__link">
+								<span>주문서</span>
+							</router-link>
+						</div>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							<router-link to="" class="lst-lnb__link">
+								<span>주문 조회</span>
+							</router-link>
+						</div>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							<router-link to="" class="lst-lnb__link">
+								<span>입금 내역 조회</span>
+							</router-link>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<ul class="lst-lnb lst-lnb__scm">
+			<li class="lst-lnb__item">
+				<div>
+					구매 SCM
+					<span>+</span>
+				</div>
+				<ul>
+					<li class="lst-lnb__item">
+						<div>
+							<router-link to="" class="lst-lnb__link">
+								<span>구매 SCM 메뉴</span>
+							</router-link>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<ul class="lst-lnb lst-lnb__eis">
+			<li class="lst-lnb__item">
+				<div>
+					EIS
+					<span>+</span>
+				</div>
+				<ul>
+					<li class="lst-lnb__item">
+						<div>
+							재무 관리
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>재무 분석</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>손익 상세</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							영업 관리
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>영업 실적</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							CRM
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>영업 기회 현황</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>영업 활동 현황</span>
+									</router-link>
+								</div>
+							</li>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>영업 매출 현황</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							구매 관리
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>구매 실적</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="lst-lnb__item">
+						<div>
+							프로젝트
+							<span>+</span>
+						</div>
+						<ul>
+							<li class="lst-lnb__item">
+								<div>
+									<router-link to="" class="lst-lnb__link">
+										<span>프로젝트 원가 분석</span>
+									</router-link>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<!-- <ul class="lst-lnb lst-lnb__crm">
 			<li class="lst-lnb__item">
 				<p>영업 기회</p>
 				<ul class="lst-lnb-sub">
@@ -289,7 +729,7 @@
 					</li>
 				</ul>
 			</li>
-		</ul>
+		</ul> -->
 	</div>
 	<!-- <el-row class="tac lnb user-lnb">
 		<el-col :span="12">
