@@ -34,13 +34,21 @@
 	padding-right: 24px; 
 }
 .admin-header .lst-gnb{
+	flex-direction: column;
 	padding-top: 20px;
 	border-top: 1px solid rgba(255,255,255, 0.16);
 }
 
-.admin-header .button__logout{
+.admin-header .buttons{
+	flex-direction: column;
+	align-items: flex-start;
 	position: absolute;
 	bottom: 32px;
+}
+
+.admin-header .button__main{
+	display: flex;
+	padding: 8px 24px;
 }
 
 

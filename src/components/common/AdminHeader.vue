@@ -40,8 +40,16 @@
 				</ul>
 			</nav>
 		</div>
-		<button class="button__logout" @click="goUserView">사용자 화면</button>
-		<button class="button__logout" @click="logoutUser">로그아웃</button>
+		<div class="buttons">
+			<button class="button__main" @click="goUserView">
+				<span class="icon icon-user"></span>
+				사용자 화면
+			</button>
+			<button class="button__logout" @click="logoutUser">
+				<span class="icon icon-logout"></span>
+				로그아웃
+			</button>
+		</div>
 	</header>
 </template>
 
