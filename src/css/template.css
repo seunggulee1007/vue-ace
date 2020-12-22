@@ -181,8 +181,6 @@
 }
 .popup.show{
 	position: fixed;
-	width: 100vw;
-	height: 100vh;
 	background-color: rgba(0,0,0, 0.4);
 	display: flex;
 	justify-content: center;
@@ -191,7 +189,9 @@
 
 .popup .component-area{
 	min-width: 24vw;
+	max-width: 64vw;
 	box-sizing: border-box;
+
 }
 .popup .component-area .inner-wrap{
 	max-height: 80vh;
@@ -211,12 +211,23 @@
 	display: flex;
 }
 .popup-contents .component-box-wrap > div{
+	
 	flex-grow: 1;
 	height: 50vh;
+
+}
+.popup-contents .component-box-wrap .component-box + .component-box{
+	margin-top: 0;
 }
 
 .popup-contents .tree-area{
 	padding-top: 0;
+}
+.popup-contents .search-result-box{
+	margin-left: 8px;
+	padding: 16px;
+	border: 1px solid #e7ecf0;
+	border-radius: 8px;
 }
 
 .popup .button__close{
@@ -230,6 +241,13 @@
 
 .popup-contents .vue-daum-postcode{
 	width: 50vw;
+}
+
+.popup.popup__tree .component-area{
+	width: 56vw;
+}
+.popup__tree .lst-search-result .lst-search__item > span + span{
+	padding-left: 8px;
 }
 
 
@@ -635,6 +653,11 @@ a.link{
 }
 
 
+/* lst-search-result */
+.popup .lst-search-result .lst-search__item{
+	padding: 4px 8px;
+}
+
 /* select-options */
 .select-options{
 	display: grid;
@@ -742,8 +765,7 @@ a.link{
 	color: rgba(103, 112, 124, 0.3);
 }
 .input:focus{
-	border: 2px solid #6a197d;
-	padding: 7px 11px
+	border-color: #6a197d;
 }
 
 .input--large{

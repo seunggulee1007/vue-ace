@@ -177,7 +177,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="popup popup__lst-dept show">
+		<div class="popup popup__tree popup__lst-dept show">
 			<div class="component-area">
 				<div class="inner-wrap">
 					<div class="popup-top">

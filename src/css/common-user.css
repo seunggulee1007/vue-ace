@@ -78,6 +78,14 @@
 	padding: 12px 24px 12px 36px;
 }
 
+
+/* popup */
+.user-container .popup{
+	width: calc(100vw - 248px);
+	height: calc(100vh - 109px);
+}
+
+
 /* ========== elements ========== */
 
 /* select-month */

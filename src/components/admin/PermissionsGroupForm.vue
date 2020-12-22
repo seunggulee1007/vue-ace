@@ -11,7 +11,7 @@
 		<section class="section__contents">
 			<div class="inner-wrap">
 				<div class="section-top">
-					<h3 class="section__title">권한그룹</h3>
+					<h3 class="section__title">권한그룹 등록</h3>
 				</div>
 				<div class="component-area">
 					<div class="component-box">
@@ -47,8 +47,11 @@
 						<div class="component-box component-box-top">
 							<p class="component__title">대상자</p>
 							<div class="buttons">
+								<button type="button" class="button button__add">
+									<span class="icon icon-add"></span>사원 추가
+								</button>
 								<button type="button" class="button button__delete">
-									<span class="icon icon-delete"></span> 선택 삭제
+									<span class="icon icon-delete"></span>선택 삭제
 								</button>
 							</div>
 						</div>
@@ -161,6 +164,65 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- popup -->
+		<div class="popup popup__tree popup__lst-user">
+			<div class="component-area">
+				<div class="inner-wrap">
+					<div class="popup-top">
+						<strong class="popup__title">사원 정보</strong>
+					</div>
+					<div class="popup-contents">
+						<form action="">
+							<div class="input-box">
+								<input type="text" class="input" placeholder="사원명을 입력하세요" />
+								<button class="button button__search">조회</button>
+							</div>
+						</form>
+						<div class="component-box-wrap">
+							<div class="component-box">
+								<div class="tree-area">
+									<el-tree
+										:data="treeData"
+										node-key="deptId"
+										:default-expanded-keys="[0]"
+										:props="defaultProps"
+										accordion
+										@node-click="choiceDept"
+									>
+									</el-tree>
+								</div>
+							</div>
+							<div class="component-box search-result-box">
+								<div class="component-box-top">
+									<p class="component__title">검색 결과</p>
+								</div>
+								<div class="component-box-cnt">
+									<ul class="lst-search-result">
+										<li class="lst-search__item">
+											<span class="item__user-name">김정환 차장</span>
+											<span class="item__user-dept">개발1팀</span>
+										</li>
+										<li class="lst-search__item">
+											<span class="item__user-name">최수현 과장</span>
+											<span class="item__user-dept">개발1팀</span>
+										</li>
+										<li class="lst-search__item">
+											<span class="item__user-name">김우중 대리</span>
+											<span class="item__user-dept">개발1팀</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="button__close" @click="closeModal">
+					<span class="icon icon-close"></span>
+					<span class="blind">닫기</span>
+				</button>
+			</div>
+		</div>
 	</div>
 </template>
 

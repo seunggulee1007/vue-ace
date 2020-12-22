@@ -152,6 +152,14 @@
 	font-weight: 700;
 }
 
+
+/* popup */
+.admin-container .popup{
+	width: calc(100vw - 182px);
+	height: 100vh;
+}
+
+
 /* row-options */
 .row-options{
 	position: relative;
