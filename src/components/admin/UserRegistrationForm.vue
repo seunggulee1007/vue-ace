@@ -74,7 +74,7 @@
 				</div>
 			</div>
 		</section>
-		<div class="popup">
+		<div class="popup show">
 			<div class="component-area">
 				<div class="inner-wrap">
 					<div class="popup-top">
@@ -148,6 +148,16 @@
 										<option value="팀장">차장</option>
 										<option value="부장">차장</option>
 									</select>
+								</div>
+							</div>
+						</div>
+						<div class="component-box">
+							<div class="component-box-top">
+								<p class="component__title">사진 등록</p>
+							</div>
+							<div class="component-box-cnt">
+								<div class="input-box">
+									<input type="file" class="input" />
 								</div>
 							</div>
 						</div>
