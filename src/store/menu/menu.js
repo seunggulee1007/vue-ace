@@ -5,6 +5,7 @@ import getters from './getters';
 let Auth = {
 	state: () => ({
 		routerMenuList: [],
+		menuList: [],
 	}),
 	getters,
 	mutations,

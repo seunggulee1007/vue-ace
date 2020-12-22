@@ -78,8 +78,11 @@
 </template>
 
 <script>
-import { selectDeptList, insertDept, updateDept, moveDept, deleteDept } from '@/api/admin/dept';
+import { selectDeptList } from '@/api/admin/dept';
 export default {
+	created() {
+		this.selectDeptList();
+	},
 	methods: {
 		async selectDeptList() {
 			let res = await selectDeptList();
@@ -88,125 +91,13 @@ export default {
 				this.treeData.isOpen = true;
 			}
 		},
-		choiceAll() {
-			this.addFlag = false;
-			this.deptVO = {};
-		},
-		async addMenu() {
-			this.sConfirm('추가하시겠습니까?', async () => {
-				if (!this.deptVO.deptNm) {
-					this.sAlert('부서 명을 입력해 주세요.');
-					this.$refs.deptNm.focus();
-					return;
-				}
-				let res = await insertDept(this.deptVO);
-				if (res.result == 0) {
-					this.selectDeptList();
-					this.deptVO = res.data;
-				}
-				this.sAlert(res.resultMsg);
-			});
-		},
-		// 메뉴 선택 이벤트
-		choiceDept(data) {
-			if (data.deptId == 0) {
-				this.parDeptNm = '전체';
-				this.deptVO = { menuYn: 1, useYn: 'Y', parDeptId: 0, crtId: this.$store.getters.getUserId };
-			} else {
-				this.deptVO = JSON.parse(JSON.stringify(data));
-				this.choiceDeptNm = data.deptNm;
-				this.deptVO.chgId = this.$store.getters.getUserId;
-				this.childCnt = this.deptVO.children.length;
-				delete this.deptVO.children;
-			}
-		},
-		// 하위 메뉴 추가 버튼 클릭 이벤트
-		addSubDept() {
-			let parDeptId = this.deptVO.deptId;
-			this.parDeptNm = this.deptVO.deptNm;
-			this.deptVO = {
-				useYn: 'Y',
-				parDeptId,
-				crtId: this.$store.getters.getUserId,
-			};
-		},
-		modifyDept() {
-			this.sConfirm('수정하시겠습니까?', async () => {
-				if (!this.deptVO.deptNm) {
-					this.sAlert('부서 명을 입력해 주세요.');
-					this.$refs.deptNm.focus();
-					return;
-				}
-				this.deptVO.chgId = this.$store.getters.getUserId;
-				let res = await updateDept(this.deptVO);
-				this.sAlert(res.resultMsg);
-				if (res.result == 0) {
-					this.selectDeptList();
-					this.deptVO = res.data;
-				}
-			});
-		},
-		async deleteDept() {
-			this.sConfirm('삭제하시겠습니까?\n상위부서인 경우 하위 부서도 함께 삭제됩니다.', async () => {
-				let res = await deleteDept(this.deptVO.deptId);
-				if (res.result == 0) {
-					this.selectDeptList();
-					this.deptVO = {
-						parDeptId: 0,
-						menuYn: 1,
-						useYn: 'Y',
-						crtId: this.$store.getters.getUserId,
-					};
-				}
-				this.sAlert(res.resultMsg);
-			});
-		},
-		// 최상단으로 순서 변경
-		async moveTop() {
-			if (this.deptVO.ord == 1) {
-				return;
-			}
-			this.changeOrd(1);
-		},
-		// 상단으로 변경
-		async moveUp() {
-			this.changeOrd(2);
-		},
-		// 하단으로 순서 변경
-		async moveDown() {
-			this.changeOrd(3);
-		},
-		// 최하단으로 순서 변경
-		moveBottom() {
-			if (this.childCnt == this.deptVO.ord) {
-				return;
-			}
-			this.changeOrd(4);
-		},
-		async changeOrd(gu) {
-			let res = await moveDept(gu, this.deptVO.ord, this.deptVO.parDeptId);
-			if (res.result == 0) {
-				this.deptVO.ord = res.data + 1;
-			}
-			this.selectDeptList();
-		},
 	},
 	data() {
 		return {
 			treeData: [],
-			parDeptNm: '',
-			childCnt: 0,
-			choiceDeptNm: '',
-			addFlag: false,
-			deptVO: {
-				parDeptId: 0,
-				menuYn: 1,
-				useYn: 'Y',
-				crtId: this.$store.getters.getUserId,
-			},
 			defaultProps: {
 				children: 'children',
-				label: 'name',
+				label: 'deptNm',
 			},
 		};
 	},

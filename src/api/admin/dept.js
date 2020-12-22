@@ -1,22 +1,27 @@
 import { doAxios } from '../api';
 
 function selectDeptList() {
-	return doAxios();
-}
-function insertDept() {
-	return doAxios();
+	return doAxios('/dept/deptList', 'get');
 }
 
-function updateDept() {
-	return doAxios;
+function selectMenu(deptId) {
+	return doAxios(`/dept/${deptId}`, 'get');
+}
+
+function updateDept(data) {
+	return doAxios('/dept/', 'put', data);
+}
+
+function insertDept(data) {
+	return doAxios('/dept/', 'post', data);
 }
 
 function deleteDept(deptId) {
-	return doAxios(`/${deptId}`);
+	return doAxios(`/dept/${deptId}`, 'delete');
 }
 
-function moveDept(gu, ord, parDeptId) {
-	return doAxios(`/${gu}/${ord}/${parDeptId}`);
+function moveDept(gu, ord, deptId) {
+	return doAxios(`/dept/moveDept/${gu}/${ord}/${deptId}`, 'put');
 }
 
-export { selectDeptList, insertDept, updateDept, moveDept, deleteDept };
+export { selectDeptList, selectMenu, insertDept, updateDept, moveDept, deleteDept };

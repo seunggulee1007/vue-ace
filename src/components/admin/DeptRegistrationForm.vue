@@ -34,17 +34,22 @@
 						<h5 class="content__title" v-else>
 							{{ choiceDeptNm }}
 						</h5>
-						<button type="button" class="button button-state__add add" @click="addSubDept">
+						<button
+							type="button"
+							class="button button-state__add add"
+							@click="addSubDept"
+							v-if="deptVO.deptId"
+						>
 							<span class="icon icon-add"></span>
 							하위 부서 추가
 						</button>
-						<button type="button" class="button button-red-full" v-if="parDeptNm" disabled>
-							하위 메뉴 등록 중
+						<button type="button" class="button button-red-full" disabled v-else>
+							하위 부서 등록 중
 						</button>
 					</div>
 					<div class="component-box">
 						<div class="component-box-top">
-							<p class="component__title">메뉴/페이지 명</p>
+							<p class="component__title">부서 명</p>
 						</div>
 						<div class="component-box-cnt">
 							<div class="input-box">
@@ -58,67 +63,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="component-box">
-						<div class="component-box-top">
-							<p class="component__title">유형</p>
-						</div>
-						<div class="component-box-cnt">
-							<ul class="radio-options">
-								<li class="radio-options__item">
-									<input
-										type="radio"
-										name="pageTypePage"
-										id="pageTypePage"
-										value="2"
-										class="input input-radio"
-										v-model="deptVO.menuYn"
-									/>
-									<label for="pageTypePage">페이지</label>
-								</li>
-								<li class="radio-options__item">
-									<input
-										type="radio"
-										name="pageType"
-										value="1"
-										id="pageTypeGroup"
-										class="input input-radio"
-										v-model="deptVO.menuYn"
-									/>
-									<label for="pageTypeGroup">메뉴</label>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="component-box">
-						<div class="component-box-top">
-							<p class="component__title">페이지 URL</p>
-						</div>
-						<div class="component-box-cnt">
-							<div class="input-box">
-								<input class="input" type="text" placeholder="입력하세요" v-model="deptVO.pageUrl" />
-							</div>
-						</div>
-					</div>
-					<div class="component-box">
-						<div class="component-box-top">
-							<p class="component__title">컴포넌트</p>
-						</div>
-						<div class="component-box-cnt">
-							<div class="input-box">
-								<input class="input" type="text" placeholder="입력하세요" v-model="deptVO.component" />
-							</div>
-						</div>
-					</div>
-					<div class="component-box">
-						<div class="component-box-top">
-							<p class="component__title">메타정보</p>
-						</div>
-						<div class="component-box-cnt">
-							<div class="input-box">
-								<input class="input" type="text" placeholder="입력하세요" v-model="deptVO.metaInfo" />
-							</div>
-						</div>
-					</div>
+
 					<div class="component-box" v-if="deptVO.deptId">
 						<div class="component-box-top">
 							<p class="component__title">순서 변경</p>
@@ -196,12 +141,18 @@
 <script>
 import { selectDeptList, insertDept, updateDept, moveDept, deleteDept } from '@/api/admin/dept';
 export default {
+	created() {
+		this.selectDeptList();
+		console.log(this.treeData);
+	},
 	methods: {
 		async selectDeptList() {
 			let res = await selectDeptList();
+			console.log(res);
 			if (res.result == 0) {
 				this.treeData = res.data;
 				this.treeData.isOpen = true;
+				this.parDeptNm = res.data[0].deptNm;
 			}
 		},
 		choiceAll() {
@@ -226,7 +177,7 @@ export default {
 		// 메뉴 선택 이벤트
 		choiceDept(data) {
 			if (data.deptId == 0) {
-				this.parDeptNm = '전체';
+				this.choiceDeptNm = data.deptNm;
 				this.deptVO = { menuYn: 1, useYn: 'Y', parDeptId: 0, crtId: this.$store.getters.getUserId };
 			} else {
 				this.deptVO = JSON.parse(JSON.stringify(data));
@@ -269,7 +220,6 @@ export default {
 					this.selectDeptList();
 					this.deptVO = {
 						parDeptId: 0,
-						menuYn: 1,
 						useYn: 'Y',
 						crtId: this.$store.getters.getUserId,
 					};
@@ -316,13 +266,12 @@ export default {
 			addFlag: false,
 			deptVO: {
 				parDeptId: 0,
-				menuYn: 1,
 				useYn: 'Y',
 				crtId: this.$store.getters.getUserId,
 			},
 			defaultProps: {
 				children: 'children',
-				label: 'name',
+				label: 'deptNm',
 			},
 		};
 	},

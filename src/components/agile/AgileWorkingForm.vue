@@ -13,19 +13,43 @@
 						<div class="component-box-cnt">
 							<div class="select-options">
 								<div class="input-box select-options__item">
-									<input type="radio" id="workingTypeTime" class="input" name="workingType" value="time">
+									<input
+										type="radio"
+										id="workingTypeTime"
+										class="input"
+										name="workingType"
+										value="time"
+									/>
 									<label for="workingTypeTime">시차 출퇴근제</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="radio" id="workingTypeSelective" class="input" name="workingType" value="selective">
+									<input
+										type="radio"
+										id="workingTypeSelective"
+										class="input"
+										name="workingType"
+										value="selective"
+									/>
 									<label for="workingTypeSelective">선택적 근무제</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="radio" id="workingTypeFlexible" class="input" name="workingType" value="flexible">
+									<input
+										type="radio"
+										id="workingTypeFlexible"
+										class="input"
+										name="workingType"
+										value="flexible"
+									/>
 									<label for="workingTypeFlexible">탄력 근무제</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="radio" id="workingTypeTelecommuting" class="input" name="workingType" value="telecommuting">
+									<input
+										type="radio"
+										id="workingTypeTelecommuting"
+										class="input"
+										name="workingType"
+										value="telecommuting"
+									/>
 									<label for="workingTypeTelecommuting">재택근무제</label>
 								</div>
 							</div>
@@ -52,15 +76,33 @@
 						<div class="component-box-cnt">
 							<div class="select-options">
 								<div class="input-box select-options__item">
-									<input type="radio" id="workingTime6h" class="input" name="workingTime" value="6h">
+									<input
+										type="radio"
+										id="workingTime6h"
+										class="input"
+										name="workingTime"
+										value="6h"
+									/>
 									<label for="workingTime6h">6시간</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="radio" id="workingTime7h" class="input" name="workingTime" value="7h">
+									<input
+										type="radio"
+										id="workingTime7h"
+										class="input"
+										name="workingTime"
+										value="7h"
+									/>
 									<label for="workingTime7h">7시간</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="radio" id="workingTime8h" class="input" name="workingTime" value="8h">
+									<input
+										type="radio"
+										id="workingTime8h"
+										class="input"
+										name="workingTime"
+										value="8h"
+									/>
 									<label for="workingTime8h">8시간</label>
 								</div>
 							</div>
@@ -73,31 +115,31 @@
 						<div class="component-box-cnt">
 							<div class="select-options">
 								<div class="input-box select-options__item">
-									<input type="checkbox" id="workdayMon" class="input" name="workday" value="mon">
+									<input type="checkbox" id="workdayMon" class="input" name="workday" value="mon" />
 									<label for="workdayMon">월요일</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="checkbox" id="workdayTue" class="input" name="workday" value="tue">
+									<input type="checkbox" id="workdayTue" class="input" name="workday" value="tue" />
 									<label for="workdayTue">화요일</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="checkbox" id="workdayWed" class="input" name="workday" value="wed">
+									<input type="checkbox" id="workdayWed" class="input" name="workday" value="wed" />
 									<label for="workdayWed">수요일</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="checkbox" id="workdayThu" class="input" name="workday" value="thu">
+									<input type="checkbox" id="workdayThu" class="input" name="workday" value="thu" />
 									<label for="workdayThu">목요일</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="checkbox" id="workdayFri" class="input" name="workday" value="fri">
+									<input type="checkbox" id="workdayFri" class="input" name="workday" value="fri" />
 									<label for="workdayFri">금요일</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="checkbox" id="workdaySat" class="input" name="workday" value="sat">
+									<input type="checkbox" id="workdaySat" class="input" name="workday" value="sat" />
 									<label for="workdaySat">토요일</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="checkbox" id="workdaySun" class="input" name="workday" value="sun">
+									<input type="checkbox" id="workdaySun" class="input" name="workday" value="sun" />
 									<label for="workdaySun">일요일</label>
 								</div>
 							</div>
@@ -110,19 +152,25 @@
 						<div class="component-box-cnt">
 							<div class="select-options">
 								<div class="input-box select-options__item">
-									<input type="radio" id="calc1week" class="input" name="calcPaid" value="1week">
+									<input type="radio" id="calc1week" class="input" name="calcPaid" value="1week" />
 									<label for="calc1week">1주</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="radio" id="calc2weeks" class="input" name="calcPaid" value="2weeks">
+									<input type="radio" id="calc2weeks" class="input" name="calcPaid" value="2weeks" />
 									<label for="calc2weeks">2주</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="radio" id="calc1month" class="input" name="calcPaid" value="1month">
+									<input type="radio" id="calc1month" class="input" name="calcPaid" value="1month" />
 									<label for="calc1month">1개월</label>
 								</div>
 								<div class="input-box select-options__item">
-									<input type="radio" id="calc3months" class="input" name="calcPaid" value="3months">
+									<input
+										type="radio"
+										id="calc3months"
+										class="input"
+										name="calcPaid"
+										value="3months"
+									/>
 									<label for="calc3months">3개월</label>
 								</div>
 							</div>
