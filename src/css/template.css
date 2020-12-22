@@ -125,11 +125,13 @@
 	font-weight: 700;
 }
 
-.lnb li.lst-lnb__item:not(:first-child) > ul{
+.lnb  .lst-lnb__item > ul{
 	display: none;
 }
-
-.lnb li.lst-lnb__item.show > ul{
+.lst-lnb > .lst-lnb__item:first-child > ul {
+	display: block;
+}
+.lnb .lst-lnb__item.show > ul{
 	display: block;
 	padding-left: 8px;	
 }
@@ -203,6 +205,18 @@
 .popup-contents{
 	max-height: calc(80vh - 36px);
 	overflow-y: auto;
+}
+
+.popup-contents .component-box-wrap{
+	display: flex;
+}
+.popup-contents .component-box-wrap > div{
+	flex-grow: 1;
+	height: 50vh;
+}
+
+.popup-contents .tree-area{
+	padding-top: 0;
 }
 
 .popup .button__close{
@@ -503,9 +517,13 @@ a.link{
 
 
 /* tree */
+.tree-area{
+	padding-top: 16px;
+}
 .tree-area .el-tree-node__content{
 	height: auto;
 }
+.tree-area .el-tree-node.is-expanded > .el-tree-node__content > .el-tree-node__label,
 .tree-area .el-tree-node.is-current > .el-tree-node__content > .el-tree-node__label{
 	font-weight: 700;
 	color: #16213e;

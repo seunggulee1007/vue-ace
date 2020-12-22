@@ -74,7 +74,9 @@
 				</div>
 			</div>
 		</section>
-		<div class="popup show">
+
+		<!-- popup -->
+		<div class="popup popup__add-user show">
 			<div class="component-area">
 				<div class="inner-wrap">
 					<div class="popup-top">
@@ -166,6 +168,42 @@
 						<div class="buttons">
 							<button type="submit" class="button button__save">등록</button>
 							<button type="button" class="button button__cancel">취소</button>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="button__close" @click="closeModal">
+					<span class="icon icon-close"></span>
+					<span class="blind">닫기</span>
+				</button>
+			</div>
+		</div>
+		<div class="popup popup__lst-dept show">
+			<div class="component-area">
+				<div class="inner-wrap">
+					<div class="popup-top">
+						<strong class="popup__title">부서 정보</strong>
+					</div>
+					<div class="popup-contents">
+						<form action="">
+							<div class="input-box">
+								<input type="text" class="input" placeholder="부서명을 입력하세요" />
+								<button class="button button__search">조회</button>
+							</div>
+						</form>
+						<div class="component-box-wrap">
+							<div class="component-box">
+								<div class="tree-area">
+									<el-tree
+										:data="treeData"
+										node-key="deptId"
+										:default-expanded-keys="[0]"
+										:props="defaultProps"
+										accordion
+										@node-click="choiceDept"
+									>
+									</el-tree>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
