@@ -616,6 +616,7 @@ a.link{
 	gap: 16px;
 }
 .select-options .select-options__item{
+	display: block;
 	border: 1px solid #e7ecf0;
 	border-radius: 8px;
 	padding: 11px 0;
@@ -624,13 +625,13 @@ a.link{
 	justify-content: center;
 	align-items: center;
 }
-.select-options .select-options__item.select{
-	border-color: #6a197d;
-	background-color: #6a197d;
-	color: #fff;
+.select-options .input{
+	flex-grow: 0;
+}
+.select-options .input:checked + label{
+	color: #6a197d;
 	font-weight: 700;
 }
-
 
 /* tab */
 .lst-tab{
