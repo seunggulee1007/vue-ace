@@ -33,6 +33,7 @@
 }
 .lnb{
 	grid-area: lnb;
+	min-width: 200px;
 	padding: 24px;
 	background-color: #fff;
 	box-shadow: 1px 0 10px rgba(0,0,0,.1);
@@ -124,8 +125,13 @@
 	font-weight: 700;
 }
 
-.lnb .lst-lnb__item > ul{
-	padding-left: 8px;
+.lnb li.lst-lnb__item:not(:first-child) > ul{
+	display: none;
+}
+
+.lnb li.lst-lnb__item.show > ul{
+	display: block;
+	padding-left: 8px;	
 }
 
 

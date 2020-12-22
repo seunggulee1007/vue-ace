@@ -12,7 +12,7 @@
 			<span v-if="isFolder && !isOpen">+</span>
 			<span v-if="isFolder && isOpen">-</span>
 		</div>
-		<ul class="lst-lnb__item">
+		<ul>
 			<tree-item v-for="(children, idx) in item.children" :key="idx" :item="children"> </tree-item>
 		</ul>
 	</li>
