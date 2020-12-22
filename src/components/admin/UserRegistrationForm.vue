@@ -74,6 +74,97 @@
 				</div>
 			</div>
 		</section>
+		<div class="popup">
+			<div class="component-area">
+				<div class="inner-wrap">
+					<div class="popup-top">
+						<strong class="popup__title">사용자 등록</strong>
+					</div>
+					<div class="popup-contents">
+						<div class="component-box">
+							<div class="component-box-top">
+								<p class="component__title">부서명</p>
+							</div>
+							<div class="component-box-cnt">
+								<div class="input-box">
+									<input type="text" class="input" />
+									<button type="button" class="button">부서찾기</button>
+								</div>
+							</div>
+						</div>
+						<div class="component-box">
+							<div class="component-box-top">
+								<p class="component__title">사원명</p>
+							</div>
+							<div class="component-box-cnt">
+								<div class="input-box">
+									<input type="text" class="input" />
+								</div>
+							</div>
+						</div>
+						<div class="component-box">
+							<div class="component-box-top">
+								<p class="component__title">사원번호</p>
+							</div>
+							<div class="component-box-cnt">
+								<div class="input-box">
+									<input type="text" class="input" />
+								</div>
+							</div>
+						</div>
+						<div class="component-box">
+							<div class="component-box-top">
+								<p class="component__title">휴대폰번호</p>
+							</div>
+							<div class="component-box-cnt">
+								<div class="input-box">
+									<input type="text" class="input" />
+								</div>
+							</div>
+						</div>
+						<div class="component-box">
+							<div class="component-box-top">
+								<p class="component__title">Email</p>
+							</div>
+							<div class="component-box-cnt">
+								<div class="input-box">
+									<input type="email" class="input" />
+								</div>
+							</div>
+						</div>
+						<div class="component-box">
+							<div class="component-box-top">
+								<p class="component__title">직위</p>
+							</div>
+							<div class="component-box-cnt">
+								<div class="input-box">
+									<select name="" id="" class="input-select">
+										<option value="인턴">사원</option>
+										<option value="사원">사원</option>
+										<option value="주임">주임</option>
+										<option value="대리">대리</option>
+										<option value="과장">과장</option>
+										<option value="차장">차장</option>
+										<option value="팀장">차장</option>
+										<option value="부장">차장</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="popup-bottom buttons-complete">
+						<div class="buttons">
+							<button type="submit" class="button button__save">등록</button>
+							<button type="button" class="button button__cancel">취소</button>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="button__close" @click="closeModal">
+					<span class="icon icon-close"></span>
+					<span class="blind">닫기</span>
+				</button>
+			</div>
+		</div>
 	</div>
 </template>
 

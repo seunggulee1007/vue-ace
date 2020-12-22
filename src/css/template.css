@@ -182,7 +182,7 @@
 }
 
 .popup .component-area{
-	min-width: 16vw;
+	min-width: 24vw;
 	box-sizing: border-box;
 }
 .popup .component-area .inner-wrap{
@@ -190,7 +190,9 @@
 	overflow: hidden;
 }
 .popup-top{
-	margin-bottom: 16px;
+	padding-bottom: 16px;
+	margin-bottom: 24px;
+	border-bottom: 1px solid #e7ecf0;
 }
 .popup-contents{
 	max-height: calc(80vh - 36px);
@@ -914,7 +916,6 @@ a.link{
 .button-state__add.write .button-txt__write{
 	display: block;
 }
-
 
 .button-state{
 	display: block;
