@@ -1,5 +1,5 @@
 <template>
-	<li class="lst-lnb__item">
+	<li class="lst-lnb__item" :class="{ show: isOpen }">
 		<div v-if="item.pageUrl">
 			<router-link :to="item.pageUrl" class="lst-lnb__link">
 				{{ item.menuNm }}
@@ -7,7 +7,7 @@
 			<span v-if="isFolder && !isOpen">+</span>
 			<span v-if="isFolder && isOpen">-</span>
 		</div>
-		<div v-else>
+		<div v-else @click="toggle">
 			{{ item.menuNm }}
 			<span v-if="isFolder && !isOpen">+</span>
 			<span v-if="isFolder && isOpen">-</span>
@@ -35,6 +35,11 @@ export default {
 	computed: {
 		isFolder() {
 			return this.item.children && this.item.children.length;
+		},
+	},
+	methods: {
+		toggle() {
+			this.isOpen = !this.isOpen;
 		},
 	},
 };

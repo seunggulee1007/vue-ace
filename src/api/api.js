@@ -42,6 +42,7 @@ function doAxios(url, method, params, config) {
 					// 인증 오류라면 메인 페이지로
 					// 쿠키에서 인증정보 삭제 후
 					store.commit('clearLoginInfo');
+					store.commit('clearUserInfo');
 					store._vm.$cookie.delete(process.env.VUE_APP_AUTH_TOKEN);
 					store._vm.$cookie.delete(process.env.VUE_APP_USER_ID);
 

@@ -21,7 +21,12 @@
 				<div class="section-top">
 					<h3 class="section__title">사용자 등록</h3>
 					<div class="buttons">
-						<button type="button" class="button button__add">
+						<button
+							type="button"
+							class="button button__add"
+							@click="setUserModal"
+							v-if="deptInfo.deptId > 0"
+						>
 							<span class="icon icon-add"></span>사용자 추가
 						</button>
 						<button type="button" class="button button__delete">
@@ -33,7 +38,7 @@
 				<div class="component-area lst-user">
 					<div class="component-box">
 						<strong class="content__title">
-							컨설팅 본부
+							{{ deptInfo.deptNm }}
 						</strong>
 					</div>
 					<div class="table-wrap">
@@ -41,7 +46,6 @@
 							<thead>
 								<tr>
 									<th>No.</th>
-									<th>부서명</th>
 									<th>사원명</th>
 									<th>사원번호</th>
 									<th>휴대폰번호</th>
@@ -51,183 +55,63 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="row">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+								<tr v-if="userList.lengh == 0">
+									<td colspan="8">조회된 데이터가 없습니다.</td>
+								</tr>
+								<tr class="row" v-for="(item, idx) in userList" :key="item.userId">
+									<td>{{ idx + 1 }}</td>
+									<td>{{ item.userNm }}</td>
+									<td>{{ item.empNo }}</td>
+									<td>{{ item.phone }}</td>
+									<td>{{ item.email }}</td>
+									<td>{{ item.rankCdNm }}</td>
+									<td>{{ item.empStatusNm }}</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<div class="buttons-complete">
-					<div class="buttons">
-						<button type="submit" class="button button__save">저장</button>
-						<button type="button" class="button button__cancel">취소</button>
-						<button type="button" class="button button__temp-save">임시저장</button>
-					</div>
-				</div>
 			</div>
 		</section>
-
-		<!-- popup -->
-		<div class="popup popup__add-user show">
-			<div class="component-area">
-				<div class="inner-wrap">
-					<div class="popup-top">
-						<strong class="popup__title">사용자 등록</strong>
-					</div>
-					<div class="popup-contents">
-						<div class="component-box">
-							<div class="component-box-top">
-								<p class="component__title">부서명</p>
-							</div>
-							<div class="component-box-cnt">
-								<div class="input-box">
-									<input type="text" class="input" />
-									<button type="button" class="button">부서찾기</button>
-								</div>
-							</div>
-						</div>
-						<div class="component-box">
-							<div class="component-box-top">
-								<p class="component__title">사원명</p>
-							</div>
-							<div class="component-box-cnt">
-								<div class="input-box">
-									<input type="text" class="input" />
-								</div>
-							</div>
-						</div>
-						<div class="component-box">
-							<div class="component-box-top">
-								<p class="component__title">사원번호</p>
-							</div>
-							<div class="component-box-cnt">
-								<div class="input-box">
-									<input type="text" class="input" />
-								</div>
-							</div>
-						</div>
-						<div class="component-box">
-							<div class="component-box-top">
-								<p class="component__title">휴대폰번호</p>
-							</div>
-							<div class="component-box-cnt">
-								<div class="input-box">
-									<input type="text" class="input" />
-								</div>
-							</div>
-						</div>
-						<div class="component-box">
-							<div class="component-box-top">
-								<p class="component__title">Email</p>
-							</div>
-							<div class="component-box-cnt">
-								<div class="input-box">
-									<input type="email" class="input" />
-								</div>
-							</div>
-						</div>
-						<div class="component-box">
-							<div class="component-box-top">
-								<p class="component__title">직위</p>
-							</div>
-							<div class="component-box-cnt">
-								<div class="input-box">
-									<select name="" id="" class="input-select">
-										<option value="인턴">사원</option>
-										<option value="사원">사원</option>
-										<option value="주임">주임</option>
-										<option value="대리">대리</option>
-										<option value="과장">과장</option>
-										<option value="차장">차장</option>
-										<option value="팀장">차장</option>
-										<option value="부장">차장</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="component-box">
-							<div class="component-box-top">
-								<p class="component__title">사진 등록</p>
-							</div>
-							<div class="component-box-cnt">
-								<div class="input-box">
-									<input type="file" class="input" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="popup-bottom buttons-complete">
-						<div class="buttons">
-							<button type="submit" class="button button__save">등록</button>
-							<button type="button" class="button button__cancel">취소</button>
-						</div>
-					</div>
-				</div>
-				<button type="button" class="button__close" @click="closeModal">
-					<span class="icon icon-close"></span>
-					<span class="blind">닫기</span>
-				</button>
-			</div>
-		</div>
-		<div class="popup popup__tree popup__lst-dept show">
-			<div class="component-area">
-				<div class="inner-wrap">
-					<div class="popup-top">
-						<strong class="popup__title">부서 정보</strong>
-					</div>
-					<div class="popup-contents">
-						<form action="">
-							<div class="input-box">
-								<input type="text" class="input" placeholder="부서명을 입력하세요" />
-								<button class="button button__search">조회</button>
-							</div>
-						</form>
-						<div class="component-box-wrap">
-							<div class="component-box">
-								<div class="tree-area">
-									<el-tree
-										:data="treeData"
-										node-key="deptId"
-										:default-expanded-keys="[0]"
-										:props="defaultProps"
-										accordion
-										@node-click="choiceDept"
-									>
-									</el-tree>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<button type="button" class="button__close" @click="closeModal">
-					<span class="icon icon-close"></span>
-					<span class="blind">닫기</span>
-				</button>
-			</div>
-		</div>
+		<user-modal :class="{ show: showUserModal }" :deptInfo="deptInfo"></user-modal>
 	</div>
 </template>
 
 <script>
 import { selectDeptList } from '@/api/admin/dept';
+import UserModal from '@/components/common/UserModal.vue';
+import { mapGetters, mapMutations } from 'vuex';
+import { selectUserList } from '@/api/user';
 export default {
 	created() {
 		this.selectDeptList();
 	},
+	computed: {
+		...mapGetters(['showUserModal']),
+	},
+	components: {
+		UserModal,
+	},
 	methods: {
+		...mapMutations(['setUserModal']),
 		async selectDeptList() {
 			let res = await selectDeptList();
 			if (res.result == 0) {
 				this.treeData = res.data;
 				this.treeData.isOpen = true;
+			}
+		},
+		choiceDept(item) {
+			this.deptInfo.deptNm = item.deptNm;
+			this.deptInfo.deptId = item.deptId;
+
+			this.selectUserList();
+		},
+		async selectUserList() {
+			console.log(this.deptInfo);
+			let res = await selectUserList(this.deptInfo.deptId);
+			if (res.result == 0) {
+				this.userList = res.data;
 			}
 		},
 	},
@@ -238,6 +122,11 @@ export default {
 				children: 'children',
 				label: 'deptNm',
 			},
+			deptInfo: {
+				deptNm: '',
+				deptId: 0,
+			},
+			userList: [],
 		};
 	},
 };
