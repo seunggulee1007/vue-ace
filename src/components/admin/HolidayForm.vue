@@ -9,17 +9,20 @@
 				<div class="component-area">
 					<div class="component-box">
 						<div class="input-box">
-							<input class="input" type="text" placeholder="기준년도를 입력하세요" />
-							<button class="button">조회</button>
+							<el-date-picker
+								v-model="value1"
+								type="year"
+								placeholder="기준 연도를 입력하세요"
+							></el-date-picker>
 						</div>
 					</div>
 					<div class="component-box">
 						<div class="component-box component-box-top">
 							<ul class="lst-tab">
-								<li class="lst-tab__item">
+								<li class="lst-tab__item on">
 									<a href="#" class="lst-tab__link"> <span class="icon icon-calendar"></span>달력 </a>
 								</li>
-								<li class="lst-tab__item on">
+								<li class="lst-tab__item">
 									<a href="#" class="lst-tab__link"> <span class="icon icon-list"></span>리스트 </a>
 								</li>
 							</ul>
@@ -33,10 +36,10 @@
 							</div>
 						</div>
 						<div class="tab-cnt-wrap">
-							<div class="tab-cnt">
-								calendar
-							</div>
 							<div class="tab-cnt show">
+								<el-calendar v-model="value2"></el-calendar>
+							</div>
+							<div class="tab-cnt">
 								<div class="table-wrap">
 									<table class="table table-hover">
 										<thead>
@@ -115,11 +118,75 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- popup -->
+		<div class="popup popup__add-holiday">
+			<div class="component-area">
+				<div class="inner-wrap">
+					<div class="popup-top">
+						<strong class="popup__title">휴일 등록</strong>
+					</div>
+					<div class="popup-contents">
+						<div class="component-box">
+							<div class="component-box-top">
+								<p class="component__title">날짜</p>
+							</div>
+							<div class="component-box-cnt">
+								<div class="input-box">
+									<el-date-picker v-model="value3" type="date"></el-date-picker>
+								</div>
+							</div>
+						</div>
+						<div class="component-box">
+							<div class="component-box-top">
+								<p class="component__title">휴일명</p>
+							</div>
+							<div class="component-box-cnt">
+								<div class="input-box">
+									<input type="text" class="input" />
+								</div>
+							</div>
+						</div>
+						<div class="component-box">
+							<div class="component-box-top">
+								<p class="component__title">휴일 종류</p>
+							</div>
+							<div class="component-box-cnt">
+								<div class="input-box">
+									<select name="" id="" class="input-select">
+										<option value="공휴일">공휴일</option>
+										<option value="휴일">휴일</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="popup-bottom buttons-complete">
+						<div class="buttons">
+							<button type="submit" class="button button__save">등록</button>
+							<button type="button" class="button button__cancel">취소</button>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="button__close" @click="closeModal">
+					<span class="icon icon-close"></span>
+					<span class="blind">닫기</span>
+				</button>
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			value1: '',
+			value2: new Date(),
+			value3: '',
+		};
+	},
+};
 </script>
 
 <style></style>
