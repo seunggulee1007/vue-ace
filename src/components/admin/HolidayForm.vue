@@ -9,8 +9,11 @@
 				<div class="component-area">
 					<div class="component-box">
 						<div class="input-box">
-							<input class="input" type="text" placeholder="기준년도를 입력하세요" />
-							<button class="button">조회</button>
+							<el-date-picker
+								v-model="value1"
+								type="year"
+								placeholder="기준 연도를 입력하세요"
+							></el-date-picker>
 						</div>
 					</div>
 					<div class="component-box">
@@ -34,7 +37,7 @@
 						</div>
 						<div class="tab-cnt-wrap">
 							<div class="tab-cnt show">
-								<el-calendar v-model="value1"></el-calendar>
+								<el-calendar v-model="value2"></el-calendar>
 							</div>
 							<div class="tab-cnt">
 								<div class="table-wrap">
@@ -130,7 +133,7 @@
 							</div>
 							<div class="component-box-cnt">
 								<div class="input-box">
-									<el-date-picker v-model="value2" type="date"></el-date-picker>
+									<el-date-picker v-model="value3" type="date"></el-date-picker>
 								</div>
 							</div>
 						</div>
@@ -178,8 +181,9 @@
 export default {
 	data() {
 		return {
-			value1: new Date(),
-			value2: '',
+			value1: '',
+			value2: new Date(),
+			value3: '',
 		};
 	},
 };
