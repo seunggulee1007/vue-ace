@@ -952,23 +952,12 @@ a.link{
 	right: 6px;
 }
 
-.button-state__add .button-txt{
-	display: none;
-}
-.button-state__add.add .button-txt__add{
-	display: flex;
-	
-}
-.button-state__add.write .button-txt__write{
-	display: block;
-}
-
 .button-state{
 	display: block;
 	min-width: 48px;
 	color: #fff;
 	font-size: 0.86em;
-	padding: 6px;
+	padding: 8px;
 	border: 0;
 }
 .button-state:hover{
@@ -988,6 +977,26 @@ a.link{
 	display: block;
 }
 .button-state.false .button-txt__false{
+	display: block;
+}
+
+.button-state.button-state__3options.opt1{
+	background-color: #1e3799;
+}
+.button-state.button-state__3options.opt2{
+	background-color: #6a197d;
+}
+.button-state.button-state__3options.opt3{
+	background-color: #e94560;
+}
+
+.button-state.button-state__3options.opt1 .button-txt__opt1{
+	display: block;
+}
+.button-state.button-state__3options.opt2 .button-txt__opt2{
+	display: block;
+}
+.button-state.button-state__3options.opt3 .button-txt__opt3{
 	display: block;
 }
 

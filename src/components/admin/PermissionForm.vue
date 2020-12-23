@@ -5,7 +5,15 @@
 				<span>메뉴</span>
 			</h4>
 			<div class="tree-area">
-				<!-- tree menu -->
+				<el-tree
+					:data="treeData"
+					node-key="menuId"
+					:default-expanded-keys="[0]"
+					:props="defaultProps"
+					accordion
+					@node-click="choiceMenu"
+				>
+				</el-tree>
 			</div>
 		</section>
 		<section class="section__contents">
@@ -13,7 +21,10 @@
 				<div class="section-top">
 					<h3 class="section__title">권한 등록</h3>
 				</div>
-				<div class="component-area lst-user">
+				<div class="component-area">
+					<div class="component-top">
+						<strong class="content__title">선택된 메뉴명</strong>
+					</div>
 					<div class="table-wrap">
 						<table class="table">
 							<thead>
@@ -28,14 +39,8 @@
 											</span>
 										</div>
 									</th>
-									<th>No.</th>
-									<th>프로그램ID</th>
-									<th>프로그램명</th>
-									<th>프로그램ID</th>
-									<th>권한그룹#1</th>
-									<th>권한그룹#2</th>
-									<th>권한그룹#3</th>
-									<th>권한그룹#4</th>
+									<th>권한그룹명</th>
+									<th>권한 범위</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -49,19 +54,15 @@
 												</label>
 											</span>
 										</div>
-										<!-- <label class="form-checkbox">
-														<input type="checkbox" :value="i.id" v-model="selected">
-														<i class="form-icon"></i>
-													</label> -->
 									</td>
-									<td>1</td>
-									<td>프로그램ID</td>
-									<td>프로그램명</td>
-									<td>프로그램ID</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td>그룹1</td>
+									<td>
+										<button type="button" class="button button-state button-state__3options opt1">
+											<span class="button-txt button-txt__opt1">읽기&쓰기</span>
+											<span class="button-txt button-txt__opt2">읽기</span>
+											<span class="button-txt button-txt__opt3">권한 없음</span>
+										</button>
+									</td>
 								</tr>
 								<tr class="row">
 									<td class="column-check">
@@ -73,19 +74,15 @@
 												</label>
 											</span>
 										</div>
-										<!-- <label class="form-checkbox">
-														<input type="checkbox" :value="i.id" v-model="selected">
-														<i class="form-icon"></i>
-													</label> -->
 									</td>
-									<td>2</td>
-									<td>프로그램ID</td>
-									<td>프로그램명</td>
-									<td>프로그램ID</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td>그룹2</td>
+									<td>
+										<button type="button" class="button button-state button-state__3options opt2">
+											<span class="button-txt button-txt__opt1">읽기 및 쓰기</span>
+											<span class="button-txt button-txt__opt2">읽기 전용</span>
+											<span class="button-txt button-txt__opt3">권한 없음</span>
+										</button>
+									</td>
 								</tr>
 								<tr class="row">
 									<td class="column-check">
@@ -97,28 +94,18 @@
 												</label>
 											</span>
 										</div>
-										<!-- <label class="form-checkbox">
-														<input type="checkbox" :value="i.id" v-model="selected">
-														<i class="form-icon"></i>
-													</label> -->
 									</td>
-									<td>3</td>
-									<td>프로그램ID</td>
-									<td>프로그램명</td>
-									<td>프로그램ID</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td>그룹3</td>
+									<td>
+										<button type="button" class="button button-state button-state__3options opt3">
+											<span class="button-txt button-txt__opt1">읽기 및 쓰기</span>
+											<span class="button-txt button-txt__opt2">읽기 전용</span>
+											<span class="button-txt button-txt__opt3">권한 없음</span>
+										</button>
+									</td>
 								</tr>
 							</tbody>
 						</table>
-					</div>
-				</div>
-				<div class="buttons-complete">
-					<div class="buttons">
-						<button type="submit" class="button button__save">저장</button>
-						<button type="button" class="button button__delete">선택삭제</button>
 					</div>
 				</div>
 			</div>
