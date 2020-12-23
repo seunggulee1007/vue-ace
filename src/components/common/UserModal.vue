@@ -92,7 +92,6 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="input-box">
-								<canvas id="imageCanvas" ref="imageCanvas" :src="uploadImagefile"></canvas>
 								<input
 									type="file"
 									class="input"
@@ -101,13 +100,14 @@
 									accept="image/*"
 								/>
 							</div>
+							<canvas id="imageCanvas" ref="imageCanvas" :src="uploadImagefile" height="0"></canvas>
 						</div>
 					</div>
-				</div>
-				<div class="popup-bottom buttons-complete">
-					<div class="buttons">
-						<button type="submit" class="button button__save">등록</button>
-						<button type="button" class="button button__cancel" @click="closeModal">취소</button>
+					<div class="buttons-complete">
+						<div class="buttons">
+							<button type="submit" class="button button__save">등록</button>
+							<button type="button" class="button button__cancel" @click="closeModal">취소</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -155,9 +155,9 @@ export default {
 					let ctx = canvas.getContext('2d');
 					let img = new Image();
 					img.onload = () => {
-						canvas.width = 150;
-						canvas.height = 150;
-						ctx.drawImage(img, 0, 0, 150, 150);
+						canvas.width = 100;
+						canvas.height = 100;
+						ctx.drawImage(img, 0, 0, 100, 100);
 					};
 					img.src = e.target.result;
 				};

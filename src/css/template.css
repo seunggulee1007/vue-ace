@@ -203,7 +203,7 @@
 	border-bottom: 1px solid #e7ecf0;
 }
 .popup-contents{
-	max-height: calc(80vh - 36px);
+	max-height: calc(80vh - 61px);
 	overflow-y: auto;
 }
 
@@ -238,6 +238,7 @@
 .popup .button__close .icon-close{
 	margin-right: 0;
 }
+
 
 .popup-contents .vue-daum-postcode{
 	width: 50vw;
