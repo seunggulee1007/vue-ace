@@ -33,10 +33,10 @@
 							</div>
 						</div>
 						<div class="tab-cnt-wrap">
-							<div class="tab-cnt">
-								calendar
-							</div>
 							<div class="tab-cnt show">
+								<el-calendar v-model="value"></el-calendar>
+							</div>
+							<div class="tab-cnt">
 								<div class="table-wrap">
 									<table class="table table-hover">
 										<thead>
@@ -119,7 +119,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			value: new Date(),
+		};
+	},
+};
 </script>
 
 <style></style>
