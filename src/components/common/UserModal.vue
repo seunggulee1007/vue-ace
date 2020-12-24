@@ -109,11 +109,11 @@
 							<canvas id="imageCanvas" ref="imageCanvas" :src="uploadImagefile" height="0"></canvas>
 						</div>
 					</div>
-				</div>
-				<div class="popup-bottom buttons-complete">
-					<div class="buttons">
-						<button type="submit" class="button button__save" @click="saveUser">등록</button>
-						<button type="button" class="button button__cancel" @click="closeModal">취소</button>
+					<div class="popup-bottom buttons-complete">
+						<div class="buttons">
+							<button type="submit" class="button button__save" @click="saveUser">등록</button>
+							<button type="button" class="button button__cancel" @click="closeModal">취소</button>
+						</div>
 					</div>
 				</div>
 			</div>

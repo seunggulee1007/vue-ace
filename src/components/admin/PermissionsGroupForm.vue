@@ -166,7 +166,7 @@
 		</section>
 
 		<!-- popup -->
-		<div class="popup popup__tree popup__lst-user show">
+		<div class="popup popup__tree popup__lst-user">
 			<div class="component-area">
 				<div class="inner-wrap">
 					<div class="popup-top">
