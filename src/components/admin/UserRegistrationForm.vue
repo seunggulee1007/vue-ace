@@ -73,7 +73,11 @@
 				</div>
 			</div>
 		</section>
-		<user-modal :class="{ show: showUserModal }" :deptInfo="deptInfo"></user-modal>
+		<user-modal
+			:class="{ show: showUserModal }"
+			:deptInfo="deptInfo"
+			@reSelectUserList="selectUserList"
+		></user-modal>
 	</div>
 </template>
 
@@ -99,6 +103,9 @@ export default {
 			if (res.result == 0) {
 				this.treeData = res.data;
 				this.treeData.isOpen = true;
+				if (this.treeData.length > 0) {
+					this.choiceDept(this.treeData[0].children[0]);
+				}
 			}
 		},
 		choiceDept(item) {
@@ -108,7 +115,6 @@ export default {
 			this.selectUserList();
 		},
 		async selectUserList() {
-			console.log(this.deptInfo);
 			let res = await selectUserList(this.deptInfo.deptId);
 			if (res.result == 0) {
 				this.userList = res.data;

@@ -18,11 +18,27 @@
 					</div>
 					<div class="component-box">
 						<div class="component-box-top">
+							<p class="component__title">로그인 아이디</p>
+						</div>
+						<div class="component-box-cnt">
+							<div class="input-box">
+								<input
+									type="text"
+									class="input"
+									@keyup="engNumberOnly"
+									ref="userId"
+									v-model="userVO.userId"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="component-box">
+						<div class="component-box-top">
 							<p class="component__title">사원명</p>
 						</div>
 						<div class="component-box-cnt">
 							<div class="input-box">
-								<input type="text" class="input" />
+								<input type="text" class="input" ref="userNm" v-model="userVO.userNm" />
 							</div>
 						</div>
 					</div>
@@ -32,7 +48,7 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="input-box">
-								<input type="text" class="input" />
+								<input type="text" class="input" v-int ref="empNo" v-model="userVO.empNo" />
 							</div>
 						</div>
 					</div>
@@ -42,7 +58,7 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="input-box">
-								<input type="text" class="input" />
+								<input type="text" class="input" v-model="userVO.phone" />
 							</div>
 						</div>
 					</div>
@@ -52,7 +68,7 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="input-box">
-								<input type="email" class="input" />
+								<input type="email" class="input" ref="email" v-model="userVO.email" />
 							</div>
 						</div>
 					</div>
@@ -66,23 +82,13 @@
 									class="input-select"
 									:codeGroup="'empRank'"
 									v-model="userVO.rankCd"
-									ref="clientKind"
+									ref="empRank"
 									@input="
 										value => {
 											userVO.rankCd = value;
 										}
 									"
 								></select-box>
-								<select name="" id="" class="input-select">
-									<option value="인턴">사원</option>
-									<option value="사원">사원</option>
-									<option value="주임">주임</option>
-									<option value="대리">대리</option>
-									<option value="과장">과장</option>
-									<option value="차장">차장</option>
-									<option value="팀장">차장</option>
-									<option value="부장">차장</option>
-								</select>
 							</div>
 						</div>
 					</div>
@@ -103,11 +109,11 @@
 							<canvas id="imageCanvas" ref="imageCanvas" :src="uploadImagefile" height="0"></canvas>
 						</div>
 					</div>
-					<div class="buttons-complete">
-						<div class="buttons">
-							<button type="submit" class="button button__save">등록</button>
-							<button type="button" class="button button__cancel" @click="closeModal">취소</button>
-						</div>
+				</div>
+				<div class="popup-bottom buttons-complete">
+					<div class="buttons">
+						<button type="submit" class="button button__save" @click="saveUser">등록</button>
+						<button type="button" class="button button__cancel" @click="closeModal">취소</button>
 					</div>
 				</div>
 			</div>
@@ -122,6 +128,9 @@
 <script>
 import SelectBox from '@/components/common/SelectBox.vue';
 import { mapMutations } from 'vuex';
+import { insertUser } from '@/api/user';
+import { validateEmail } from '@/utils/validation';
+
 export default {
 	components: {
 		SelectBox,
@@ -147,6 +156,7 @@ export default {
 				return;
 			}
 			this.files = uploadedFiles;
+			console.log(this.files);
 			let input = event.target;
 			if (input.files && input.files[0]) {
 				let reader = new FileReader();
@@ -166,6 +176,7 @@ export default {
 		},
 		closeModal() {
 			this.setUserModal();
+			this.userVO = {};
 			this.files = {};
 			let canvas = this.$refs.imageCanvas;
 			let ctx = canvas.getContext('2d');
@@ -174,6 +185,48 @@ export default {
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			// 컨텍스트 리셋
 			ctx.beginPath();
+		},
+		saveUser() {
+			this.userVO.deptId = this.deptInfo.deptId;
+			console.log(this.userVO);
+			this.sConfirm('등록하시겠습니까?', async () => {
+				if (!this.userVO.userId) {
+					this.sAlert('로그인 아이디를 입력해 주세요');
+					this.$refs.userId.focus();
+					return;
+				}
+				if (!this.userVO.userNm) {
+					this.sAlert('사원명을 입력해 주세요.');
+					this.$refs.userNm.focus();
+					return;
+				}
+				if (this.userVO.email && !validateEmail(this.userVO.email)) {
+					this.sAlert('이메일 형식이 맞지 않습니다.');
+					this.$refs.email.focus();
+					return;
+				}
+
+				let formData = new FormData();
+				for (let key in this.userVO) {
+					const val = this.userVO[key];
+					if (!val) {
+						continue;
+					}
+					formData.append(key, val);
+				}
+
+				for (let i = 0; i < this.files.length; i++) {
+					formData.append(`files[${i}]`, this.files[i]);
+				}
+
+				let res = await insertUser(formData);
+				console.log(res);
+				this.sAlert(res.resultMsg);
+				if (res.result == 0) {
+					this.$emit('reSelectUserList');
+					this.closeModal();
+				}
+			});
 		},
 	},
 };

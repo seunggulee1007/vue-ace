@@ -21,7 +21,7 @@ export default {
 			let res = await getSelectBox(this.codeGroup);
 			this.codeList = res.data[this.codeGroup];
 			if (this.codeList.length > 0) {
-				this.$emit('input', this.codeList[0].code);
+				this.updateVal(this.codeList[0].codeId);
 			}
 		},
 		updateVal(val) {

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { setInterceptors } from '@/api/common';
+import { setInterceptors, setInterceptorsPost } from '@/api/common';
 import router from '@/router/router';
 import store from '@/store/store';
 
@@ -12,6 +12,22 @@ function createInstance() {
 
 const instance = createInstance();
 
+function createPostInstance() {
+	const instance = axios.create({
+		baseURL: `${process.env.VUE_APP_API_URL}/api`,
+	});
+	return setInterceptorsPost(instance);
+}
+
+const postInstance = createPostInstance();
+
+function doAxiosPost(url, param) {
+	return postInstance
+		.post(url, param)
+		.then(successFunciton)
+		.catch(errFunction);
+}
+
 function doAxios(url, method, params, config) {
 	store.state.spinnerStatus = true;
 	return instance({
@@ -20,55 +36,58 @@ function doAxios(url, method, params, config) {
 		params,
 		config,
 	})
-		.then(response => {
-			store.state.spinnerStatus = false;
-			// 토큰을 계속 갱신해 준다. 토큰은 20분간 유효하다.
-			if (response.headers.ACCESS_TOKEN) {
-				store.commit('setToken', response.headers.ACCESS_TOKEN);
-				store._vm.$cookie.set(process.env.VUE_APP_AUTH_TOKEN, response.headers.ACCESS_TOKEN);
-			}
-			return response.data;
-		})
-		.catch(error => {
-			store.state.spinnerStatus = false;
-			let res = {
-				result: -1,
-			};
-			console.log(error.response);
-			if (error.response) {
-				res = error.response.data;
-				res.status = error.response.status;
-				if (error.response.status == 401) {
-					// 인증 오류라면 메인 페이지로
-					// 쿠키에서 인증정보 삭제 후
-					store.commit('clearLoginInfo');
-					store.commit('clearUserInfo');
-					store._vm.$cookie.delete(process.env.VUE_APP_AUTH_TOKEN);
-					store._vm.$cookie.delete(process.env.VUE_APP_USER_ID);
+		.then(successFunciton)
+		.catch(errFunction);
+}
 
-					store._vm.$alert(res.resultMsg, '경고', {
-						confirmButtonText: '확인',
-						callback: action => {
-							/*this.$message({
+function successFunciton(response) {
+	store.state.spinnerStatus = false;
+	// 토큰을 계속 갱신해 준다. 토큰은 20분간 유효하다.
+	if (response.headers.ACCESS_TOKEN) {
+		store.commit('setToken', response.headers.ACCESS_TOKEN);
+		store._vm.$cookie.set(process.env.VUE_APP_AUTH_TOKEN, response.headers.ACCESS_TOKEN);
+	}
+	return response.data;
+}
+function errFunction(error) {
+	store.state.spinnerStatus = false;
+	let res = {
+		result: -1,
+	};
+	console.log(error.response);
+	if (error.response) {
+		res = error.response.data;
+		res.status = error.response.status;
+		if (error.response.status == 401) {
+			// 인증 오류라면 메인 페이지로
+			// 쿠키에서 인증정보 삭제 후
+			store.commit('clearLoginInfo');
+			store.commit('clearUserInfo');
+			store._vm.$cookie.delete(process.env.VUE_APP_AUTH_TOKEN);
+			store._vm.$cookie.delete(process.env.VUE_APP_USER_ID);
+
+			store._vm.$alert(res.resultMsg, '경고', {
+				confirmButtonText: '확인',
+				callback: action => {
+					/*this.$message({
 									type: 'info',
 									message: `action: ${action}`,
 								}); */
-							if (action) {
-								router.push('/login');
-							}
-						},
-					});
-				}
-			} else if (!error.status) {
-				res.resultMsg = '네트워크 연결을 확인해 주세요';
-			} else {
-				res.data.resultMsg = error.message;
-			}
-			store._vm.$message({
-				type: 'warnning',
-				message: res.resultMsg,
+					if (action) {
+						router.push('/login');
+					}
+				},
 			});
-			return res;
-		});
+		}
+	} else if (!error.status) {
+		res.resultMsg = '네트워크 연결을 확인해 주세요';
+	} else {
+		res.data.resultMsg = error.message;
+	}
+	store._vm.$message({
+		type: 'warnning',
+		message: res.resultMsg,
+	});
+	return res;
 }
-export { createInstance, doAxios };
+export { createInstance, doAxios, doAxiosPost };
