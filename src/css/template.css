@@ -812,27 +812,57 @@ a.link{
 	width: 100%;
 }
 
-/* .el-calendar */
-.calendar.el-calendar .el-calendar__header{
-	padding: 16px 0;
+/* full-calendar */
+.calendar.fc .fc-button-primary{
+	background-color:  #fff;
+	border-color: #b2bbca;
+	color: #666;
 }
-.calendar.el-calendar .el-calendar__header .el-calendar__title{
-	font-size: 1.4em;
-	font-weight: 700;
-	color: #1b1c25;
-}
-.calendar.el-calendar .el-button:focus,
-.calendar.el-calendar .el-button:hover{
-	color: #6a197d;
+.calendar.fc .fc-button-primary:hover{
 	border-color: #6a197d;
 	background-color: #fff;
+	color: #6a197d;
 }
-.calendar.el-calendar .el-calendar__body{
-	padding: 16px 0;
+.calendar.fc .fc-button:disabled,
+.calendar.fc .fc-button.fc-today-button:disabled{
+	background-color: #cfd5e2;
+	border-color: #9ba4b4;
+	color: #9ba4b4;
+	cursor: default;
 }
-.calendar.el-calendar .el-calendar-table .el-calendar-table__row td.current:last-child .el-calendar-day > span{
-	color: #e94560;
+.calendar.fc .fc-button-primary:disabled:hover{
+	border-color: #9ba4b4;
 }
+.calendar.fc .fc-button.fc-today-button{
+	background-color: #6a197d;
+	border-color: #6a197d;
+	color: #fff;
+}
+
+.calendar.fc .fc-button .fc-icon{
+	color: #666;
+}
+.calendar.fc .fc-button:hover .fc-icon{
+	color: #6a197d;
+}
+
+.calendar.fc .fc-daygrid-day-number{
+	margin: 2px;
+}
+
+.calendar.fc .fc-daygrid-day.fc-day-today{
+	background-color: transparent;
+}
+.calendar.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number{
+	font-weight: 700;
+	background-color: #6a197d;
+	color: #fff;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+}
+
 
 .input-checkbox{
 	display: flex;
