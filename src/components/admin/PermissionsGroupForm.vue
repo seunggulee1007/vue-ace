@@ -166,7 +166,7 @@
 		</section>
 
 		<!-- popup -->
-		<div class="popup popup__tree popup__lst-user">
+		<div class="popup popup__tree popup__lst-user show">
 			<div class="component-area">
 				<div class="inner-wrap">
 					<div class="popup-top">
@@ -200,16 +200,40 @@
 								<div class="component-box-cnt">
 									<ul class="lst-search-result">
 										<li class="lst-search__item">
-											<span class="item__user-name">김정환 차장</span>
-											<span class="item__user-dept">개발1팀</span>
+											<div class="input-checkbox">
+												<input type="checkbox" id="checkUser1" />
+												<label
+													for="checkUser1"
+													class="input-checkbox__label icon-checkbox-purple"
+												>
+													<span class="item__user-name">김정환 차장</span>
+													<span class="item__user-dept">개발1팀</span>
+												</label>
+											</div>
 										</li>
 										<li class="lst-search__item">
-											<span class="item__user-name">최수현 과장</span>
-											<span class="item__user-dept">개발1팀</span>
+											<div class="input-checkbox">
+												<input type="checkbox" id="checkUser2" />
+												<label
+													for="checkUser2"
+													class="input-checkbox__label icon-checkbox-purple"
+												>
+													<span class="item__user-name">최수현 과장</span>
+													<span class="item__user-dept">개발1팀</span>
+												</label>
+											</div>
 										</li>
 										<li class="lst-search__item">
-											<span class="item__user-name">김우중 대리</span>
-											<span class="item__user-dept">개발1팀</span>
+											<div class="input-checkbox">
+												<input type="checkbox" id="checkUser3" />
+												<label
+													for="checkUser3"
+													class="input-checkbox__label icon-checkbox-purple"
+												>
+													<span class="item__user-name">김우중 대리</span>
+													<span class="item__user-dept">개발1팀</span>
+												</label>
+											</div>
 										</li>
 									</ul>
 								</div>
