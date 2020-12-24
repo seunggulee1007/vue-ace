@@ -29,7 +29,7 @@
 							<el-tabs v-model="activeName" @tab-click="handleClick">
 								<el-tab-pane label="달력" name="first">
 									<div class="tab-cnt">
-										<el-calendar v-model="value2" class="calendar"></el-calendar>
+										<FullCalendar :options="calendarOptions" class="calendar" />
 									</div>
 								</el-tab-pane>
 								<el-tab-pane label="리스트" name="second">
@@ -212,7 +212,7 @@
 							</div>
 							<div class="component-box-cnt">
 								<div class="input-box">
-									<el-date-picker v-model="value3" type="date"></el-date-picker>
+									<el-date-picker v-model="value2" type="date"></el-date-picker>
 								</div>
 							</div>
 						</div>
@@ -257,13 +257,21 @@
 </template>
 
 <script>
+import FullCalendar from '@fullcalendar/vue';
+import dayGridPlugin from '@fullcalendar/daygrid';
 export default {
+	components: {
+		FullCalendar,
+	},
 	data() {
 		return {
 			activeName: 'first',
 			value1: '',
-			value2: new Date(),
-			value3: '',
+			value2: '',
+			calendarOptions: {
+				plugins: [dayGridPlugin],
+				initialView: 'dayGridMonth',
+			},
 		};
 	},
 };
