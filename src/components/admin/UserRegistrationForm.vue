@@ -24,7 +24,7 @@
 						<button
 							type="button"
 							class="button button__add"
-							@click="setUserModal"
+							@click="modalFlag = true"
 							v-if="deptInfo.deptId > 0"
 						>
 							<span class="icon icon-add"></span>사용자 추가
@@ -58,7 +58,12 @@
 								<tr v-if="userList.lengh == 0">
 									<td colspan="8">조회된 데이터가 없습니다.</td>
 								</tr>
-								<tr class="row" v-for="(item, idx) in userList" :key="item.userId">
+								<tr
+									class="row"
+									v-for="(item, idx) in userList"
+									:key="item.userId"
+									@dblclick="modifyUser(item)"
+								>
 									<td>{{ idx + 1 }}</td>
 									<td>{{ item.userNm }}</td>
 									<td>{{ item.empNo }}</td>
@@ -73,18 +78,21 @@
 				</div>
 			</div>
 		</section>
-		<user-modal
-			:class="{ show: showUserModal }"
+		<RegUserModal
+			v-if="modalFlag"
+			class="show"
 			:deptInfo="deptInfo"
+			:userInfo="userInfo"
 			@reSelectUserList="selectUserList"
-		></user-modal>
+			@sendData="sendData"
+		></RegUserModal>
 	</div>
 </template>
 
 <script>
 import { selectDeptList } from '@/api/admin/dept';
-import UserModal from '@/components/common/UserModal.vue';
-import { mapGetters, mapMutations } from 'vuex';
+import RegUserModal from '@/components/common/RegUserModal.vue';
+import { mapGetters } from 'vuex';
 import { selectUserList } from '@/api/user';
 export default {
 	created() {
@@ -94,10 +102,9 @@ export default {
 		...mapGetters(['showUserModal']),
 	},
 	components: {
-		UserModal,
+		RegUserModal,
 	},
 	methods: {
-		...mapMutations(['setUserModal']),
 		async selectDeptList() {
 			let res = await selectDeptList();
 			if (res.result == 0) {
@@ -120,6 +127,15 @@ export default {
 				this.userList = res.data;
 			}
 		},
+		modifyUser(item) {
+			this.modalFlag = true;
+			this.userInfo = item;
+		},
+		sendData() {
+			console.log('sendData');
+			this.modalFlag = false;
+			this.userInfo = {};
+		},
 	},
 	data() {
 		return {
@@ -133,6 +149,8 @@ export default {
 				deptId: 0,
 			},
 			userList: [],
+			userInfo: {},
+			modalFlag: false,
 		};
 	},
 };

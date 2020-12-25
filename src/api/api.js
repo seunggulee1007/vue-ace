@@ -28,6 +28,13 @@ function doAxiosPost(url, param) {
 		.catch(errFunction);
 }
 
+function doAxiosPut(url, param) {
+	return postInstance
+		.put(url, param)
+		.then(successFunciton)
+		.catch(errFunction);
+}
+
 function doAxios(url, method, params, config) {
 	store.state.spinnerStatus = true;
 	return instance({
@@ -90,4 +97,4 @@ function errFunction(error) {
 	});
 	return res;
 }
-export { createInstance, doAxios, doAxiosPost };
+export { createInstance, doAxios, doAxiosPost, doAxiosPut };
