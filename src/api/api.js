@@ -21,15 +21,30 @@ function createPostInstance() {
 
 const postInstance = createPostInstance();
 
-function doAxiosPost(url, param) {
+function doAxiosPostMultipart(url, param) {
 	return postInstance
 		.post(url, param)
 		.then(successFunciton)
 		.catch(errFunction);
 }
 
-function doAxiosPut(url, param) {
+function doAxiosPutMultipart(url, param) {
 	return postInstance
+		.put(url, param)
+		.then(successFunciton)
+		.catch(errFunction);
+}
+
+function doAxiosPost(url, param) {
+	console.log(param);
+	return instance
+		.post(url, param)
+		.then(successFunciton)
+		.catch(errFunction);
+}
+
+function doAxiosPut(url, param) {
+	return instance
 		.put(url, param)
 		.then(successFunciton)
 		.catch(errFunction);
@@ -50,9 +65,9 @@ function doAxios(url, method, params, config) {
 function successFunciton(response) {
 	store.state.spinnerStatus = false;
 	// 토큰을 계속 갱신해 준다. 토큰은 20분간 유효하다.
-	if (response.headers.ACCESS_TOKEN) {
-		store.commit('setToken', response.headers.ACCESS_TOKEN);
-		store._vm.$cookie.set(process.env.VUE_APP_AUTH_TOKEN, response.headers.ACCESS_TOKEN);
+	if (response.headers.access_token) {
+		store.commit('setToken', response.headers.access_token);
+		store._vm.$cookie.set(process.env.VUE_APP_AUTH_TOKEN, response.headers.access_token);
 	}
 	return response.data;
 }
@@ -61,7 +76,6 @@ function errFunction(error) {
 	let res = {
 		result: -1,
 	};
-	console.log(error.response);
 	if (error.response) {
 		res = error.response.data;
 		res.status = error.response.status;
@@ -97,4 +111,4 @@ function errFunction(error) {
 	});
 	return res;
 }
-export { createInstance, doAxios, doAxiosPost, doAxiosPut };
+export { createInstance, doAxios, doAxiosPostMultipart, doAxiosPutMultipart, doAxiosPost, doAxiosPut };

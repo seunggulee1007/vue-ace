@@ -132,14 +132,15 @@
 
 <script>
 import SelectBox from '@/components/common/SelectBox.vue';
-import { mapMutations } from 'vuex';
-import { insertUser, updateUser } from '@/api/user';
+import { insertUser, updateUser } from '@/api/admin/user';
 import { validateEmail } from '@/utils/validation';
 
 export default {
 	mounted() {
 		this.userVO = this.userInfo;
-		this.userVO.modifyYn = true;
+		if (this.userInfo.userId) {
+			this.userVO.modifyYn = true;
+		}
 		let canvas = this.$refs.imageCanvas;
 		let ctx = canvas.getContext('2d');
 		let img = new Image();
@@ -149,7 +150,6 @@ export default {
 			ctx.drawImage(img, 0, 0, 100, 100);
 		};
 		img.src = process.env.VUE_APP_API_URL + this.userInfo.photo;
-		console.log(this.userVO);
 	},
 
 	components: {
@@ -164,7 +164,7 @@ export default {
 		};
 	},
 	methods: {
-		...mapMutations(['setUserModal']),
+		// 파일 선택 시 캔버스에 해당 내용 그리기
 		handleFilesUpload(event) {
 			let uploadedFiles = {}; // 해당 파일의 엘리먼트에 접근해서 변수에 담는다.
 
@@ -193,10 +193,11 @@ export default {
 				reader.readAsDataURL(input.files[0]);
 			}
 		},
+		// 모달 창 닫는 함수
 		closeModal() {
-			this.setUserModal();
-			this.userVO = {};
-			this.files = {};
+			this.userVO = {}; // 유저 객체 초기화
+			this.files = {}; // 파일 정보 초기화
+			// 캔버스에 그려진 내용 초기화
 			let canvas = this.$refs.imageCanvas;
 			let ctx = canvas.getContext('2d');
 			this.$refs.files.value = null;
@@ -243,13 +244,11 @@ export default {
 					formData.append(`files[${i}]`, this.files[i]);
 				}
 				let res;
-				console.log(modifyYn);
 				if (modifyYn) {
 					res = await updateUser(formData);
 				} else {
 					res = await insertUser(formData);
 				}
-				console.log(res);
 				this.sAlert(res.resultMsg);
 				if (res.result == 0) {
 					this.$emit('reSelectUserList');

@@ -3,7 +3,6 @@ import Vuex from 'vuex';
 import Auth from './auth/auth';
 import Menu from './menu/menu';
 import User from './user/user';
-import Modal from './modal/modal';
 import createPersistedState from 'vuex-persistedstate';
 
 Vue.use(Vuex);
@@ -12,7 +11,6 @@ export default new Vuex.Store({
 		Auth,
 		Menu,
 		User,
-		Modal,
 	},
 	plugins: [
 		createPersistedState({

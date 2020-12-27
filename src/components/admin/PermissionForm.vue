@@ -23,83 +23,34 @@
 				</div>
 				<div class="component-area">
 					<div class="component-top">
-						<strong class="content__title">선택된 메뉴명</strong>
+						<strong class="content__title">{{ choicedMenuNm }}</strong>
 					</div>
 					<div class="table-wrap">
 						<table class="table">
 							<thead>
 								<tr class="row">
-									<th>
-										<div class="input-box">
-											<span class="input-checkbox">
-												<input type="checkbox" id="checkboxSelectAll1" />
-												<label for="checkboxSelectAll1" class="input-checkbox__label">
-													<span class="blind">선택</span>
-												</label>
-											</span>
-										</div>
-									</th>
+									<th>순서</th>
 									<th>권한그룹명</th>
 									<th>권한 범위</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="row">
-									<td class="column-check">
-										<div class="input-box">
-											<span class="input-checkbox">
-												<input type="checkbox" id="checkboxSelect1" />
-												<label for="checkboxSelect1" class="input-checkbox__label">
-													<span class="blind">선택</span>
-												</label>
-											</span>
-										</div>
-									</td>
-									<td>그룹1</td>
+								<tr class="row" v-for="(item, idx) in authMenuList" :key="item.menuNm">
+									<td>{{ idx + 1 }}</td>
+									<td>{{ item.authGroupNm }}</td>
 									<td>
-										<button type="button" class="button button-state button-state__3options opt1">
+										<button
+											type="button"
+											class="button button-state button-state__3options"
+											:class="{
+												opt1: item.authType == 'W',
+												opt2: item.authType == 'R',
+												opt3: item.authType == 'N',
+											}"
+											@click="changeAuth(item)"
+										>
 											<span class="button-txt button-txt__opt1">읽기&쓰기</span>
 											<span class="button-txt button-txt__opt2">읽기</span>
-											<span class="button-txt button-txt__opt3">권한 없음</span>
-										</button>
-									</td>
-								</tr>
-								<tr class="row">
-									<td class="column-check">
-										<div class="input-box">
-											<span class="input-checkbox">
-												<input type="checkbox" id="checkboxSelect2" />
-												<label for="checkboxSelect2" class="input-checkbox__label">
-													<span class="blind">선택</span>
-												</label>
-											</span>
-										</div>
-									</td>
-									<td>그룹2</td>
-									<td>
-										<button type="button" class="button button-state button-state__3options opt2">
-											<span class="button-txt button-txt__opt1">읽기 및 쓰기</span>
-											<span class="button-txt button-txt__opt2">읽기 전용</span>
-											<span class="button-txt button-txt__opt3">권한 없음</span>
-										</button>
-									</td>
-								</tr>
-								<tr class="row">
-									<td class="column-check">
-										<div class="input-box">
-											<span class="input-checkbox">
-												<input type="checkbox" id="checkboxSelect3" />
-												<label for="checkboxSelect3" class="input-checkbox__label">
-													<span class="blind">선택</span>
-												</label>
-											</span>
-										</div>
-									</td>
-									<td>그룹3</td>
-									<td>
-										<button type="button" class="button button-state button-state__3options opt3">
-											<span class="button-txt button-txt__opt1">읽기 및 쓰기</span>
-											<span class="button-txt button-txt__opt2">읽기 전용</span>
 											<span class="button-txt button-txt__opt3">권한 없음</span>
 										</button>
 									</td>
@@ -114,7 +65,73 @@
 </template>
 
 <script>
-export default {};
+import { selectMenuList, selectAuthMenuList } from '@/api/menu';
+import { insertMenuAuth, updateMenuAuth } from '@/api/admin/menuAuth';
+export default {
+	created() {
+		this.selectMenuList();
+	},
+	data() {
+		return {
+			treeData: [],
+			defaultProps: {
+				children: 'children',
+				label: 'name',
+			},
+			choicedMenuNm: '',
+			choicedMenuId: '',
+			authMenuList: [],
+		};
+	},
+	methods: {
+		choiceMenu(item) {
+			this.choicedMenuNm = item.menuNm;
+			this.choicedMenuId = item.menuId;
+			this.selectAuthMenuList(item.menuId);
+		},
+		async selectMenuList() {
+			let res = await selectMenuList();
+			if (res.result == 0) {
+				this.treeData = res.data.menuList;
+			}
+		},
+		async selectAuthMenuList(menuId) {
+			let res = await selectAuthMenuList(menuId);
+			console.log(res);
+			if (res.result == 0) {
+				this.authMenuList = res.data;
+			}
+		},
+		async changeAuth(item) {
+			let authType = item.authType;
+			switch (authType) {
+				case 'N':
+					item.authType = 'W';
+					break;
+				case 'W':
+					item.authType = 'R';
+					break;
+				case 'R':
+					item.authType = 'N';
+					break;
+			}
+			let res;
+			if (item.menuAuthId) {
+				res = await updateMenuAuth(item);
+			} else {
+				item.menuId = this.choicedMenuId;
+				res = await insertMenuAuth(item);
+				if (res.result == 0) {
+					item.menuAuthId = res.data.menuAuthId;
+				}
+			}
+			if (res.result != 0) {
+				this.sAlert(res.resultMsg);
+				item.authType = authType;
+			}
+		},
+	},
+};
 </script>
 
 <style></style>

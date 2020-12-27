@@ -19,21 +19,39 @@
 							<p class="component__title">그룹명</p>
 							<div class="input-box">
 								<span class="input-checkbox">
-									<input type="checkbox" id="checkboxNotUse" />
+									<input
+										type="checkbox"
+										id="checkboxNotUse"
+										v-model="authGroupVO.useYn"
+										true-value="N"
+										false-value="Y"
+									/>
 									<label for="checkboxNotUse" class="input-checkbox__label  icon-checkbox-purple">
 										<span>미 사용 시, 체크하세요</span>
 									</label>
 								</span>
 							</div>
 						</div>
-						<div class="input-box">
-							<input class="input" type="text" placeholder="입력하세요" />
-							<button type="button" class="button">
+						<div class="input-box" v-if="!authGroupNmDuple">
+							<input
+								class="input"
+								type="text"
+								placeholder="입력하세요"
+								v-model="authGroupVO.authGroupNm"
+							/>
+							<button type="button" class="button" @click="confirmDuple">
 								<span class="icon icon-check"></span>
 								중복확인
 							</button>
 						</div>
-						<p class="msg-state">중복입니다</p>
+						<div class="input-box" v-else>
+							<input type="text" class="input" v-model="authGroupVO.authGroupNm" readonly />
+							<button class="button" type="button" @click="reSearchDuple">
+								<span class="icon icon-check"></span>
+								재조회
+							</button>
+						</div>
+						<p class="msg-state">{{ authGroupNmDupleResultMsg }}</p>
 					</div>
 					<div class="component-box">
 						<div class="component-box-top">
@@ -47,7 +65,7 @@
 						<div class="component-box component-box-top">
 							<p class="component__title">대상자</p>
 							<div class="buttons">
-								<button type="button" class="button button__add">
+								<button type="button" class="button button__add" @click="modalFlag = !modalFlag">
 									<span class="icon icon-add"></span>사원 추가
 								</button>
 								<button type="button" class="button button__delete">
@@ -71,10 +89,6 @@
 													</label>
 												</span>
 											</div>
-											<!-- <label class="form-checkbox">
-														<input type="checkbox" v-model="selectAll" @click="select">
-														<i class="form-icon"></i>
-													</label> -->
 										</th>
 										<th>No.</th>
 										<th>부서명</th>
@@ -83,36 +97,13 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr class="row">
+									<tr class="row" v-for="(user, idx) in userList" :key="user.userId">
 										<td class="column-check">
 											<div class="input-box">
 												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect1" />
+													<input type="checkbox" :id="user.userId" />
 													<label
-														for="checkboxSelect1"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-											<!-- <label class="form-checkbox">
-															<input type="checkbox" :value="i.id" v-model="selected">
-															<i class="form-icon"></i>
-														</label> -->
-										</td>
-										<td>1</td>
-										<td>컨설팅본부</td>
-										<td>홍길동 차장</td>
-										<td>재직</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect2" />
-													<label
-														for="checkboxSelect2"
+														:for="user.userId"
 														class="input-checkbox__label icon-checkbox-purple"
 													>
 														<span class="blind">선택</span>
@@ -120,29 +111,10 @@
 												</span>
 											</div>
 										</td>
-										<td>2</td>
-										<td>컨설팅본부</td>
-										<td>최수현 과장</td>
-										<td>재직</td>
-									</tr>
-									<tr class="row">
-										<td class="column-check">
-											<div class="input-box">
-												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelect3" />
-													<label
-														for="checkboxSelect3"
-														class="input-checkbox__label icon-checkbox-purple"
-													>
-														<span class="blind">선택</span>
-													</label>
-												</span>
-											</div>
-										</td>
-										<td>3</td>
-										<td>컨설팅본부</td>
-										<td>김우중 대리</td>
-										<td>재직</td>
+										<td>{{ idx + 1 }}</td>
+										<td>{{ user.deptNm }}</td>
+										<td>{{ user.userNm }} {{ user.rankCdNm }}</td>
+										<td>{{ user.empStatusNm }}</td>
 									</tr>
 								</tbody>
 							</table>
@@ -159,18 +131,122 @@
 				</div>
 				<div class="buttons-complete">
 					<div class="buttons">
-						<button type="submit" class="button button__save">등록</button>
+						<button type="submit" class="button button__save" @click="saveAuthGroup">등록</button>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- popup -->
+		<user-modal
+			v-if="modalFlag"
+			:class="{ show: modalFlag }"
+			@closeModal="closeModal"
+			@sendData="receiveData"
+		></user-modal>
 	</div>
 </template>
 
 <script>
-export default {};
+import UserModal from '@/components/common/UserModal.vue';
+import { confirmDuple, insertAuthGroup, updateAuthGroup } from '@/api/admin/authGroup';
+export default {
+	components: {
+		UserModal,
+	},
+	data() {
+		return {
+			modalFlag: false,
+			userList: [],
+			authGroupVO: {
+				useYn: 'Y',
+				authGroupNm: '',
+			},
+			authGroupNmDuple: false,
+			authGroupNmDupleResultMsg: '중복 체크해 주세요.',
+		};
+	},
+	methods: {
+		closeModal() {
+			this.modalFlag = false;
+		},
+		receiveData(itemList) {
+			for (let item of itemList) {
+				console.log(item);
+				if (!this.checkRetain(item.userId)) {
+					this.userList.push(item);
+				}
+			}
+		},
+		checkRetain(data) {
+			for (let user of this.userList) {
+				if (user.userId == data) {
+					return true;
+				}
+			}
+			return false;
+		},
+		async confirmDuple() {
+			if (!this.authGroupVO.authGroupNm) {
+				this.sAlert('그룹명을 입력해 주세요.');
+				return;
+			}
+			let res = await confirmDuple(this.authGroupVO.authGroupNm);
+			if (res.result == 0) {
+				this.authGroupNmDuple = true;
+			}
+			this.authGroupNmDupleResultMsg = res.resultMsg;
+		},
+		saveAuthGroup() {
+			let txt = '등록';
+			if (this.authGroupVO.authGroupId) {
+				txt = '수정';
+			}
+			this.sConfirm(txt + '하시겠습니까?', async () => {
+				if (!this.authGroupVO.authGroupNm) {
+					this.sAlert('그룹명을 입력해 주세요.');
+					return;
+				} else if (!this.authGroupNmDuple) {
+					this.sAlert('그룹 명 중복 체크를 진행해 주세요.');
+					return;
+				} else if (this.userList.length == 0) {
+					this.sAlert('대상자를 선택해 주세요.');
+					return;
+				}
+				let formData = new FormData();
+				for (let i = 0; i < this.userList.length; i++) {
+					let user = this.userList[i];
+					formData.append(`authUserList[${i}].userId`, user.userId);
+				}
+				for (let key in this.authGroupVO) {
+					if (!this.authGroupVO[key]) {
+						continue;
+					}
+					formData.append(key, this.authGroupVO[key]);
+				}
+				let arr = [];
+				for (var key of formData.keys()) {
+					let data = {};
+					data[key] = formData.get(key);
+					arr.push(data);
+				}
+				console.log(arr);
+				let res;
+				if (!this.authGroupVO.authGroupId) {
+					res = await insertAuthGroup(formData);
+				} else {
+					res = await updateAuthGroup(formData);
+				}
+				console.log(res);
+				this.sAlert(res.resultMsg);
+			});
+		},
+		reSearchDuple() {
+			this.authGroupNmDuple = false;
+			this.authGroupNmDupleResultMsg = '중복 체크해 주세요.';
+		},
+	},
+};
 </script>
 
 <style></style>

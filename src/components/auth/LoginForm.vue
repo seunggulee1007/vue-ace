@@ -45,14 +45,14 @@
 								</label>
 							</span>
 						</div>
-						<div class="input-box">
+						<!-- div class="input-box">
 							<span class="input-checkbox">
 								<input type="checkbox" id="checkboxPw" />
 								<label for="checkboxPw" class="input-checkbox__label">
 									<span>비밀번호 저장</span>
 								</label>
 							</span>
-						</div>
+						</div -->
 					</div>
 					<a href="#" class="link">아이디/비밀번호 찾기</a>
 				</div>

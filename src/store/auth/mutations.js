@@ -19,4 +19,7 @@ export default {
 		state.userId = '';
 		state.token = '';
 	},
+	setToken(state, token) {
+		state.token = token;
+	},
 };

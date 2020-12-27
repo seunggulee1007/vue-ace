@@ -6,6 +6,7 @@ let Auth = {
 	state: () => ({
 		routerMenuList: [],
 		menuList: [],
+		treeData: [],
 	}),
 	getters,
 	mutations,

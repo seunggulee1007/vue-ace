@@ -7,4 +7,8 @@ function selectRouterMenuList() {
 function selectMenuList() {
 	return doAxios('/menu/menuList', 'get');
 }
-export { selectRouterMenuList, selectMenuList };
+
+function selectAuthMenuList(menuId) {
+	return doAxios(`/menu/authMenuList/${menuId}`, 'get');
+}
+export { selectRouterMenuList, selectMenuList, selectAuthMenuList };

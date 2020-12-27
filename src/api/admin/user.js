@@ -1,7 +1,14 @@
-import { doAxios } from '../api';
+import { doAxios, doAxiosPostMultipart, doAxiosPutMultipart } from '../api';
 
 function selectUserList(deptId) {
-	return doAxios(`${deptId}`);
+	return doAxios(`/user/userList/${deptId}`, 'get');
 }
 
-export { selectUserList };
+function insertUser(data) {
+	return doAxiosPostMultipart('/user', data);
+}
+
+function updateUser(data) {
+	return doAxiosPutMultipart('/user', data);
+}
+export { selectUserList, insertUser, updateUser };

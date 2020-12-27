@@ -6,7 +6,7 @@
 			</h4>
 			<div class="tree-area">
 				<el-tree
-					:data="treeData"
+					:data="getTreeData"
 					node-key="deptId"
 					:default-expanded-keys="[0]"
 					:props="defaultProps"
@@ -84,62 +84,61 @@
 			:deptInfo="deptInfo"
 			:userInfo="userInfo"
 			@reSelectUserList="selectUserList"
-			@sendData="sendData"
+			@sendData="receiveData"
 		></RegUserModal>
 	</div>
 </template>
 
 <script>
-import { selectDeptList } from '@/api/admin/dept';
 import RegUserModal from '@/components/common/RegUserModal.vue';
-import { mapGetters } from 'vuex';
-import { selectUserList } from '@/api/user';
+import { mapGetters, mapActions } from 'vuex';
+import { selectUserList } from '@/api/admin/user';
 export default {
 	created() {
 		this.selectDeptList();
 	},
 	computed: {
-		...mapGetters(['showUserModal']),
+		...mapGetters(['getTreeData']),
 	},
 	components: {
 		RegUserModal,
 	},
 	methods: {
+		...mapActions(['DEPTLIST']),
+		// 부서 리스트 조회
 		async selectDeptList() {
-			let res = await selectDeptList();
-			if (res.result == 0) {
-				this.treeData = res.data;
-				this.treeData.isOpen = true;
-				if (this.treeData.length > 0) {
-					this.choiceDept(this.treeData[0].children[0]);
-				}
+			await this.DEPTLIST();
+			if (this.getTreeData.length > 0) {
+				this.choiceDept(this.getTreeData[0].children[0]);
 			}
 		},
+		// 부서 선택 이벤트
 		choiceDept(item) {
 			this.deptInfo.deptNm = item.deptNm;
 			this.deptInfo.deptId = item.deptId;
 
 			this.selectUserList();
 		},
+		// 사용자 선택 이벤트
 		async selectUserList() {
 			let res = await selectUserList(this.deptInfo.deptId);
 			if (res.result == 0) {
 				this.userList = res.data;
 			}
 		},
+		// 사용자 수정 이벤트 (더블 클릭시 사용자 모달로 해당 내용 전송)
 		modifyUser(item) {
 			this.modalFlag = true;
 			this.userInfo = item;
 		},
-		sendData() {
-			console.log('sendData');
+		// 모달 창에서 보낸 정보 받는 함수
+		receiveData() {
 			this.modalFlag = false;
 			this.userInfo = {};
 		},
 	},
 	data() {
 		return {
-			treeData: [],
 			defaultProps: {
 				children: 'children',
 				label: 'deptNm',

@@ -5,4 +5,7 @@ export default {
 	menuList(state) {
 		return state.menuList;
 	},
+	getTreeData(state) {
+		return state.treeData;
+	},
 };

@@ -5,4 +5,7 @@ export default {
 	setMenuList(state, menuList) {
 		state.menuList = menuList;
 	},
+	setTreeData(state, treeData) {
+		state.treeData = treeData;
+	},
 };

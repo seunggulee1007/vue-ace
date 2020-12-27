@@ -3,6 +3,7 @@ export default {
 		console.log('유저 인포 저장 ?');
 		state.userNm = data.user.userNm;
 		state.adminYn = data.user.adminYn;
+		state.adminView = false;
 	},
 	clearUserInfo(state) {
 		state.userNm = '';
