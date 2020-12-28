@@ -238,7 +238,6 @@
 	margin-right: 0;
 }
 
-
 .popup-contents .vue-daum-postcode{
 	width: 50vw;
 }
@@ -246,8 +245,17 @@
 .popup.popup__tree .component-area{
 	width: 56vw;
 }
+
+/* lst-search-result */
+.popup .lst-search-result .lst-search__item{
+	padding: 6px 8px;
+}
 .popup__tree .lst-search-result .lst-search__item > span + span{
 	padding-left: 8px;
+}
+.popup__tree .lst-search-result .input-checkbox__label span{
+	font-size: 1em;
+	color: #1b1c25;
 }
 
 
@@ -653,11 +661,6 @@ a.link{
 }
 
 
-/* lst-search-result */
-.popup .lst-search-result .lst-search__item{
-	padding: 4px 8px;
-}
-
 /* select-options */
 .select-options{
 	display: grid;
@@ -844,6 +847,11 @@ a.link{
 }
 .calendar.fc .fc-button:hover .fc-icon{
 	color: #6a197d;
+}
+
+.calendar.fc-theme-standard th{
+	padding: 8px 0;
+	/* background-color:  */
 }
 
 .calendar.fc .fc-daygrid-day-number{
@@ -1281,6 +1289,8 @@ a.link{
 	.popup-contents .vue-daum-postcode{
 		width: 100%;
 	}
+
+
 
 	/* logo temp */
 	.logo.logo-rec .mark{

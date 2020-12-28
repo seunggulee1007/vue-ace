@@ -259,6 +259,7 @@
 <script>
 import FullCalendar from '@fullcalendar/vue';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
 export default {
 	components: {
 		FullCalendar,
@@ -269,7 +270,7 @@ export default {
 			value1: '',
 			value2: '',
 			calendarOptions: {
-				plugins: [dayGridPlugin],
+				plugins: [dayGridPlugin, interactionPlugin],
 				initialView: 'dayGridMonth',
 			},
 		};

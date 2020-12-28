@@ -49,7 +49,7 @@
 											}"
 											@click="changeAuth(item)"
 										>
-											<span class="button-txt button-txt__opt1">읽기&쓰기</span>
+											<span class="button-txt button-txt__opt1">읽기&amp;쓰기</span>
 											<span class="button-txt button-txt__opt2">읽기</span>
 											<span class="button-txt button-txt__opt3">권한 없음</span>
 										</button>
