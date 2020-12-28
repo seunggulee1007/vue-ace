@@ -39,6 +39,9 @@
 	justify-content: center;
 }
 
+.table .data__number{
+	text-align: right;
+}
 
 
 
