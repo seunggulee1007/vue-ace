@@ -45,7 +45,6 @@
 		<nav class="gnb">
 			<ul class="lst-gnb">
 				<li class="lst-gnb__item" v-for="(item, idx) in menuList" :key="idx">
-					<span class="icon icon-gnb2"></span>
 					<span>{{ item.menuNm }}</span>
 					<div class="gnb-sub" v-if="item.children && item.children.length > 0">
 						<ul class="lst-gnb-sub" v-for="children in item.children" :key="children.menuId">
