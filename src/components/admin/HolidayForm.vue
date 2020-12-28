@@ -29,12 +29,13 @@
 							<el-tabs v-model="activeName" @tab-click="handleClick">
 								<el-tab-pane label="달력" name="first">
 									<div class="tab-cnt">
-										<FullCalendar :options="calendarOptions" class="calendar" />
+										<FullCalendar :options="calendarOptions1" class="calendar" />
 									</div>
 								</el-tab-pane>
 								<el-tab-pane label="리스트" name="second">
 									<div class="tab-cnt">
-										<div class="table-wrap">
+										<FullCalendar :options="calendarOptions2" class="calendar calendar-list" />
+										<!-- <div class="table-wrap">
 											<table class="table table-hover">
 												<thead>
 													<tr>
@@ -106,7 +107,7 @@
 													</tr>
 												</tbody>
 											</table>
-										</div>
+										</div> -->
 									</div>
 								</el-tab-pane>
 							</el-tabs>
@@ -260,6 +261,7 @@
 import FullCalendar from '@fullcalendar/vue';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import listPlugin from '@fullcalendar/list';
 export default {
 	components: {
 		FullCalendar,
@@ -269,9 +271,31 @@ export default {
 			activeName: 'first',
 			value1: '',
 			value2: '',
-			calendarOptions: {
+			calendarOptions1: {
 				plugins: [dayGridPlugin, interactionPlugin],
 				initialView: 'dayGridMonth',
+			},
+			calendarOptions2: {
+				plugins: [listPlugin],
+				initialView: 'listMonth',
+				events: [
+					{
+						title: '크리스마스',
+						start: '2020-12-25T07:00:00',
+					},
+				],
+				eventDidMount: function(info) {
+					if (info.event.extendedProps.status === 'done') {
+						// Change background color of row
+						info.el.style.backgroundColor = 'red';
+
+						// Change color of dot marker
+						var dotEl = info.el.getElementsByClassName('fc-event-dot')[0];
+						if (dotEl) {
+							dotEl.style.backgroundColor = 'white';
+						}
+					}
+				},
 			},
 		};
 	},

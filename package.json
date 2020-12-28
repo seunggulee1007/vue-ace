@@ -11,6 +11,7 @@
   "dependencies": {
     "@fullcalendar/daygrid": "^5.5.0",
     "@fullcalendar/interaction": "^5.5.0",
+    "@fullcalendar/list": "^5.5.0",
     "@fullcalendar/vue": "^5.5.0",
     "axios": "^0.21.0",
     "babel-polyfill": "^6.26.0",
