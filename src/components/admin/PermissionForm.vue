@@ -97,7 +97,6 @@ export default {
 		},
 		async selectAuthMenuList(menuId) {
 			let res = await selectAuthMenuList(menuId);
-			console.log(res);
 			if (res.result == 0) {
 				this.authMenuList = res.data;
 			}

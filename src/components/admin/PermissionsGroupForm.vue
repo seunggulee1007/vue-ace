@@ -172,7 +172,6 @@ export default {
 		},
 		receiveData(itemList) {
 			for (let item of itemList) {
-				console.log(item);
 				if (!this.checkRetain(item.userId)) {
 					this.userList.push(item);
 				}
@@ -224,20 +223,13 @@ export default {
 					}
 					formData.append(key, this.authGroupVO[key]);
 				}
-				let arr = [];
-				for (var key of formData.keys()) {
-					let data = {};
-					data[key] = formData.get(key);
-					arr.push(data);
-				}
-				console.log(arr);
+
 				let res;
 				if (!this.authGroupVO.authGroupId) {
 					res = await insertAuthGroup(formData);
 				} else {
 					res = await updateAuthGroup(formData);
 				}
-				console.log(res);
 				this.sAlert(res.resultMsg);
 			});
 		},

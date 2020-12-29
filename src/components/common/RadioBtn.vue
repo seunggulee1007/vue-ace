@@ -1,12 +1,17 @@
 <template>
-	<select class="input-select" v-if="codeFlag" @input="updateVal($event.target.value)" v-model="selected">
-		<option v-for="item in codeList" :key="item.codeId" :value="item.codeId"
-			>{{ `${item.int_1}(${item.codeNm})-${item.codeInfo}` }}
-		</option>
-	</select>
-	<select class="input-select" v-else @input="updateVal($event.target.value)" v-model="selected">
-		<option v-for="item in codeList" :key="item.codeId" :value="item.codeId">{{ item.codeNm }} </option>
-	</select>
+	<div class="select-options">
+		<div class="input-box select-options__item" v-for="item in codeList" :key="item.codeId">
+			<input
+				type="radio"
+				:id="item.codeId"
+				class="input"
+				:name="codeGroup"
+				:value="item.codeId"
+				v-model="selected"
+			/>
+			<label :for="item.codeId">{{ item.codeNm }}</label>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -14,6 +19,11 @@ import { getCodeList } from '@/api/common/common';
 export default {
 	created() {
 		this.getCode();
+	},
+	watch: {
+		selected(val) {
+			this.$emit('input', val);
+		},
 	},
 	props: ['codeGroup', 'codeFlag', 'defaultVal'],
 	methods: {
@@ -25,10 +35,6 @@ export default {
 			} else if (this.codeList.length > 0) {
 				this.selected = this.codeList[0].codeId;
 			}
-			this.updateVal(this.selected);
-		},
-		updateVal(val) {
-			this.$emit('input', val);
 		},
 	},
 	data() {

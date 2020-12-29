@@ -3,7 +3,6 @@ export default {
 		return state.userNm;
 	},
 	isAdmin(state) {
-		console.log(state);
 		return state.adminYn == 'Y';
 	},
 	adminView(state) {

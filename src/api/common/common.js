@@ -1,7 +1,7 @@
 import { doAxios } from '../api';
 
-function getSelectBox(codeGroup) {
+function getCodeList(codeGroup) {
 	return doAxios(`/common/code/${codeGroup}`, 'get');
 }
 
-export { getSelectBox };
+export { getCodeList };

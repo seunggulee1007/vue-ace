@@ -86,7 +86,7 @@ function errFunction(error) {
 			store.commit('clearUserInfo');
 			store._vm.$cookie.delete(process.env.VUE_APP_AUTH_TOKEN);
 			store._vm.$cookie.delete(process.env.VUE_APP_USER_ID);
-
+			router.push('/login');
 			store._vm.$alert(res.resultMsg, '경고', {
 				confirmButtonText: '확인',
 				callback: action => {
@@ -95,7 +95,7 @@ function errFunction(error) {
 									message: `action: ${action}`,
 								}); */
 					if (action) {
-						router.push('/login');
+						console.log(action);
 					}
 				},
 			});

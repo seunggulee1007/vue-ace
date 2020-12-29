@@ -143,12 +143,10 @@ import { selectDeptList, insertDept, updateDept, moveDept, deleteDept } from '@/
 export default {
 	created() {
 		this.selectDeptList();
-		console.log(this.treeData);
 	},
 	methods: {
 		async selectDeptList() {
 			let res = await selectDeptList();
-			console.log(res);
 			if (res.result == 0) {
 				this.treeData = res.data;
 				this.treeData.isOpen = true;

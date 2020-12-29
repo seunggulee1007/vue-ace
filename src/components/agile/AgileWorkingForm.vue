@@ -12,46 +12,14 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="select-options">
-								<div class="input-box select-options__item">
-									<input
-										type="radio"
-										id="workingTypeTime"
-										class="input"
-										name="workingType"
-										value="time"
-									/>
-									<label for="workingTypeTime">시차 출퇴근제</label>
-								</div>
-								<div class="input-box select-options__item">
-									<input
-										type="radio"
-										id="workingTypeSelective"
-										class="input"
-										name="workingType"
-										value="selective"
-									/>
-									<label for="workingTypeSelective">선택적 근무제</label>
-								</div>
-								<div class="input-box select-options__item">
-									<input
-										type="radio"
-										id="workingTypeFlexible"
-										class="input"
-										name="workingType"
-										value="flexible"
-									/>
-									<label for="workingTypeFlexible">탄력 근무제</label>
-								</div>
-								<div class="input-box select-options__item">
-									<input
-										type="radio"
-										id="workingTypeTelecommuting"
-										class="input"
-										name="workingType"
-										value="telecommuting"
-									/>
-									<label for="workingTypeTelecommuting">재택근무제</label>
-								</div>
+								<radio-btn
+									:codeGroup="'workType'"
+									@input="
+										value => {
+											workType = value;
+										}
+									"
+								></radio-btn>
 							</div>
 						</div>
 					</div>
@@ -243,7 +211,9 @@
 							<p class="component__title">근무 대상자 등록</p>
 							<div class="buttons">
 								<button type="button" class="button button__dept">부서별 등록</button>
-								<button type="button" class="button button__member">사원별 등록</button>
+								<button type="button" class="button button__member" @click="modalFlag = !modalFlag">
+									사원별 등록
+								</button>
 							</div>
 						</div>
 						<div class="component-box-cnt">
@@ -337,11 +307,31 @@
 				</div>
 			</div>
 		</section>
+		<user-modal v-if="modalFlag" :class="{ show: modalFlag }" @closeModal="closeModal"></user-modal>
 	</div>
 </template>
 
 <script>
-export default {};
+import RadioBtn from '@/components/common/RadioBtn.vue';
+import UserModal from '@/components/common/UserModal.vue';
+export default {
+	components: {
+		RadioBtn,
+		UserModal,
+	},
+	data() {
+		return {
+			workGroupVO: { workType: '' },
+			workType: '',
+			modalFlag: false,
+		};
+	},
+	methods: {
+		closeModal() {
+			this.modalFlag = false;
+		},
+	},
+};
 </script>
 
 <style></style>

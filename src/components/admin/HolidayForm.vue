@@ -248,7 +248,7 @@
 						</div>
 					</div>
 				</div>
-				<button type="button" class="button__close" @click="closeModal">
+				<button type="button" class="button__close">
 					<span class="icon icon-close"></span>
 					<span class="blind">닫기</span>
 				</button>
