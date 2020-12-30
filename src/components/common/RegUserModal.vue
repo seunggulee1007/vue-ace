@@ -97,6 +97,27 @@
 							</div>
 						</div>
 					</div>
+					<div class="component-box" v-if="userVO.modifyYn">
+						<div class="component-box-top">
+							<p class="component__title">상태</p>
+						</div>
+						<div class="component-box-cnt">
+							<div class="input-box">
+								<select-box
+									class="input-select"
+									:codeGroup="'empStatus'"
+									v-model="userVO.empStatus"
+									:defaultVal="userVO.empStatus"
+									ref="empStatus"
+									@input="
+										value => {
+											userVO.empStatus = value;
+										}
+									"
+								></select-box>
+							</div>
+						</div>
+					</div>
 					<div class="component-box">
 						<div class="component-box-top">
 							<p class="component__title">사진 등록</p>

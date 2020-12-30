@@ -16,7 +16,7 @@
 									:codeGroup="'workType'"
 									@input="
 										value => {
-											workType = value;
+											workGroupVO.workType = value;
 										}
 									"
 								></radio-btn>
@@ -43,36 +43,14 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="select-options">
-								<div class="input-box select-options__item">
-									<input
-										type="radio"
-										id="workingTime6h"
-										class="input"
-										name="workingTime"
-										value="6h"
-									/>
-									<label for="workingTime6h">6시간</label>
-								</div>
-								<div class="input-box select-options__item">
-									<input
-										type="radio"
-										id="workingTime7h"
-										class="input"
-										name="workingTime"
-										value="7h"
-									/>
-									<label for="workingTime7h">7시간</label>
-								</div>
-								<div class="input-box select-options__item">
-									<input
-										type="radio"
-										id="workingTime8h"
-										class="input"
-										name="workingTime"
-										value="8h"
-									/>
-									<label for="workingTime8h">8시간</label>
-								</div>
+								<radio-btn
+									:codeGroup="'stdWorkingHours'"
+									@input="
+										value => {
+											workGroupVO.stdWorkingHours = value;
+										}
+									"
+								></radio-btn>
 							</div>
 						</div>
 					</div>
@@ -119,28 +97,14 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="select-options">
-								<div class="input-box select-options__item">
-									<input type="radio" id="calc1week" class="input" name="calcPaid" value="1week" />
-									<label for="calc1week">1주</label>
-								</div>
-								<div class="input-box select-options__item">
-									<input type="radio" id="calc2weeks" class="input" name="calcPaid" value="2weeks" />
-									<label for="calc2weeks">2주</label>
-								</div>
-								<div class="input-box select-options__item">
-									<input type="radio" id="calc1month" class="input" name="calcPaid" value="1month" />
-									<label for="calc1month">1개월</label>
-								</div>
-								<div class="input-box select-options__item">
-									<input
-										type="radio"
-										id="calc3months"
-										class="input"
-										name="calcPaid"
-										value="3months"
-									/>
-									<label for="calc3months">3개월</label>
-								</div>
+								<radio-btn
+									:codeGroup="'settlementUnit'"
+									@input="
+										value => {
+											workGroupVO.settlementUnit = value;
+										}
+									"
+								></radio-btn>
 							</div>
 						</div>
 					</div>
@@ -218,79 +182,22 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="lst-cards lst-cards__4colums">
-								<div class="lst-cards__item cards__member">
+								<div
+									class="lst-cards__item cards__member"
+									v-for="(item, idx) in userList"
+									:key="item.userId"
+								>
 									<div class="user-name">
 										<div class="img-user">
-											<img src="/images/sample1.jpeg" alt="" />
+											<img :src="SERVER_URL + item.photo" alt="" />
 										</div>
 										<p>
-											홍길동
-											<span class="user-position">차장</span>
-											<span class="user-dept">개발1팀</span>
+											{{ item.userNm }}
+											<span class="user-position">{{ item.rankCdNm }}</span>
+											<span class="user-dept">{{ item.deptNm }}</span>
 										</p>
 									</div>
-									<button type="button" class="button__delete">
-										<span class="icon icon-close"></span>
-										<span class="blind">삭제</span>
-									</button>
-								</div>
-								<div class="lst-cards__item cards__member">
-									<div class="user-name">
-										<div class="img-user">
-											<img src="/images/sample2.jpeg" alt="" />
-										</div>
-										<p>
-											최수현
-											<span class="user-position">과장</span>
-											<span class="user-dept">개발2팀</span>
-										</p>
-									</div>
-									<button type="button" class="button__delete">
-										<span class="icon icon-close"></span>
-										<span class="blind">삭제</span>
-									</button>
-								</div>
-								<div class="lst-cards__item cards__member">
-									<div class="user-name">
-										<div class="img-user">
-											<img src="/images/sample3.jpeg" alt="" />
-										</div>
-										<p>
-											김우중
-											<span class="user-position">대리</span>
-											<span class="user-dept">개발1팀</span>
-										</p>
-									</div>
-									<button type="button" class="button__delete">
-										<span class="icon icon-close"></span>
-										<span class="blind">삭제</span>
-									</button>
-								</div>
-								<div class="lst-cards__item cards__member">
-									<div class="user-name">
-										<div class="img-user">
-											<img src="/images/sample1.jpeg" alt="" />
-										</div>
-										<p>
-											김영희
-											<span class="user-position">사원</span>
-											<span class="user-dept">개발1팀</span>
-										</p>
-									</div>
-									<button type="button" class="button__delete">
-										<span class="icon icon-close"></span>
-										<span class="blind">삭제</span>
-									</button>
-								</div>
-								<div class="lst-cards__item cards__dept">
-									<div class="dept-name">
-										<span class="icon icon-dept__large"></span>
-										<p>
-											개발사업부
-										</p>
-									</div>
-
-									<button type="button" class="button__delete">
+									<button type="button" class="button__delete" @click="userList.splice(idx, 1)">
 										<span class="icon icon-close"></span>
 										<span class="blind">삭제</span>
 									</button>
@@ -307,7 +214,12 @@
 				</div>
 			</div>
 		</section>
-		<user-modal v-if="modalFlag" :class="{ show: modalFlag }" @closeModal="closeModal"></user-modal>
+		<user-modal
+			v-if="modalFlag"
+			:class="{ show: modalFlag }"
+			@closeModal="closeModal"
+			@sendData="receiveData"
+		></user-modal>
 	</div>
 </template>
 
@@ -321,14 +233,29 @@ export default {
 	},
 	data() {
 		return {
-			workGroupVO: { workType: '' },
-			workType: '',
+			workGroupVO: { workType: '', stdWorkingHours: '', settlementUnit: '' },
 			modalFlag: false,
+			userList: [],
 		};
 	},
 	methods: {
 		closeModal() {
 			this.modalFlag = false;
+		},
+		receiveData(itemList) {
+			for (let item of itemList) {
+				if (!this.checkRetain(item.userId)) {
+					this.userList.push(item);
+				}
+			}
+		},
+		checkRetain(data) {
+			for (let user of this.userList) {
+				if (user.userId == data) {
+					return true;
+				}
+			}
+			return false;
 		},
 	},
 };

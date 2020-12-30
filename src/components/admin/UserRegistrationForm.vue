@@ -55,19 +55,20 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr v-if="userList.lengh == 0">
-									<td colspan="8">조회된 데이터가 없습니다.</td>
+								<tr v-if="userList.length == 0" class="row">
+									<td colspan="8" style="text-align:center;">조회된 데이터가 없습니다.</td>
 								</tr>
 								<tr
 									class="row"
 									v-for="(item, idx) in userList"
 									:key="item.userId"
 									@dblclick="modifyUser(item)"
+									v-else
 								>
 									<td>{{ idx + 1 }}</td>
 									<td>{{ item.userNm }}</td>
 									<td>{{ item.empNo }}</td>
-									<td>{{ item.phone }}</td>
+									<td>{{ item.phone | phoneFormat }}</td>
 									<td>{{ item.email }}</td>
 									<td>{{ item.rankCdNm }}</td>
 									<td>{{ item.empStatusNm }}</td>

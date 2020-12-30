@@ -35,7 +35,12 @@
 									<ul class="lst-search-result">
 										<li class="lst-search__item" v-for="item in userList" :key="item.userId">
 											<div class="input-checkbox">
-												<input type="checkbox" :id="item.userId" @click="choiceItem(item)" />
+												<input
+													type="checkbox"
+													:id="item.userId"
+													:value="item"
+													v-model="checkList"
+												/>
 												<label
 													:for="item.userId"
 													class="input-checkbox__label icon-checkbox-purple"
@@ -65,7 +70,8 @@
 												<input
 													type="checkbox"
 													:id="`delete${item.userId}`"
-													@click="deleteItem(item)"
+													:value="item"
+													v-model="deleteList"
 												/>
 												<label
 													:for="`delete${item.userId}`"
@@ -120,9 +126,9 @@ export default {
 				deptId: 0,
 			},
 			userList: [],
-			choiceList: [],
 			deleteList: [],
 			choicedList: [],
+			checkList: [],
 		};
 	},
 	methods: {
@@ -147,49 +153,18 @@ export default {
 			this.deptInfo.deptId = item.deptId;
 			this.selectUserList();
 		},
-		// 사용자 선택
-		choiceItem(item) {
-			let flag = true;
-			let size = this.choiceList.length;
-			for (let i = 0; i < size; i++) {
-				let temp = this.choiceList[i];
-				if (temp.userId == item.userId) {
-					flag = false;
-					this.choiceList.splice(i, 1);
-					break;
-				}
-			}
-			if (flag) {
-				this.choiceList.push(item);
-			}
-		},
-		// 사용자 삭제
-		deleteItem(item) {
-			let flag = true;
-			let size = this.deleteList.length;
-			for (let i = 0; i < size; i++) {
-				let temp = this.deleteList[i];
-				if (temp.userId == item.userId) {
-					flag = false;
-					this.deleteList.splice(i, 1);
-					break;
-				}
-			}
-			if (flag) {
-				this.deleteList.push(item);
-			}
-		},
 		// 사용자 선택 이벤트
 		addUser() {
-			if (this.choiceList.length == 0) {
+			if (this.checkList.length == 0) {
 				this.sAlert('사용자를 선택해 주세요.');
 				return;
 			}
-			for (let item of this.choiceList) {
+			for (let item of this.checkList) {
 				if (!this.checkRetain(item.userId)) {
 					this.choicedList.push(item);
 				}
 			}
+			this.checkList = [];
 		},
 		// 사용자 제거 이벤트
 		deleteUser() {
@@ -203,6 +178,7 @@ export default {
 					this.choicedList.splice(idx, 1);
 				}
 			}
+			this.deleteList = [];
 		},
 		closeModal() {
 			this.$emit('closeModal');

@@ -14,6 +14,11 @@ Vue.use(VueCookie);
 Vue.use(ElementUI, { locale });
 
 Vue.mixin({
+	data() {
+		return {
+			SERVER_URL: process.env.VUE_APP_API_URL,
+		};
+	},
 	methods: {
 		// 전역 알림 창
 		sAlert(text, title, okLabel, okFunction) {
@@ -104,6 +109,13 @@ Vue.filter('bizNoFilter', function(value, type) {
 		console.log(e);
 	}
 	return formatNum;
+});
+
+Vue.filter('phoneFormat', value => {
+	if (!value) {
+		return '등록된 휴대폰 번호가 없습니다.';
+	}
+	return value.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/, '$1-$2-$3');
 });
 
 Vue.filter('dateFilter', (value, type = '-') => {

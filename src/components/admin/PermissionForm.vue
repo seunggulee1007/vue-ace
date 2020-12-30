@@ -35,6 +35,9 @@
 								</tr>
 							</thead>
 							<tbody>
+								<tr v-if="authMenuList.length == 0" class="row">
+									<td colspan="3" style="text-align:center;">조회된 데이터가 없습니다.</td>
+								</tr>
 								<tr class="row" v-for="(item, idx) in authMenuList" :key="item.menuNm">
 									<td>{{ idx + 1 }}</td>
 									<td>{{ item.authGroupNm }}</td>

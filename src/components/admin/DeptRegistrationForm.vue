@@ -195,6 +195,7 @@ export default {
 				crtId: this.$store.getters.getUserId,
 			};
 		},
+		// 부서 수정
 		modifyDept() {
 			this.sConfirm('수정하시겠습니까?', async () => {
 				if (!this.deptVO.deptNm) {
@@ -211,6 +212,7 @@ export default {
 				}
 			});
 		},
+		// 부서 삭제
 		async deleteDept() {
 			this.sConfirm('삭제하시겠습니까?\n상위부서인 경우 하위 부서도 함께 삭제됩니다.', async () => {
 				let res = await deleteDept(this.deptVO.deptId);
