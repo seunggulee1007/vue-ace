@@ -26,56 +26,60 @@
 								</el-tree>
 							</div>
 						</div>
-						<div class="component-box search-result-box">
-							<div class="component-box-top">
-								<p class="component__title">검색 결과</p>
-							</div>
-							<div class="component-box-cnt">
-								<ul class="lst-search-result">
-									<li class="lst-search__item" v-for="item in userList" :key="item.userId">
-										<div class="input-checkbox">
-											<input type="checkbox" :id="item.userId" @click="choiceItem(item)" />
-											<label
-												:for="item.userId"
-												class="input-checkbox__label icon-checkbox-purple"
-											>
-												<span class="item__user-name"
-													>{{ item.userNm }} {{ item.rankCdNm }}</span
+						<div class="search-result-wrap">
+							<div class="component-box search-result-box">
+								<div class="component-box-top">
+									<p class="component__title">검색 결과</p>
+								</div>
+								<div class="component-box-cnt">
+									<ul class="lst-search-result">
+										<li class="lst-search__item" v-for="item in userList" :key="item.userId">
+											<div class="input-checkbox">
+												<input type="checkbox" :id="item.userId" @click="choiceItem(item)" />
+												<label
+													:for="item.userId"
+													class="input-checkbox__label icon-checkbox-purple"
 												>
-												<span class="item__user-dept">{{ item.deptNm }}</span>
-											</label>
-										</div>
-									</li>
-								</ul>
+													<span class="item__user-name"
+														>{{ item.userNm }} {{ item.rankCdNm }}</span
+													>
+													<span class="item__user-dept">{{ item.deptNm }}</span>
+												</label>
+											</div>
+										</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<button type="button" @click="addUser">넣기</button>
-						<button type="button" @click="deleteUser">빼기</button>
-						<div class="component-box search-result-box">
-							<div class="component-box-top">
-								<p class="component__title">선택된 사용자</p>
+							<div class="component-box buttons">
+								<button type="button" class="button" @click="addUser">선택 추가</button>
+								<button type="button" class="button" @click="deleteUser">선택 제외</button>
 							</div>
-							<div class="component-box-cnt">
-								<ul class="lst-search-result">
-									<li class="lst-search__item" v-for="item in choicedList" :key="item.userId">
-										<div class="input-checkbox">
-											<input
-												type="checkbox"
-												:id="`delete${item.userId}`"
-												@click="deleteItem(item)"
-											/>
-											<label
-												:for="`delete${item.userId}`"
-												class="input-checkbox__label icon-checkbox-purple"
-											>
-												<span class="item__user-name"
-													>{{ item.userNm }} {{ item.rankCdNm }}</span
+							<div class="component-box search-result-box">
+								<div class="component-box-top">
+									<p class="component__title">선택된 사용자</p>
+								</div>
+								<div class="component-box-cnt">
+									<ul class="lst-search-result">
+										<li class="lst-search__item" v-for="item in choicedList" :key="item.userId">
+											<div class="input-checkbox">
+												<input
+													type="checkbox"
+													:id="`delete${item.userId}`"
+													@click="deleteItem(item)"
+												/>
+												<label
+													:for="`delete${item.userId}`"
+													class="input-checkbox__label icon-checkbox-purple"
 												>
-												<span class="item__user-dept">{{ item.deptNm }}</span>
-											</label>
-										</div>
-									</li>
-								</ul>
+													<span class="item__user-name"
+														>{{ item.userNm }} {{ item.rankCdNm }}</span
+													>
+													<span class="item__user-dept">{{ item.deptNm }}</span>
+												</label>
+											</div>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
