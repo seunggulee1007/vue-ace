@@ -1,11 +1,49 @@
 <template>
 	<div class="container admin-container">
-		<section class="section__tree">
+		<section class="section__list">
 			<h4 class="section__title">
 				<span>권한그룹</span>
 			</h4>
-			<div class="tree-area">
-				<!-- tree menu -->
+			<div class="table-wrap">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="column-check">
+								<div class="input-box">
+									<span class="input-checkbox">
+										<input type="checkbox" id="checkboxSelectAll2" />
+										<label
+											for="checkboxSelectAll2"
+											class="input-checkbox__label icon-checkbox-purple"
+										>
+											<span class="blind">선택</span>
+										</label>
+									</span>
+								</div>
+							</th>
+							<th>그룹명</th>
+							<th>그룹코드</th>
+							<th>등록일자</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="row">
+							<td class="column-check">
+								<div class="input-box">
+									<span class="input-checkbox">
+										<input type="checkbox" id="" />
+										<label for="" class="input-checkbox__label icon-checkbox-purple">
+											<span class="blind">선택</span>
+										</label>
+									</span>
+								</div>
+							</td>
+							<td>그룹명1</td>
+							<td>그룹코드1</td>
+							<td>2020-12-01</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</section>
 		<section class="section__contents">
