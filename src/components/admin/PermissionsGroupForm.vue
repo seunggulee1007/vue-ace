@@ -1,9 +1,14 @@
 <template>
 	<div class="container admin-container">
 		<section class="section__list">
-			<h4 class="section__title">
-				<span>권한그룹</span>
-			</h4>
+			<div class="section-top">
+				<h4 class="section__title">
+					<span>권한그룹</span>
+				</h4>
+				<button type="button" class="button button__delete">
+					<span class="icon icon-delete"></span>선택 삭제
+				</button>
+			</div>
 			<div class="table-wrap">
 				<table class="table">
 					<thead>
