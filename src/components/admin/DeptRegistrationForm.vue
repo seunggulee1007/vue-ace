@@ -1,20 +1,21 @@
 <template>
 	<div class="container admin-container">
 		<section class="section__tree">
-			<h4 class="section__title">
-				<span>조직도</span>
-			</h4>
-			<div class="tree-area">
-				<!-- tree menu -->
-				<el-tree
-					:data="treeData"
-					node-key="deptId"
-					:default-expanded-keys="[0]"
-					:props="defaultProps"
-					accordion
-					@node-click="choiceDept"
-				>
-				</el-tree>
+			<div class="inner-wrap">
+				<h4 class="section__title">
+					<span>조직도</span>
+				</h4>
+				<div class="tree-area">
+					<el-tree
+						:data="treeData"
+						node-key="deptId"
+						:default-expanded-keys="[0]"
+						:props="defaultProps"
+						accordion
+						@node-click="choiceDept"
+					>
+					</el-tree>
+				</div>
 			</div>
 		</section>
 		<section class="section__contents">

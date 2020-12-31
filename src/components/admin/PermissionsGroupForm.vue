@@ -9,52 +9,60 @@
 					<span class="icon icon-delete"></span>선택 삭제
 				</button>
 			</div>
-			<div class="table-wrap">
-				<table class="table">
-					<thead>
-						<tr>
-							<th class="column-check">
-								<div class="input-box">
-									<span class="input-checkbox">
-										<input type="checkbox" id="checkboxSelectAll2" />
-										<label
-											for="checkboxSelectAll2"
-											class="input-checkbox__label icon-checkbox-purple"
-										>
-											<span class="blind">선택</span>
-										</label>
-									</span>
-								</div>
-							</th>
-							<th>그룹명</th>
-							<th>그룹코드</th>
-							<th>등록일자</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="row">
-							<td class="column-check">
-								<div class="input-box">
-									<span class="input-checkbox">
-										<input type="checkbox" id="" />
-										<label for="" class="input-checkbox__label icon-checkbox-purple">
-											<span class="blind">선택</span>
-										</label>
-									</span>
-								</div>
-							</td>
-							<td>그룹명1</td>
-							<td>그룹코드1</td>
-							<td>2020-12-01</td>
-						</tr>
-					</tbody>
-				</table>
+			<div class="inner-wrap">
+				<div class="table-wrap">
+					<table class="table">
+						<thead>
+							<tr>
+								<th class="column-check">
+									<div class="input-box">
+										<span class="input-checkbox">
+											<input type="checkbox" id="checkboxSelectAll2" />
+											<label
+												for="checkboxSelectAll2"
+												class="input-checkbox__label icon-checkbox-purple"
+											>
+												<span class="blind">선택</span>
+											</label>
+										</span>
+									</div>
+								</th>
+								<th>그룹명</th>
+								<th>그룹코드</th>
+								<th>등록일자</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="row">
+								<td class="column-check">
+									<div class="input-box">
+										<span class="input-checkbox">
+											<input type="checkbox" id="" />
+											<label for="" class="input-checkbox__label icon-checkbox-purple">
+												<span class="blind">선택</span>
+											</label>
+										</span>
+									</div>
+								</td>
+								<td>그룹명1</td>
+								<td>그룹코드1</td>
+								<td>2020-12-01</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</section>
 		<section class="section__contents">
 			<div class="inner-wrap">
 				<div class="section-top">
-					<h3 class="section__title">권한그룹 등록</h3>
+					<h3 class="section__title">
+						<button type="button" class="button__back">
+							<span class="icon icon-prev-page-white"></span>
+							<span class="blind">이전페이지</span>
+						</button>
+						권한그룹 등록
+					</h3>
 				</div>
 				<div class="component-area">
 					<div class="component-box">

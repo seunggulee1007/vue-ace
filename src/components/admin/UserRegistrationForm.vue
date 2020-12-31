@@ -1,25 +1,33 @@
 <template>
 	<div class="container admin-container">
 		<section class="section__tree">
-			<h4 class="section__title">
-				<span>조직도</span>
-			</h4>
-			<div class="tree-area">
-				<el-tree
-					:data="getTreeData"
-					node-key="deptId"
-					:default-expanded-keys="[0]"
-					:props="defaultProps"
-					accordion
-					@node-click="choiceDept"
-				>
-				</el-tree>
+			<div class="inner-wrap">
+				<h4 class="section__title">
+					<span>조직도</span>
+				</h4>
+				<div class="tree-area">
+					<el-tree
+						:data="getTreeData"
+						node-key="deptId"
+						:default-expanded-keys="[0]"
+						:props="defaultProps"
+						accordion
+						@node-click="choiceDept"
+					>
+					</el-tree>
+				</div>
 			</div>
 		</section>
 		<section class="section__contents">
 			<div class="inner-wrap">
 				<div class="section-top">
-					<h3 class="section__title">사용자 등록</h3>
+					<h3 class="section__title">
+						<button type="button" class="button__back">
+							<span class="icon icon-prev-page-white"></span>
+							<span class="blind">이전페이지</span>
+						</button>
+						사용자 등록
+					</h3>
 					<div class="buttons">
 						<button
 							type="button"
