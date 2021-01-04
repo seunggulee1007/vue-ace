@@ -33,13 +33,13 @@
 								</div>
 								<div class="component-box-cnt">
 									<ul class="lst-search-result">
-										<li class="lst-search__item" v-for="item in userList" :key="item.userId">
+										<li class="lst-search__item" v-for="item in userModalList" :key="item.userId">
 											<div class="input-checkbox">
 												<input
 													type="checkbox"
 													:id="item.userId"
 													:value="item"
-													v-model="checkList"
+													v-model="checkModalList"
 												/>
 												<label
 													:for="item.userId"
@@ -65,13 +65,17 @@
 								</div>
 								<div class="component-box-cnt">
 									<ul class="lst-search-result">
-										<li class="lst-search__item" v-for="item in choicedList" :key="item.userId">
+										<li
+											class="lst-search__item"
+											v-for="item in choicedModalList"
+											:key="item.userId"
+										>
 											<div class="input-checkbox">
 												<input
 													type="checkbox"
 													:id="`delete${item.userId}`"
 													:value="item"
-													v-model="deleteList"
+													v-model="deleteUserModalList"
 												/>
 												<label
 													:for="`delete${item.userId}`"
@@ -125,10 +129,10 @@ export default {
 				deptNm: '',
 				deptId: 0,
 			},
-			userList: [],
-			deleteList: [],
-			choicedList: [],
-			checkList: [],
+			userModalList: [],
+			deleteUserModalList: [],
+			choicedModalList: [],
+			checkModalList: [],
 		};
 	},
 	methods: {
@@ -142,9 +146,8 @@ export default {
 		},
 		async selectUserList() {
 			let res = await selectUserList(this.deptInfo.deptId);
-			console.log(res);
 			if (res.result == 0) {
-				this.userList = res.data;
+				this.userModalList = res.data;
 			}
 		},
 		// 부서 선택
@@ -155,45 +158,45 @@ export default {
 		},
 		// 사용자 선택 이벤트
 		addUser() {
-			if (this.checkList.length == 0) {
+			if (this.checkModalList.length == 0) {
 				this.sAlert('사용자를 선택해 주세요.');
 				return;
 			}
-			for (let item of this.checkList) {
+			for (let item of this.checkModalList) {
 				if (!this.checkRetain(item.userId)) {
-					this.choicedList.push(item);
+					this.choicedModalList.push(item);
 				}
 			}
-			this.checkList = [];
+			this.checkModalList = [];
 		},
 		// 사용자 제거 이벤트
 		deleteUser() {
-			if (this.deleteList.length == 0) {
+			if (this.deleteUserModalList.length == 0) {
 				this.sAlert('삭제할 사용자를 선택해 주세요.');
 				return;
 			}
-			for (let item of this.deleteList) {
-				let idx = this.choicedList.indexOf(item);
+			for (let item of this.deleteUserModalList) {
+				let idx = this.choicedModalList.indexOf(item);
 				if (idx != -1) {
-					this.choicedList.splice(idx, 1);
+					this.choicedModalList.splice(idx, 1);
 				}
 			}
-			this.deleteList = [];
+			this.deleteUserModalList = [];
 		},
 		closeModal() {
 			this.$emit('closeModal');
 		},
 		choiceUser() {
-			if (this.choicedList.length == 0) {
+			if (this.choicedModalList.length == 0) {
 				this.sAlert('사용자를 선택해 주세요.');
 				return;
 			}
-			this.$emit('sendData', this.choicedList);
+			this.$emit('sendData', this.choicedModalList);
 			this.closeModal();
 		},
 		// 중복 체크
 		checkRetain(data) {
-			for (let user of this.choicedList) {
+			for (let user of this.choicedModalList) {
 				if (user.userId == data) {
 					return true;
 				}

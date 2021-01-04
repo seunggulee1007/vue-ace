@@ -5,48 +5,33 @@
 				<h4 class="section__title">
 					<span>권한그룹</span>
 				</h4>
-				<button type="button" class="button button__delete">
-					<span class="icon icon-delete"></span>선택 삭제
-				</button>
 			</div>
 			<div class="inner-wrap">
 				<div class="table-wrap">
 					<table class="table">
 						<thead>
 							<tr>
-								<th class="column-check">
-									<div class="input-box">
-										<span class="input-checkbox">
-											<input type="checkbox" id="checkboxSelectAll2" />
-											<label
-												for="checkboxSelectAll2"
-												class="input-checkbox__label icon-checkbox-purple"
-											>
-												<span class="blind">선택</span>
-											</label>
-										</span>
-									</div>
-								</th>
 								<th>그룹명</th>
 								<th>그룹코드</th>
 								<th>등록일자</th>
+								<th>삭제</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="row">
-								<td class="column-check">
-									<div class="input-box">
-										<span class="input-checkbox">
-											<input type="checkbox" id="" />
-											<label for="" class="input-checkbox__label icon-checkbox-purple">
-												<span class="blind">선택</span>
-											</label>
-										</span>
-									</div>
+							<tr
+								class="row"
+								v-for="item in authGroupList"
+								:key="item.authGroupId"
+								@click="choiceAuthGroup(item)"
+							>
+								<td>{{ item.authGroupNm }}</td>
+								<td>{{ item.authGroupId }}</td>
+								<td>{{ item.crtDtm }}</td>
+								<td>
+									<button type="button" class="button button__delete">
+										<span class="icon icon-delete"></span>삭제
+									</button>
 								</td>
-								<td>그룹명1</td>
-								<td>그룹코드1</td>
-								<td>2020-12-01</td>
 							</tr>
 						</tbody>
 					</table>
@@ -109,7 +94,7 @@
 							<p class="component__title">그룹코드</p>
 						</div>
 						<div class="input-box">
-							<input class="input " type="text" placeholder="저장 시, 자동 생성" readonly />
+							<input class="input " type="text" v-model="authGroupVO.authGroupId" readonly />
 						</div>
 					</div>
 					<div class="component-box">
@@ -119,7 +104,7 @@
 								<button type="button" class="button button__add" @click="modalFlag = !modalFlag">
 									<span class="icon icon-add"></span>사원 추가
 								</button>
-								<button type="button" class="button button__delete">
+								<button type="button" class="button button__delete" @click="deleteUser">
 									<span class="icon icon-delete"></span>선택 삭제
 								</button>
 							</div>
@@ -131,7 +116,12 @@
 										<th class="column-check">
 											<div class="input-box">
 												<span class="input-checkbox">
-													<input type="checkbox" id="checkboxSelectAll1" />
+													<input
+														type="checkbox"
+														id="checkboxSelectAll1"
+														v-model="allCheck"
+														@change="chcekAll"
+													/>
 													<label
 														for="checkboxSelectAll1"
 														class="input-checkbox__label icon-checkbox-purple"
@@ -152,9 +142,14 @@
 										<td class="column-check">
 											<div class="input-box">
 												<span class="input-checkbox">
-													<input type="checkbox" :id="user.userId" />
+													<input
+														type="checkbox"
+														:id="user.userId + idx"
+														:value="user"
+														v-model="deleteList"
+													/>
 													<label
-														:for="user.userId"
+														:for="user.userId + idx"
 														class="input-checkbox__label icon-checkbox-purple"
 													>
 														<span class="blind">선택</span>
@@ -176,7 +171,7 @@
 							<p class="component__title">등록일자</p>
 						</div>
 						<div class="input-box">
-							<input class="input" type="text" placeholder="저장 시, 자동 생성" readonly />
+							<input class="input" type="text" v-model="authGroupVO.crtDtm" readonly />
 						</div>
 					</div>
 				</div>
@@ -188,7 +183,6 @@
 			</div>
 		</section>
 
-		<!-- popup -->
 		<user-modal
 			v-if="modalFlag"
 			:class="{ show: modalFlag }"
@@ -200,29 +194,51 @@
 
 <script>
 import UserModal from '@/components/common/UserModal.vue';
-import { confirmDuple, insertAuthGroup, updateAuthGroup } from '@/api/admin/authGroup';
+import { confirmDuple, insertAuthGroup, updateAuthGroup, selectAuthgroupList } from '@/api/admin/authGroup';
 export default {
+	created() {
+		this.selectAuthgroupList();
+	},
 	components: {
 		UserModal,
+	},
+	watch: {
+		deleteList(newVal) {
+			this.allCheck = newVal.length == this.userList.length;
+		},
 	},
 	data() {
 		return {
 			modalFlag: false,
 			userList: [],
+			authGroupList: [],
 			authGroupVO: {
+				authGroupId: '저장시, 자동 생성',
 				useYn: 'Y',
 				authGroupNm: '',
+				crtDtm: '저장 시, 자동 생성',
 			},
 			authGroupNmDuple: false,
 			authGroupNmDupleResultMsg: '중복 체크해 주세요.',
+			deleteList: [],
+			allCheck: false,
 		};
 	},
 	methods: {
+		// 권한 그룹 리스트 조회
+		async selectAuthgroupList() {
+			let res = await selectAuthgroupList();
+			if (res.result == 0) {
+				this.authGroupList = res.data;
+			}
+		},
+		// 모달 창 닫기
 		closeModal() {
 			this.modalFlag = false;
 		},
 		receiveData(itemList) {
-			for (let item of itemList) {
+			let list = JSON.parse(JSON.stringify(itemList));
+			for (let item of list) {
 				if (!this.checkRetain(item.userId)) {
 					this.userList.push(item);
 				}
@@ -235,6 +251,16 @@ export default {
 				}
 			}
 			return false;
+		},
+		choiceAuthGroup(item) {
+			// 선택된 아이템 복사
+			this.authGroupVO = JSON.parse(JSON.stringify(item));
+			// 불필요한 리스트 삭제
+			delete this.authGroupVO.authUserList;
+			// 리스트는 따로 담는다.
+			this.userList = item.authUserList;
+			this.authGroupNmDuple = true;
+			this.authGroupNmDupleResultMsg = '';
 		},
 		async confirmDuple() {
 			if (!this.authGroupVO.authGroupNm) {
@@ -276,6 +302,7 @@ export default {
 				}
 
 				let res;
+
 				if (!this.authGroupVO.authGroupId) {
 					res = await insertAuthGroup(formData);
 				} else {
@@ -287,6 +314,25 @@ export default {
 		reSearchDuple() {
 			this.authGroupNmDuple = false;
 			this.authGroupNmDupleResultMsg = '중복 체크해 주세요.';
+		},
+		chcekAll() {
+			if (this.allCheck) {
+				this.deleteList = this.userList;
+			} else {
+				this.deleteList = [];
+			}
+		},
+		deleteUser() {
+			let size = this.deleteList;
+			if (size == 0) return;
+			for (let item of this.deleteList) {
+				let idx = this.userList.indexOf(item);
+				if (idx != -1) {
+					this.userList.splice(idx, 1);
+				}
+			}
+
+			this.deleteList = [];
 		},
 	},
 };

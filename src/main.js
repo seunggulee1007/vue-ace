@@ -64,6 +64,31 @@ Vue.mixin({
 		engNumberOnly(e) {
 			e.target.value = e.target.value.replace(/[^\\!-z]/gi, '');
 		},
+		formatDate(date, type = '') {
+			let year = date.getFullYear();
+			let month = new String(date.getMonth() + 1);
+			let day = new String(date.getDate());
+			if (month.length == 1) {
+				month = '0' + month;
+			}
+			if (day.length == 1) {
+				day = '0' + day;
+			}
+
+			return year + type + month + type + day;
+		},
+		getTodayFromTo() {
+			let arr = new Array();
+			arr.push(new Date(`${this.formatDate(new Date(), '-')}:00:00`));
+			arr.push(new Date(`${this.formatDate(new Date(), '-')}:23:59`));
+			return arr;
+		},
+		formatTime(date) {
+			const hour = date.getHours();
+			let min = date.getMinutes();
+			min = min.length == 1 ? '0' + min : min;
+			return hour + min;
+		},
 	},
 });
 

@@ -49,7 +49,7 @@
 				<div class="buttons">
 					<button class="button__main" @click="goUserView">
 						<span class="icon icon-user"></span>
-						사용자 화면
+						{{ viewName }}
 					</button>
 					<button class="button__logout" @click="logoutUser">
 						<span class="icon icon-logout"></span>
@@ -63,6 +63,11 @@
 
 <script>
 export default {
+	computed: {
+		viewName() {
+			return this.$router.name;
+		},
+	},
 	methods: {
 		logoutUser() {
 			this.sConfirm('로그아웃 하시겠습니까?', () => {
