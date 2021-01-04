@@ -48,6 +48,22 @@
 	overflow: auto;
 }
 
+.mypage-container{
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	height: 100%;
+	padding: 0;
+}
+.section__mypage{
+	width: 480px;
+	padding: 24px;
+	box-sizing: border-box;
+}
+.section__mypage .buttons-complete{
+	padding-bottom: 24px;
+}
+
 
 /* header */
 .header .header-top{
@@ -302,7 +318,6 @@
 }
 
 
-
 /* logo-temp */
 .logo .mark{
 	border-radius: 50%;
@@ -376,6 +391,19 @@
 .logo.logo-line p:last-child > span:last-child{
 	font-size: 14px;
 	font-weight: 400;
+}
+
+.logo.logo--small .mark{
+	font-size: 2em;
+	width: 40px;
+	height: 40px;
+	margin-right: 12px;
+}
+.logo.logo--small p:last-child > span:first-child{
+	font-size: 1.2em;
+}
+.logo.logo--small p:last-child > span:last-child{
+	font-size: 0.85em;
 }
 
 
@@ -509,11 +537,13 @@ a.link{
 
 /* user-picture */
 .user-name,
+.user-info,
 .dept-name{
 	display: flex;
 	align-items: center;
 }
 .img-user{
+	flex-shrink: 0;
 	width: 36px;
 	height: 36px;
 	border-radius: 50%;
@@ -523,11 +553,15 @@ a.link{
 	margin-right: 12px;
 	text-align: center;
 }
+.img-user.img-user--large{
+	width: 100px;
+	height: 100px;
+}
 .img-user img{
 	width: 100%;
 	height: auto;
 }
-.user-name > p{
+.info__name{
 	letter-spacing: 0.08em;
 }
 .user-name .user-position,
@@ -550,6 +584,10 @@ a.link{
 
 .dept-name .icon-dept{
 	margin-right: 12px;
+}
+
+.user-info .info__name{
+	font-size: 1.2em;
 }
 
 
@@ -1290,6 +1328,15 @@ a.link{
 		height: 100vh;
 		overflow: hidden;
 		box-sizing: border-box;
+	}
+	.mypage-container{
+		height: 100%;
+		overflow: auto;
+	}
+
+	/* section */
+	.section__mypage{
+		width: 100vw;
 	}
 
 	/* component */
