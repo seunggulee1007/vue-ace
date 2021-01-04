@@ -269,6 +269,10 @@
 .popup.popup__tree .component-area{
 	width: 56vw;
 }
+.popup.popup__info-change .component-area{
+	width: 360px;
+}
+
 
 /* lst-search-result */
 .popup .lst-search-result{
@@ -528,6 +532,9 @@
 	color: #e94560;
 	margin-top: 6px;
 }
+.msg-info{
+	font-size: 0.86em;
+}
 
 /* link */
 a.link{
@@ -537,11 +544,11 @@ a.link{
 
 /* user-picture */
 .user-name,
-.user-info,
 .dept-name{
 	display: flex;
 	align-items: center;
 }
+
 .img-user{
 	flex-shrink: 0;
 	width: 36px;
@@ -554,12 +561,15 @@ a.link{
 	text-align: center;
 }
 .img-user.img-user--large{
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 }
 .img-user img{
 	width: 100%;
 	height: auto;
+}
+.user-info-box > p{
+	line-height: 1.6;
 }
 .info__name{
 	letter-spacing: 0.08em;
@@ -575,6 +585,7 @@ a.link{
 	padding-top: 4px;
 	color: #67707c;
 }
+
 .header .user-name > p{
 	font-size: 1.1em;
 }
@@ -586,8 +597,20 @@ a.link{
 	margin-right: 12px;
 }
 
+.user-info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #b2bbca;
+}
+.user-info .img-user{
+	margin-right: 0;
+	margin-bottom: 8px;
+}
 .user-info .info__name{
-	font-size: 1.2em;
+	font-size: 1.4em;
 }
 
 
@@ -610,46 +633,7 @@ a.link{
 .tree-area .el-tree-node__content>.el-tree-node__expand-icon{
 	padding: 10px 6px;
 }
-/* tree-vue
-.tree-area{
-	font-size: 13px;
-	color: #666;
-	max-height: 84vh;
-	overflow-y: auto;
-}
-.tree .lst-tree__menu {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 8px 10px;
-	border-bottom: 1px solid #eee;
-}
 
-.tree .lst-tree__menu .icon-folder-open{
-	font-size: 16px;
-	color:#b2bbca;
-	flex-grow: 1;
-	text-align: right;
-}
-
-.tree .lst-tree__sub{
-	padding-left: 8px;
-}
-.tree .lst-tree__sub .lst-tree__item > div{
-	padding-left: 8px;
-}
-
-.tree .lst-tree__item{
-	position: relative;
-	padding: 10px 0;
-}
-
-.tree .lst-tree__menu:hover > span:first-child,
-.tree .lst-tree__sub .lst-tree__item > div:hover > span:first-child{
-	font-weight: 700;
-	transition: font-weight 0.3s;
-}
- */
 
 /* lst-cards */
 .lst-cards{
@@ -795,6 +779,9 @@ a.link{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+.input-box + .input-box{
+	margin-top: 6px;
 }
 .input-box > * + *{
 	margin-left: 16px;
