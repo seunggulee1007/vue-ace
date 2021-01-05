@@ -7,12 +7,17 @@
 						<span>A</span>
 					</p>
 					<p>
-						<span><span class="color">ACE</span> Business Portal</span>
+						<span>ACE Business Portal</span>
 						<span>Agile Centric Efficiency</span>
 					</p>
 				</h1>
 			</a>
 			<ul class="util-menu">
+				<li class="util-menu__link">
+					<button class="button" @click="goAdminView" v-if="this.$store.getters.isAdmin">
+						관리자 페이지
+					</button>
+				</li>
 				<li class="util-menu__link">
 					<button type="button" class="button__alert">
 						<span class="icon icon-alert">
@@ -36,9 +41,6 @@
 							<button class="button__logout">로그아웃</button>
 						</li>
 					</ul>
-					<button class="button" @click="goAdminView" v-if="this.$store.getters.isAdmin">
-						관리자 페이지
-					</button>
 				</li>
 			</ul>
 		</div>
