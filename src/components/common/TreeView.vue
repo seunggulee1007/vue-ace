@@ -9,8 +9,8 @@
 		</div>
 		<div v-else @click="toggle">
 			{{ item.menuNm }}
-			<span v-if="isFolder && !isOpen">+</span>
-			<span v-if="isFolder && isOpen">-</span>
+			<span v-if="isFolder && !isOpen && !isFirst">+</span>
+			<span v-if="isFolder && isOpen && !isFirst">-</span>
 		</div>
 		<ul>
 			<tree-item v-for="(children, idx) in item.children" :key="idx" :item="children"> </tree-item>
@@ -21,9 +21,7 @@
 <script>
 export default {
 	name: 'tree-item',
-	props: {
-		item: Object,
-	},
+	props: ['item', 'isFirst'],
 	created() {
 		this.isOpen = this.item.isOpen;
 	},
@@ -39,6 +37,7 @@ export default {
 	},
 	methods: {
 		toggle() {
+			if (this.isFirst) return;
 			this.isOpen = !this.isOpen;
 		},
 	},

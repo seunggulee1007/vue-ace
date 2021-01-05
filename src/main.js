@@ -1,8 +1,9 @@
+import 'babel-polyfill';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router/router';
 import store from './store/store';
-// sweetAlert2
+
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import locale from 'element-ui/lib/locale/lang/ko';
@@ -84,10 +85,11 @@ Vue.mixin({
 			return arr;
 		},
 		formatTime(date) {
-			const hour = date.getHours();
+			let hour = date.getHours();
 			let min = date.getMinutes();
-			min = min.length == 1 ? '0' + min : min;
-			return hour + min;
+			hour = hour < 10 ? '0' + hour : hour;
+			min = min < 10 ? '0' + min : min;
+			return hour + '' + min;
 		},
 	},
 });

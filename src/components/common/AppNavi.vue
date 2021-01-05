@@ -1,7 +1,7 @@
 <template>
 	<div class="lnb">
 		<ul v-for="(item, idx) in menuList" :key="idx" class="lst-lnb">
-			<tree-view :item="item"></tree-view>
+			<tree-view :item="item" :isFirst="true"></tree-view>
 		</ul>
 	</div>
 </template>

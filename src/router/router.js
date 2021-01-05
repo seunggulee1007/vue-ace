@@ -35,6 +35,10 @@ const routes = [
 		meta: { admin: true },
 		component: () => import('@/views/admin/UserRegistration.vue'),
 	},
+	{
+		path: '/my/myPage',
+		component: () => import('@/views/my/MyPage.vue'),
+	},
 ];
 
 const router = new VueRouter({

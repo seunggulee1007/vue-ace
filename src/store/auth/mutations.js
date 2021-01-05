@@ -5,9 +5,9 @@ export default {
 	 * @param {*} data
 	 */
 	setLoginInfo(state, data) {
-		console.log(data);
 		state.userId = data.user.userId;
 		state.token = data.authToken;
+		state.photo = data.user.photo;
 	},
 	/**
 	 * 로그 아웃 이후 state에 내용 빈값으로 초기화

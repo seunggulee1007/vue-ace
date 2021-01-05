@@ -25,20 +25,20 @@
 						</span>
 					</button>
 				</li>
-				<li class="util-menu__link">
+				<li class="util-menu__link" :class="{ show: myPageFlag }">
 					<div class="user-name">
 						<div class="img-user">
-							<img src="/images/sample1.jpeg" alt="" />
+							<img :src="SERVER_URL + getPhoto" alt="" />
 						</div>
 						<p>{{ this.$store.getters.getUserNm }}</p>
 					</div>
-					<span class="icon icon-arrow"></span>
-					<ul class="account-menu">
+					<span class="icon icon-arrow" @click="myPageFlag = !myPageFlag"></span>
+					<ul class="account-menu" @click="myPageFlag = !myPageFlag">
 						<li>
-							<a href="/mypage.html">마이페이지</a>
+							<router-link to="/my/myPage">마이페이지</router-link>
 						</li>
 						<li>
-							<button class="button__logout">로그아웃</button>
+							<button class="button__logout" @click="logoutUser">로그아웃</button>
 						</li>
 					</ul>
 				</li>
@@ -79,14 +79,18 @@
 
 <script>
 import { selectMenuList } from '@/api/menu';
+import { mapGetters } from 'vuex';
 export default {
 	created() {
 		this.selectMenuList();
 	},
-
+	computed: {
+		...mapGetters(['getPhoto']),
+	},
 	data() {
 		return {
 			menuList: [],
+			myPageFlag: false,
 		};
 	},
 	methods: {
@@ -103,6 +107,7 @@ export default {
 		},
 		async selectMenuList() {
 			let res = await selectMenuList();
+			console.log(res);
 			if (res.result == 0) {
 				this.menuList = res.data.menuList;
 				this.routerMenuList = res.data.routerMenuList;

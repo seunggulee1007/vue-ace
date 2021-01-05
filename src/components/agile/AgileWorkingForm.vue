@@ -434,14 +434,18 @@ export default {
 				} else if (this.workWeekList.length == 0) {
 					this.sAlert('근무 요일을 선택해 주세요.');
 					return;
+				} else if (this.userList.length == 0 && this.deptList.length == 0) {
+					this.sAlert('근무 대상자를 등록해 주세요.');
+					return;
 				}
-				for (let temp in this.workGrupoVO) {
-					formData.append(temp, this.workGruopVO[temp]);
+				for (let temp in this.workGroupVO) {
+					console.log(temp);
+					formData.append(temp, this.workGroupVO[temp]);
 				}
 				let cnt = 0; // 근무시간 저장용 변수
 				if (!this.restUseYn) {
 					for (let temp of this.restList) {
-						formData.append(`workTimeList[${cnt}].workType`, 'R');
+						formData.append(`workTimeList[${cnt}].workTimeType`, 'R');
 						console.log(temp.restTime[0]);
 						console.log(typeof temp.restTime[0]);
 						formData.append(`workTimeList[${cnt}].workTimeFr`, this.formatTime(temp.restTime[0]));
@@ -451,14 +455,14 @@ export default {
 				}
 				if (!this.coreUseYn) {
 					for (let temp of this.coreList) {
-						formData.append(`workTimeList[${cnt}].workType`, 'C');
+						formData.append(`workTimeList[${cnt}].workTimeType`, 'C');
 						formData.append(`workTimeList[${cnt}].workTimeFr`, this.formatTime(temp.coreTime[0]));
 						formData.append(`workTimeList[${cnt}].workTimeTo`, this.formatTime(temp.coreTime[1]));
 						cnt++;
 					}
 				}
 
-				formData.append(`workTimeList[${cnt}].workType`, 'W');
+				formData.append(`workTimeList[${cnt}].workTimeType`, 'W');
 				formData.append(`workTimeList[${cnt}].workTimeFr`, this.formatTime(this.workingTime[0]));
 				formData.append(`workTimeList[${cnt}].workTimeTo`, this.formatTime(this.workingTime[1]));
 				cnt = 0;

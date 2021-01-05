@@ -42,144 +42,32 @@
 									<th>등록일자</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody v-for="item in workGroupList" :key="item.workGroupId">
 								<tr class="group-header">
 									<td></td>
 									<td colspan="6">
 										<div class="flex-box">
-											<span class="bold">개발사업부</span>
+											<span class="bold">{{ item.workGroupNm }}</span>
 											<span class="icon icon-arrow"></span>
 										</div>
 									</td>
 								</tr>
-								<tr class="row">
-									<td>1</td>
-									<td>개발사업부</td>
+								<tr class="row" v-for="(subItem, idx) in item.workUserResList" :key="subItem.userNm">
+									<td>{{ idx + 1 }}</td>
+									<td>{{ item.workGroupNm }}</td>
 									<td>
 										<div class="user-name">
 											<div class="img-user">
-												<img src="/images/sample1.jpeg" alt="" />
+												<img :src="SERVER_URL + subItem.photo" alt="" />
 											</div>
-											<p>홍길동 차장</p>
+											<p>{{ subItem.userNm }} {{ subItem.rankCdNm }}</p>
 										</div>
 									</td>
-									<td>개발1팀</td>
-									<td>시차 출퇴근제</td>
+									<td>{{ subItem.deptNm }}</td>
+									<td>{{ item.workTypeNm }}</td>
 									<td>09:00 ~ 18:00</td>
-									<td>2020-03-01</td>
+									<td>{{ item.crtDtm }}</td>
 								</tr>
-								<tr class="row">
-									<td>2</td>
-									<td>개발사업부</td>
-									<td>
-										<div class="user-name">
-											<div class="img-user">
-												<img src="/images/sample2.jpeg" alt="" />
-											</div>
-											<p>최수현 과장</p>
-										</div>
-									</td>
-									<td>개발2팀</td>
-									<td>시차 출퇴근제</td>
-									<td>09:00 ~ 18:00</td>
-									<td>2020-03-01</td>
-								</tr>
-								<tr class="row">
-									<td>3</td>
-									<td>개발사업부</td>
-									<td>
-										<div class="user-name">
-											<div class="img-user">
-												<img src="/images/sample3.jpeg" alt="" />
-											</div>
-											<p>김우중 대리</p>
-										</div>
-									</td>
-									<td>개발2팀</td>
-									<td>시차 출퇴근제</td>
-									<td>09:00 ~ 18:00</td>
-									<td>2020-03-01</td>
-								</tr>
-								<tr class="row">
-									<td>4</td>
-									<td>개발사업부</td>
-									<td>
-										<div class="user-name">
-											<div class="img-user">
-												<img src="/images/sample1.jpeg" alt="" />
-											</div>
-											<p>홍길동 차장</p>
-										</div>
-									</td>
-									<td>개발1팀</td>
-									<td>시차 출퇴근제</td>
-									<td>09:00 ~ 18:00</td>
-									<td>2020-03-01</td>
-								</tr>
-								<tr class="row">
-									<td>5</td>
-									<td>개발사업부</td>
-									<td>
-										<div class="user-name">
-											<div class="img-user">
-												<img src="/images/sample1.jpeg" alt="" />
-											</div>
-											<p>홍길동 차장</p>
-										</div>
-									</td>
-									<td>개발1팀</td>
-									<td>시차 출퇴근제</td>
-									<td>09:00 ~ 18:00</td>
-									<td>2020-03-01</td>
-								</tr>
-								<tr class="row">
-									<td>6</td>
-									<td>개발사업부</td>
-									<td>
-										<div class="user-name">
-											<div class="img-user">
-												<img src="/images/sample3.jpeg" alt="" />
-											</div>
-											<p>김우중 대리</p>
-										</div>
-									</td>
-									<td>개발2팀</td>
-									<td>시차 출퇴근제</td>
-									<td>09:00 ~ 18:00</td>
-									<td>2020-03-01</td>
-								</tr>
-								<tr class="row">
-									<td>7</td>
-									<td>개발사업부</td>
-									<td>
-										<div class="user-name">
-											<div class="img-user">
-												<img src="/images/sample1.jpeg" alt="" />
-											</div>
-											<p>홍길동 차장</p>
-										</div>
-									</td>
-									<td>개발1팀</td>
-									<td>시차 출퇴근제</td>
-									<td>09:00 ~ 18:00</td>
-									<td>2020-03-01</td>
-								</tr>
-								<!-- <tr class="row">
-										<td>8</td>
-										<td>개발사업부</td>
-										<td>
-											<div class="user-name">
-												<div class="img-user">
-													<img src="../images/sample1.jpeg" alt="">
-												</div>
-												<p>홍길동 차장</p>
-											</div>
-										</td>
-										<td>개발1팀</td>
-										<td>시차 출퇴근제</td>
-										<td>09:00 ~ 18:00</td>
-										<td>2020-03-01</td>
-									</tr> -->
 							</tbody>
 						</table>
 					</div>
@@ -190,7 +78,29 @@
 </template>
 
 <script>
-export default {};
+import { selectWorkGroupList } from '@/api/agile/workGroup';
+export default {
+	created() {
+		this.selectWorkGroupList();
+	},
+	data() {
+		return {
+			pagingVO: {
+				pageNo: 0,
+			},
+			workGroupList: [],
+		};
+	},
+	methods: {
+		async selectWorkGroupList() {
+			let res = await selectWorkGroupList(this.pagingVO);
+			console.log(res);
+			if (res.result == 0) {
+				this.workGroupList = res.data;
+			}
+		},
+	},
+};
 </script>
 
 <style></style>

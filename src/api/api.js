@@ -51,7 +51,6 @@ function doAxiosPut(url, param) {
 }
 
 function doAxios(url, method, params, config) {
-	store.state.spinnerStatus = true;
 	return instance({
 		url,
 		method,
@@ -63,7 +62,6 @@ function doAxios(url, method, params, config) {
 }
 
 function successFunciton(response) {
-	store.state.spinnerStatus = false;
 	// 토큰을 계속 갱신해 준다. 토큰은 20분간 유효하다.
 	if (response.headers.access_token) {
 		store.commit('setToken', response.headers.access_token);
@@ -72,7 +70,6 @@ function successFunciton(response) {
 	return response.data;
 }
 function errFunction(error) {
-	store.state.spinnerStatus = false;
 	let res = {
 		result: -1,
 	};

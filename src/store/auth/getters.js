@@ -8,4 +8,7 @@ export default {
 	getUserId(state) {
 		return state.userId;
 	},
+	getPhoto(state) {
+		return state.photo;
+	},
 };
