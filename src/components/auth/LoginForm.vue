@@ -7,7 +7,7 @@
 					<span>A</span>
 				</p>
 				<p>
-					<span><span class="color">ACE</span> Business Portal</span>
+					<span>ACE Business Portal</span>
 					<span>Agile Centric Efficiency</span>
 				</p>
 			</h1>
@@ -56,7 +56,7 @@
 					</div>
 					<a href="#" class="link">아이디/비밀번호 찾기</a>
 				</div>
-				<button type="button" class="button button-red-full button__login" @click="login">로그인</button>
+				<button type="button" class="button button__login" @click="login">로그인</button>
 			</form>
 		</div>
 	</section>

@@ -59,6 +59,9 @@
 	width: 416px;
 	padding: 14px 0;
 	justify-content: center;
+	background-color: #2B5BC7;
+	border-color: #2B5BC7;
+	color: #fff;
 }
 
 /* mobile */
