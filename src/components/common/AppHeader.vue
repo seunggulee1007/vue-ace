@@ -51,9 +51,7 @@
 					<span class="nav-bar"></span>
 					<span class="nav-bar"></span>
 				</button>
-				<p>
-					메뉴<span class="blind">열기</span>
-				</p>
+				<p>메뉴<span class="blind">열기</span></p>
 			</div>
 			<div class="gnb-wrap">
 				<ul class="lst-gnb">

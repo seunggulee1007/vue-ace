@@ -1,6 +1,6 @@
 <template>
 	<div class="select-options">
-		<div class="input-box select-options__item" v-for="item in codeList" :key="item.codeId">
+		<div class="input-radio select-options__item " v-for="item in codeList" :key="item.codeId">
 			<input
 				type="radio"
 				:id="item.codeId"

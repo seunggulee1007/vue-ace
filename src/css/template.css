@@ -146,7 +146,7 @@
 	justify-content: space-between;
 }
 .lnb .lst-lnb__item > div:hover{
-	color: #2B5BC7;
+	color: #3C7DFF;
 	font-weight: 700;
 }
 .lst-lnb > .lst-lnb__item:first-child > div{
@@ -310,7 +310,7 @@
 /* logo-temp */
 .logo .mark{
 	border-radius: 50%;
-	background-color: #2B5BC7;
+	background-color: #3C7DFF;
 	width: 32px;
 	height: 32px;
 	font-size: 1.8em;
@@ -495,7 +495,7 @@
 }
 
 .component__title{
-	color: #67707c;
+	/* color: #67707c; */
 	font-weight: 700;
 }
 
@@ -514,7 +514,7 @@
 }
 .msg-state{
 	font-size: 0.86em;
-	color: #e94560;
+	color: #F41200;
 	margin-top: 6px;
 }
 .msg-info{
@@ -690,20 +690,25 @@ a.link{
 	gap: 16px;
 }
 .select-options .select-options__item{
+	position: relative;
 	display: block;
-	border: 1px solid #e7ecf0;
-	border-radius: 8px;
-	padding: 11px 0;
-
+}
+.select-options .input{
+	position: absolute;
+	flex-grow: 0;
+}
+.select-options .input + label{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-.select-options .input{
-	flex-grow: 0;
+	border: 1px solid #e7ecf0;
+	border-radius: 10px;
+	padding: 11px 0;
+	
 }
 .select-options .input:checked + label{
-	color: #6a197d;
+	background-color: #3C7DFF;
+	color: #fff;
 	font-weight: 700;
 }
 
@@ -791,7 +796,7 @@ a.link{
 /* input */
 .input,
 .input-select{
-	border-radius: 4px;
+	border-radius: 10px;
 	background-color: #fff;
 	border: 1px solid #e7ecf0;
 	padding: 8px 12px;
@@ -815,7 +820,7 @@ a.link{
 	padding-left: 36px;
 }
 
-.input-term {
+/* .input-term {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -826,12 +831,20 @@ a.link{
 
 .input-term > p{
 	margin: 0 12px;
-}
+} */
+
+
 
 /* el-date-picker */
 .input-term .input-box > div,
-.input-box .el-date-editor.el-input, .el-date-editor.el-input__inner{
-	width: 100%;
+.input-box .el-date-editor.el-input,
+.el-date-editor.el-input__inner{
+	/* width: 100%; */
+	border-radius: 10px;
+}
+.input-box .el-date-editor .el-range-input,
+.input-box .el-date-editor .el-range-separator{
+	color: #1a1a2e;
 }
 
 /* full-calendar */
@@ -943,7 +956,7 @@ a.link{
 }
 .button:hover{
 	border-color: #2B5BC7;
-	color: #2B5BC7;
+	/* color: #2B5BC7; */
 }
 
 .button.disabled{
@@ -982,13 +995,13 @@ a.link{
 .buttons-complete .button{
 	min-width: 72px;
 	padding: 12px 24px;
-	border-radius: 8px;
+	border-radius: 21px;
 	justify-content: center;
 	font-size: 1em;
 }
 .buttons-complete .button__submit{
-	border-color: #e94560;
-	background-color: #e94560;
+	border-color: #2B5BC7;
+	background-color: #2B5BC7;
 	color: #fff;
 }
 
@@ -1197,7 +1210,7 @@ a.link{
 	margin-top: -16vh;
 }
 .error .error-code {
-	color: #ff6b81;
+	color: #F41200;
 	font-size: 7rem;
 	font-weight: 700;
 	text-align: center;

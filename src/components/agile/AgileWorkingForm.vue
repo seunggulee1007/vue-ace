@@ -75,7 +75,7 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="select-options">
-								<div class="input-box select-options__item">
+								<div class="input-checkbox select-options__item">
 									<input
 										type="checkbox"
 										id="workdayMon"
@@ -85,7 +85,7 @@
 									/>
 									<label for="workdayMon">월요일</label>
 								</div>
-								<div class="input-box select-options__item">
+								<div class="input-checkbox select-options__item">
 									<input
 										type="checkbox"
 										id="workdayTue"
@@ -95,7 +95,7 @@
 									/>
 									<label for="workdayTue">화요일</label>
 								</div>
-								<div class="input-box select-options__item">
+								<div class="input-checkbox select-options__item">
 									<input
 										type="checkbox"
 										id="workdayWed"
@@ -105,7 +105,7 @@
 									/>
 									<label for="workdayWed">수요일</label>
 								</div>
-								<div class="input-box select-options__item">
+								<div class="input-checkbox select-options__item">
 									<input
 										type="checkbox"
 										id="workdayThu"
@@ -115,7 +115,7 @@
 									/>
 									<label for="workdayThu">목요일</label>
 								</div>
-								<div class="input-box select-options__item">
+								<div class="input-checkbox select-options__item">
 									<input
 										type="checkbox"
 										id="workdayFri"
@@ -125,7 +125,7 @@
 									/>
 									<label for="workdayFri">금요일</label>
 								</div>
-								<div class="input-box select-options__item">
+								<div class="input-checkbox select-options__item">
 									<input
 										type="checkbox"
 										id="workdaySat"
@@ -135,7 +135,7 @@
 									/>
 									<label for="workdaySat">토요일</label>
 								</div>
-								<div class="input-box select-options__item">
+								<div class="input-checkbox select-options__item">
 									<input
 										type="checkbox"
 										id="workdaySun"
@@ -295,11 +295,11 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="buttons-complete">
-					<div class="buttons">
-						<button type="submit" class="button button__submit" @click="saveWorkGroup">등록</button>
-						<button type="button" class="button button__copy-save">복사 저장</button>
+					<div class="buttons-complete">
+						<div class="buttons">
+							<button type="submit" class="button button__submit" @click="saveWorkGroup">등록</button>
+							<button type="button" class="button button__copy-save">복사 저장</button>
+						</div>
 					</div>
 				</div>
 			</div>
