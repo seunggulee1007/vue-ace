@@ -45,24 +45,36 @@
 			</ul>
 		</div>
 		<nav class="gnb">
-			<ul class="lst-gnb">
-				<li class="lst-gnb__item" v-for="(item, idx) in menuList" :key="idx">
-					<span>{{ item.menuNm }}</span>
-					<div class="gnb-sub" v-if="item.children && item.children.length > 0">
-						<ul class="lst-gnb-sub" v-for="children in item.children" :key="children.menuId">
-							<li class="lst-sub__title">
-								<p>{{ item.menuNm }}</p>
-							</li>
-							<li class="lst-sub__item" v-for="subChild in children.children" :key="subChild.menuId">
-								<router-link :to="subChild.pageUrl" class="lst-sub__link" v-if="subChild.pageUrl">
-									<span>{{ subChild.menuNm }}</span>
-								</router-link>
-								<span v-else>{{ subChild.menuNm }}</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-			</ul>
+			<div class="nav-icon">
+				<button type="button" class="button__nav">
+					<span class="nav-bar"></span>
+					<span class="nav-bar"></span>
+					<span class="nav-bar"></span>
+				</button>
+				<p>
+					메뉴<span class="blind">열기</span>
+				</p>
+			</div>
+			<div class="gnb-wrap">
+				<ul class="lst-gnb">
+					<li class="lst-gnb__item" v-for="(item, idx) in menuList" :key="idx">
+						<span>{{ item.menuNm }}</span>
+						<div class="gnb-sub" v-if="item.children && item.children.length > 0">
+							<ul class="lst-gnb-sub" v-for="children in item.children" :key="children.menuId">
+								<li class="lst-sub__title">
+									<p>{{ item.menuNm }}</p>
+								</li>
+								<li class="lst-sub__item" v-for="subChild in children.children" :key="subChild.menuId">
+									<router-link :to="subChild.pageUrl" class="lst-sub__link" v-if="subChild.pageUrl">
+										<span>{{ subChild.menuNm }}</span>
+									</router-link>
+									<span v-else>{{ subChild.menuNm }}</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</nav>
 	</header>
 </template>

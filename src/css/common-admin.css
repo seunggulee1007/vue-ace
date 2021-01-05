@@ -31,6 +31,10 @@
 	padding-left:24px;
 	padding-right: 24px; 
 }
+
+.admin-header .button__nav{
+	display: none;
+}
 .admin-header .lst-gnb{
 	flex-direction: column;
 	padding-top: 20px;
@@ -218,7 +222,9 @@
 	.admin-header .page__title{
 		padding: 0 48px 0 0;
 	}
-
+	.admin-header .button__nav{
+		display: block;
+	}
 	.admin-header .gnb-wrap.show{
 		background-color: #16213e;
 		z-index: 100;
