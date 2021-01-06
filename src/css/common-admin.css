@@ -198,6 +198,10 @@
 .radio-options .radio-options__item .input-radio{
 	margin-right: 8px;
 }
+.radio-options .radio-options__item .input-radio:checked + label{
+	color: #3C7DFF;
+	font-weight: 700;
+}
 
 
  /* mobile */
