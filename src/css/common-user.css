@@ -66,7 +66,7 @@
 	bottom: -4px;
 	height: 2px;
 	width: 0;
-	background-color: #2B5BC7;
+	background-color: #3C7DFF;
 }
 .gnb .lst-gnb__item:hover > span{
 	font-weight: 700;
@@ -121,7 +121,7 @@
 	width: 4px;
 	height: 4px;
 	border-radius: 50%;
-	background-color: #2B5BC7;
+	background-color: #3C7DFF;
 }
 
 /* ========== elements ========== */

@@ -634,6 +634,9 @@ a.link{
 .lst-cards.lst-cards__4colums{
 	grid-template-columns: repeat(4, 1fr);
 }
+.lst-cards.lst-cards__6colums{
+	grid-template-columns: repeat(6, 1fr);
+}
 
 .lst-cards__item{
 	padding: 12px;
@@ -655,6 +658,56 @@ a.link{
 
 
 /* lst-status */
+.lst-status{
+	min-width: 40px;
+	color: #fff;
+	font-size: 0.86em;
+	padding: 6px;
+	border-radius: 13px;
+	border: 0;
+	text-align: center;
+}
+.lst-status .opt__txt{
+	display: none;
+}
+.lst-status.opt1{
+	background-color: #AEB9CB;
+}
+.lst-status.opt2{
+	background-color: #FE8F00;
+}
+.lst-status.opt3{
+	background-color: #7FD323;
+}
+.lst-status.opt4{
+	background-color: #7B26D7;
+}
+.lst-status.opt5{
+	background-color: #3A579B;
+}
+.lst-status.opt6{
+	background-color: #CE0D00
+}
+.lst-status.opt1 .opt1__txt{
+	display: block;
+}
+.lst-status.opt2 .opt2__txt{
+	display: block;
+}
+.lst-status.opt3 .opt3__txt{
+	display: block;
+}
+.lst-status.opt4 .opt4__txt{
+	display: block;
+}
+.lst-status.opt5 .opt5__txt{
+	display: block;
+}
+.lst-status.opt6 .opt6__txt{
+	display: block;
+}
+
+/* 유연근무-승인처리 lst-status html 변경필요 */
 .lst-status__item{
 	display: none;
 }
@@ -957,6 +1010,11 @@ a.link{
 .button:hover{
 	border-color: #2B5BC7;
 	/* color: #2B5BC7; */
+}
+.button.on{
+	background-color: #2B5BC7;
+	border-color: #2B5BC7;
+	color: #fff;
 }
 
 .button.disabled{
