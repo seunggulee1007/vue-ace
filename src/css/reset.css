@@ -60,3 +60,10 @@ table {
 address{
     font-style: inherit;
 }
+
+
+@media (max-width: 768px) {
+	body{
+		font-size: 13px;
+	}
+}

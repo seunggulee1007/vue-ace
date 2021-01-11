@@ -211,7 +211,6 @@
 	.header.admin-header{
 		grid-area: header;
 		position: fixed;
-		width: 100vw;
 		height: 56px;
 		padding: 0 16px;
 		box-shadow: none;
@@ -228,6 +227,9 @@
 	}
 	.admin-header .button__nav{
 		display: block;
+	}
+	.admin-header .button__nav .nav-bar{
+		background-color: #fff;
 	}
 	.admin-header .gnb-wrap.show{
 		background-color: #16213e;
@@ -254,7 +256,6 @@
 	/* admin-container */
 	.container.admin-container{
 		flex-direction: column;
-		padding-top: 56px;
 	}
 	.admin-container .section__tree{
 		padding: 24px 16px;
@@ -267,8 +268,7 @@
 		overflow-y: hidden;
 	}
 	.admin-container .section__tree .inner-wrap,
-	.admin-container .section__list .inner-wrap,
-	.admin-container .section__contents .inner-wrap{
+	.admin-container .section__list .inner-wrap{
 		overflow-y: auto;
 		height: 100%;
 	}
