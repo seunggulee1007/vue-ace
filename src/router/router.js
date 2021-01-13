@@ -56,10 +56,13 @@ router.beforeEach((to, from, next) => {
 		next(from.path);
 		return;
 	} else if (!to.meta.auth && !store.getters.isLogin) {
-		store._vm.$message({
-			type: 'info',
-			message: '인증이 필요합니다',
-		});
+		if (to.path != '/' && to.path != '/login') {
+			store._vm.$message({
+				type: 'info',
+				message: '인증이 필요합니다',
+			});
+		}
+
 		next('/login');
 		return;
 	} else if (to.path == '/login' && store.getters.getToken) {
