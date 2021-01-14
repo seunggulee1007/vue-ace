@@ -21,7 +21,7 @@
 					</div>
 				</div>
 				<div class="component-area">
-					<div class="table-wrap table--horizontal">
+					<div class="table-wrap table--horizontal no-mobile">
 						<table class="table">
 							<thead>
 								<tr>
@@ -73,6 +73,43 @@
 							</tbody>
 						</table>
 					</div>
+					<div class="lst-wrap mobile">
+							<div class="lst-clients lst__item">
+								<div class="lst-clients__item element">
+									<p>최수현 과장</p>
+									<p>영업1팀</p>
+								</div>
+								<div class="lst-clients__item element">
+									<p>(주)아이에스전자</p>
+								</div>
+								<div class="lst-clients__item element">
+									<p>이선원</p>
+								</div>
+								<div class="lst-clients__item element">
+									<p>과장</p>
+								</div>
+								<div class="lst-clients__item element">
+									<p>010-1234-5678</p>
+								</div>
+							</div>
+							<div class="lst-clients lst__item">
+								<div class="lst-clients__item element">
+									<p>영업담당자</p>
+								</div>
+								<div class="lst-clients__item element">
+									<p>거래처명</p>
+								</div>
+								<div class="lst-clients__item element">
+									<p>고객명</p>
+								</div>
+								<div class="lst-clients__item element">
+									<p>직위/직책</p>
+								</div>
+								<div class="lst-clients__item element">
+									<p>휴대전화</p>
+								</div>
+							</div>
+						</div>
 				</div>
 			</div>
 		</section>

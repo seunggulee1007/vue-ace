@@ -57,7 +57,7 @@
 					</div>
 				</div>
 				<div class="component-area">
-					<div class="table-wrap table--horizontal">
+					<div class="table-wrap table--horizontal no-mobile">
 						<table class="table">
 							<thead>
 								<tr>
@@ -104,6 +104,60 @@
 							</tbody>
 						</table>
 					</div>
+					<div class="lst-wrap mobile">
+							<div class="lst-activities lst__item">
+								<div class="lst-activities__item element">
+									<p>방문일자</p>
+								</div>
+								<div class="lst-activities__item element">
+									<p>담당자</p>
+								</div>
+								<div class="lst-activities__item element">
+									<p>거래처명</p>
+								</div>
+								<div class="lst-activities__item element">
+									<p>영업활동목적</p>
+								</div>
+								<div class="lst-activities__item element">
+									<p>방문시간</p>
+								</div>
+								<div class="lst-activities__item element">
+									<p>부서</p>
+								</div>
+								<div class="lst-activities__item element">
+									<p>영업기회명</p>
+								</div>
+								<div class="lst-activities__item element">
+									<button type="button" class="button button--small">상세</button>
+								</div>
+							</div>
+							<div class="lst-activities lst__item">
+								<div class="lst-activities__item element">
+									<p>2020-12-01 화</p>
+								</div>
+								<div class="lst-activities__item element">
+									<p>최수현</p>
+								</div>
+								<div class="lst-activities__item element">
+									<p>(주)아이에스전자</p>
+								</div>
+								<div class="lst-activities__item element">
+									<p>영업활동목적</p>
+								</div>
+								<div class="lst-activities__item element">
+									<p>10:00 ~ 12:00</p>
+								</div>
+								<div class="lst-activities__item element">
+									<p>영업1팀</p>
+								</div>
+								<div class="lst-activities__item element">
+									<p>스마트팩토리 ERP 구축 사업</p>
+								</div>
+								<div class="lst-activities__item element">
+									<button type="button" class="button button--small">상세</button>
+								</div>
+							</div>
+						</div>
 				</div>
 			</div>
 		</section>

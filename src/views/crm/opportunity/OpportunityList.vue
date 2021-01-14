@@ -26,7 +26,7 @@
 					</div>
 				</div>
 				<div class="component-area">
-					<div class="table-wrap table--horizontal">
+					<div class="table-wrap table--horizontal no-mobile">
 						<table class="table">
 							<thead>
 								<tr>
@@ -145,6 +145,74 @@
 							</tbody>
 						</table>
 					</div>
+					<div class="lst-wrap mobile">
+							<div class="lst-opportunities lst__item">
+								<div class="lst-opportunities__item element bold">
+									<p>담당자</p>
+								</div>
+								<div class="lst-opportunities__item element">
+									<div class="lst-status opt2">
+										<span class="opt1__txt opt__txt">인지</span>
+										<span class="opt2__txt opt__txt">제안</span>
+										<span class="opt3__txt opt__txt">견적</span>
+										<span class="opt4__txt opt__txt">협상</span>
+										<span class="opt5__txt opt__txt">계약</span>
+										<span class="opt6__txt opt__txt">실패</span>
+									</div>
+								</div>
+								<div class="lst-opportunities__item element">
+									<p>거래처명</p>
+								</div>
+								<div class="lst-opportunities__item element">
+									<p>제품유형</p>
+								</div>
+								<div class="lst-opportunities__item element">
+									<p>부서</p>
+								</div>
+								<div class="lst-opportunities__item element">
+									<p>성공확률</p>
+								</div>
+								<div class="lst-opportunities__item element">
+									<p>영업기회명</p>
+								</div>
+								<div class="lst-opportunities__item element">
+									<button type="button" class="button button--small">상세</button>
+								</div>
+							</div>
+							<div class="lst-opportunities lst__item">
+								<div class="lst-opportunities__item element bold">
+									<p>최수현</p>
+								</div>
+								<div class="lst-opportunities__item element">
+									<div class="lst-status opt1">
+										<span class="opt1__txt opt__txt">인지</span>
+										<span class="opt2__txt opt__txt">제안</span>
+										<span class="opt3__txt opt__txt">견적</span>
+										<span class="opt4__txt opt__txt">협상</span>
+										<span class="opt5__txt opt__txt">계약</span>
+										<span class="opt6__txt opt__txt">실패</span>
+									</div>
+								</div>
+								<div class="lst-opportunities__item element">
+									<p>(주)아이에스전자</p>
+								</div>
+								<div class="lst-opportunities__item element">
+									<p>Genuine</p>
+								</div>
+								<div class="lst-opportunities__item element">
+									<p>영업1팀</p>
+								</div>
+								<div class="lst-opportunities__item element">
+									<p>확도: 100%</p>
+								</div>
+								<div class="lst-opportunities__item element">
+									<p>스마트팩토리 ERP 구축 사업</p>
+								</div>
+								<div class="lst-opportunities__item element">
+									<button type="button" class="button button--small">상세</button>
+								</div>
+							</div>
+						</div>
 				</div>
 			</div>
 		</section>
