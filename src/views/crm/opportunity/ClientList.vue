@@ -22,9 +22,7 @@
 							<button class="button button__search">조회</button>
 						</form>
 					</div>
-				</div>
-				<div class="component-area">
-					<div class="table-wrap table--horizontal no-mobile">
+					<div class="component-box table-wrap table--horizontal no-mobile">
 						<table class="table">
 							<thead>
 								<tr>
@@ -76,7 +74,7 @@
 							</tbody>
 						</table>
 					</div>
-					<div class="lst-wrap mobile">
+					<div class="component-box lst-wrap mobile">
 							<div class="lst-clients lst__item">
 								<div class="lst-clients__item element">
 									<p>최수현 과장</p>

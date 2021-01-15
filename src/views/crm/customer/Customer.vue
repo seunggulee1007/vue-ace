@@ -56,20 +56,17 @@
 							<p class="component__title">직위/직책</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-box">
-								<select-box
-									class="input-select"
-									:codeGroup="'empRank'"
-									v-model="clientVO.rankCd"
-									:defaultVal="clientVO.rankCd"
-									ref="empRank"
-									@input="
-										value => {
-											clientVO.rankCd = value;
-										}
-									"
-								></select-box>
-							</div>
+							<select-box
+								:codeGroup="'empRank'"
+								v-model="clientVO.rankCd"
+								:defaultVal="clientVO.rankCd"
+								ref="empRank"
+								@input="
+									value => {
+										clientVO.rankCd = value;
+									}
+								"
+							></select-box>
 						</div>
 					</div>
 					<div class="component-box">

@@ -64,10 +64,13 @@
 							<p class="component__title">영업 활동 방법</p>
 						</div>
 						<div class="component-box-cnt">
-							<select name="" id="">
-								<option value="">방법1</option>
-								<option value="">방법2</option>
-							</select>
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
+									<option value="">방법1</option>
+									<option value="">방법2</option>
+								</select>
+								<span class="icon icon-arrow"></span>
+							</div>
 						</div>
 					</div>
 					<div class="component-box">

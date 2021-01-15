@@ -78,11 +78,12 @@
 							<p class="component__title">정보 출처</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-box">
-								<select name="" id="">
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
 									<option value="">출처1</option>
 									<option value="">출처2</option>
 								</select>
+								<span class="icon icon-arrow"></span>
 							</div>
 						</div>
 					</div>
@@ -91,8 +92,8 @@
 							<p class="component__title">프로젝트 유형</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-box">
-								<select name="" id="">
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
 									<option value="">유형1</option>
 									<option value="">유형2</option>
 								</select>
@@ -104,8 +105,8 @@
 							<p class="component__title">제품 유형</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-box">
-								<select name="" id="">
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
 									<option value="">유형1</option>
 									<option value="">유형2</option>
 								</select>
@@ -117,8 +118,8 @@
 							<p class="component__title">지역</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-box">
-								<select name="" id="">
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
 									<option value="">서울</option>
 									<option value="">경기</option>
 									<option value="">인천</option>
@@ -144,12 +145,13 @@
 							<p class="component__title">성공 확률 (%)</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-box">
-								<select name="" id="">
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
 									<option value="">0%</option>
 									<option value="">50%</option>
 									<option value="">100%</option>
 								</select>
+								<span class="icon icon-arrow"></span>
 							</div>
 						</div>
 					</div>

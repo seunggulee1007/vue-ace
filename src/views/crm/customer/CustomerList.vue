@@ -43,11 +43,14 @@
 										</template> 
 									</div>-->
 							</div>
-							<select name="" id="">
-								<option value="">고객명</option>
-								<option value="">거래처명</option>
-								<option value="">영업담당자</option>
-							</select>
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
+									<option value="">고객명</option>
+									<option value="">거래처명</option>
+									<option value="">영업담당자</option>
+								</select>
+								<span class="icon icon-arrow"></span>
+							</div>
 							<div class="input-box input-box-icon">
 								<input class="input input-icon" type="text" placeholder="검색어를 입력하세요" />
 								<span class="icon icon-search"></span>
@@ -55,9 +58,7 @@
 							<button class="button button__search">조회</button>
 						</form>
 					</div>
-				</div>
-				<div class="component-area">
-					<div class="table-wrap table--horizontal no-mobile">
+					<div class="component-box table-wrap table--horizontal no-mobile">
 						<table class="table">
 							<thead>
 								<tr>
@@ -114,7 +115,7 @@
 							</tbody>
 						</table>
 					</div>
-					<div class="lst-wrap mobile">
+					<div class="component-box lst-wrap mobile">
 							<div class="lst-vender lst__item">
 								<div class="lst-vender__item element bold">
 									<p>(주)아이에스전자</p>
