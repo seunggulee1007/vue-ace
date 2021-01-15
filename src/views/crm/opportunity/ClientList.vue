@@ -8,10 +8,13 @@
 				<div class="component-area">
 					<div class="component-box component__search">
 						<form>
-							<select name="" id="">
-								<option value="">거래처명</option>
-								<option value="">사업자번호</option>
-							</select>
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
+									<option value="">거래처명</option>
+									<option value="">사업자번호</option>
+								</select>
+								<span class="icon icon-arrow"></span>
+							</div>
 							<div class="input-box input-box-icon">
 								<input class="input input-icon" type="text" placeholder="검색어를 입력하세요" />
 								<span class="icon icon-search"></span>

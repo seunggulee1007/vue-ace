@@ -40,18 +40,16 @@
 							<p class="component__title">거래처 종류</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-box">
-								<select-box
-									:codeGroup="'clientKind'"
-									v-model="clientVO.clientKind"
-									ref="clientKind"
-									@input="
-										value => {
-											clientVO.clientKind = value;
-										}
-									"
-								></select-box>
-							</div>
+							<select-box
+								:codeGroup="'clientKind'"
+								v-model="clientVO.clientKind"
+								ref="clientKind"
+								@input="
+									value => {
+										clientVO.clientKind = value;
+									}
+								"
+							></select-box>
 						</div>
 					</div>
 					<div class="component-box">
@@ -122,15 +120,13 @@
 							<p class="component__title">업태</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-box">
-								<select-box
-									:codeGroup="'bizCond'"
-									v-model="clientVO.bizCond"
-									:codeFlag="true"
-									ref="bizCond"
-								>
-								</select-box>
-							</div>
+							<select-box
+								:codeGroup="'bizCond'"
+								v-model="clientVO.bizCond"
+								:codeFlag="true"
+								ref="bizCond"
+							>
+							</select-box>
 						</div>
 					</div>
 					<div class="component-box">
@@ -138,13 +134,11 @@
 							<p class="component__title">업종</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-box">
-								<select-box
-									:codeGroup="'bizKind'"
-									v-model="clientVO.bizKind"
-									ref="bizCond"
-								></select-box>
-							</div>
+							<select-box
+								:codeGroup="'bizKind'"
+								v-model="clientVO.bizKind"
+								ref="bizCond"
+							></select-box>
 						</div>
 						<select-box
 							:codeGroup="'contractStatus'"

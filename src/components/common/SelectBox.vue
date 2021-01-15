@@ -1,12 +1,15 @@
 <template>
-	<select class="input-select" v-if="codeFlag" @input="updateVal($event.target.value)" v-model="selected">
-		<option v-for="item in codeList" :key="item.codeId" :value="item.codeId"
-			>{{ `${item.int_1}(${item.codeNm})-${item.codeInfo}` }}
-		</option>
-	</select>
-	<select class="input-select" v-else @input="updateVal($event.target.value)" v-model="selected">
-		<option v-for="item in codeList" :key="item.codeId" :value="item.codeId">{{ item.codeNm }} </option>
-	</select>
+	<div class="input-select input-box input-box-icon">
+		<select class="selectbox" v-if="codeFlag" @input="updateVal($event.target.value)" v-model="selected">
+			<option v-for="item in codeList" :key="item.codeId" :value="item.codeId"
+				>{{ `${item.int_1}(${item.codeNm})-${item.codeInfo}` }}
+			</option>
+		</select>
+		<select class="selectbox" v-else @input="updateVal($event.target.value)" v-model="selected">
+			<option v-for="item in codeList" :key="item.codeId" :value="item.codeId">{{ item.codeNm }} </option>
+		</select>
+		<span class="icon icon-arrow"></span>
+	</div>
 </template>
 
 <script>
