@@ -8,27 +8,27 @@
 				<div class="component-area">
 					<div class="component-box component__search">
 						<form>
-							<div class="input-box input-box-icon">
+							<!-- <div class="input-box input-box-icon">
 								<input class="input input-icon" type="text" placeholder="적용일자를 입력하세요" />
 								<span class="icon icon-clock"></span>
+							</div> -->
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
+									<option value="">검색조건</option>
+									<option value="">유연근무유형</option>
+									<option value="">근무그룹명</option>
+									<option value="">부서명</option>
+									<option value="">사원명</option>
+								</select>
+								<span class="icon icon-arrow"></span>
 							</div>
-							<select name="" id="">
-								<option value="">검색조건을 선택하세요</option>
-								<option value="">유연근무유형</option>
-								<option value="">근무그룹명</option>
-								<option value="">부서명</option>
-								<option value="">사원명</option>
-							</select>
 							<div class="input-box input-box-icon">
 								<input class="input input-icon" type="text" placeholder="검색어를 입력하세요" />
 								<span class="icon icon-search"></span>
 							</div>
 							<button class="button button__search">조회</button>
 						</form>
-						<p class="result-search">검색결과 <span class="font-">100</span>건</p>
 					</div>
-				</div>
-				<div class="component-area">
 					<div class="component-box table-wrap">
 						<table class="table table-hover">
 							<thead>
