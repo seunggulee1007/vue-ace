@@ -23,20 +23,16 @@
 							<p class="component__title">유연 근무 유형</p>
 						</div>
 						<div class="component-box-cnt">
-							<ul class="select-options">
-								<li class="select-options__item select">
-									<span>시차 출퇴근제</span>
-								</li>
-								<li class="select-options__item">
-									<span>선택적 근무제</span>
-								</li>
-								<li class="select-options__item">
-									<span>탄력 근무제</span>
-								</li>
-								<li class="select-options__item">
-									<span>재택근무제</span>
-								</li>
-							</ul>
+							<div class="select-options">
+								<radio-btn
+									:codeGroup="'workType'"
+									@input="
+										value => {
+											workGroupVO.workType = value;
+										}
+									"
+								></radio-btn>
+							</div>
 						</div>
 					</div>
 					<div class="component-box">
@@ -197,7 +193,24 @@
 </template>
 
 <script>
-export default {};
+import RadioBtn from '@/components/common/RadioBtn.vue';
+import UserModal from '@/components/common/UserModal.vue';
+import { confirmDuple, insertWorkGroup, updateWorkGroup } from '@/api/agile/workGroup';
+export default {
+	components: {
+		RadioBtn,
+		UserModal,
+	},
+	data() {
+		return {
+			workGroupVO: {
+				workType: '',
+				stdWorkingHours: '',
+				settlementUnit: '',
+			},
+		}
+	}
+};
 </script>
 
 <style></style>
