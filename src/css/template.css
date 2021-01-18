@@ -643,6 +643,9 @@ a.link{
 .lst-cards.lst-cards__4colums{
 	grid-template-columns: repeat(4, 1fr);
 }
+.lst-cards.lst-cards__5colums{
+	grid-template-columns: repeat(5, 1fr);
+}
 .lst-cards.lst-cards__6colums{
 	grid-template-columns: repeat(6, 1fr);
 }
