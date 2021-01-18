@@ -32,7 +32,7 @@
 									재조회
 								</button>
 							</div>
-							<p class="msg-state">거래처명 중복 체크를 해주세요.</p>
+							<p class="msg-state">{{ idDupleResultMsg }}</p>
 						</div>
 					</div>
 					<div class="component-box">
@@ -253,6 +253,22 @@
 				</div>
 			</div>
 		</section>
+		<div class="popup" :class="{ show: openPostFlag }">
+			<div class="component-area">
+				<div class="inner-wrap">
+					<div class="popup-top">
+						<strong class="popup__title">주소 검색</strong>
+					</div>
+					<div class="popup-contents" v-if="openPostFlag">
+						<vue-daum-postcode @complete="getPostData($event)" />
+					</div>
+				</div>
+				<button type="button" class="button__close" @click="closeModal">
+					<span class="icon icon-close"></span>
+					<span class="blind">닫기</span>
+				</button>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -434,36 +450,17 @@ export default {
 					this.sAlert('이메일을 입력해 주세요.');
 					this.$refs.email.focus();
 					return;
-				} else if (!this.contractAmt || this.contractAmt < 1) {
-					this.sAlert('계약금액을 입력해 주세요.');
-					this.$refs.contractAmt.focus();
-					return;
-				} else if (!this.contractDateFrom) {
-					this.sAlert('계약 기간 시작일자를 입력해 주세요.');
-					this.$refs.contractDateFrom.focus();
-					return;
-				} else if (!this.contractDateTo) {
-					this.sAlert('계약 기간 종료 일자를 입력해 주세요.');
-					this.$refs.contractDateTo.focus();
-					return;
 				}
 				if (this.clientVO.bizNo.indexOf('-') != -1) {
 					this.clientVO.bizNo = this.clientVO.bizNo.replace(/-/gi, '');
 				}
-				this.clientVO.contractDateFrom = this.formatDate(this.contractDateFrom);
-				this.clientVO.contractDateTo = this.formatDate(this.contractDateTo);
-				let contractAmt = this.contractAmt;
-				if (contractAmt.indexOf(',') != -1) {
-					contractAmt = contractAmt.replace(/,/gi, '');
-				}
-				this.clientVO.contractAmt = contractAmt;
+
 				let res;
 				if (!this.clientId) {
 					res = await saveClient(this.clientVO);
 				} else {
 					res = await modifyClient(this.clientVO);
 				}
-				console.log(res);
 				if (res.result == 0) {
 					this.sAlert(res.resultMsg);
 				}

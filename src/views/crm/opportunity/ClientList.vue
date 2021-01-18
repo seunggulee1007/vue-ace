@@ -38,79 +38,57 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="row">
-									<td>1</td>
-									<td>거래처종류1</td>
-									<td>(주)아이에스전자</td>
-									<td>513-81-51116</td>
-									<td>유영빈</td>
-									<td>경북 구미시 임수동 92-9 구미산업유통단지 6동 213호</td>
-									<td>유영빈</td>
-									<td>010-0000-0000</td>
-									<td>abcd@abc.com</td>
-								</tr>
-								<tr class="row">
-									<td>2</td>
-									<td>거래처종류2</td>
-									<td>(주)아이에스전자</td>
-									<td>513-81-51116</td>
-									<td>유영빈</td>
-									<td>경북 구미시 임수동 92-9 구미산업유통단지 6동 213호</td>
-									<td>유영빈</td>
-									<td>010-0000-0000</td>
-									<td>abcd@abc.com</td>
-								</tr>
-								<tr class="row">
-									<td>3</td>
-									<td>거래처종류3</td>
-									<td>(주)아이에스전자</td>
-									<td>513-81-51116</td>
-									<td>유영빈</td>
-									<td>경북 구미시 임수동 92-9 구미산업유통단지 6동 213호</td>
-									<td>유영빈</td>
-									<td>010-0000-0000</td>
-									<td>abcd@abc.com</td>
+								<tr class="row" v-for="(item, idx) in clientList" :key="item.clientId">
+									<td>{{ idx + 1 }}</td>
+									<td>{{ item.bizCondNm }}</td>
+									<td>{{ item.clientNm }}</td>
+									<td>{{ item.bizNo | bizNoFilter }}</td>
+									<td>{{ item.ceoNm }}</td>
+									<td>{{ item.addr }} {{ item.addrDetail }}</td>
+									<td>{{ item.manager }}</td>
+									<td>{{ item.phone | phoneFormat }}</td>
+									<td>{{ item.email }}</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<div class="component-box lst-wrap mobile">
-							<div class="lst-clients lst__item">
-								<div class="lst-clients__item element">
-									<p>최수현 과장</p>
-									<p>영업1팀</p>
-								</div>
-								<div class="lst-clients__item element">
-									<p>(주)아이에스전자</p>
-								</div>
-								<div class="lst-clients__item element">
-									<p>이선원</p>
-								</div>
-								<div class="lst-clients__item element">
-									<p>과장</p>
-								</div>
-								<div class="lst-clients__item element">
-									<p>010-1234-5678</p>
-								</div>
+					<div class="lst-wrap mobile">
+						<div class="lst-clients lst__item">
+							<div class="lst-clients__item element">
+								<p>최수현 과장</p>
+								<p>영업1팀</p>
 							</div>
-							<div class="lst-clients lst__item">
-								<div class="lst-clients__item element">
-									<p>영업담당자</p>
-								</div>
-								<div class="lst-clients__item element">
-									<p>거래처명</p>
-								</div>
-								<div class="lst-clients__item element">
-									<p>고객명</p>
-								</div>
-								<div class="lst-clients__item element">
-									<p>직위/직책</p>
-								</div>
-								<div class="lst-clients__item element">
-									<p>휴대전화</p>
-								</div>
+							<div class="lst-clients__item element">
+								<p>(주)아이에스전자</p>
+							</div>
+							<div class="lst-clients__item element">
+								<p>이선원</p>
+							</div>
+							<div class="lst-clients__item element">
+								<p>과장</p>
+							</div>
+							<div class="lst-clients__item element">
+								<p>010-1234-5678</p>
 							</div>
 						</div>
+						<div class="lst-clients lst__item">
+							<div class="lst-clients__item element">
+								<p>영업담당자</p>
+							</div>
+							<div class="lst-clients__item element">
+								<p>거래처명</p>
+							</div>
+							<div class="lst-clients__item element">
+								<p>고객명</p>
+							</div>
+							<div class="lst-clients__item element">
+								<p>직위/직책</p>
+							</div>
+							<div class="lst-clients__item element">
+								<p>휴대전화</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -118,7 +96,26 @@
 </template>
 
 <script>
-export default {};
+import { selectClientList } from '@/api/crm/client/client';
+export default {
+	async created() {
+		await this.selectClientList();
+	},
+	data() {
+		return {
+			clientList: [],
+		};
+	},
+	methods: {
+		async selectClientList() {
+			let res = await selectClientList(this.pagingVO);
+			console.log(res);
+			if (res.result == 0) {
+				this.clientList = res.data;
+			}
+		},
+	},
+};
 </script>
 
 <style></style>

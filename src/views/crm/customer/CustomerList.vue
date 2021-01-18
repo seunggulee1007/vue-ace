@@ -115,42 +115,42 @@
 							</tbody>
 						</table>
 					</div>
-					<div class="component-box lst-wrap mobile">
-							<div class="lst-vender lst__item">
-								<div class="lst-vender__item element bold">
-									<p>(주)아이에스전자</p>
-								</div>
-								<div class="lst-vender__item element">
-									<p>513-81-51116</p>
-								</div>
-								<div class="lst-vender__item element">
-									<p>유영빈</p>
-								</div>
-								<div class="lst-vender__item element">
-									<p>경북 구미시 임수동 92-9 구미산업유통단지 6동 213호</p>
-								</div>
-								<div class="lst-vender__item element">
-									<button type="button" class="button button--small">상세</button>
-								</div>
+					<div class="lst-wrap mobile">
+						<div class="lst-vender lst__item">
+							<div class="lst-vender__item element bold">
+								<p>(주)아이에스전자</p>
 							</div>
-							<div class="lst-vender lst__item">
-								<div class="lst-vender__item element bold">
-									<p>거래처명</p>
-								</div>
-								<div class="lst-vender__item element">
-									<p>사업자번호</p>
-								</div>
-								<div class="lst-vender__item element">
-									<p>대표자명</p>
-								</div>
-								<div class="lst-vender__item element">
-									<p>주소</p>
-								</div>
-								<div class="lst-vender__item element">
-									<button type="button" class="button button--small">상세</button>
-								</div>
+							<div class="lst-vender__item element">
+								<p>513-81-51116</p>
+							</div>
+							<div class="lst-vender__item element">
+								<p>유영빈</p>
+							</div>
+							<div class="lst-vender__item element">
+								<p>경북 구미시 임수동 92-9 구미산업유통단지 6동 213호</p>
+							</div>
+							<div class="lst-vender__item element">
+								<button type="button" class="button button--small">상세</button>
 							</div>
 						</div>
+						<div class="lst-vender lst__item">
+							<div class="lst-vender__item element bold">
+								<p>거래처명</p>
+							</div>
+							<div class="lst-vender__item element">
+								<p>사업자번호</p>
+							</div>
+							<div class="lst-vender__item element">
+								<p>대표자명</p>
+							</div>
+							<div class="lst-vender__item element">
+								<p>주소</p>
+							</div>
+							<div class="lst-vender__item element">
+								<button type="button" class="button button--small">상세</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

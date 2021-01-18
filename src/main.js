@@ -9,10 +9,12 @@ import 'element-ui/lib/theme-chalk/index.css';
 import locale from 'element-ui/lib/locale/lang/ko';
 import VueCookie from 'vue-cookie';
 import onlyInt from 'vue-input-only-number';
+import VueDaumPostcode from 'vue-daum-postcode';
 
 Vue.use(onlyInt);
 Vue.use(VueCookie);
 Vue.use(ElementUI, { locale });
+Vue.use(VueDaumPostcode);
 
 Vue.mixin({
 	data() {
@@ -58,6 +60,28 @@ Vue.mixin({
 					successFunction();
 				})
 				.catch(() => {});
+		},
+		checkBizNo(bizNo) {
+			// 사업자 번호 체크
+
+			let checkID = new Array(1, 3, 7, 1, 3, 7, 1, 3, 5, 1);
+			let i,
+				chkSum = 0,
+				c2,
+				remander;
+			bizNo = bizNo.replace(/-/gi, '');
+			if (bizNo.length != 10) {
+				return false;
+			}
+			for (i = 0; i <= 7; i++) {
+				chkSum += checkID[i] * bizNo.charAt(i);
+			}
+			c2 = '0' + checkID[8] * bizNo.charAt(8);
+			c2 = c2.substring(c2.length - 2, c2.length);
+			chkSum += Math.floor(c2.charAt(0)) + Math.floor(c2.charAt(1));
+			remander = (10 - (chkSum % 10)) % 10;
+
+			return Math.floor(bizNo.charAt(9)) == remander;
 		},
 		engOnly(e) {
 			e.target.value = e.target.value.replace(/[0-9]|[^\\!-z]/gi, '');
