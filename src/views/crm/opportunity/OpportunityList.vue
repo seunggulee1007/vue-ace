@@ -152,13 +152,13 @@
 								<p>담당자</p>
 							</div>
 							<div class="lst-opportunities__item element">
-								<div class="lst-status opt2">
-									<span class="opt1__txt opt__txt">인지</span>
-									<span class="opt2__txt opt__txt">제안</span>
+								<div class="lst-status opt5">
+									<span class="opt1__txt opt__txt">제안</span>
+									<span class="opt2__txt opt__txt">실패</span>
 									<span class="opt3__txt opt__txt">견적</span>
 									<span class="opt4__txt opt__txt">협상</span>
-									<span class="opt5__txt opt__txt">계약</span>
-									<span class="opt6__txt opt__txt">실패</span>
+									<span class="opt5__txt opt__txt">인지</span>
+									<span class="opt6__txt opt__txt">계약</span>
 								</div>
 							</div>
 							<div class="lst-opportunities__item element">
@@ -186,12 +186,12 @@
 							</div>
 							<div class="lst-opportunities__item element">
 								<div class="lst-status opt1">
-									<span class="opt1__txt opt__txt">인지</span>
-									<span class="opt2__txt opt__txt">제안</span>
+									<span class="opt1__txt opt__txt">제안</span>
+									<span class="opt2__txt opt__txt">실패</span>
 									<span class="opt3__txt opt__txt">견적</span>
 									<span class="opt4__txt opt__txt">협상</span>
-									<span class="opt5__txt opt__txt">계약</span>
-									<span class="opt6__txt opt__txt">실패</span>
+									<span class="opt5__txt opt__txt">인지</span>
+									<span class="opt6__txt opt__txt">계약</span>
 								</div>
 							</div>
 							<div class="lst-opportunities__item element">

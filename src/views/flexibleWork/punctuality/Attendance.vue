@@ -352,8 +352,8 @@ export default {
 				plugins: [dayGridPlugin, interactionPlugin],
 				initialView: 'dayGridMonth',
 			},
-		}
-	}
+		};
+	},
 };
 </script>
 

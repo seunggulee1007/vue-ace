@@ -8,30 +8,25 @@
 				<div class="component-area">
 					<div class="component-box component__search">
 						<form>
-							<div class="input-box-wrap input-term">
-								<div class="input-box input-box-icon">
-									<input
-										class="input input-icon"
-										type="text"
-										placeholder="작성 기준일자를 입력하세요"
-									/>
-									<span class="icon icon-calendar"></span>
-								</div>
-								<p>~</p>
-								<div class="input-box input-box-icon">
-									<input
-										class="input input-icon"
-										type="text"
-										placeholder="작성 기준일자를 입력하세요"
-									/>
-									<span class="icon icon-calendar"></span>
+							<div class="input-term">
+								<div class="input-box">
+									<el-date-picker
+										v-model="value1"
+										type="daterange"
+										range-separator="~"
+										start-placeholder="작성기준시작일"
+										end-placeholder="작성기준종료일">
+									</el-date-picker>
 								</div>
 							</div>
-							<select name="" id="">
-								<option value="">검색조건을 선택하세요</option>
-								<option value="">부서명</option>
-								<option value="">사원명</option>
-							</select>
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
+									<option value="">검색조건을 선택하세요</option>
+									<option value="">부서명</option>
+									<option value="">사원명</option>
+								</select>
+								<span class="icon icon-arrow"></span>
+							</div>
 							<div class="input-box input-box-icon">
 								<input class="input input-icon" type="text" placeholder="검색어를 입력하세요" />
 								<span class="icon icon-search"></span>
@@ -47,8 +42,8 @@
 					</div>
 				</div>
 				<div class="component-area">
-					<div class="component-box table-wrap">
-						<table class="table table-hover">
+					<div class="table-wrap table--horizontal">
+						<table class="table">
 							<thead>
 								<tr>
 									<th>
@@ -64,7 +59,6 @@
 											</span>
 										</div>
 									</th>
-									<th>바로가기</th>
 									<th>처리유형</th>
 									<th>승인상태</th>
 									<th>사유</th>
@@ -88,13 +82,12 @@
 											</span>
 										</div>
 									</td>
-									<td></td>
 									<td>연장근무</td>
 									<td>
-										<ul class="lst-status">
-											<li class="lst-status__item bg-purple show">승인 요청</li>
-											<li class="lst-status__item bg-blue">승인</li>
-											<li class="lst-status__item">미승인</li>
+										<ul class="lst-status opt1">
+											<li class="opt1__txt opt__txt">승인 요청</li>
+											<li class="opt2__txt opt__txt">미승인</li>
+											<li class="opt3__txt opt__txt">승인</li>
 										</ul>
 									</td>
 									<td>결산 지원</td>
@@ -127,13 +120,12 @@
 											</span>
 										</div>
 									</td>
-									<td></td>
 									<td>외근</td>
 									<td>
-										<ul class="lst-status">
-											<li class="lst-status__item bg-purple">승인 요청</li>
-											<li class="lst-status__item bg-blue show">승인</li>
-											<li class="lst-status__item">미승인</li>
+										<ul class="lst-status opt3">
+											<li class="opt1__txt opt__txt">승인 요청</li>
+											<li class="opt2__txt opt__txt">미승인</li>
+											<li class="opt3__txt opt__txt">승인</li>
 										</ul>
 									</td>
 									<td>외근</td>
@@ -166,13 +158,12 @@
 											</span>
 										</div>
 									</td>
-									<td></td>
 									<td>휴가</td>
 									<td>
-										<ul class="lst-status">
-											<li class="lst-status__item bg-purple">승인 요청</li>
-											<li class="lst-status__item bg-blue">승인</li>
-											<li class="lst-status__item show">미승인</li>
+										<ul class="lst-status opt2">
+											<li class="opt1__txt opt__txt">승인 요청</li>
+											<li class="opt2__txt opt__txt">미승인</li>
+											<li class="opt3__txt opt__txt">승인</li>
 										</ul>
 										<p class="msg-canceled">미승인사유</p>
 									</td>
@@ -206,13 +197,12 @@
 											</span>
 										</div>
 									</td>
-									<td></td>
 									<td>국내출장</td>
 									<td>
-										<ul class="lst-status">
-											<li class="lst-status__item bg-purple show">승인 요청</li>
-											<li class="lst-status__item bg-blue">승인</li>
-											<li class="lst-status__item">미승인</li>
+										<ul class="lst-status opt1">
+											<li class="opt1__txt opt__txt">승인 요청</li>
+											<li class="opt2__txt opt__txt">미승인</li>
+											<li class="opt3__txt opt__txt">승인</li>
 										</ul>
 									</td>
 									<td>국내 출장</td>
@@ -237,7 +227,7 @@
 				</div>
 				<div class="buttons-complete">
 					<div class="buttons">
-						<button type="submit" class="button button__approval">승인</button>
+						<button type="submit" class="button button__approval button__submit">승인</button>
 						<button type="button" class="button button__cancel">미승인</button>
 					</div>
 				</div>

@@ -758,30 +758,6 @@ a.link{
 }
 
 
-/* 유연근무-출/퇴근등록, 유연근무-승인처리
- lst-status html 변경필요 */
-.lst-status__item{
-	display: none;
-}
-.lst-status__item.show{
-	display: block;
-	border-radius: 8px;
-	padding: 8px 16px;
-	color: #fff;
-	font-size: 0.86em;
-	text-align: center;
-	background-color: #e94560;
-}
-.lst-status__item:nth-child(1),
-.lst-status__item.bg-blue{
-	background-color: #1f4068;
-}
-.lst-status__item.bg-purple{
-	background-color: #6a197d;
-}
-
-
-
 /* select-options */
 .select-options{
 	display: grid;
