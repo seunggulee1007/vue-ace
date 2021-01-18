@@ -345,7 +345,7 @@ export default {
 	},
 	data() {
 		return {
-			activeName: 'first',
+			activeName: 'second',
 			value1: '',
 			value2: '',
 			calendarOptions1: {

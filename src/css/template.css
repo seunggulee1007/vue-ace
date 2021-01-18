@@ -939,9 +939,9 @@ a.link{
 	color: #666;
 }
 .calendar.fc .fc-button-primary:hover{
-	border-color: #6a197d;
+	border-color: #2B5BC7;
 	background-color: #fff;
-	color: #6a197d;
+	color: #2B5BC7;
 }
 .calendar.fc .fc-button:disabled,
 .calendar.fc .fc-button.fc-today-button:disabled{
@@ -954,8 +954,8 @@ a.link{
 	border-color: #9ba4b4;
 }
 .calendar.fc .fc-button.fc-today-button{
-	background-color: #6a197d;
-	border-color: #6a197d;
+	background-color: #2B5BC7;
+	border-color: #2B5BC7;
 	color: #fff;
 }
 
@@ -963,7 +963,7 @@ a.link{
 	color: #666;
 }
 .calendar.fc .fc-button:hover .fc-icon{
-	color: #6a197d;
+	color: #2B5BC7;
 }
 
 .calendar.fc-theme-standard th{
@@ -980,7 +980,7 @@ a.link{
 }
 .calendar.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number{
 	font-weight: 700;
-	background-color: #6a197d;
+	background-color: #2B5BC7;
 	color: #fff;
 	border-radius: 50%;
 	width: 24px;
