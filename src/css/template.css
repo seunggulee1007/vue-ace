@@ -680,10 +680,10 @@ a.link{
 	display: none;
 }
 .lst-status.opt1{
-	background-color: #AEB9CB;
+	background-color: #3A579B;
 }
 .lst-status.opt2{
-	background-color: #FE8F00;
+	background-color: #CE0D00
 }
 .lst-status.opt3{
 	background-color: #7FD323;
@@ -692,10 +692,10 @@ a.link{
 	background-color: #7B26D7;
 }
 .lst-status.opt5{
-	background-color: #3A579B;
+	background-color: #AEB9CB;
 }
 .lst-status.opt6{
-	background-color: #CE0D00
+	background-color: #FE8F00;
 }
 .lst-status.opt1 .opt1__txt{
 	display: block;
@@ -716,7 +716,50 @@ a.link{
 	display: block;
 }
 
-/* 유연근무-승인처리 lst-status html 변경필요 */
+/* .lst-status-multiple */
+.lst-status.lst-status-multiple{
+	display: flex;
+	background-color: transparent;
+}
+.lst-status-multiple .opt__txt{
+	min-width: 40px;
+	padding: 6px;
+	border-radius: 13px;
+	border: 0;
+	text-align: center;
+}
+.lst-status-multiple .opt__txt + .opt__txt{
+	margin-left: 6px;
+}
+
+.lst-status.lst-status-multiple.opt1 .opt1__txt{
+	display: block;
+	background-color: #3A579B;
+}
+.lst-status.lst-status-multiple.opt2 .opt2__txt{
+	display: block;
+	background-color: #CE0D00
+}
+.lst-status.lst-status-multiple.opt3 .opt3__txt{
+	display: block;
+	background-color: #7FD323;
+}
+.lst-status.lst-status-multiple.opt4 .opt4__txt{
+	display: block;
+	background-color: #AEB9CB;
+}
+.lst-status.lst-status-multiple.opt5 .opt5__txt{
+	display: block;
+	background-color: #3A579B;
+}
+.lst-status.lst-status-multiple.opt6 .opt6__txt{
+	display: block;
+	background-color: #FE8F00;
+}
+
+
+/* 유연근무-출/퇴근등록, 유연근무-승인처리
+ lst-status html 변경필요 */
 .lst-status__item{
 	display: none;
 }
@@ -737,12 +780,6 @@ a.link{
 	background-color: #6a197d;
 }
 
-.lst-status.lst-status-multiple{
-	display: flex;
-}
-.lst-status-multiple .lst-status__item + .lst-status__item{
-	margin-left: 6px;
-}
 
 
 /* select-options */
@@ -978,12 +1015,16 @@ a.link{
 }
 .component-box-top .input-checkbox__label{
 	margin-right: 12px;
+	padding-bottom: 1px;
 }
 
 .input-box.input-box-icon.input-select{
 	padding-right: 38px
 }
-.input-box.input-box-icon.input-select .icon.icon-arrow{
+.input-select:hover{	
+	border-color: #2b5bc7;
+}
+.input-select .icon.icon-arrow{
 	left: auto;
 	right: 6px;
 }
@@ -998,9 +1039,7 @@ a.link{
 .selectbox::-ms-expand{
 	display: none;
 }
-.selectbox:focus{
-	border-color: #2b5bc7;
-}
+
 
 /* button */
 .buttons{
@@ -1248,7 +1287,7 @@ a.link{
 }
 
 .progress__bar{
-	background-color: #6a197d;
+	background-color: #3C7DFF;
 	border-radius: 4px;
 	z-index: 1;
 }
@@ -1269,7 +1308,7 @@ a.link{
 	border-radius: 4px 0 0 4px;
 }
 .progress__bar2 .progress__bar{
-	background-color: #ff6b81;
+	background-color: #7FD323;
 	border-radius: 0 4px 4px 0;
 }
 

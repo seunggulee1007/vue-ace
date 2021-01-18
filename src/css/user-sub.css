@@ -15,7 +15,7 @@
 .time-recording-wrap .clock{
 	font-size: 24px;
 	font-weight: 700;
-	color: #6a197d;
+	color: #3C7DFF;
 	padding: 12px 0 10px;
 }
 .time-recording-wrap .buttons .button{
@@ -54,7 +54,6 @@
 
 .lst-working{
 	display: flex;
-	margin-right: 24px;
 }
 .lst-working > ul{
 	display: none;
