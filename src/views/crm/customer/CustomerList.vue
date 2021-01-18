@@ -44,18 +44,23 @@
 									</div>-->
 							</div>
 							<div class="input-select input-box input-box-icon">
-								<select name="" id="" class="selectbox">
-									<option value="">고객명</option>
-									<option value="">거래처명</option>
-									<option value="">영업담당자</option>
+								<select class="selectbox" v-model="pagingVO.searchKind">
+									<option value="1">고객명</option>
+									<option value="2">거래처명</option>
+									<option value="3">영업담당자</option>
 								</select>
 								<span class="icon icon-arrow"></span>
 							</div>
 							<div class="input-box input-box-icon">
-								<input class="input input-icon" type="text" placeholder="검색어를 입력하세요" />
+								<input
+									class="input input-icon"
+									type="text"
+									placeholder="검색어를 입력하세요"
+									v-model="pagingVO.searchKeyword"
+								/>
 								<span class="icon icon-search"></span>
 							</div>
-							<button class="button button__search">조회</button>
+							<button class="button button__search" @click="selectCustomerList">조회</button>
 						</form>
 					</div>
 					<div class="component-box table-wrap table--horizontal no-mobile">
@@ -76,41 +81,29 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="row">
-									<td>1</td>
-									<td>(주)아이에스전자</td>
-									<td>최수현 과장</td>
-									<td>이선원</td>
-									<td>과장</td>
-									<td>마케팅부서</td>
-									<td>010-0000-0000</td>
-									<td>abcd@abc.com</td>
+								<tr class="row" v-for="(item, idx) in customerList" :key="item.customerId">
+									<td>{{ idx + 1 }}</td>
+									<td>{{ item.clientNm }}</td>
+									<td>{{ item.manager }}</td>
+									<td>{{ item.customerNm }}</td>
+									<td>{{ item.rankCdNm }}</td>
+									<td>{{ item.deptNm }}</td>
+									<td>{{ item.phone }}</td>
+									<td>{{ item.email }}</td>
 									<td>
-										<div class="lst-status opt5">
+										<div
+											class="lst-status opt5"
+											:class="{
+												opt5: item.resignationYn == 'Y',
+												opt6: item.resignationYn == 'N',
+											}"
+										>
 											<span class="opt5__txt opt__txt">재직</span>
 											<span class="opt6__txt opt__txt">퇴사</span>
 										</div>
 									</td>
 									<td></td>
-									<td>2020-12-20</td>
-								</tr>
-								<tr class="row">
-									<td>2</td>
-									<td>(주)아이에스전자</td>
-									<td>최수현 과장</td>
-									<td>이선원</td>
-									<td>과장</td>
-									<td>마케팅부서</td>
-									<td>010-0000-0000</td>
-									<td>abcd@abc.com</td>
-									<td>
-										<div class="lst-status opt6">
-											<span class="opt5__txt opt__txt">재직</span>
-											<span class="opt6__txt opt__txt">퇴사</span>
-										</div>
-									</td>
-									<td></td>
-									<td>2020-12-20</td>
+									<td>{{ item.crtDtm }}</td>
 								</tr>
 							</tbody>
 						</table>
@@ -158,7 +151,28 @@
 </template>
 
 <script>
-export default {};
+import { selectCustomerList } from '@/api/crm/customer/customer';
+export default {
+	created() {
+		this.selectCustomerList();
+	},
+	data() {
+		return {
+			customerList: [],
+			pagingVO: {
+				pageNo: 0,
+			},
+		};
+	},
+	methods: {
+		async selectCustomerList() {
+			let res = await selectCustomerList(this.pagingVO);
+			if (res == 0) {
+				this.customerList = res.data;
+			}
+		},
+	},
+};
 </script>
 
 <style></style>

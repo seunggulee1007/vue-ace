@@ -134,11 +134,7 @@
 							<p class="component__title">업종</p>
 						</div>
 						<div class="component-box-cnt">
-							<select-box
-								:codeGroup="'bizKind'"
-								v-model="clientVO.bizKind"
-								ref="bizCond"
-							></select-box>
+							<select-box :codeGroup="'bizKind'" v-model="clientVO.bizKind" ref="bizCond"></select-box>
 						</div>
 						<select-box
 							:codeGroup="'contractStatus'"

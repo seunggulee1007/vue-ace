@@ -194,22 +194,10 @@
 
 <script>
 import RadioBtn from '@/components/common/RadioBtn.vue';
-import UserModal from '@/components/common/UserModal.vue';
-import { confirmDuple, insertWorkGroup, updateWorkGroup } from '@/api/agile/workGroup';
 export default {
 	components: {
 		RadioBtn,
-		UserModal,
 	},
-	data() {
-		return {
-			workGroupVO: {
-				workType: '',
-				stdWorkingHours: '',
-				settlementUnit: '',
-			},
-		}
-	}
 };
 </script>
 
