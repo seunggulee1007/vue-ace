@@ -98,19 +98,6 @@
 	margin-right: 0;
 }
 
-.icon-checkbox-blue:before{
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 14px;
-	height:14px;
-	background-image: url("../images/sprites_icons.png");
-	background-position: -70px 0;
-}
-input[type='checkbox']:checked + .icon-checkbox-blue:before{
-	background-position: -84px 0;
-}
 .input-checkbox__label:before{
 	content: '';
 	position: absolute;
@@ -123,7 +110,7 @@ input[type='checkbox']:checked + .icon-checkbox-blue:before{
 	background-position: -70px 0;
 }
 input[type='checkbox']:checked + .input-checkbox__label:before{
-	background-position: -98px 0;
+	background-position: -84px 0;
 }
 
 .icon-gnb1{

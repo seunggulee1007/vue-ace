@@ -547,11 +547,12 @@ a.link{
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
-	border: 1px solid #e7ecf0;
-	box-shadow: 0 0px 8px rgba(0,0,0,0.08);
+	border: 1px solid #E8EBF0;
+	box-shadow: 0 0px 8px rgba(0,0,0,0.1);
 	overflow: hidden;
 	margin-right: 12px;
 	text-align: center;
+	background: url("../images/user-default.png") no-repeat center / cover;
 }
 .img-user.img-user--large{
 	width: 80px;
@@ -997,7 +998,9 @@ a.link{
 .selectbox::-ms-expand{
 	display: none;
 }
-
+.selectbox:focus{
+	border-color: #2b5bc7;
+}
 
 /* button */
 .buttons{
