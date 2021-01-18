@@ -38,20 +38,24 @@
 							<p class="component__title">휴가 구분</p>
 						</div>
 						<div class="component-box-cnt">
-							<ul class="select-options">
-								<li class="select-options__item select">
-									<span>연차</span>
-								</li>
-								<li class="select-options__item">
-									<span>반차</span>
-								</li>
-								<li class="select-options__item">
-									<span>반반차</span>
-								</li>
-								<li class="select-options__item">
-									<span>시간연차</span>
-								</li>
-							</ul>
+							<div class="select-options">
+								<div class="input-radio select-options__item">
+									<input type="radio" class="input" id="leaveType1" name="leaveType" value="">
+									<label for="leaveType1">연차</label>
+								</div>
+								<div class="input-radio select-options__item">
+									<input type="radio" class="input" id="leaveType2" name="leaveType" value="">
+									<label for="leaveType2">반차</label>
+								</div>
+								<div class="input-radio select-options__item">
+									<input type="radio" class="input" id="leaveType3" name="leaveType" value="">
+									<label for="leaveType3">반반차</label>
+								</div>
+								<div class="input-radio select-options__item">
+									<input type="radio" class="input" id="leaveType4" name="leaveType" value="">
+									<label for="leaveType4">시간연차</label>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="component-box">
@@ -59,28 +63,24 @@
 							<p class="component__title">휴가 기간</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-box-wrap input-term">
-								<div class="input-box input-box-icon">
-									<input class="input input-icon" type="text" placeholder="시작일" />
-									<span class="icon icon-calendar"></span>
-								</div>
-								<p>~</p>
-								<div class="input-box input-box-icon">
-									<input class="input input-icon" type="text" placeholder="종료일" />
-									<span class="icon icon-calendar"></span>
-								</div>
-							</div>
-							<div class="input-box-wrap input-term">
-								<div class="input-box input-box-icon">
-									<input class="input input-icon" type="text" placeholder="시작시간" />
-									<span class="icon icon-clock"></span>
-								</div>
-								<p>~</p>
-								<div class="input-box input-box-icon">
-									<input class="input input-icon" type="text" placeholder="종료시간" />
-									<span class="icon icon-clock"></span>
+							<div class="input-term">
+								<div class="input-box">
+									<el-date-picker
+										v-model="value1"
+										type="daterange"
+										range-separator="~"
+										start-placeholder="시작일"
+										end-placeholder="종료일">
+									</el-date-picker>
 								</div>
 							</div>
+							<el-time-picker
+								is-range
+								v-model="value2"
+								range-separator="~"
+								start-placeholder="시작시간"
+								end-placeholder="종료시간">
+							</el-time-picker>
 						</div>
 					</div>
 				</div>

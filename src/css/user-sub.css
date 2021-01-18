@@ -91,6 +91,11 @@
 	display: flex;
 	justify-content: space-between;
 }
+.lst-leave__item{
+	border: 1px solid #E8EBF0;
+	border-radius: 8px;
+	padding: 32px;
+}
 .lst-leave__item .status-leave{
 	font-size: 18px;
 	padding-top: 12px 
