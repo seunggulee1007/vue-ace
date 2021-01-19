@@ -900,7 +900,7 @@ a.link{
 
 
 /* el-date-picker */
-.input-term .input-box > div,
+/* .input-term .input-box > div, */
 .input-box .el-date-editor.el-input,
 .el-date-editor.el-input__inner{
 	/* width: 100%; */
@@ -910,6 +910,20 @@ a.link{
 .input-box .el-date-editor .el-range-separator{
 	color: #1a1a2e;
 }
+/* .input-box .el-date-editor.el-range-editor.el-date-editor--datetimerange{
+	width: 646px;
+} */
+
+/* input-term
+.input-term{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.input-term .input-box + .input-box{
+	margin-left: 16px;
+}
+ */
 
 /* full-calendar */
 .calendar.fc .fc-button-primary{

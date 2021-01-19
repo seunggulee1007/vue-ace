@@ -35,19 +35,19 @@
 						<div class="component-box-cnt">
 							<div class="select-options">
 								<div class="input-radio select-options__item">
-									<input type="radio" class="input" id="leaveType1" name="leaveType" value="">
+									<input type="radio" class="input" id="leaveType1" name="leaveType" value="" />
 									<label for="leaveType1">연차</label>
 								</div>
 								<div class="input-radio select-options__item">
-									<input type="radio" class="input" id="leaveType2" name="leaveType" value="">
+									<input type="radio" class="input" id="leaveType2" name="leaveType" value="" />
 									<label for="leaveType2">반차</label>
 								</div>
 								<div class="input-radio select-options__item">
-									<input type="radio" class="input" id="leaveType3" name="leaveType" value="">
+									<input type="radio" class="input" id="leaveType3" name="leaveType" value="" />
 									<label for="leaveType3">반반차</label>
 								</div>
 								<div class="input-radio select-options__item">
-									<input type="radio" class="input" id="leaveType4" name="leaveType" value="">
+									<input type="radio" class="input" id="leaveType4" name="leaveType" value="" />
 									<label for="leaveType4">시간연차</label>
 								</div>
 							</div>
@@ -58,24 +58,20 @@
 							<p class="component__title">휴가 기간</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-term">
-								<div class="input-box">
-									<el-date-picker
-										v-model="value1"
-										type="daterange"
-										range-separator="~"
-										start-placeholder="시작일"
-										end-placeholder="종료일">
-									</el-date-picker>
-								</div>
+							<div class="input-box">
+								<el-date-picker
+									v-model="value1"
+									type="datetimerange"
+									range-separator="~"
+									start-placeholder="시작일"
+									end-placeholder="종료일"
+								>
+								</el-date-picker>
+								<button type="button" class="button button__add">
+									<span class="icon icon-add"></span>
+									추가
+								</button>
 							</div>
-							<el-time-picker
-								is-range
-								v-model="value2"
-								range-separator="~"
-								start-placeholder="시작시간"
-								end-placeholder="종료시간">
-							</el-time-picker>
 						</div>
 					</div>
 				</div>

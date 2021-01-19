@@ -21,14 +21,16 @@
 							<p class="component__title">근태 구분</p>
 						</div>
 						<div class="component-box-cnt">
-							<ul class="select-options">
-								<li class="select-options__item select">
-									<span>직출</span>
-								</li>
-								<li class="select-options__item">
-									<span>직퇴</span>
-								</li>
-							</ul>
+							<div class="select-options">
+								<div class="input-radio select-options__item">
+									<input type="radio" class="input" id="offSite1" name="offSite" value="" />
+									<label for="offSite1">직출</label>
+								</div>
+								<div class="input-radio select-options__item">
+									<input type="radio" class="input" id="offSite2" name="offSite" value="" />
+									<label for="offSite2">직퇴</label>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="component-box">
@@ -36,29 +38,20 @@
 							<p class="component__title">일자 및 시간</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-box-wrap input-term">
-								<div class="input-box input-box-icon">
-									<input class="input input-icon" type="text" placeholder="외근일" readonly />
-									<span class="icon icon-calendar"></span>
-								</div>
-								<div class="input-box input-box-icon">
-									<input class="input input-icon" type="text" placeholder="시작시간" readonly />
-									<span class="icon icon-clock"></span>
-								</div>
-								<p>~</p>
-								<div class="input-box input-box-icon">
-									<input class="input input-icon" type="text" placeholder="외근일" readonly />
-									<span class="icon icon-calendar"></span>
-								</div>
-								<div class="input-box input-box-icon">
-									<input class="input input-icon" type="text" placeholder="종료시간" readonly />
-									<span class="icon icon-clock"></span>
-								</div>
+							<div class="input-box">
+								<el-date-picker
+									v-model="value1"
+									type="datetimerange"
+									range-separator="~"
+									start-placeholder="시작일"
+									end-placeholder="종료일"
+								>
+								</el-date-picker>
+								<button type="button" class="button button__add">
+									<span class="icon icon-add"></span>
+									추가
+								</button>
 							</div>
-							<button type="button" class="button button__add">
-								<span class="icon icon-add"></span>
-								추가
-							</button>
 						</div>
 					</div>
 					<div class="component-box">
@@ -77,7 +70,7 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="input-box">
-								<input class="input " type="text" placeholder="자동표시" readonly />
+								<input class="input " type="text" placeholder="0.0 시간" />
 							</div>
 						</div>
 					</div>

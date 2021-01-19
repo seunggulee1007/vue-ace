@@ -15,7 +15,8 @@
 										type="daterange"
 										range-separator="~"
 										start-placeholder="작성기준시작일"
-										end-placeholder="작성기준종료일">
+										end-placeholder="작성기준종료일"
+									>
 									</el-date-picker>
 								</div>
 							</div>
