@@ -8,17 +8,15 @@
 				<div class="component-area">
 					<div class="component-box component__search">
 						<form>
-							<div class="input-term">
-								<div class="input-box">
-									<el-date-picker
-										v-model="value1"
-										type="daterange"
-										range-separator="~"
-										start-placeholder="작성기준시작일"
-										end-placeholder="작성기준종료일"
-									>
-									</el-date-picker>
-								</div>
+							<div class="input-box">
+								<el-date-picker
+									v-model="value1"
+									type="daterange"
+									range-separator="~"
+									start-placeholder="작성기준시작일"
+									end-placeholder="작성기준종료일"
+								>
+								</el-date-picker>
 							</div>
 							<div class="input-select input-box input-box-icon">
 								<select name="" id="" class="selectbox">
