@@ -11,7 +11,8 @@
 								type="daterange"
 								range-separator="~"
 								start-placeholder="기회일자"
-								end-placeholder="기회일자">
+								end-placeholder="기회일자"
+							>
 							</el-date-picker>
 							<div class="input-select input-box input-box-icon">
 								<select name="" id="" class="select-box">
@@ -61,7 +62,7 @@
 					<div class="component-area">
 						<div class="component-box">
 							<p class="component__title">실패</p>
-							<p class="status-txt--large bold">3건</p>
+							<p class="status-txt--large"><span class="bold">3</span>건</p>
 						</div>
 					</div>
 				</div>

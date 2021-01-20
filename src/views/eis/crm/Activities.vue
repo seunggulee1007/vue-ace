@@ -5,13 +5,22 @@
 				<div class="section-top">
 					<h3 class="section__title">영업 활동 분석</h3>
 					<div class="input-box-wrap">
-						<div class="input-box input-box-icon">
-							<input class="input input-icon" type="text" placeholder="활동일자" />
-							<span class="icon icon-calendar"></span>
-							<select name="" id="">
-								<option value="" selected>부서명</option>
-								<option value="">사원명</option>
-							</select>
+						<div class="input-box">
+							<el-date-picker
+								v-model="value1"
+								type="daterange"
+								range-separator="~"
+								start-placeholder="활동일자"
+								end-placeholder="활동일자"
+							>
+							</el-date-picker>
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="select-box">
+									<option value="" selected>부서명</option>
+									<option value="">사원명</option>
+								</select>
+								<span class="icon icon-arrow"></span>
+							</div>
 							<div class="input-box">
 								<input type="text" class="input" placeholder="검색어를 입력하세요" />
 							</div>
@@ -20,48 +29,58 @@
 					</div>
 				</div>
 
-				<div class="component-area">
-					<strong class="content__title">영업 활동 유형 현황</strong>
-					<div class="lst-cards lst-cards__6colums">
+				<div class="component-area-wrap lst-cards lst-cards__6colums">
+					<!-- <strong class="content__title">영업 활동 유형 현황</strong> -->
+					<div class="component-area">
 						<div class="component-box">
-							<p class="bold">15건</p>
 							<p class="component__title">방문</p>
-						</div>
-						<div class="component-box">
-							<p class="bold">25건</p>
-							<p class="component__title">전화</p>
-						</div>
-						<div class="component-box">
-							<p class="bold">20건</p>
-							<p class="component__title">E-Mail</p>
-						</div>
-						<div class="component-box">
-							<p class="bold">10건</p>
-							<p class="component__title">DM</p>
-						</div>
-						<div class="component-box">
-							<p class="bold">7건</p>
-							<p class="component__title">기타</p>
-						</div>
-						<div class="component-box">
-							<p class="bold">3건</p>
-							<p class="component__title">TOTAL</p>
+							<p class="status-txt--large"><span class="bold">15</span>건</p>
 						</div>
 					</div>
+					<div class="component-area">
+						<div class="component-box">
+							<p class="component__title">전화</p>
+							<p class="status-txt--large"><span class="bold">25</span>건</p>
+						</div>
+					</div>
+					<div class="component-area">
+						<div class="component-box">
+							<p class="component__title">E-Mail</p>
+							<p class="status-txt--large"><span class="bold">20</span>건</p>
+						</div>
+					</div>
+					<div class="component-area">
+						<div class="component-box">
+							<p class="component__title">DM</p>
+							<p class="status-txt--large"><span class="bold">10</span>건</p>
+						</div>
+					</div>
+					<div class="component-area">
+						<div class="component-box">
+							<p class="component__title">기타</p>
+							<p class="status-txt--large"><span class="bold">7</span>건</p>
+						</div>
+					</div>
+					<div class="component-area">
+						<div class="component-box">
+							<p class="component__title">TOTAL</p>
+							<p class="status-txt--large"><span class="bold">3</span>건</p>
+						</div>
+					</div>					
 				</div>
 				<div class="component-area">
 					<strong class="content__title">부서/담당자 영업 활동 유형 현황</strong>
 					<div class="table-wrap">
-						<table class="table">
+						<table class="table" style="table-layout: fixed">
 							<thead>
 								<tr>
 									<th>부서</th>
-									<th>방문</th>
-									<th>전화</th>
-									<th>E-mail</th>
-									<th>DM</th>
-									<th>기타</th>
-									<th>TOTAL</th>
+									<th class="data__number">방문</th>
+									<th class="data__number">전화</th>
+									<th class="data__number">E-mail</th>
+									<th class="data__number">DM</th>
+									<th class="data__number">기타</th>
+									<th class="data__number">TOTAL</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -69,7 +88,7 @@
 									<td>
 										<div class="flex-box">
 											영업1팀
-											<button type="button" class="button">상세보기</button>
+											<button type="button" class="button button--small">상세보기</button>
 										</div>
 									</td>
 									<td class="data__number">10</td>
@@ -83,7 +102,7 @@
 									<td>
 										<div class="flex-box">
 											영업2팀
-											<button type="button" class="button">상세보기</button>
+											<button type="button" class="button button--small">상세보기</button>
 										</div>
 									</td>
 									<td class="data__number">12</td>
@@ -97,7 +116,7 @@
 									<td>
 										<div class="flex-box">
 											영업3팀
-											<button type="button" class="button">상세보기</button>
+											<button type="button" class="button button--small">상세보기</button>
 										</div>
 									</td>
 									<td class="data__number">8</td>
@@ -121,7 +140,7 @@
 							</tfoot>
 						</table>
 
-						<table class="table">
+						<table class="table" style="table-layout: fixed">
 							<thead>
 								<tr>
 									<th>담당자</th>
@@ -200,7 +219,7 @@
 									<td>
 										<div class="flex-box">
 											3
-											<button type="button" class="button">상세보기</button>
+											<button type="button" class="button button--small">상세보기</button>
 										</div>
 									</td>
 									<td>ERP 구축 (스마트팩토리)</td>
@@ -223,7 +242,7 @@
 									<td>
 										<div class="flex-box">
 											1
-											<button type="button" class="button">상세보기</button>
+											<button type="button" class="button button--small">상세보기</button>
 										</div>
 									</td>
 									<td></td>
