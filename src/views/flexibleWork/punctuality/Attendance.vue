@@ -36,7 +36,7 @@
 					<div class="component-area">
 						<div class="component-box">
 							<p class="component__title">주 평균 근로시간</p>
-							<p class="status-time"><span class="bold">38.6</span>시간</p>
+							<p class="status-time status-txt--large"><span class="bold">38.6</span>시간</p>
 						</div>
 						<p>시차 출퇴근제</p>
 						<div class="progress-box-wrap progress__2bars">
@@ -57,7 +57,7 @@
 					<div class="component-area">
 						<div class="component-box">
 							<p class="component__title">잔여 근무 가능 시간</p>
-							<p class="status-time"><span class="bold">18.5</span>시간</p>
+							<p class="status-time status-txt--large"><span class="bold">18.5</span>시간</p>
 						</div>
 						<p>총 근로시간 <span class="bold">198시간</span></p>
 						<div class="progress-box-wrap progress__2bars">
@@ -78,7 +78,7 @@
 					<div class="component-area">
 						<div class="component-box">
 							<p class="component__title">잔여 연차</p>
-							<p class="status-time"><span class="bold">8.5</span>개</p>
+							<p class="status-time status-txt--large"><span class="bold">8.5</span>개</p>
 						</div>
 						<p>발생 <span class="bold">15.0</span>개</p>
 						<div class="progress-box">

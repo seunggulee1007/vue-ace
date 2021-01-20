@@ -8,23 +8,23 @@
 				<div class="component-area-wrap lst-cards lst-cards__5colums lst-leave">
 					<div class="component-area">
 						<p class="component__title">발생</p>
-						<p class="status-leave"><span class="bold">15.0</span>개</p>
+						<p class="status-txt--large"><span class="bold">15.0</span>개</p>
 					</div>
 					<div class="component-area">
 						<p class="component__title">사용</p>
-						<p class="status-leave"><span class="bold">6.0</span>개</p>
+						<p class="status-txt--large"><span class="bold">6.0</span>개</p>
 					</div>
 					<div class="component-area">
 						<p class="component__title">잔여</p>
-						<p class="status-leave"><span class="bold">9.0</span>개</p>
+						<p class="status-txt--large"><span class="bold">9.0</span>개</p>
 					</div>
 					<div class="component-area">
 						<p class="component__title">신청</p>
-						<p class="status-leave"><span class="bold">3.0</span>개</p>
+						<p class="status-txt--large"><span class="bold">3.0</span>개</p>
 					</div>
 					<div class="component-area">
 						<p class="component__title">신청 후 잔여</p>
-						<p class="status-leave"><span class="bold">6.0</span>개</p>
+						<p class="status-txt--large"><span class="bold">6.0</span>개</p>
 					</div>
 				</div>
 				<div class="component-area">

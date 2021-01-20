@@ -877,7 +877,7 @@ a.link{
 	border-radius: 6px;
 	background-color: #fff;
 	border: 1px solid #e7ecf0;
-	padding: 8px 12px;
+	padding: 12px 16px;
 	box-sizing: border-box;
 	flex-grow: 1;
 }
@@ -900,7 +900,6 @@ a.link{
 
 
 /* el-date-picker */
-/* .input-term .input-box > div, */
 .input-box .el-date-editor.el-input,
 .el-date-editor.el-input__inner{
 	/* width: 100%; */
@@ -1047,7 +1046,7 @@ a.link{
 }
 
 .button{
-	padding: 8px 12px;
+	padding: 12px 16px;
 	border-radius: 4px;
 	border: 1px solid #b2bbca;
 	background-color: #fff;
