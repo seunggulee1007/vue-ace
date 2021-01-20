@@ -65,10 +65,16 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="input-select input-box input-box-icon">
-								<select name="" id="" class="selectbox">
-									<option value="">방법1</option>
-									<option value="">방법2</option>
-								</select>
+								<select-box
+									:codeGroup="'salesPurpose'"
+									:defaultVal="dataVO.salesPurpose"
+									ref="salesPurpose"
+									@input="
+										value => {
+											dataVO.rankCd = value;
+										}
+									"
+								></select-box>
 								<span class="icon icon-arrow"></span>
 							</div>
 						</div>
@@ -79,10 +85,16 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="input-box">
-								<select name="" id="">
-									<option value="">목적1</option>
-									<option value="">목적2</option>
-								</select>
+								<select-box
+									:codeGroup="'selesMethod'"
+									:defaultVal="dataVO.selesMethod"
+									ref="selesMethod"
+									@input="
+										value => {
+											dataVO.selesMethod = value;
+										}
+									"
+								></select-box>
 							</div>
 						</div>
 					</div>
@@ -180,7 +192,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			dataVO: {},
+		};
+	},
+};
 </script>
 
 <style></style>
