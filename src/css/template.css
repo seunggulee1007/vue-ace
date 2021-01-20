@@ -654,6 +654,7 @@ a.link{
 	padding: 12px;
 	border: 1px solid #e7ecf0;
 	border-radius: 8px;
+	box-shadow: 1px 1px 8px rgba(24,24,24,0.08);
 
 	display: flex;
 	align-items: center;
@@ -1054,7 +1055,7 @@ a.link{
 	font-size: 0.86em;
 	display: flex;
 }
-.button--small{
+.button.button--small{
 	padding: 4px 6px;
 }
 .button:hover{

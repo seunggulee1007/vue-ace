@@ -80,4 +80,7 @@
 }
 
 
-/* eis - 재무분석 */
+/* eis - 매출 실적 */
+.result-performance .lst-cards + .lst-cards{
+	margin-top: 16px;
+}

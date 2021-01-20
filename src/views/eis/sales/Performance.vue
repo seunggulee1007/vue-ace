@@ -6,16 +6,18 @@
 					<h3 class="section__title">영업 실적 분석</h3>
 					<div class="input-box-wrap">
 						<div class="input-box input-box-icon">
-							<input class="input input-icon" type="text" placeholder="기준년월" />
-							<span class="icon icon-calendar"></span>
-							<select name="" id="">
-								<option value="" selected>억원</option>
-								<option value="">백만원</option>
-								<option value="">십만원</option>
-								<option value="">만원</option>
-								<option value="">천원</option>
-								<option value="">원</option>
-							</select>
+							<el-date-picker v-model="value1" type="month" placeholder="기준년월"></el-date-picker>
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
+									<option value="" selected>억원</option>
+									<option value="">백만원</option>
+									<option value="">십만원</option>
+									<option value="">만원</option>
+									<option value="">천원</option>
+									<option value="">원</option>
+								</select>
+								<span class="icon icon-arrow"></span>
+							</div>
 							<button type="button" class="button button__search">
 								조회
 							</button>
@@ -25,63 +27,67 @@
 
 				<div class="component-area">
 					<strong class="content__title">매출 실적</strong>
-					<div class="flex-box">
+					<div class="result-performance">
 						<div>
+							<div class="lst-cards lst-cards__5colums">
+								<div class="lst-cards__item">
+									<div class="component-box">
+										<p class="component__title">당월</p>
+										<p class="status-txt--large bold">64.3억원</p>
+									</div>
+								</div>
+								<div class="lst-cards__item">
+									<div class="component-box">
+										<p class="component__title">전월</p>
+										<p class="status-txt--large bold">50.1억원</p>
+									</div>
+								</div>
+								<div class="lst-cards__item">
+									<div class="component-box">
+										<p class="component__title">전년동기</p>
+										<p class="status-txt--large bold">46.7억원</p>
+									</div>
+								</div>
+								<div class="lst-cards__item">
+									<div class="component-box">
+										<p class="component__title">당기누계</p>
+										<p class="status-txt--large bold">1,363억원</p>
+									</div>
+								</div>
+								<div class="lst-cards__item">
+									<div class="component-box">
+										<p class="component__title">전기누계</p>
+										<p class="status-txt--large bold">1,381억원</p>
+									</div>
+								</div>
+							</div>
 							<div class="lst-cards lst-cards__3colums">
 								<div class="lst-cards__item">
 									<div class="component-box">
-										<p class="bold">64.3</p>
-										<p class="component__title">당월</p>
+										<p class="component__title">전월 대비</p>
+										<p class="status-txt--large bold status--up flex-box">
+											<span class="icon-triangle"></span>
+											46.7억원(27.8%)
+										</p>
 									</div>
 								</div>
 								<div class="lst-cards__item">
 									<div class="component-box">
-										<p class="bold">50.1</p>
-										<p class="component__title">전월</p>
+										<p class="component__title">전년 동기 대비</p>
+										<p class="status-txt--large bold status--down flex-box">
+											<span class="icon-triangle"></span>
+											27.7억원(38.9%)
+										</p>
 									</div>
 								</div>
 								<div class="lst-cards__item">
 									<div class="component-box">
-										<p class="bold">46.7</p>
-										<p class="component__title">전년동기</p>
+										<p class="component__title">전년대비</p>
+										<p class="status-txt--large bold status--down flex-box">
+											<span class="icon-triangle"></span>
+											18.0억원(1.3%)
+										</p>
 									</div>
-								</div>
-							</div>
-							<div class="flex-box">
-								<p class="component__title">전월대비</p>
-								<div class="component-box flex-box">
-									<p>46.7 (+)</p>
-									<p>27.8% (+)</p>
-								</div>
-							</div>
-							<div class="flex-box">
-								<p class="component__title">전년 동기 대비</p>
-								<div class="component-box flex-box">
-									<p>27.7 (-)</p>
-									<p>38.9% (-)</p>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="lst-cards lst-cards__2colums">
-								<div class="lst-cards__item">
-									<div class="component-box">
-										<p class="bold">1,363</p>
-										<p class="component__title">당기누계</p>
-									</div>
-								</div>
-								<div class="lst-cards__item">
-									<div class="component-box">
-										<p class="bold">1,381</p>
-										<p class="component__title">전기누계</p>
-									</div>
-								</div>
-							</div>
-							<div class="flex-box">
-								<p class="component__title">전년대비</p>
-								<div class="component-box flex-box">
-									<p>18.0 (-)</p>
-									<p>1.3% (-)</p>
 								</div>
 							</div>
 						</div>

@@ -78,15 +78,19 @@
 							<div class="lst-cards__item">
 								<div class="component-box">
 									<p class="component__title">전월 대비</p>
-									<p class="status-txt--large bold status--up">10.7억원</p>
-									<p class="status-txt--large bold status--up">27.8%</p>
+									<p class="status-txt--large bold status--up">
+										<span class="icon-triangle"></span>
+										10.7억원(27.8%)
+									</p>
 								</div>
 							</div>
 							<div class="lst-cards__item">
 								<div class="component-box">
 									<p class="component__title">전년 동기 대비</p>
-									<p class="status-txt--large bold status--down">27.7억원</p>
-									<p class="status-txt--large bold status--down">38.9%</p>
+									<p class="status-txt--large bold status--down">
+										<span class="icon-triangle"></span>
+										27.7억원(38.9%)
+									</p>
 								</div>
 							</div>
 						</div>

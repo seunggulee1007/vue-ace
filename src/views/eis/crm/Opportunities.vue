@@ -5,13 +5,21 @@
 				<div class="section-top">
 					<h3 class="section__title">영업 기회 분석</h3>
 					<div class="input-box-wrap">
-						<div class="input-box input-box-icon">
-							<input class="input input-icon" type="text" placeholder="기회일자" />
-							<span class="icon icon-calendar"></span>
-							<select name="" id="">
-								<option value="" selected>부서명</option>
-								<option value="">사원명</option>
-							</select>
+						<div class="input-box">
+							<el-date-picker
+								v-model="value1"
+								type="daterange"
+								range-separator="~"
+								start-placeholder="기회일자"
+								end-placeholder="기회일자">
+							</el-date-picker>
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="select-box">
+									<option value="" selected>부서명</option>
+									<option value="">사원명</option>
+								</select>
+								<span class="icon icon-arrow"></span>
+							</div>
 							<div class="input-box">
 								<input type="text" class="input" placeholder="검색어를 입력하세요" />
 							</div>
@@ -19,40 +27,48 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="component-area">
-					<strong class="content__title">파이프라인</strong>
-					<div class="lst-cards lst-cards__6colums">
+				<div class="component-area-wrap lst-cards lst-cards__6colums">
+					<div class="component-area">
 						<div class="component-box">
-							<p class="bold">15건</p>
 							<p class="component__title">인지</p>
+							<p class="status-txt--large"><span class="bold">15</span>건</p>
 						</div>
+					</div>
+					<div class="component-area">
 						<div class="component-box">
-							<p class="bold">25건</p>
 							<p class="component__title">제안</p>
+							<p class="status-txt--large"><span class="bold">25</span>건</p>
 						</div>
+					</div>
+					<div class="component-area">
 						<div class="component-box">
-							<p class="bold">20건</p>
 							<p class="component__title">견적</p>
+							<p class="status-txt--large"><span class="bold">20</span>건</p>
 						</div>
+					</div>
+					<div class="component-area">
 						<div class="component-box">
-							<p class="bold">10건</p>
 							<p class="component__title">협상</p>
+							<p class="status-txt--large"><span class="bold">10</span>건</p>
 						</div>
+					</div>
+					<div class="component-area">
 						<div class="component-box">
-							<p class="bold">7건</p>
 							<p class="component__title">계약</p>
+							<p class="status-txt--large"><span class="bold">7</span>건</p>
 						</div>
+					</div>
+					<div class="component-area">
 						<div class="component-box">
-							<p class="bold">3건</p>
 							<p class="component__title">실패</p>
+							<p class="status-txt--large bold">3건</p>
 						</div>
 					</div>
 				</div>
 				<div class="component-area">
 					<strong class="content__title">부서/담당자 파이프라인</strong>
 					<div class="table-wrap">
-						<table class="table">
+						<table class="table" style="table-layout: fixed">
 							<thead>
 								<tr>
 									<th>부서</th>
@@ -69,7 +85,7 @@
 									<td>
 										<div class="flex-box">
 											영업1팀
-											<button type="button" class="button">상세보기</button>
+											<button type="button" class="button button--small">상세보기</button>
 										</div>
 									</td>
 									<td class="data__number">10</td>
@@ -83,7 +99,7 @@
 									<td>
 										<div class="flex-box">
 											영업2팀
-											<button type="button" class="button">상세보기</button>
+											<button type="button" class="button button--small">상세보기</button>
 										</div>
 									</td>
 									<td class="data__number">12</td>
@@ -97,7 +113,7 @@
 									<td>
 										<div class="flex-box">
 											영업3팀
-											<button type="button" class="button">상세보기</button>
+											<button type="button" class="button button--small">상세보기</button>
 										</div>
 									</td>
 									<td class="data__number">8</td>
@@ -121,7 +137,7 @@
 							</tfoot>
 						</table>
 
-						<table class="table">
+						<table class="table" style="table-layout: fixed">
 							<thead>
 								<tr>
 									<th>담당자</th>
@@ -200,7 +216,7 @@
 									<td>
 										<div class="flex-box">
 											3
-											<button type="button" class="button">상세보기</button>
+											<button type="button" class="button button--small">상세보기</button>
 										</div>
 									</td>
 									<td>ERP 구축 (스마트팩토리)</td>
@@ -223,7 +239,7 @@
 									<td>
 										<div class="flex-box">
 											1
-											<button type="button" class="button">상세보기</button>
+											<button type="button" class="button button--small">상세보기</button>
 										</div>
 									</td>
 									<td></td>

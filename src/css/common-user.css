@@ -163,14 +163,12 @@
 	font-size: 1.34em;
 	letter-spacing: 0.08em;
 }
-/* .status--up{
+.status--up{
 	color: #2B5BC7;
-	display: flex;
-	align-items: center;
 }
 .status--down{
 	color: #F41200; 
-}*/
+}
 .status--up .icon-triangle,
 .status--down .icon-triangle{
 	position: relative;
