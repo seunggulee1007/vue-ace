@@ -30,6 +30,7 @@
 									<option value="">천원</option>
 									<option value="">원</option>
 								</select>
+								<span class="icon icon-arrow"></span>
 							</div>
 							<button type="button" class="button button__search">검색</button>
 						</div>
