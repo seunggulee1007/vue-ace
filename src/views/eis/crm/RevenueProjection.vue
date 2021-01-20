@@ -5,24 +5,32 @@
 				<div class="section-top">
 					<h3 class="section__title">예상 매출 분석</h3>
 					<div class="input-box-wrap">
-						<div class="input-box input-box-icon">
-							<input class="input input-icon" type="text" placeholder="예상매출월" />
-							<span class="icon icon-calendar"></span>
-							<select name="" id="">
-								<option value="" selected>부서명</option>
-								<option value="">사원명</option>
-							</select>
+						<div class="input-box">
+							<el-date-picker
+								v-model="value2"
+								type="month"
+								placeholder="예상매출월">
+							</el-date-picker>
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="select-box">
+									<option value="" selected>부서명</option>
+									<option value="">사원명</option>
+								</select>
+								<span class="icon icon-arrow"></span>
+							</div>
 							<div class="input-box">
 								<input type="text" class="input" placeholder="검색어를 입력하세요" />
 							</div>
-							<select name="" id="">
-								<option value="" selected>억원</option>
-								<option value="">백만원</option>
-								<option value="">십만원</option>
-								<option value="">만원</option>
-								<option value="">천원</option>
-								<option value="">원</option>
-							</select>
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
+									<option value="" selected>억원</option>
+									<option value="">백만원</option>
+									<option value="">십만원</option>
+									<option value="">만원</option>
+									<option value="">천원</option>
+									<option value="">원</option>
+								</select>
+							</div>
 							<button type="button" class="button button__search">검색</button>
 						</div>
 					</div>
@@ -31,35 +39,59 @@
 				<div class="component-area">
 					<strong class="content__title">성공 확률별 예상 매출</strong>
 					<div class="lst-cards lst-cards__6colums">
-						<div class="component-box">
-							<p class="bold">4.8억원</p>
-							<p>15건</p>
-							<p class="component__title">50%</p>
+						<div class="lst-cards__item">
+							<div class="component-box">
+								<p class="component__title">50%</p>
+								<div class="status-txt--large">
+									<p class="bold">4.8억원</p>
+									<p>15건</p>
+								</div>
+							</div>
 						</div>
-						<div class="component-box">
-							<p class="bold">4.8억원</p>
-							<p>15건</p>
-							<p class="component__title">60%</p>
+						<div class="lst-cards__item">
+							<div class="component-box">
+								<p class="component__title">60%</p>
+								<div class="status-txt--large">
+									<p class="bold">4.8억원</p>
+									<p>15건</p>
+								</div>
+							</div>
 						</div>
-						<div class="component-box">
-							<p class="bold">4.8억원</p>
-							<p>15건</p>
-							<p class="component__title">70%</p>
+						<div class="lst-cards__item">
+							<div class="component-box">
+								<p class="component__title">70%</p>
+								<div class="status-txt--large">
+									<p class="bold">4.8억원</p>
+									<p>15건</p>
+								</div>
+							</div>
 						</div>
-						<div class="component-box">
-							<p class="bold">4.8억원</p>
-							<p>15건</p>
-							<p class="component__title">80%</p>
+						<div class="lst-cards__item">
+							<div class="component-box">
+								<p class="component__title">80%</p>
+								<div class="status-txt--large">
+									<p class="bold">4.8억원</p>
+									<p>15건</p>
+								</div>
+							</div>
 						</div>
-						<div class="component-box">
-							<p class="bold">4.8억원</p>
-							<p>15건</p>
-							<p class="component__title">90%</p>
+						<div class="lst-cards__item">
+							<div class="component-box">
+								<p class="component__title">90%</p>
+								<div class="status-txt--large">
+									<p class="bold">4.8억원</p>
+									<p>15건</p>
+								</div>
+							</div>
 						</div>
-						<div class="component-box">
-							<p class="bold">4.8억원</p>
-							<p>15건</p>
-							<p class="component__title">100%</p>
+						<div class="lst-cards__item">
+							<div class="component-box">
+								<p class="component__title">100%</p>
+								<div class="status-txt--large">
+									<p class="bold">4.8억원</p>
+									<p>15건</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
