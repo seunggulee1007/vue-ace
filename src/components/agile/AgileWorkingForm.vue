@@ -260,7 +260,8 @@
 									type="daterange"
 									range-separator="~"
 									start-placeholder="시작일"
-									end-placeholder="종료일">
+									end-placeholder="종료일"
+								>
 								</el-date-picker>
 							</div>
 						</div>
