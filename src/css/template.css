@@ -903,6 +903,12 @@ a.link{
 /* el-date-picker */
 .input-box .el-input__inner{
 	height: 32px;
+	border-radius: 6px;
+	border-color: #E8EBF0;
+}
+.input-box .el-input__inner:hover,
+.input-box .el-input__inner:focus{
+	border-color:  #2B5BC7;
 }
 .input-box .el-input__icon{
 	line-height: 32px;
