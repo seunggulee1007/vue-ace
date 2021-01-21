@@ -254,9 +254,14 @@
 							<p class="component__title">적용 기간</p>
 						</div>
 						<div class="component-box-cnt">
-							<div class="input-box input-box-icon">
-								<input class="input input-icon" type="text" placeholder="입력하세요" />
-								<span class="icon icon-calendar"></span>
+							<div class="input-box">
+								<el-date-picker
+									v-model="value1"
+									type="daterange"
+									range-separator="~"
+									start-placeholder="시작일"
+									end-placeholder="종료일">
+								</el-date-picker>
 							</div>
 						</div>
 					</div>
