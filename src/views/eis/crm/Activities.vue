@@ -66,7 +66,7 @@
 							<p class="component__title">TOTAL</p>
 							<p class="status-txt--large"><span class="bold">3</span>건</p>
 						</div>
-					</div>					
+					</div>
 				</div>
 				<div class="component-area">
 					<strong class="content__title">부서/담당자 영업 활동 유형 현황</strong>

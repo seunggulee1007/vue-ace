@@ -5,7 +5,7 @@
 				<div class="section-top">
 					<h3 class="section__title">영업 실적 분석</h3>
 					<div class="input-box-wrap">
-						<div class="input-box input-box-icon">
+						<div class="input-box">
 							<el-date-picker v-model="value1" type="month" placeholder="기준년월"></el-date-picker>
 							<div class="input-select input-box input-box-icon">
 								<select name="" id="" class="selectbox">
