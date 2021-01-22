@@ -501,7 +501,11 @@
 .component-box-top .content__title{
 	margin-bottom: 0;
 }
-
+.sub__title{
+	font-size: 1.2em;
+	margin-bottom: 16px;
+	font-weight: 700;
+}
 .component__title{
 	/* color: #67707c; */
 	font-weight: 700;
@@ -510,6 +514,31 @@
 .popup__title{
 	font-size: 1.2em;
 	font-weight: 700;
+}
+
+/* title-box */
+.title-box{
+	padding: 8px 12px;
+	color: #fff;
+	border-radius: 16px;
+}
+.title-box.opt1{
+	background-color: #3A579B;
+}
+.title-box.opt2{
+	background-color: #CE0D00
+}
+.title-box.opt3{
+	background-color: #7FD323;
+}
+.title-box.opt4{
+	background-color: #7B26D7;
+}
+.title-box.opt5{
+	background-color: #AEB9CB;
+}
+.title-box.opt6{
+	background-color: #FE8F00;
 }
 
 
@@ -914,32 +943,18 @@ a.link{
 	line-height: 32px;
 }
 .input-box .el-date-editor .el-range__icon,
-.input-box .el-date-editor .el-range__close-icon{
+.input-box .el-date-editor .el-range__close-icon,
+.input-box .el-date-editor .el-range-separator{
 	line-height: 24px;
 }
 .input-box .el-date-editor.el-input,
 .input-box .el-date-editor.el-input__inner{
-	/* width: 100%; */
 	border-radius: 10px;
 }
 .input-box .el-date-editor .el-range-input,
 .input-box .el-date-editor .el-range-separator{
 	color: #1a1a2e;
 }
-/* .input-box .el-date-editor.el-range-editor.el-date-editor--datetimerange{
-	width: 646px;
-} */
-
-/* input-term
-.input-term{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.input-term .input-box + .input-box{
-	margin-left: 16px;
-}
- */
 
 /* full-calendar */
 .calendar.fc .fc-button-primary{
@@ -1354,7 +1369,7 @@ a.link{
 		display: block;
 	}
 	.no-mobile{
-		display: none;
+		display: none !important;
 	}
 
 	/* ========== layout ========== */
@@ -1378,12 +1393,22 @@ a.link{
 	.header .header-top{
 		padding: 0;
 	}
+
 	.header .page__title{
 		font-size: 14px;
 		opacity: 0.4;
 	}
+	.header .header-top .section__title{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
 
 	/* gnb */
+	.gnb{
+		position: static;
+	}
 	.header .button__nav{
 		position: absolute;
 		right: 16px;
