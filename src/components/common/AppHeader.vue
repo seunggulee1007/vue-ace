@@ -1,7 +1,7 @@
 <template>
 	<header class="header user-header">
 		<div class="header-top">
-			<a href="/">
+			<a href="/" class="no-mobile">
 				<h1 class="logo logo-line">
 					<p class="mark">
 						<span>A</span>
@@ -12,7 +12,12 @@
 					</p>
 				</h1>
 			</a>
-			<ul class="util-menu">
+			<button type="button" class="button__back mobile">
+				<span class="icon icon-prev-page"></span>
+				<span class="blind">이전페이지</span>
+			</button>
+			<h2 class="section__title mobile">페이지제목</h2>
+			<ul class="util-menu no-mobile">
 				<li class="util-menu__link">
 					<button class="button" @click="goAdminView" v-if="this.$store.getters.isAdmin">
 						관리자 페이지

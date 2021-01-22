@@ -1369,7 +1369,7 @@ a.link{
 		display: block;
 	}
 	.no-mobile{
-		display: none;
+		display: none !important;
 	}
 
 	/* ========== layout ========== */
@@ -1393,12 +1393,22 @@ a.link{
 	.header .header-top{
 		padding: 0;
 	}
+
 	.header .page__title{
 		font-size: 14px;
 		opacity: 0.4;
 	}
+	.header .header-top .section__title{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
 
 	/* gnb */
+	.gnb{
+		position: static;
+	}
 	.header .button__nav{
 		position: absolute;
 		right: 16px;
