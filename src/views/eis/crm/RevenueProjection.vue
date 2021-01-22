@@ -6,7 +6,7 @@
 					<h3 class="section__title">예상 매출 분석</h3>
 					<div class="input-box-wrap">
 						<div class="input-box">
-							<el-date-picker v-model="value1" type="month" placeholder="예상매출월"></el-date-picker>
+							<el-date-picker v-model="value2" type="month" placeholder="예상매출월"> </el-date-picker>
 							<div class="input-select input-box input-box-icon">
 								<select name="" id="" class="select-box">
 									<option value="" selected>부서명</option>
@@ -234,6 +234,7 @@ export default {
 	data() {
 		return {
 			chart: Object,
+			value2: '',
 		};
 	},
 };

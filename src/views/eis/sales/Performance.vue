@@ -310,6 +310,7 @@ export default {
 			chart: '',
 			chart2: '',
 			xAxis: '',
+			value1: '',
 		};
 	},
 };

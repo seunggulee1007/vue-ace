@@ -255,13 +255,7 @@
 						</div>
 						<div class="component-box-cnt">
 							<div class="input-box">
-								<el-date-picker
-									v-model="value1"
-									type="daterange"
-									range-separator="~"
-									start-placeholder="시작일"
-									end-placeholder="종료일">
-								</el-date-picker>
+								<el-date-picker v-model="workGroupVO.startDt"> </el-date-picker>
 							</div>
 						</div>
 					</div>
@@ -333,6 +327,7 @@ export default {
 				workType: '',
 				stdWorkingHours: '',
 				settlementUnit: '',
+				startDt: new Date(),
 			},
 			workGroupNmDuple: false,
 			workGroupNmDupleResultMsg: '중복 체크해 주세요.',
