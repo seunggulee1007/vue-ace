@@ -507,7 +507,6 @@
 	font-weight: 700;
 }
 .component__title{
-	/* color: #67707c; */
 	font-weight: 700;
 }
 
@@ -1498,7 +1497,7 @@ a.link{
 		width: 100vw;
 	}
 
-	.section-title{
+	.section__title{
 		margin-bottom: 0;
 	}
 	.section__contents .section__title{

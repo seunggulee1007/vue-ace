@@ -173,8 +173,8 @@
 .status--down .icon-triangle{
 	position: relative;
 	display: block;
-	width: 24px;
-	height: 24px;
+	width: 18px;
+	height: 18px;
 	border-radius: 50%;
 	border: 1px solid #E8EBF0;
 	margin-right: 8px;
@@ -182,24 +182,24 @@
 .status--up .icon-triangle:after{
 	content: '';
 	position: absolute;
-	left: 6px;
-	top: 6px;
+	left: 4px;
+	top: 4px;
 	width: 0px;
 	height: 0px;
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-bottom: 10px solid #2B5BC7;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 8px solid #2B5BC7;
 }
 .status--down .icon-triangle:after{
 	content: '';
 	position: absolute;
-	left: 6px;
-	top: 8px;
+	left: 4px;
+	top: 5px;
 	width: 0px;
 	height: 0px;
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-top: 10px solid #F41200;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 8px solid #F41200;
 }
 
 .table .status--up .icon-triangle,

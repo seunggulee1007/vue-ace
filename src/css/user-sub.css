@@ -80,8 +80,32 @@
 }
 
 /* eis - 재무 분석 */
-.component__fa-1 .lst-cards__item{
-	align-items: flex-start;
+.component__fa-1{
+	display: flex;
+}
+.component__fa-1 .component-area{
+	flex-grow: 1;
+}
+.component__fa-1 .component-area + .component-area{
+	margin-top: 0;
+	margin-left: 16px;
+}
+.component__fa-1 .component-area > .flex-box{
+	justify-content: space-between;
+}
+.component__fa-1 .component__title{
+	color: #8293A7;
+}
+
+.component__fa-1 .status-txt--large{
+	padding-top: 0;
+	font-size: 1.2em;
+}
+.component__fa-1 .status-txt--large > span{
+	display: block;
+	font-size: 0.9em;
+	color: #1a1a2e;
+	padding-top: 2px;
 }
 .component__fa-2 .lst-cards__item{
 	flex-direction: column;
@@ -112,16 +136,46 @@
 }
 
 
+@media (max-width: 1400px) {
+	.component__fa-1{
+		flex-direction: column;
+	}
+	.component__fa-1 .component-area + .component-area{
+		margin-top: 16px;
+		margin-left: 0;
+	}
+}
+
+
 @media (max-width: 768px) {
 
 	/* eis - 재무 분석 */
-	.component__fa-1 .lst-cards{
-		display: flex;
+	.component__fa-1 .component-area > .flex-box{
+		justify-content: flex-start;
 		flex-wrap: wrap;
 	}
-	.component__fa-1 .lst-cards__item {
+	.component__fa-1 .component-area > .flex-box > div{
 		flex-grow: 1;
+
+		padding: 12px;
+		border: 1px solid #e7ecf0;
+		border-radius: 8px;
+		box-shadow: 1px 1px 8px rgba(24, 24, 24, 0.08);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
 	}
+	.component__fa-1 .component-area > .flex-box > div:nth-child(4){
+		margin-top: 8px;
+		margin-left: 0;
+	}
+	.component__fa-1 .component-area > .flex-box > div:nth-child(5){
+		margin-top: 8px;
+	}
+	.component__fa-1 .component-area > .flex-box > div + div{
+		margin-left: 8px;
+	}
+
 	.component__fa-2 .lst-cards{
 		grid-template-columns: 1fr;
 	}
