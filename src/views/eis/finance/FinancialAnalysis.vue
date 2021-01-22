@@ -114,7 +114,7 @@
 						<p class="sub__title">안정성</p>
 						<div class="lst-cards lst-cards__3colums">
 							<div class="lst-cards__item">
-								<p class="title-box opt1">유동 비율</p>
+								<p class="title-box opt1 bold">유동 비율</p>
 								<div class="component-box flex-box">
 									<div>
 										<p class="component__title">당기 누계</p>
@@ -133,7 +133,7 @@
 								</div>
 							</div>
 							<div class="lst-cards__item">
-								<p class="title-box opt1">당좌 비율</p>
+								<p class="title-box opt1 bold">당좌 비율</p>
 								<div class="component-box flex-box">
 									<div>
 										<p class="component__title">당기 누계</p>
@@ -152,7 +152,7 @@
 								</div>
 							</div>
 							<div class="lst-cards__item">
-								<p class="title-box opt1">부채 비율</p>
+								<p class="title-box opt1 bold">부채 비율</p>
 								<div class="component-box flex-box">
 									<div>
 										<p class="component__title">당기 누계</p>
@@ -176,7 +176,7 @@
 						<p class="sub__title">성장성</p>
 						<div class="lst-cards lst-cards__3colums">
 							<div class="lst-cards__item">
-								<p class="title-box opt1">매출액 증가율</p>
+								<p class="title-box opt1 bold">매출액 증가율</p>
 								<div class="component-box flex-box">
 									<div>
 										<p class="component__title">당기 누계</p>
@@ -195,7 +195,7 @@
 								</div>
 							</div>
 							<div class="lst-cards__item">
-								<p class="title-box opt1">영업 이익 증가율</p>
+								<p class="title-box opt1 bold">영업 이익 증가율</p>
 								<div class="component-box flex-box">
 									<div>
 										<p class="component__title">당기 누계</p>
@@ -214,7 +214,7 @@
 								</div>
 							</div>
 							<div class="lst-cards__item">
-								<p class="title-box opt1">순이익 증가률</p>
+								<p class="title-box opt1 bold">순이익 증가률</p>
 								<div class="component-box flex-box">
 									<div>
 										<p class="component__title">당기 누계</p>
