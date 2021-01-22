@@ -11,7 +11,7 @@
 						</button>
 					</div>
 				</div>
-				<div class="component-area result-profit">
+				<div class="component-area component__fa-1">
 					<p class="content__title">손익 분석</p>
 					<div class="component-box">
 						<p class="sub__title">매출액</p>
@@ -96,7 +96,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="component-area financial-ratio">
+				<div class="component-area component__fa-2">
 					<p class="content__title">재무 비율 분석</p>
 					<div class="component-box">
 						<p class="sub__title">안정성</p>
@@ -114,12 +114,14 @@
 									</div>
 									<div>
 										<p class="component__title">전년 대비</p>
-										<p class="status-txt--large status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
+										<p class="status-txt--large status--down flex-box">
+											<span class="icon-triangle"></span>2.5%
+										</p>
 									</div>
 								</div>
 							</div>
 							<div class="lst-cards__item">
-									<p class="title-box opt1">당좌 비율</p>
+								<p class="title-box opt1">당좌 비율</p>
 								<div class="component-box flex-box">
 									<div>
 										<p class="component__title">당기 누계</p>
@@ -131,7 +133,9 @@
 									</div>
 									<div>
 										<p class="component__title">전년 대비</p>
-										<p class="status-txt--large status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
+										<p class="status-txt--large status--down flex-box">
+											<span class="icon-triangle"></span>2.5%
+										</p>
 									</div>
 								</div>
 							</div>
@@ -148,7 +152,9 @@
 									</div>
 									<div>
 										<p class="component__title">전년 대비</p>
-										<p class="status-txt--large status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
+										<p class="status-txt--large status--down flex-box">
+											<span class="icon-triangle"></span>2.5%
+										</p>
 									</div>
 								</div>
 							</div>
@@ -158,7 +164,7 @@
 						<p class="sub__title">성장성</p>
 						<div class="lst-cards lst-cards__3colums">
 							<div class="lst-cards__item">
-									<p class="title-box opt1">매출액 증가율</p>
+								<p class="title-box opt1">매출액 증가율</p>
 								<div class="component-box flex-box">
 									<div>
 										<p class="component__title">당기 누계</p>
@@ -170,12 +176,14 @@
 									</div>
 									<div>
 										<p class="component__title">전년 대비</p>
-										<p class="status-txt--large status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
+										<p class="status-txt--large status--down flex-box">
+											<span class="icon-triangle"></span>2.5%
+										</p>
 									</div>
 								</div>
 							</div>
 							<div class="lst-cards__item">
-									<p class="title-box opt1">영업 이익 증가율</p>
+								<p class="title-box opt1">영업 이익 증가율</p>
 								<div class="component-box flex-box">
 									<div>
 										<p class="component__title">당기 누계</p>
@@ -187,7 +195,9 @@
 									</div>
 									<div>
 										<p class="component__title">전년 대비</p>
-										<p class="status-txt--large status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
+										<p class="status-txt--large status--down flex-box">
+											<span class="icon-triangle"></span>2.5%
+										</p>
 									</div>
 								</div>
 							</div>
@@ -204,10 +214,11 @@
 									</div>
 									<div>
 										<p class="component__title">전년 대비</p>
-										<p class="status-txt--large status--down bold flex-box"><span class="icon-triangle"></span>2.5%</p>
+										<p class="status-txt--large status--down bold flex-box">
+											<span class="icon-triangle"></span>2.5%
+										</p>
 									</div>
 								</div>
-								
 							</div>
 						</div>
 					</div>

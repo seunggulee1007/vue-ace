@@ -1498,6 +1498,12 @@ a.link{
 		width: 100vw;
 	}
 
+	.section-title{
+		margin-bottom: 0;
+	}
+	.section__contents .section__title{
+		display: none;
+	}
 
 	/* component */
 	.component-area{
@@ -1514,7 +1520,6 @@ a.link{
 	}
 
 
-
 	/* logo temp */
 	.logo.logo-rec .mark{
 		font-size: 2em;
@@ -1526,5 +1531,44 @@ a.link{
 	}
 	.logo.logo-rec p:last-child > span:last-child{
 		font-size: 12px;
+	}
+
+	/* select-options */
+	.select-options{
+		grid-template-columns: repeat(auto-fit, minmax(42%, auto));
+		gap: 8px;
+	}
+
+	/* input-box */
+	.input-box{
+		box-sizing: border-box;
+	}
+	/* .input-box{
+		flex-direction: column;
+	}
+	.input-box .button{
+		margin-left: 0;
+		margin-top: 8px;
+	} */
+
+	/* input */
+	.input,
+	.input-select{
+		width: 100%;
+	}
+
+	/* el-date-picker */
+	/* .input-box .el-date-editor.el-input,
+	.input-box .el-date-editor.el-input__inner{
+		width: 100%;
+	} */
+
+	.msg-state{
+		text-align: center;
+	}
+
+	/* lst-cards */
+	.lst-cards{
+		grid-gap: 8px;
 	}
 }

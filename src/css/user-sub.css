@@ -80,33 +80,49 @@
 }
 
 /* eis - 재무 분석 */
-.result-profit .lst-cards__item{
+.component__fa-1 .lst-cards__item{
 	align-items: flex-start;
 }
-.financial-ratio .lst-cards__item{
+.component__fa-2 .lst-cards__item{
 	flex-direction: column;
 	justify-content: flex-start;
 }
-.financial-ratio .lst-cards__item .component-box.flex-box{
+.component__fa-2 .lst-cards__item .component-box.flex-box{
 	justify-content: space-between;
 	margin-top: 16px;
 	width: 100%;
 }
-.financial-ratio .flex-box > .component-box {
+.component__fa-2 .flex-box > .component-box {
 	margin-top: 0;
 	flex-grow: 1;
 }
-.financial-ratio .flex-box > .component-box + .component-box{
+.component__fa-2 .flex-box > .component-box + .component-box{
 	margin-left: 24px;
 }
 
 
-.financial-ratio .status--up.flex-box,
-.financial-ratio .status--down.flex-box{
+.component__fa-2 .status--up.flex-box,
+.component__fa-2 .status--down.flex-box{
 	align-items: center;
 }
 
 /* eis - 매출 실적 */
-.result-performance .lst-cards + .lst-cards{
+.component__fa-1 .lst-cards + .lst-cards{
 	margin-top: 16px;
+}
+
+
+@media (max-width: 768px) {
+
+	/* eis - 재무 분석 */
+	.component__fa-1 .lst-cards{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.component__fa-1 .lst-cards__item {
+		flex-grow: 1;
+	}
+	.component__fa-2 .lst-cards{
+		grid-template-columns: 1fr;
+	}
 }
