@@ -115,10 +115,10 @@
 							<p class="sub__title text-align__center">안정성</p>
 							<table class="table">
 								<colgroup>
-									<col>
-									<col>
-									<col>
-									<col>
+									<col />
+									<col />
+									<col />
+									<col />
 								</colgroup>
 								<thead>
 									<tr>
@@ -156,19 +156,13 @@
 											</p>
 										</th>
 										<td class="">
-											<p class="status--down flex-box">
-												<span class="icon-triangle"></span>2.5%
-											</p>
+											<p class="status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
 										</td>
 										<td class="">
-											<p class="status--down flex-box">
-												<span class="icon-triangle"></span>2.5%
-											</p>
+											<p class="status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
 										</td>
 										<td class="">
-											<p class="status--down flex-box">
-												<span class="icon-triangle"></span>2.5%
-											</p>
+											<p class="status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
 										</td>
 									</tr>
 								</tbody>
@@ -178,10 +172,10 @@
 							<p class="sub__title text-align__center">성장성</p>
 							<table class="table">
 								<colgroup>
-									<col>
-									<col>
-									<col>
-									<col>
+									<col />
+									<col />
+									<col />
+									<col />
 								</colgroup>
 								<thead>
 									<tr>
@@ -219,19 +213,13 @@
 											</p>
 										</th>
 										<td class="">
-											<p class="status--down flex-box">
-												<span class="icon-triangle"></span>2.5%
-											</p>
+											<p class="status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
 										</td>
 										<td class="">
-											<p class="status--down flex-box">
-												<span class="icon-triangle"></span>2.5%
-											</p>
+											<p class="status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
 										</td>
 										<td class="">
-											<p class="status--down flex-box">
-												<span class="icon-triangle"></span>2.5%
-											</p>
+											<p class="status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
 										</td>
 									</tr>
 								</tbody>
@@ -243,10 +231,10 @@
 							<p class="sub__title text-align__center">수익성</p>
 							<table class="table">
 								<colgroup>
-									<col>
-									<col>
-									<col>
-									<col>
+									<col />
+									<col />
+									<col />
+									<col />
 								</colgroup>
 								<thead>
 									<tr>
@@ -284,19 +272,13 @@
 											</p>
 										</th>
 										<td class="">
-											<p class="status--down flex-box">
-												<span class="icon-triangle"></span>2.5%
-											</p>
+											<p class="status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
 										</td>
 										<td class="">
-											<p class="status--down flex-box">
-												<span class="icon-triangle"></span>2.5%
-											</p>
+											<p class="status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
 										</td>
 										<td class="">
-											<p class="status--down flex-box">
-												<span class="icon-triangle"></span>2.5%
-											</p>
+											<p class="status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
 										</td>
 									</tr>
 								</tbody>
@@ -306,10 +288,10 @@
 							<p class="sub__title text-align__center">활동성</p>
 							<table class="table">
 								<colgroup>
-									<col>
-									<col>
-									<col>
-									<col>
+									<col />
+									<col />
+									<col />
+									<col />
 								</colgroup>
 								<thead>
 									<tr>
@@ -347,19 +329,13 @@
 											</p>
 										</th>
 										<td class="">
-											<p class="status--down flex-box">
-												<span class="icon-triangle"></span>2.5%
-											</p>
+											<p class="status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
 										</td>
 										<td class="">
-											<p class="status--down flex-box">
-												<span class="icon-triangle"></span>2.5%
-											</p>
+											<p class="status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
 										</td>
 										<td class="">
-											<p class="status--down flex-box">
-												<span class="icon-triangle"></span>2.5%
-											</p>
+											<p class="status--down flex-box"><span class="icon-triangle"></span>2.5%</p>
 										</td>
 									</tr>
 								</tbody>
