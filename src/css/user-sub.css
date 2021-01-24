@@ -93,7 +93,8 @@
 .component__fa-1 .component-area > .flex-box{
 	justify-content: space-between;
 }
-.component__fa-1 .component__title{
+.component__fa-1 .component__title,
+.component__fa-2 .component__title{
 	color: #8293A7;
 }
 
@@ -103,9 +104,17 @@
 }
 .component__fa-1 .status-txt--large > span{
 	display: block;
-	font-size: 0.9em;
-	color: #1a1a2e;
+	font-size: 0.8em;
+	color: #666;
 	padding-top: 2px;
+	font-weight: 400;
+}
+
+
+
+/* 
+.component__fa-2 .lst-cards__3colums{
+	grid-template-columns: repeat(3, 30%);
 }
 .component__fa-2 .lst-cards__item{
 	flex-direction: column;
@@ -118,22 +127,45 @@
 }
 .component__fa-2 .flex-box > .component-box {
 	margin-top: 0;
-	flex-grow: 1;
+	flex-basis: 48%;
 }
-.component__fa-2 .flex-box > .component-box + .component-box{
-	margin-left: 24px;
-}
-
-
+.component__fa-2 .component__title{
+	color: #8293A7;
+	padding-right: 8px;
+} */
 .component__fa-2 .status--up.flex-box,
 .component__fa-2 .status--down.flex-box{
 	align-items: center;
+	justify-content: center;/* 추가 */
 }
 
-/* eis - 매출 실적 */
-.component__fa-1 .lst-cards + .lst-cards{
-	margin-top: 16px;
+/* table형식의 component__fa-2 */
+.component__fa-2 > .flex-box{
+	justify-content: space-between;
 }
+.component__fa-2 > .flex-box + .flex-box{
+	margin-top: 24px;
+}
+.component__fa-2 .table-wrap{
+	flex-basis: 47%;
+}
+.component__fa-2 .sub__title{
+	color: #7B26D7
+}
+.component__fa-2 .table-wrap .table{
+	width: 100%;
+}
+.component__fa-2 .table-wrap .table colgroup col:first-child{
+	width: 88px;
+}
+.component__fa-2 .table-wrap .table thead td{
+	border-bottom: 0;
+}
+.component__fa-2 .table-wrap .table thead th,
+.component__fa-2 .table-wrap .table tbody td{
+	text-align: center;
+}
+
 
 
 @media (max-width: 1400px) {
@@ -176,7 +208,13 @@
 		margin-left: 8px;
 	}
 
-	.component__fa-2 .lst-cards{
-		grid-template-columns: 1fr;
+	.component__fa-2 > .flex-box{
+		flex-direction: column;
+	}
+	.component__fa-2 > .flex-box > .table-wrap + .table-wrap{
+		margin-top: 24px;
+	}
+	.component__fa-2 .table-wrap .table colgroup col:first-child{
+		width: 72px;
 	}
 }
