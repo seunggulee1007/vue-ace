@@ -45,22 +45,22 @@
 							<thead>
 								<tr>
 									<th rowspan="2">구분</th>
-									<th rowspan="2" class="data__number">당월</th>
-									<th rowspan="2" class="data__number">전월</th>
-									<th rowspan="2" class="data__number">전년동기</th>
-									<th colspan="2" class="border--none text-align__center">전월 대비</th>
-									<th colspan="2" class="border--none text-align__center">전년동기 대비</th>
-									<th rowspan="2" class="data__number">당기 누계</th>
-									<th rowspan="2" class="data__number">전기 누계</th>
-									<th colspan="2" class="border--none text-align__center">전년 대비</th>
+									<th rowspan="2">당월</th>
+									<th rowspan="2">전월</th>
+									<th rowspan="2">전년동기</th>
+									<th colspan="2">전월 대비</th>
+									<th colspan="2">전년동기 대비</th>
+									<th rowspan="2" class="highlight">당기 누계</th>
+									<th rowspan="2" class="highlight">전기 누계</th>
+									<th colspan="2" class="highlight">전년 대비</th>
 								</tr>
 								<tr>
-									<th class="data__number">증감액</th>
-									<th class="data__number">증감율(%)</th>
-									<th class="data__number">증감액</th>
-									<th class="data__number">증감율(%)</th>
-									<th class="data__number">증감액</th>
-									<th class="data__number">증감율(%)</th>
+									<th>증감액</th>
+									<th>증감율(%)</th>
+									<th>증감액</th>
+									<th>증감율(%)</th>
+									<th class="highlight">증감액</th>
+									<th class="highlight">증감율(%)</th>
 								</tr>
 							</thead>
 							<tbody>
