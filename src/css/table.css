@@ -27,11 +27,14 @@
 	padding: 8px;
 	color: #67707c;
 }
+.table th.border--none{
+	box-shadow: none;
+}
+
 .table td {
 	padding: 8px;
 	border-bottom: 1px solid #e7ecf0;
 }
-
 .table td .flex-box{
 	align-items: center;
 }
@@ -49,6 +52,9 @@
 
 .table .data__number{
 	text-align: right;
+}
+.table .highlight{
+	background-color: rgba(240, 243, 248, 0.6);
 }
 
 .table-wrap.table--horizontal{

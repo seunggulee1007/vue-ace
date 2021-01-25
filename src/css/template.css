@@ -306,6 +306,10 @@
 	text-align: right;
 }
 
+.border--none{
+	border: 0;
+}
+
 .flex-box{
 	display: flex;
 }

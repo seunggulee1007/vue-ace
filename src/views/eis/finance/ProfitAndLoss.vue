@@ -28,25 +28,39 @@
 				<div class="component-area">
 					<div class="table-wrap">
 						<table class="table">
+							<colgroup>
+								<col />
+								<col />
+								<col />
+								<col />
+								<col />
+								<col />
+								<col />
+								<col />
+								<col class="highlight" />
+								<col class="highlight" />
+								<col class="highlight" />
+								<col class="highlight" />
+							</colgroup>
 							<thead>
 								<tr>
 									<th rowspan="2">구분</th>
 									<th rowspan="2" class="data__number">당월</th>
 									<th rowspan="2" class="data__number">전월</th>
 									<th rowspan="2" class="data__number">전년동기</th>
-									<th colspan="2" class="text-align__center">전월 대비</th>
-									<th colspan="2" class="text-align__center">전년동기 대비</th>
-									<th rowspan="2" class="highlight data__number">당기 누계</th>
-									<th rowspan="2" class="highlight data__number">전기 누계</th>
-									<th colspan="2" class="text-align__center highlight">전년 대비</th>
+									<th colspan="2" class="border--none text-align__center">전월 대비</th>
+									<th colspan="2" class="border--none text-align__center">전년동기 대비</th>
+									<th rowspan="2" class="data__number">당기 누계</th>
+									<th rowspan="2" class="data__number">전기 누계</th>
+									<th colspan="2" class="border--none text-align__center">전년 대비</th>
 								</tr>
 								<tr>
 									<th class="data__number">증감액</th>
 									<th class="data__number">증감율(%)</th>
 									<th class="data__number">증감액</th>
 									<th class="data__number">증감율(%)</th>
-									<th class="highlight data__number">증감액</th>
-									<th class="highlight data__number">증감율(%)</th>
+									<th class="data__number">증감액</th>
+									<th class="data__number">증감율(%)</th>
 								</tr>
 							</thead>
 							<tbody>
