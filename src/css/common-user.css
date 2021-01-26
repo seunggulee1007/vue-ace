@@ -130,7 +130,7 @@
 
 /* user-container */
 .user-container .inner-wrap > div + div{
-	margin-top: 24px;
+	margin-top: 36px;
 }
 
 .user-container .content__title{
@@ -267,7 +267,11 @@
 	border-right: 4px solid transparent;
 	border-top: 7px solid #F41200;
 }
-
+.box-cnt .status--up .icon-triangle,
+.box-cnt .status--down .icon-triangle{
+	margin-right: 4px;
+	border: 0;
+}
 
 /* EIS */
 .component__eis-1 .component-area .component-box .component__title{
@@ -289,6 +293,18 @@
 .component__eis-1 > .flex-box .lst-cards .component-area{
 	padding: 24px;
 }
+
+.img-box img{
+	width: 100%;
+	height: auto;
+}
+.img-box.icon-eis-pipeline{
+	width: 36%;
+	min-width: 36px;
+	max-width: 60px;
+	margin-bottom: 12px;
+}
+
 
 
 @media (max-width: 1670px){

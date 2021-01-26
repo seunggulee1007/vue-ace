@@ -29,11 +29,14 @@
 					</div>
 				</div>
 
-				<div class="component-area-wrap component__eis-1">
+				<div class="component-area-wrap component__eis-1 component__a-1">
 					<strong class="content__title">영업 활동 유형 현황</strong>
 					<div class="lst-cards lst-cards__6colums">
 						<div class="component-area">
 							<div class="component-box">
+								<div class="img-box icon-eis-pipeline">
+									<img src="../../../images/eis-a-1.png" />
+								</div>
 								<div class="component-box-top">
 									<p class="component__title">방문</p>
 								</div>
@@ -42,6 +45,9 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
+								<div class="img-box icon-eis-pipeline">
+									<img src="../../../images/eis-a-2.png" />
+								</div>
 								<div class="component-box-top">
 									<p class="component__title">전화</p>
 								</div>
@@ -50,6 +56,9 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
+								<div class="img-box icon-eis-pipeline">
+									<img src="../../../images/eis-a-3.png" />
+								</div>
 								<div class="component-box-top">
 									<p class="component__title">E-Mail</p>
 								</div>
@@ -58,6 +67,9 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
+								<div class="img-box icon-eis-pipeline">
+									<img src="../../../images/eis-a-4.png" />
+								</div>
 								<div class="component-box-top">
 									<p class="component__title">DM</p>
 								</div>
@@ -66,6 +78,9 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
+								<div class="img-box icon-eis-pipeline">
+									<img src="../../../images/eis-a-5.png" />
+								</div>
 								<div class="component-box-top">
 									<p class="component__title">기타</p>
 								</div>
@@ -74,6 +89,9 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
+								<div class="img-box icon-eis-pipeline">
+									<img src="../../../images/eis-a-6.png" />
+								</div>
 								<div class="component-box-top">
 									<p class="component__title">TOTAL</p>
 								</div>

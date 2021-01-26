@@ -128,6 +128,14 @@
 	color: inherit;
 }
 
+/* eis-영업기회분석, 영업활동분석 */
+.component__o-1 .lst-cards .component-area > .component-box, 
+.component__a-1 .lst-cards .component-area > .component-box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 /* eis - 구매실적 */
 .component__pp-1 .status--up .bold span,
 .component__pp-1 .status--down .bold span{

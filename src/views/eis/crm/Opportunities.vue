@@ -28,11 +28,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="component-area-wrap component__eis-1">
+				<div class="component-area-wrap component__eis-1 component__o-1">
 					<strong class="content__title">파이프라인</strong>
 					<div class="lst-cards lst-cards__6colums">
 						<div class="component-area">
 							<div class="component-box">
+								<div class="img-box icon-eis-pipeline">
+									<img src="../../../images/eis-o-1.png" />
+								</div>
 								<div class="component-box-top">
 									<p class="component__title">인지</p>
 								</div>
@@ -41,6 +44,9 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
+								<div class="img-box icon-eis-pipeline">
+									<img src="../../../images/eis-o-2.png" alt="" />
+								</div>
 								<div class="component-box-top">
 									<p class="component__title">제안</p>
 								</div>
@@ -49,6 +55,9 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
+								<div class="img-box icon-eis-pipeline">
+									<img src="../../../images/eis-o-3.png" />
+								</div>
 								<div class="component-box-top">
 									<p class="component__title">견적</p>
 								</div>
@@ -57,6 +66,9 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
+								<div class="img-box icon-eis-pipeline">
+									<img src="../../../images/eis-o-4.png" />
+								</div>
 								<div class="component-box-top">
 									<p class="component__title">협상</p>
 								</div>
@@ -65,6 +77,9 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
+								<div class="img-box icon-eis-pipeline">
+									<img src="../../../images/eis-o-5.png" />
+								</div>
 								<div class="component-box-top">
 									<p class="component__title">계약</p>
 								</div>
@@ -73,6 +88,9 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
+								<div class="img-box icon-eis-pipeline">
+									<img src="../../../images/eis-o-6.png" />
+								</div>
 								<div class="component-box-top">
 									<p class="component__title">실패</p>
 								</div>
