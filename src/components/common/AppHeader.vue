@@ -66,7 +66,9 @@
 						</div>
 						<p clas="user-name__txt">{{ this.$store.getters.getUserNm }}</p>
 					</div>
-					<router-link to="/my/myPage" class="link-mypage flex-box"><span class="icon icon-user"></span>마이페이지</router-link>
+					<router-link to="/my/myPage" class="link-mypage flex-box">
+						<span class="icon icon-user"></span>마이페이지</router-link
+					>
 				</div>
 				<ul class="lst-gnb">
 					<li class="lst-gnb__item" v-for="(item, idx) in menuList" :key="idx">
