@@ -58,7 +58,7 @@
 				</button>
 				<p>메뉴<span class="blind">열기</span></p>
 			</div>
-			<div class="gnb-wrap show">
+			<div class="gnb-wrap">
 				<div class="gnb-top mobile">
 					<div class="user-name">
 						<div class="img-user">
