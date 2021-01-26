@@ -452,12 +452,12 @@
 								</div>
 							</div>
 							<div class="component-box">
-								<div class="component-box-top">
-									<p class="sub__title text-align__center">활동성</p>
-								</div>
+								<p class="sub__title text-align__center">활동성</p>
 								<div class="lst-cards lst-cards__3colums">
 									<div class="">
-										<p class="component__title">총 자산 회전율</p>
+										<div class="component-box-top">
+											<p class="component__title">총 자산 회전율</p>
+										</div>
 										<div class="component-box">
 											<div class="box">
 												<div class="box-top">
