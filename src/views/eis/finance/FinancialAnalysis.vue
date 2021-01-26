@@ -5,7 +5,7 @@
 				<div class="section-top">
 					<h3 class="section__title">재무 분석</h3>
 					<div class="input-box">
-						<el-date-picker v-model="value1" type="month" placeholder="기준년월"></el-date-picker>
+						<el-date-picker v-model="searchDt" type="month" placeholder="기준년월"></el-date-picker>
 						<button type="button" class="button button__search">
 							조회
 						</button>
@@ -564,7 +564,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			searchDt: this.getYearMonth(),
+		};
+	},
+};
 </script>
 
 <style></style>

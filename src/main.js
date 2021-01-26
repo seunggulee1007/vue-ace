@@ -115,6 +115,17 @@ Vue.mixin({
 			min = min < 10 ? '0' + min : min;
 			return hour + '' + min;
 		},
+		getYearMonth() {
+			let date = new Date();
+			let year = date.getFullYear();
+			let month = new String(date.getMonth() + 1);
+
+			if (month.length == 1) {
+				month = '0' + month;
+			}
+
+			return year + '-' + month;
+		},
 	},
 });
 

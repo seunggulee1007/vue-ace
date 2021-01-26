@@ -6,15 +6,15 @@
 					<h3 class="section__title">손익 분석</h3>
 					<div class="input-box-wrap">
 						<div class="input-box">
-							<el-date-picker v-model="value1" type="month" placeholder="기준년월"></el-date-picker>
+							<el-date-picker v-model="searchDt" type="month" placeholder="기준년월"></el-date-picker>
 							<div class="input-select input-box input-box-icon">
 								<select name="" id="" class="selectbox">
-									<option value="" selected>억원</option>
-									<option value="">백만원</option>
-									<option value="">십만원</option>
-									<option value="">만원</option>
-									<option value="">천원</option>
-									<option value="">원</option>
+									<option
+										v-for="item in unitList"
+										:key="item.SMQryUnitSeq"
+										:value="item.SMQryUnitSeq"
+										>{{ item.SMQryUnitName }}</option
+									>
 								</select>
 								<span class="icon icon-arrow"></span>
 							</div>
@@ -157,7 +157,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			searchDt: this.getYearMonth(),
+			unitList: [
+				{ SMQryUnitSeq: 1060001, SMQryUnitName: '원' },
+				{ SMQryUnitSeq: 1060002, SMQryUnitName: '천원' },
+				{ SMQryUnitSeq: 1060003, SMQryUnitName: '만원' },
+				{ SMQryUnitSeq: 1060004, SMQryUnitName: '십만원' },
+				{ SMQryUnitSeq: 1060005, SMQryUnitName: '백만원' },
+				{ SMQryUnitSeq: 1060006, SMQryUnitName: '천만원' },
+				{ SMQryUnitSeq: 1060007, SMQryUnitName: '억원' },
+			],
+		};
+	},
+};
 </script>
 
 <style></style>

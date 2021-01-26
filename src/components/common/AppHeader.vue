@@ -12,11 +12,11 @@
 					</p>
 				</h1>
 			</a>
-			<button type="button" class="button__back mobile">
+			<button type="button" class="button__back mobile" @click="$router.go(-1)">
 				<span class="icon icon-prev-page"></span>
 				<span class="blind">이전페이지</span>
 			</button>
-			<h2 class="section__title mobile">페이지제목</h2>
+			<h2 class="section__title mobile">{{ this.$route.name }}</h2>
 			<ul class="util-menu no-mobile">
 				<li class="util-menu__link">
 					<button class="button" @click="goAdminView" v-if="this.$store.getters.isAdmin">
@@ -87,6 +87,7 @@ import { selectMenuList } from '@/api/menu';
 import { mapGetters } from 'vuex';
 export default {
 	created() {
+		console.log(this.$route);
 		this.selectMenuList();
 	},
 	computed: {
@@ -112,7 +113,7 @@ export default {
 		},
 		async selectMenuList() {
 			let res = await selectMenuList();
-			console.log(res);
+
 			if (res.result == 0) {
 				this.menuList = res.data.menuList;
 				this.routerMenuList = res.data.routerMenuList;
