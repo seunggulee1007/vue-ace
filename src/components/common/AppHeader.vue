@@ -77,6 +77,7 @@
 						</div>
 					</li>
 				</ul>
+				<button class="button__close"><span class="icon icon-close"></span></button>
 			</div>
 		</nav>
 	</header>
