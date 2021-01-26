@@ -8,7 +8,7 @@
 						<div class="input-box">
 							<el-date-picker v-model="value2" type="month" placeholder="예상매출월"> </el-date-picker>
 							<div class="input-select input-box input-box-icon">
-								<select name="" id="" class="select-box">
+								<select name="" id="" class="selectbox">
 									<option value="" selected>부서명</option>
 									<option value="">사원명</option>
 								</select>

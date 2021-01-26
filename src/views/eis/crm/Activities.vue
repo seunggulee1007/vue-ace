@@ -15,7 +15,7 @@
 							>
 							</el-date-picker>
 							<div class="input-select input-box input-box-icon">
-								<select name="" id="" class="select-box">
+								<select name="" id="" class="selectbox">
 									<option value="" selected>부서명</option>
 									<option value="">사원명</option>
 								</select>
