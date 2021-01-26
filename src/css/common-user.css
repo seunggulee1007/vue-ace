@@ -157,12 +157,24 @@
 /* status-txt */
 .status-txt--large{
 	font-size: 1.28em;
-	padding-top: 12px;
+	/* padding-top: 12px; */
 }
+/* .flex-box > .status-txt--large{
+	padding-top: 0;
+} */
 .status-txt--large .bold{
 	font-size: 1.34em;
 	letter-spacing: 0.08em;
 }
+.status--up .bold span,
+.status--down .bold span{
+	display: block;
+	font-size: 0.8em;
+	color: #666;
+	padding-top: 2px;
+	font-weight: 400;
+}
+
 .status--up{
 	color: #2B5BC7;
 }

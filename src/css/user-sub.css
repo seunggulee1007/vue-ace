@@ -80,8 +80,8 @@
 }
 
 /* eis - 재무 분석 */
-.component__fa-1{
-	display: flex;
+.component__fa-1 > .component-box.component-box-top{
+	margin-bottom: 24px;
 }
 .component__fa-1 .component-area{
 	flex-grow: 1;
@@ -93,86 +93,81 @@
 .component__fa-1 .component-area > .flex-box{
 	justify-content: space-between;
 }
-.component__fa-1 .component__title,
-.component__fa-2 .component__title{
-	color: #8293A7;
-}
 
-.component__fa-1 .status-txt--large{
-	padding-top: 0;
-	font-size: 1.2em;
+.component__fa-2{
+	margin-top: 32px;
 }
-.component__fa-1 .status-txt--large > span{
-	display: block;
-	font-size: 0.8em;
-	color: #666;
-	padding-top: 2px;
-	font-weight: 400;
-}
-
-/* 
-.component__fa-2 .lst-cards__3colums{
-	grid-template-columns: repeat(3, 30%);
-}
-.component__fa-2 .lst-cards__item{
-	flex-direction: column;
-	justify-content: flex-start;
-}
-.component__fa-2 .lst-cards__item .component-box.flex-box{
-	justify-content: space-between;
-	margin-top: 16px;
-	width: 100%;
+.component__fa-2 .component-area > .flex-box + .flex-box{
+	margin-top: 24px;
 }
 .component__fa-2 .flex-box > .component-box {
 	margin-top: 0;
-	flex-basis: 48%;
+	flex-grow: 1;
 }
-.component__fa-2 .component__title{
-	color: #8293A7;
-	padding-right: 8px;
-} */
+.component__fa-2 .flex-box > .component-box + .component-box{
+	margin-left: 16px;
+}
+.component__fa-2 .component-box-top{
+	justify-content: center;
+	color:#8293A7;
+}
+.component__fa-2 .box{
+	flex-direction: row;
+}
+.component__fa-2 .box + .box{
+	margin-top: 2px;
+}
 .component__fa-2 .status--up.flex-box,
 .component__fa-2 .status--down.flex-box{
 	align-items: center;
 	justify-content: center;/* 추가 */
 }
 
-/* table형식의 component__fa-2 */
-.component__fa-2 > .flex-box{
-	justify-content: space-between;
+
+/* 영업 실적 분석 */
+.component__p-1 .component__title{
+	color: #8293A7;
 }
-.component__fa-2 > .flex-box + .flex-box{
-	margin-top: 24px;
+/* .component__p-1 > .flex-box > div{
+	width: 50%;
 }
-.component__fa-2 .table-wrap{
-	flex-basis: 47%;
+.component__p-1 .flex-box .lst-cards + .flex-box{
+	margin-top: 16px;
+	justify-content: space-evenly;
 }
-.component__fa-2 .sub__title{
-	color: #7B26D7
-}
-.component__fa-2 .table-wrap .table{
+.component__p-1 .lst-cards > .flex-box{
+	justify-content: center;
+} */
+
+.component__p-1 > .flex-box {
 	width: 100%;
-}
-.component__fa-2 .table-wrap .table colgroup col:first-child{
-	width: 88px;
-}
-.component__fa-2 .table-wrap .table thead td{
-	border-bottom: 0;
-}
-.component__fa-2 .table-wrap .table thead th,
-.component__fa-2 .table-wrap .table tbody td{
-	text-align: center;
+	justify-content: space-around;
 }
 
-
-
-@media (max-width: 1400px) {
-	.component__fa-1{
+@media (max-width: 1670px){
+	
+	/* eis-재무분석 */
+	.component__fa-1 > .flex-box{
 		flex-direction: column;
 	}
 	.component__fa-1 .component-area + .component-area{
 		margin-top: 16px;
 		margin-left: 0;
+	}
+	.component__fa-1 .lst-cards .box-cnt .bold{
+		font-size: 1.2em;
+	}
+}
+
+
+@media (max-width: 1440px) {
+	/* eis-재무분석 */
+	.component__fa-2 .component-area > .flex-box{
+		flex-direction: column;
+	}
+	.component__fa-2 .flex-box > .component-box + .component-box{
+		margin-left: 0;
+		margin-top: 24px;
 	}
 }
 
