@@ -12,12 +12,10 @@
 					</div>
 				</div>
 				<div class="component-area-wrap component__fa-1">
-					<div class="component-box component-box-top">
-						<p class="content__title">
-							손익 분석
-						</p>
+					<p class="content__title">
+						손익 분석
 						<a href="#" class="link">손익 상세보기</a>
-					</div>
+					</p>
 					<div class="flex-box">
 						<div class="component-area">
 							<p class="sub__title text-align__center">매출액</p>

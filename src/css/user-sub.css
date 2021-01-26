@@ -80,8 +80,10 @@
 }
 
 /* eis - 재무 분석 */
-.component__fa-1 > .component-box.component-box-top{
-	margin-bottom: 24px;
+.component__fa-1 .content__title .link{
+	margin-left: 24px;
+	font-size: 0.78em;
+	font-weight: 400;
 }
 .component__fa-1 .component-area{
 	flex-grow: 1;
