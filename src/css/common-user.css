@@ -249,6 +249,9 @@
 
 
 /* EIS */
+.component__eis-1 .component__title{
+	color: #8293A7;
+}
 .component__eis-1 > .flex-box {
 	width: 100%;
 	justify-content: space-between;

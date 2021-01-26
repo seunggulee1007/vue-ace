@@ -24,7 +24,7 @@
 							<div class="input-box">
 								<input type="text" class="input" placeholder="검색어를 입력하세요" />
 							</div>
-							<button type="button" class="button button__search">검색</button>
+							<button type="button" class="button button__search">조회</button>
 						</div>
 					</div>
 				</div>
@@ -33,37 +33,49 @@
 					<div class="lst-cards lst-cards__6colums">
 						<div class="component-area">
 							<div class="component-box">
-								<p class="component__title">인지</p>
+								<div class="component-box-top">
+									<p class="component__title">인지</p>
+								</div>
 								<p class="status-txt--large"><span class="bold">15</span>건</p>
 							</div>
 						</div>
 						<div class="component-area">
 							<div class="component-box">
-								<p class="component__title">제안</p>
+								<div class="component-box-top">
+									<p class="component__title">제안</p>
+								</div>
 								<p class="status-txt--large"><span class="bold">25</span>건</p>
 							</div>
 						</div>
 						<div class="component-area">
 							<div class="component-box">
-								<p class="component__title">견적</p>
+								<div class="component-box-top">
+									<p class="component__title">견적</p>
+								</div>
 								<p class="status-txt--large"><span class="bold">20</span>건</p>
 							</div>
 						</div>
 						<div class="component-area">
 							<div class="component-box">
-								<p class="component__title">협상</p>
+								<div class="component-box-top">
+									<p class="component__title">협상</p>
+								</div>
 								<p class="status-txt--large"><span class="bold">10</span>건</p>
 							</div>
 						</div>
 						<div class="component-area">
 							<div class="component-box">
-								<p class="component__title">계약</p>
+								<div class="component-box-top">
+									<p class="component__title">계약</p>
+								</div>
 								<p class="status-txt--large"><span class="bold">7</span>건</p>
 							</div>
 						</div>
 						<div class="component-area">
 							<div class="component-box">
-								<p class="component__title">실패</p>
+								<div class="component-box-top">
+									<p class="component__title">실패</p>
+								</div>
 								<p class="status-txt--large"><span class="bold">3</span>건</p>
 							</div>
 						</div>
@@ -224,7 +236,16 @@
 										<td>2020-12-01 화</td>
 										<td>영업1팀</td>
 										<td>차장 김정환</td>
-										<td>인지</td>
+										<td>
+											<div class="lst-status opt1">
+												<span class="opt1__txt opt__txt">인지</span>
+												<span class="opt2__txt opt__txt">제안</span>
+												<span class="opt3__txt opt__txt">견적</span>
+												<span class="opt4__txt opt__txt">협상</span>
+												<span class="opt5__txt opt__txt">계약</span>
+												<span class="opt6__txt opt__txt">실패</span>
+											</div>
+										</td>
 										<td>
 											<div class="flex-box">
 												3
@@ -286,7 +307,16 @@
 										<td>2020-12-01 화</td>
 										<td>영업2팀</td>
 										<td>과장 최수현</td>
-										<td>견적</td>
+										<td>
+											<div class="lst-status opt3">
+												<span class="opt1__txt opt__txt">인지</span>
+												<span class="opt2__txt opt__txt">제안</span>
+												<span class="opt3__txt opt__txt">견적</span>
+												<span class="opt4__txt opt__txt">협상</span>
+												<span class="opt5__txt opt__txt">계약</span>
+												<span class="opt6__txt opt__txt">실패</span>
+											</div>
+										</td>
 										<td></td>
 										<td></td>
 										<td></td>
@@ -295,7 +325,16 @@
 										<td>2020-12-01 화</td>
 										<td>영업3팀</td>
 										<td>대리 김우중</td>
-										<td>협상</td>
+										<td>
+											<div class="lst-status opt4">
+												<span class="opt1__txt opt__txt">인지</span>
+												<span class="opt2__txt opt__txt">제안</span>
+												<span class="opt3__txt opt__txt">견적</span>
+												<span class="opt4__txt opt__txt">협상</span>
+												<span class="opt5__txt opt__txt">계약</span>
+												<span class="opt6__txt opt__txt">실패</span>
+											</div>
+										</td>
 										<td>
 											<div class="flex-box">
 												1

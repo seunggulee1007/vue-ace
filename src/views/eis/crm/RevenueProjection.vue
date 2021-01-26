@@ -28,62 +28,74 @@
 								</select>
 								<span class="icon icon-arrow"></span>
 							</div>
-							<button type="button" class="button button__search">검색</button>
+							<button type="button" class="button button__search">조회</button>
 						</div>
 					</div>
 				</div>
 
-				<div class="component-area">
+				<div class="component__eis-1">
 					<strong class="content__title">성공 확률별 예상 매출</strong>
 					<div class="lst-cards lst-cards__6colums">
-						<div class="lst-cards__item">
+						<div class="component-area">
 							<div class="component-box">
-								<p class="component__title">50%</p>
+								<div class="component-box-top">
+									<p class="component__title">50%</p>
+								</div>
 								<div class="status-txt--large">
 									<p class="bold">4.8억원</p>
 									<p>15건</p>
 								</div>
 							</div>
 						</div>
-						<div class="lst-cards__item">
+						<div class="component-area">
 							<div class="component-box">
-								<p class="component__title">60%</p>
+								<div class="component-box-top">
+									<p class="component__title">60%</p>
+								</div>
 								<div class="status-txt--large">
 									<p class="bold">4.8억원</p>
 									<p>15건</p>
 								</div>
 							</div>
 						</div>
-						<div class="lst-cards__item">
+						<div class="component-area">
 							<div class="component-box">
-								<p class="component__title">70%</p>
+								<div class="component-box-top">
+									<p class="component__title">70%</p>
+								</div>
 								<div class="status-txt--large">
 									<p class="bold">4.8억원</p>
 									<p>15건</p>
 								</div>
 							</div>
 						</div>
-						<div class="lst-cards__item">
+						<div class="component-area">
 							<div class="component-box">
-								<p class="component__title">80%</p>
+								<div class="component-box-top">
+									<p class="component__title">80%</p>
+								</div>
 								<div class="status-txt--large">
 									<p class="bold">4.8억원</p>
 									<p>15건</p>
 								</div>
 							</div>
 						</div>
-						<div class="lst-cards__item">
+						<div class="component-area">
 							<div class="component-box">
-								<p class="component__title">90%</p>
+								<div class="component-box-top">
+									<p class="component__title">90%</p>
+								</div>
 								<div class="status-txt--large">
 									<p class="bold">4.8억원</p>
 									<p>15건</p>
 								</div>
 							</div>
 						</div>
-						<div class="lst-cards__item">
+						<div class="component-area">
 							<div class="component-box">
-								<p class="component__title">100%</p>
+								<div class="component-box-top">
+									<p class="component__title">100%</p>
+								</div>
 								<div class="status-txt--large">
 									<p class="bold">4.8억원</p>
 									<p>15건</p>
@@ -92,59 +104,63 @@
 						</div>
 					</div>
 				</div>
-				<div class="component-area">
+				<div class="component__eis-2">
 					<strong class="content__title">월별 예상 매출</strong>
-					<div class="chart-wrap" ref="chartdiv"></div>
+					<div class="component-area">
+						<div class="chart-wrap" ref="chartdiv"></div>
+					</div>
 				</div>
-				<div class="component-area">
+				<div class="component__eis-3">
 					<strong class="content__title">담당자별 영업 기회</strong>
-					<div class="table-wrap">
-						<table class="table">
-							<thead>
-								<tr>
-									<th>영업 기회 일자</th>
-									<th>부서</th>
-									<th>담당자</th>
-									<th>영업 기회명</th>
-									<th>거래처</th>
-									<th>성공확율</th>
-									<th>예상년월</th>
-									<th>예상매출</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="row">
-									<td>2020-11-01</td>
-									<td>영업1팀</td>
-									<td>차장 김정환</td>
-									<td>ERP 구축 (스마트팩토리)</td>
-									<td>고운세상코스메틱</td>
-									<td>50%</td>
-									<td>2020-12</td>
-									<td>4.8</td>
-								</tr>
-								<tr class="row">
-									<td>2020-10-01</td>
-									<td>영업2팀</td>
-									<td>과장 최수현</td>
-									<td>ERP 구축 (스마트팩토리)</td>
-									<td>고운세상코스메틱</td>
-									<td>50%</td>
-									<td>2021-01</td>
-									<td>3.5</td>
-								</tr>
-								<tr class="row">
-									<td>2020-12-01</td>
-									<td>영업3팀</td>
-									<td>대리 김우중</td>
-									<td>ERP 구축 (스마트팩토리)</td>
-									<td>고운세상코스메틱</td>
-									<td>60%</td>
-									<td>2021-02</td>
-									<td>4.1</td>
-								</tr>
-							</tbody>
-						</table>
+					<div class="component-area">
+						<div class="table-wrap">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>영업 기회 일자</th>
+										<th>부서</th>
+										<th>담당자</th>
+										<th>영업 기회명</th>
+										<th>거래처</th>
+										<th>성공확율</th>
+										<th>예상년월</th>
+										<th>예상매출</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row">
+										<td>2020-11-01</td>
+										<td>영업1팀</td>
+										<td>차장 김정환</td>
+										<td>ERP 구축 (스마트팩토리)</td>
+										<td>고운세상코스메틱</td>
+										<td>50%</td>
+										<td>2020-12</td>
+										<td>4.8</td>
+									</tr>
+									<tr class="row">
+										<td>2020-10-01</td>
+										<td>영업2팀</td>
+										<td>과장 최수현</td>
+										<td>ERP 구축 (스마트팩토리)</td>
+										<td>고운세상코스메틱</td>
+										<td>50%</td>
+										<td>2021-01</td>
+										<td>3.5</td>
+									</tr>
+									<tr class="row">
+										<td>2020-12-01</td>
+										<td>영업3팀</td>
+										<td>대리 김우중</td>
+										<td>ERP 구축 (스마트팩토리)</td>
+										<td>고운세상코스메틱</td>
+										<td>60%</td>
+										<td>2021-02</td>
+										<td>4.1</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>

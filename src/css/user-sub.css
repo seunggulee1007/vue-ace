@@ -88,7 +88,9 @@
 .component__fa-1 .component-area{
 	flex-grow: 1;
 }
-
+.component__fa-1 .component__title{
+	color: #fff;
+}
 .component__fa-1 .component-area > .flex-box{
 	justify-content: space-between;
 }
@@ -124,25 +126,6 @@
 
 
 /* eis - 영업 실적 분석 */
-.component__p-1 .component__title{
-	color: #8293A7;
-}
-/* .component__p-1 > .flex-box {
-	width: 100%;
-	justify-content: space-between;
-}
-.component__p-1 > .flex-box > div{
-	flex-grow: 1;
-}
-.component__p-1 > .flex-box > div + div{
-	margin-left: 16px;
-}
-.component__p-1 > .flex-box .lst-cards + .lst-cards{
-	margin-top: 16px;
-}
-.component__p-1 > .flex-box .lst-cards .component-area{
-	padding: 24px;
-} */
 .component__p-1 .status--up .bold span,
 .component__p-1 .status--down .bold span{
 	display: inline-block;
