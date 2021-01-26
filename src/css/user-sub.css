@@ -164,11 +164,19 @@
 }
 
 
+@media (max-width: 1670px) {
+	/* eis-재무분석 */
+	.component__fa-1.component__eis-1 > .flex-box{
+		flex-direction: column;
+	}
+	.component__fa-1.component__eis-1 .flex-box .component-area + .component-area{
+		margin-top: 16px;
+		margin-left: 0;
+	}
+}
+
 @media (max-width: 1440px) {
 	/* eis-재무분석 */
-	.component__eis-1.component__fa-1 .flex-box .component-area + .component-area{
-		margin-top: 16px;
-	}
 	.component__fa-2 .component-area > .flex-box{
 		flex-direction: column;
 	}
