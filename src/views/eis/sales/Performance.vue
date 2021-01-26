@@ -24,82 +24,116 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="component-area">
+				<div class="component__p-1">
 					<strong class="content__title">매출 실적</strong>
-					<div class="result-performance">
+					<div class="flex-box">
 						<div>
-							<div class="lst-cards lst-cards__5colums">
-								<div class="lst-cards__item">
+							<div class="lst-cards lst-cards__3colums">
+								<div class="component-area flex-box">
 									<div class="component-box">
-										<p class="component__title">당월</p>
+										<div class="component-box-top">
+											<p class="component__title">당월</p>
+										</div>
 										<p class="status-txt--large bold">64.3억원</p>
 									</div>
 								</div>
-								<div class="lst-cards__item">
+								<div class="component-area flex-box">
 									<div class="component-box">
-										<p class="component__title">전월</p>
+										<div class="component-box-top">
+											<p class="component__title">전월</p>
+										</div>
 										<p class="status-txt--large bold">50.1억원</p>
 									</div>
 								</div>
-								<div class="lst-cards__item">
+								<div class="component-area flex-box">
 									<div class="component-box">
-										<p class="component__title">전년동기</p>
+										<div class="component-box-top">
+											<p class="component__title">전년동기</p>
+										</div>
 										<p class="status-txt--large bold">46.7억원</p>
 									</div>
 								</div>
-								<div class="lst-cards__item">
+							</div>
+							<div class="lst-cards lst-cards__2colums">
+								<div class="component-area">
 									<div class="component-box">
-										<p class="component__title">당기누계</p>
+										<div class="component-box-top">
+											<p class="component__title">전월 대비</p>
+										</div>
+										<div class="status--up flex-box">
+											<span class="icon-triangle"></span>
+											<p class="status-txt--large bold">
+												46.7억원
+												<span>+ 27.8%</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="component-area">
+									<div class="component-box">
+										<div class="component-box-top">
+											<p class="component__title">전년 동기 대비</p>
+										</div>
+										<div class="status--down flex-box">
+											<span class="icon-triangle"></span>
+											<p class="status-txt--large bold">
+												27.7억원
+												<span>- 38.9%</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="lst-cards lst-cards__2colums">
+								<div class="component-area flex-box">
+									<div class="component-box">
+										<div class="component-box-top">
+											<p class="component__title">당기누계</p>
+										</div>
 										<p class="status-txt--large bold">1,363억원</p>
 									</div>
 								</div>
-								<div class="lst-cards__item">
+								<div class="component-area flex-box">
 									<div class="component-box">
-										<p class="component__title">전기누계</p>
+										<div class="component-box-top">
+											<p class="component__title">전기누계</p>
+										</div>
 										<p class="status-txt--large bold">1,381억원</p>
 									</div>
 								</div>
 							</div>
-							<div class="lst-cards lst-cards__3colums">
-								<div class="lst-cards__item">
+							<div class="lst-cards flex-box">
+								<div class="component-area">
 									<div class="component-box">
-										<p class="component__title">전월 대비</p>
-										<p class="status-txt--large bold status--up flex-box">
+										<div class="component-box-top">
+											<p class="component__title">전년대비</p>
+										</div>
+										<div class="status--down flex-box">
 											<span class="icon-triangle"></span>
-											46.7억원(27.8%)
-										</p>
-									</div>
-								</div>
-								<div class="lst-cards__item">
-									<div class="component-box">
-										<p class="component__title">전년 동기 대비</p>
-										<p class="status-txt--large bold status--down flex-box">
-											<span class="icon-triangle"></span>
-											27.7억원(38.9%)
-										</p>
-									</div>
-								</div>
-								<div class="lst-cards__item">
-									<div class="component-box">
-										<p class="component__title">전년대비</p>
-										<p class="status-txt--large bold status--down flex-box">
-											<span class="icon-triangle"></span>
-											18.0억원(1.3%)
-										</p>
+											<p class="status-txt--large bold">
+												18.0억원
+												<span>- 1.3%</span>
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="component-area">
+				<div class="component__p-2">
 					<strong class="content__title">매출 채권 연령분석</strong>
-					<div class="chart-wrap" ref="chartdiv"></div>
+					<div class="component-area">
+						<div class="chart-wrap" ref="chartdiv"></div>
+					</div>
 				</div>
-				<div class="component-area">
+				<div class="component__p-3">
 					<strong class="content__title">월별 실적</strong>
-					<div class="chart-wrap" ref="chartdiv2"></div>
+					<div class="component-area">
+						<div class="chart-wrap" ref="chartdiv2"></div>
+					</div>
 				</div>
 			</div>
 		</section>

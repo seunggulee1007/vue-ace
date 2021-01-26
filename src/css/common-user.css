@@ -124,6 +124,10 @@
 	background-color: #3C7DFF;
 }
 
+/* user-container */
+.user-container .inner-wrap > div + div{
+	margin-top: 24px;
+}
 /* ========== elements ========== */
 
 /* select-month */

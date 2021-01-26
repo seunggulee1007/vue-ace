@@ -582,7 +582,7 @@
 									</div>
 								</div>
 							</div>
-						</div>	
+						</div>
 						<div class="flex-box">
 							<div class="component-box">
 								<p class="sub__title text-align__center">수익성</p>

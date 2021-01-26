@@ -130,21 +130,26 @@
 .component__p-1 .component__title{
 	color: #8293A7;
 }
-/* .component__p-1 > .flex-box > div{
-	width: 50%;
-}
-.component__p-1 .flex-box .lst-cards + .flex-box{
-	margin-top: 16px;
-	justify-content: space-evenly;
-}
-.component__p-1 .lst-cards > .flex-box{
-	justify-content: center;
-} */
-
 .component__p-1 > .flex-box {
 	width: 100%;
-	justify-content: space-around;
+	justify-content: space-between;
 }
+.component__p-1 > .flex-box > div{
+	flex-grow: 1;
+}
+.component__p-1 > .flex-box > div + div{
+	margin-left: 16px;
+}
+.component__p-1 > .flex-box .lst-cards + .lst-cards{
+	margin-top: 16px;
+}
+.component__p-1 .status--up .bold span,
+.component__p-1 .status--down .bold span{
+	display: inline-block;
+	margin-left: 8px;
+	color: inherit;
+}
+
 
 @media (max-width: 1670px){
 	
