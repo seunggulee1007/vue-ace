@@ -58,7 +58,8 @@
 				</button>
 				<p>메뉴<span class="blind">열기</span></p>
 			</div>
-			<div class="gnb-wrap">
+			<div class="gnb-wrap show">
+				<p class="menu-title bold mobile">메뉴</p>
 				<ul class="lst-gnb">
 					<li class="lst-gnb__item" v-for="(item, idx) in menuList" :key="idx">
 						<span>{{ item.menuNm }}</span>

@@ -495,20 +495,8 @@
 	font-size: 1.3em !important;
 	margin-bottom: 16px;
 	font-weight: 700;
+}
 
-	position:relative;
-	color: #2B5BC7;
-	padding-left: 12px;
-}
-.content__title:before{
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 2px;
-	height: 18px;
-	width: 4px;
-	background-color: #2b5bc7;
-}
 
 .content__title .content-sub__title{
 	display: inline-block;
