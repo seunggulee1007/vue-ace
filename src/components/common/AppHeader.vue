@@ -59,7 +59,15 @@
 				<p>메뉴<span class="blind">열기</span></p>
 			</div>
 			<div class="gnb-wrap show">
-				<p class="menu-title bold mobile">메뉴</p>
+				<div class="gnb-top mobile">
+					<div class="user-name">
+						<div class="img-user">
+							<img :src="SERVER_URL + getPhoto" alt="" />
+						</div>
+						<p clas="user-name__txt">{{ this.$store.getters.getUserNm }}</p>
+					</div>
+					<router-link to="/my/myPage" class="link-mypage flex-box"><span class="icon icon-user"></span>마이페이지</router-link>
+				</div>
 				<ul class="lst-gnb">
 					<li class="lst-gnb__item" v-for="(item, idx) in menuList" :key="idx">
 						<span>{{ item.menuNm }}</span>
@@ -78,7 +86,17 @@
 						</div>
 					</li>
 				</ul>
-				<button class="button__close"><span class="icon icon-close"></span></button>
+				<div class="buttons mobile">
+					<button class="button__admin" @click="goAdminView" v-if="this.$store.getters.isAdmin">
+						<span class="icon icon-module"></span>
+						관리자 페이지
+					</button>
+					<button class="button__logout" @click="logoutUser">
+						<span class="icon icon-logout"></span>
+						로그아웃
+					</button>
+				</div>
+				<button class="button__close mobile"><span class="icon icon-close"></span></button>
 			</div>
 		</nav>
 	</header>

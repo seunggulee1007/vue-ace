@@ -1303,7 +1303,8 @@ a.link:hover::before{
 }
 
 
-.button__logout{
+.button__logout,
+.button__admin{
 	display: flex;
 	padding: 8px 24px;
 }
