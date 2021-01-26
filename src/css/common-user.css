@@ -249,7 +249,7 @@
 
 
 /* EIS */
-.component__eis-1 .component__title{
+.component__eis-1 .component-area .component-box .component__title{
 	color: #8293A7;
 }
 .component__eis-1 > .flex-box {

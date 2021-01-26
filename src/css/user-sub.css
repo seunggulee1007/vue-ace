@@ -98,25 +98,20 @@
 .component__fa-2{
 	margin-top: 32px;
 }
-.component__fa-2 .component-area > .flex-box + .flex-box{
+.component__fa-2 > .flex-box + .flex-box{
 	margin-top: 24px;
 }
-.component__fa-2 .flex-box > .component-box {
+.component__fa-2 .flex-box > .component-area {
 	margin-top: 0;
 	flex-grow: 1;
+
 }
-.component__fa-2 .flex-box > .component-box + .component-box{
+.component__fa-2 .flex-box > .component-area + .component-area{
 	margin-left: 16px;
 }
 .component__fa-2 .component-box-top{
 	justify-content: center;
 	color:#8293A7;
-}
-.component__fa-2 .box{
-	flex-direction: row;
-}
-.component__fa-2 .box + .box{
-	margin-top: 2px;
 }
 .component__fa-2 .status--up.flex-box,
 .component__fa-2 .status--down.flex-box{
@@ -146,6 +141,10 @@
 	margin-top: 8px;
 }
 
+/* eis - 프로젝트원가분석 */
+.component__ca-1 .lst-cards__4colums > .box:first-child{
+	grid-row: 1 / 3;
+}
 
 @media (max-width: 1670px) {
 	/* eis-재무분석 */
