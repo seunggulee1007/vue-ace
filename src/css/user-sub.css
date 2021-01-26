@@ -88,10 +88,7 @@
 .component__fa-1 .component-area{
 	flex-grow: 1;
 }
-.component__fa-1 .component-area + .component-area{
-	margin-top: 0;
-	margin-left: 16px;
-}
+
 .component__fa-1 .component-area > .flex-box{
 	justify-content: space-between;
 }
@@ -126,11 +123,11 @@
 }
 
 
-/* 영업 실적 분석 */
+/* eis - 영업 실적 분석 */
 .component__p-1 .component__title{
 	color: #8293A7;
 }
-.component__p-1 > .flex-box {
+/* .component__p-1 > .flex-box {
 	width: 100%;
 	justify-content: space-between;
 }
@@ -143,6 +140,9 @@
 .component__p-1 > .flex-box .lst-cards + .lst-cards{
 	margin-top: 16px;
 }
+.component__p-1 > .flex-box .lst-cards .component-area{
+	padding: 24px;
+} */
 .component__p-1 .status--up .bold span,
 .component__p-1 .status--down .bold span{
 	display: inline-block;
@@ -150,25 +150,25 @@
 	color: inherit;
 }
 
+/* eis - 구매실적 */
+.component__pp-1 .status--up .bold span,
+.component__pp-1 .status--down .bold span{
+	display: inline-block;
+	margin-left: 8px;
+	color: inherit;
+}
 
-@media (max-width: 1670px){
-	
-	/* eis-재무분석 */
-	.component__fa-1 > .flex-box{
-		flex-direction: column;
-	}
-	.component__fa-1 .component-area + .component-area{
-		margin-top: 16px;
-		margin-left: 0;
-	}
-	.component__fa-1 .lst-cards .box-cnt .bold{
-		font-size: 1.2em;
-	}
+/* eis - 생산실적 */
+.component__ao-1 .lst-cards + .lst-cards{
+	margin-top: 8px;
 }
 
 
 @media (max-width: 1440px) {
 	/* eis-재무분석 */
+	.component__eis-1.component__fa-1 .flex-box .component-area + .component-area{
+		margin-top: 16px;
+	}
 	.component__fa-2 .component-area > .flex-box{
 		flex-direction: column;
 	}

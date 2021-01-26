@@ -24,7 +24,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="component__p-1">
+				<div class="component__eis-1 component__p-1">
 					<strong class="content__title">매출 실적</strong>
 					<div class="flex-box">
 						<div>
@@ -123,13 +123,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="component__p-2">
-					<strong class="content__title">매출 채권 연령분석</strong>
+				<div class="component__eis-2 component__p-2">
+					<strong class="content__title">매출 채권 연령 분석</strong>
 					<div class="component-area">
 						<div class="chart-wrap" ref="chartdiv"></div>
 					</div>
 				</div>
-				<div class="component__p-3">
+				<div class="component__eis-3 component__p-3">
 					<strong class="content__title">월별 실적</strong>
 					<div class="component-area">
 						<div class="chart-wrap" ref="chartdiv2"></div>

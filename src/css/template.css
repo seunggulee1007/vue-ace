@@ -721,6 +721,9 @@ a.link:hover::before{
 .lst-cards.lst-cards__6colums{
 	grid-template-columns: repeat(6, 1fr);
 }
+.lst-cards.lst-cards__8colums{
+	grid-template-columns: repeat(8, 1fr);
+}
 
 .lst-cards__item{
 	padding: 12px;

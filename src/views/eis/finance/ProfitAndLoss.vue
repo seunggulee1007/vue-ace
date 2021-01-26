@@ -24,7 +24,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="component-area">
 					<div class="table-wrap">
 						<table class="table">
