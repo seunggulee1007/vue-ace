@@ -109,7 +109,7 @@
 						</div>
 					</div>
 					<div class="component-area">
-						<div class="table-wrap">
+						<div class="table-wrap table--horizontal">
 							<table class="table">
 								<colgroup>
 									<col />
@@ -203,7 +203,7 @@
 						</div>
 					</div>
 					<div class="component-area">
-						<div class="table-wrap">
+						<div class="table-wrap table--horizontal">
 							<table class="table">
 								<colgroup>
 									<col />

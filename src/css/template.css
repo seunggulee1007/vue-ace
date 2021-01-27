@@ -1050,7 +1050,6 @@ a.link:hover::before{
 
 .calendar.fc-theme-standard th{
 	padding: 8px 0;
-	/* background-color:  */
 }
 
 .calendar.fc .fc-daygrid-day-number{
@@ -1070,6 +1069,10 @@ a.link:hover::before{
 	text-align: center;
 }
 
+/* amchart */
+.chart-wrap{
+	font-size: 0.88em;
+}
 
 .input-checkbox{
 	display: flex;
