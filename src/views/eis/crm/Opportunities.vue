@@ -359,6 +359,10 @@
 				<div class="component__eis-3 .component__o-3">
 					<strong class="content__title">담당자별 영업 기회 현황</strong>
 					<div class="component-area">
+						
+					</div>
+
+					<div class="component-area">
 						<div class="table-wrap">
 							<table class="table">
 								<thead>

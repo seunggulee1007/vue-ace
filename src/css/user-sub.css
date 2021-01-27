@@ -292,9 +292,17 @@
 		display: block;
 		margin-left: 0px;
 	}
+	.component__p-2 .chart-wrap1{
+		height: 220px;
+		width: 110%;
+		transform: translateX(-24px);
+	}
+	.component__p-3 .chart-wrap{
+		width: 115%;
+		transform: translateX(-28px);
+	}
 
-	/* eis - 영업기회분석 */
-	
+	/* eis - crm */
 	.component__o-1 .lst-cards.lst-cards__6colums, 
 	.component__a-1 .lst-cards.lst-cards__6colums,
 	.component__rp-1 .lst-cards.lst-cards__6colums{

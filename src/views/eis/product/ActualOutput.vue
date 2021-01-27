@@ -597,6 +597,23 @@
 										<td class="data__number"></td>
 										<td class="data__number"></td>
 									</tr>
+									<tr class="row">
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+									</tr>
 								</tbody>
 							</table>
 						</div>
