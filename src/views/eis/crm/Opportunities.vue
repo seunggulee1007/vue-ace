@@ -104,6 +104,156 @@
 				<div class="component__eis-2 component__o-2">
 					<strong class="content__title">부서/담당자 파이프라인</strong>
 					<div class="component-area">
+						<div class="lst-cards lst-cards__6colums">
+							<div class="flex-box">
+								<p class="component__title">영업1팀</p>
+								<button type="button" class="button button--small">상세보기</button>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt5">인지</p>
+								<p>10</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt6">제안</p>
+								<p>5</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt3">견적</p>
+								<p>5</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt4">협상</p>
+								<p>3</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt1">계약</p>
+								<p>2</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt2">실패</p>
+								<p>2</p>
+							</div>
+							<div class="detail">
+								<div class="table-wrap">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>담당자</th>
+												<th>인지</th>
+												<th>제안</th>
+												<th>견적</th>
+												<th>협상</th>
+												<th>계약</th>
+												<th>실패</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="row">
+												<td>차장 김정환</td>
+												<td>5</td>
+												<td>2</td>
+												<td>3</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr class="row">
+												<td>과장 최수현</td>
+												<td>3</td>
+												<td>2</td>
+												<td>2</td>
+												<td>1</td>
+												<td>1</td>
+												<td></td>
+											</tr>
+											<tr class="row">
+												<td>대리 김우중</td>
+												<td>2</td>
+												<td>1</td>
+												<td></td>
+												<td>1</td>
+												<td></td>
+												<td>1</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td>TOTAL</td>
+												<td>10</td>
+												<td>5</td>
+												<td>5</td>
+												<td>3</td>
+												<td>2</td>
+												<td>2</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="lst-cards lst-cards__6colums">
+							<div class="flex-box">
+								<p class="component__title">영업2팀</p>
+								<button type="button" class="button button--small">상세보기</button>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt5">인지</p>
+								<p>10</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt6">제안</p>
+								<p>5</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt3">견적</p>
+								<p>5</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt4">협상</p>
+								<p>3</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt1">계약</p>
+								<p>2</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt2">실패</p>
+								<p>2</p>
+							</div>
+						</div>
+						<div class="lst-cards lst-cards__6colums">
+							<div class="flex-box">
+								<p class="component__title">영업3팀</p>
+								<button type="button" class="button button--small">상세보기</button>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt5">인지</p>
+								<p>10</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt6">제안</p>
+								<p>5</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt3">견적</p>
+								<p>5</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt4">협상</p>
+								<p>3</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt1">계약</p>
+								<p>2</p>
+							</div>
+							<div class="flex-box">
+								<p class="lst-status opt2">실패</p>
+								<p>2</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- <div class="component-area">
 						<div class="table-wrap">
 							<table class="table">
 								<colgroup>
@@ -354,14 +504,10 @@
 								</tfoot>
 							</table>
 						</div>
-					</div>
+					</div> -->
 				</div>
-				<div class="component__eis-3 .component__o-3">
+				<div class="component__eis-3 component__o-3">
 					<strong class="content__title">담당자별 영업 기회 현황</strong>
-					<div class="component-area">
-						
-					</div>
-
 					<div class="component-area">
 						<div class="table-wrap">
 							<table class="table">

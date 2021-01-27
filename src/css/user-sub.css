@@ -130,16 +130,38 @@
 }
 
 /* eis-영업기회분석, 영업활동분석, 영업매출분석 */
-/* .component__o-top .input-box-wrap > .input-box > div,
-.component__a-top .input-box-wrap > .input-box > div,
-.component__rp-top .input-box-wrap > .input-box > div{
-	display: flex;
+.component__o-2 .component-area > .lst-cards{
+	padding: 16px 0;
+	border-top: 2px solid #e8ebf0;
 }
-.component__o-top .input-box-wrap > .input-box > div > .input-box,
-.component__a-top .input-box-wrap > .input-box > div > .input-box,
-.component__rp-top .input-box-wrap > .input-box > div > .input-box{
-	margin-right: 4px;
-} */
+.component__o-2 .component-area > .lst-cards:first-child{
+	padding-top: 0;
+	border-top: 0;
+}
+.component__o-2 .component-area > .lst-cards.lst-cards__6colums > .flex-box{
+	align-items: center;
+}
+.component__o-2 .component-area > .lst-cards.lst-cards__6colums > .flex-box:first-child{
+	grid-column: 1 / 7;
+	justify-content: space-between;
+	margin-bottom: 8px;
+}
+.component__o-2 .component-area > .lst-cards.lst-cards__6colums > .flex-box:first-child > .component__title{
+	font-size: 1.2em;
+}
+.component__o-2 .component-area > .lst-cards.lst-cards__6colums > .flex-box .lst-status{
+	font-size: 1em;
+	margin: 0 16px 0 0;
+}
+.component__o-2 .component-area > .lst-cards.lst-cards__6colums > .detail{
+	grid-column: 1 / 7;
+	font-size: 0.88em;
+	margin-top: 8px;
+}
+.component__o-2 .component-area > .lst-cards.lst-cards__6colums > .detail .table th{
+	background-color: #3C7DFF;
+	box-shadow: inset -1px 0 0 #e7ecf0, inset 0 -1px 0 #e7ecf0, inset 0 1px 0 #3C7DFF;
+}
 
 .component__rp-1 .component-box-top{
 	width: 44px;
@@ -307,6 +329,14 @@
 	.component__a-1 .lst-cards.lst-cards__6colums,
 	.component__rp-1 .lst-cards.lst-cards__6colums{
 		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.component__o-2 .component-area > .lst-cards.lst-cards__6colums{
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.component__o-2 .component-area > .lst-cards.lst-cards__6colums > .flex-box:first-child,
+	.component__o-2 .component-area > .lst-cards.lst-cards__6colums > .detail{
+		grid-column: 1 / 4;
 	}
 
 	/* eis - 프로젝트원가분석 */

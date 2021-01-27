@@ -104,7 +104,7 @@
 				<div class="component__eis-3 component__rp-3">
 					<strong class="content__title">담당자별 영업 기회</strong>
 					<div class="component-area">
-						<div class="table-wrap">
+						<div class="table-wrap table--horizontal">
 							<table class="table">
 								<thead>
 									<tr>
