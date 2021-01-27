@@ -95,18 +95,198 @@
 					</div>
 				</div>
 				<div class="component__eis-2 component__pp-2">
-					<strong class="content__title">유형별 매입 분석</strong>
+					<div class="component-box component-box-top">
+						<strong class="content__title">유형별 매입 분석</strong>
+						<div class="input-box">
+							<div class="input-select input-box input-box-icon">
+								<select name="" id="" class="selectbox">
+									<option value="">품목자산분류</option>
+									<option value="">분류1</option>
+									<option value="">분류2</option>
+									<option value="">분류3</option>
+								</select>
+								<span class="icon icon-arrow"></span>
+							</div>
+							<button type="button" class="button button__search">
+								조회
+							</button>
+						</div>
+					</div>
 					<div class="component-area">
-						<div class="chart-wrap" ref="chartdiv2">
-							chart2
+						<div class="table-wrap">
+							<table class="table">
+								<colgroup>
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+								</colgroup>
+								<thead>
+									<tr>
+										<th rowspan="2">No.</th>
+										<th rowspan="2">품목 자산 분류</th>
+										<th rowspan="2">품목 유형</th>
+										<th rowspan="2">품명</th>
+										<th rowspan="2">전년동기</th>
+										<th rowspan="2">전월</th>
+										<th rowspan="2">당월</th>
+										<th colspan="2">전월 대비</th>
+										<th colspan="2">전년동기 대비</th>
+										<th rowspan="2" class="highlight">전기 누계</th>
+										<th rowspan="2" class="highlight">당기 누계</th>
+										<th colspan="2" class="highlight">전년 대비</th>
+									</tr>
+									<tr>
+										<th>증감액</th>
+										<th>증감율(%)</th>
+										<th>증감액</th>
+										<th>증감율(%)</th>
+										<th class="highlight">증감액</th>
+										<th class="highlight">증감율(%)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row">
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+									</tr>
+									<tr class="row">
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
 				<div class="component__eis-3 component__pp-3">
-					<strong class="content__title">구매처별 매입 현황</strong>
+					<div class="component-box component-box-top">
+						<strong class="content__title">구매처별 매입 현황</strong>
+						<div class="input-box">
+							<input type="text" class="input" placeholder="구매처명" />
+							<button type="button" class="button button__search">
+								조회
+							</button>
+						</div>
+					</div>
 					<div class="component-area">
-						<div class="chart-wrap" ref="chartdiv3">
-							chart3
+						<div class="table-wrap">
+							<table class="table">
+								<colgroup>
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+								</colgroup>
+								<thead>
+									<tr>
+										<th rowspan="2">No.</th>
+										<th rowspan="2">품목 자산 분류</th>
+										<th rowspan="2">품목 유형</th>
+										<th rowspan="2">품명</th>
+										<th rowspan="2">전년동기</th>
+										<th rowspan="2">전월</th>
+										<th rowspan="2">당월</th>
+										<th colspan="2">전월 대비</th>
+										<th colspan="2">전년동기 대비</th>
+										<th rowspan="2" class="highlight">전기 누계</th>
+										<th rowspan="2" class="highlight">당기 누계</th>
+										<th colspan="2" class="highlight">전년 대비</th>
+									</tr>
+									<tr>
+										<th>증감액</th>
+										<th>증감율(%)</th>
+										<th>증감액</th>
+										<th>증감율(%)</th>
+										<th class="highlight">증감액</th>
+										<th class="highlight">증감율(%)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row">
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+									</tr>
+									<tr class="row">
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+										<td class="data__number"></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
