@@ -190,8 +190,24 @@
 }
 
 /* eis - 생산실적 */
-.component__ao-1 .lst-cards + .lst-cards{
-	margin-top: 8px;
+.component__ao-1 .component-area > .lst-cards + .lst-cards{
+	margin-top: 24px;
+}
+.component__ao-1 .lst-cards.lst-cards__2colums > div.flex-box:first-child > .box,
+.component__ao-1 .lst-cards.lst-cards__2colums > div.flex-box:last-child > .lst-cards{
+	flex-grow: 1;
+}
+.component__ao-1 .lst-cards.lst-cards__2colums > div.flex-box:last-child > .lst-cards.lst-cards__2colums{
+	margin-left: 16px;
+}
+.component__ao-1 .lst-cards.lst-cards__2colums > div.flex-box:last-child .box-cnt .flex-box{
+	justify-content: center;
+}
+.component__ao-3 .component-box-top > .input-box > div{
+	display: flex;
+}
+.component__ao-3 .component-box-top > .input-box > div > .input-box{
+	margin-right: 4px;
 }
 
 
@@ -225,6 +241,17 @@
 	.component__ca-1 .lst-cards.lst-cards__4colums > .box:first-child{
 		grid-row: 1 / 2;
 		grid-column: 1 / 4;
+	}
+
+	/* eis - 생산실적 */
+	.component__ao-1 .lst-cards + .lst-cards{
+		margin-top: 8px;
+	}	
+	.component__ao-1 .lst-cards.lst-cards__2colums > div.flex-box:last-child{
+		flex-direction: column;
+	}
+	.component__ao-1 .lst-cards.lst-cards__2colums > div.flex-box:last-child > .lst-cards.lst-cards__2colums{
+		margin-left: 0;
 	}
 }
 
@@ -266,19 +293,6 @@
 		margin-left: 0px;
 	}
 
-	/* eis-영업기회분석, 영업활동분석, 영업 매출 분석 */
-	/* .component__o-top .input-box-wrap > .input-box,
-	.component__a-top .input-box-wrap > .input-box,
-	.component__rp-top .input-box-wrap > .input-box{
-		flex-direction: column;
-		align-items: flex-start;
-	}
-	.component__o-top .input-box-wrap > .input-box > div,
-	.component__a-top .input-box-wrap > .input-box > div,
-	.component__rp-top .input-box-wrap > .input-box > div{
-		margin-left: 0;
-		margin-top: 4px;
-	} */
 	.component__o-1 .lst-cards.lst-cards__6colums, 
 	.component__a-1 .lst-cards.lst-cards__6colums,
 	.component__rp-1 .lst-cards.lst-cards__6colums{
@@ -292,4 +306,28 @@
 	.component__ca-1 .lst-cards.lst-cards__4colums > .box:first-child{
 		grid-column: 1 / 2;
 	}
+
+	/* eis - 생산실적 */
+	.component__ao-1 .lst-cards{
+		grid-gap: 4px;
+	}
+	.component__ao-1 .lst-cards + .lst-cards{
+		margin-top: 4px;
+	}	
+	.component__ao-1 .component-area > .lst-cards.lst-cards__2colums{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.component__ao-3 .component-box-top > .input-box {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.component__ao-3 .component-box-top > .input-box > div{
+		margin-left: 0;
+		margin-top: 4px;
+	}
+	.component__ao-3 .component-box-top > .input-box > div .input{
+		width: 40%;
+		margin-right: 4px;
+	}
+	
 }
