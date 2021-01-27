@@ -122,14 +122,6 @@
 
 
 /* eis - 영업 실적 분석 */
-/*.component__p-1 .lst-cards .component-area{
-	justify-content: center;
-}
- .component__p-1 .lst-cards .component-area > .component-box{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-} */
 .component__p-1 .status--up .bold span,
 .component__p-1 .status--down .bold span{
 	display: inline-block;
@@ -137,13 +129,37 @@
 	color: inherit;
 }
 
-/* eis-영업기회분석, 영업활동분석
-.component__o-1 .lst-cards .component-area > .component-box, 
-.component__a-1 .lst-cards .component-area > .component-box{
+/* eis-영업기회분석, 영업활동분석, 영업매출분석 */
+.component__o-top .input-box-wrap > .input-box > div,
+.component__a-top .input-box-wrap > .input-box > div,
+.component__rp-top .input-box-wrap > .input-box > div{
 	display: flex;
-	flex-direction: column;
+}
+.component__o-top .input-box-wrap > .input-box > div > .input-box,
+.component__a-top .input-box-wrap > .input-box > div > .input-box,
+.component__rp-top .input-box-wrap > .input-box > div > .input-box{
+	margin-right: 4px;
+}
+
+.component__rp-1 .component-box-top{
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: flex;
 	align-items: center;
-} */
+	justify-content: center;
+}
+.component__rp-1 .component-area .component-box-top .component__title{
+	color: #fff;
+}
+.component__rp-1 .status-txt--large .bold{
+	font-size: inherit;
+}
+.component__rp-1 .status-txt--large .bold + p{
+	font-size: 0.88em;
+	margin-top: 4px;
+}
+
 
 /* eis - 구매실적 */
 .component__pp-1 .status--up .bold span,
@@ -225,9 +241,25 @@
 		margin-left: 0px;
 	}
 
-	/* eis-영업기회분석, 영업활동분석 */
+	/* eis-영업기회분석, 영업활동분석, 영업 매출 분석 */
+	.component__o-top .input-box-wrap > .input-box,
+	.component__a-top .input-box-wrap > .input-box,
+	.component__rp-top .input-box-wrap > .input-box{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.component__o-top .input-box-wrap > .input-box > div,
+	.component__a-top .input-box-wrap > .input-box > div,
+	.component__rp-top .input-box-wrap > .input-box > div{
+		margin-left: 0;
+		margin-top: 4px;
+	}
+
 	.component__o-1 .lst-cards.lst-cards__6colums, 
-	.component__a-1 .lst-cards.lst-cards__6colums{
+	.component__a-1 .lst-cards.lst-cards__6colums,
+	.component__rp-1 .lst-cards.lst-cards__6colums{
 		grid-template-columns: repeat(3, 1fr);
 	}
+
+	
 }

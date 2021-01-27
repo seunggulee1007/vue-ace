@@ -994,6 +994,9 @@ a.link:hover::before{
 .input-box .el-input__icon{
 	line-height: 32px;
 }
+.input-box .el-input--suffix .el-input__inner{
+	padding-right: 8px;
+}
 .input-box .el-date-editor .el-range__icon,
 .input-box .el-date-editor .el-range__close-icon,
 .input-box .el-date-editor .el-range-separator{
@@ -1553,7 +1556,7 @@ a.link:hover::before{
 	.container{
 		height: calc(100vh - 57px);
 		width: 100vw;
-		padding: 24px 16px;
+		padding: 16px 16px 24px;
 		overflow: hidden;
 		box-sizing: border-box;
 	}
@@ -1575,7 +1578,8 @@ a.link:hover::before{
 	}
 
 	.section-top{
-		justify-content: flex-end;
+		justify-content: flex-start;
+		/* margin-bottom: 16px; */
 	}
 	.section__title{
 		margin-bottom: 0;
@@ -1625,7 +1629,9 @@ a.link:hover::before{
 	.input-box .input-box{
 		width: auto;
 	}
-
+	.input-box > * + *{
+		margin-left: 4px;
+	}
 	/* .input-box{
 		flex-direction: column;
 	}
@@ -1645,6 +1651,10 @@ a.link:hover::before{
 	.input-box .el-date-editor.el-input__inner{
 		max-width: 40%;
 	}
+	.input-box .el-date-editor.el-date-editor--daterange{
+		max-width: 74%;
+	}
+	
 
 	.msg-state{
 		text-align: center;

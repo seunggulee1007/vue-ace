@@ -2,46 +2,37 @@
 	<div class="container user-container">
 		<section class="section__contents">
 			<div class="inner-wrap">
-				<div class="section-top">
+				<div class="section-top component__rp-top">
 					<h3 class="section__title">예상 매출 분석</h3>
 					<div class="input-box-wrap">
 						<div class="input-box">
 							<el-date-picker v-model="value2" type="month" placeholder="예상매출월"> </el-date-picker>
-							<div class="input-select input-box input-box-icon">
-								<select name="" id="" class="selectbox">
-									<option value="" selected>부서명</option>
-									<option value="">사원명</option>
-								</select>
-								<span class="icon icon-arrow"></span>
+							<div>
+								<div class="input-select input-box input-box-icon">
+									<select name="" id="" class="selectbox">
+										<option value="" selected>부서명</option>
+										<option value="">사원명</option>
+									</select>
+									<span class="icon icon-arrow"></span>
+								</div>
+								<div class="input-box">
+									<input type="text" class="input" placeholder="검색어를 입력하세요" />
+								</div>
+								<button type="button" class="button button__search">조회</button>
 							</div>
-							<div class="input-box">
-								<input type="text" class="input" placeholder="검색어를 입력하세요" />
-							</div>
-							<div class="input-select input-box input-box-icon">
-								<select name="" id="" class="selectbox">
-									<option value="" selected>억원</option>
-									<option value="">백만원</option>
-									<option value="">십만원</option>
-									<option value="">만원</option>
-									<option value="">천원</option>
-									<option value="">원</option>
-								</select>
-								<span class="icon icon-arrow"></span>
-							</div>
-							<button type="button" class="button button__search">조회</button>
 						</div>
 					</div>
 				</div>
 
-				<div class="component__eis-1">
+				<div class="component__eis-1 component__rp-1">
 					<strong class="content__title">성공 확률별 예상 매출</strong>
 					<div class="lst-cards lst-cards__6colums">
 						<div class="component-area">
 							<div class="component-box">
-								<div class="component-box-top">
+								<div class="component-box-top bg-opt5">
 									<p class="component__title">50%</p>
 								</div>
-								<div class="status-txt--large">
+								<div class="status-txt--large text-align__center">
 									<p class="bold">4.8억원</p>
 									<p>15건</p>
 								</div>
@@ -49,10 +40,10 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
-								<div class="component-box-top">
+								<div class="component-box-top bg-opt3">
 									<p class="component__title">60%</p>
 								</div>
-								<div class="status-txt--large">
+								<div class="status-txt--large text-align__center">
 									<p class="bold">4.8억원</p>
 									<p>15건</p>
 								</div>
@@ -60,10 +51,10 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
-								<div class="component-box-top">
+								<div class="component-box-top bg-opt6">
 									<p class="component__title">70%</p>
 								</div>
-								<div class="status-txt--large">
+								<div class="status-txt--large text-align__center">
 									<p class="bold">4.8억원</p>
 									<p>15건</p>
 								</div>
@@ -71,10 +62,10 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
-								<div class="component-box-top">
+								<div class="component-box-top bg-opt4">
 									<p class="component__title">80%</p>
 								</div>
-								<div class="status-txt--large">
+								<div class="status-txt--large text-align__center">
 									<p class="bold">4.8억원</p>
 									<p>15건</p>
 								</div>
@@ -82,10 +73,10 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
-								<div class="component-box-top">
+								<div class="component-box-top bg-opt7">
 									<p class="component__title">90%</p>
 								</div>
-								<div class="status-txt--large">
+								<div class="status-txt--large text-align__center">
 									<p class="bold">4.8억원</p>
 									<p>15건</p>
 								</div>
@@ -93,10 +84,10 @@
 						</div>
 						<div class="component-area">
 							<div class="component-box">
-								<div class="component-box-top">
+								<div class="component-box-top bg-opt2">
 									<p class="component__title">100%</p>
 								</div>
-								<div class="status-txt--large">
+								<div class="status-txt--large text-align__center">
 									<p class="bold">4.8억원</p>
 									<p>15건</p>
 								</div>
@@ -104,13 +95,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="component__eis-2">
+				<div class="component__eis-2 component__rp-2">
 					<strong class="content__title">월별 예상 매출</strong>
 					<div class="component-area">
 						<div class="chart-wrap" ref="chartdiv"></div>
 					</div>
 				</div>
-				<div class="component__eis-3">
+				<div class="component__eis-3 component__rp-3">
 					<strong class="content__title">담당자별 영업 기회</strong>
 					<div class="component-area">
 						<div class="table-wrap">

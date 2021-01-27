@@ -2,7 +2,7 @@
 	<div class="container user-container">
 		<section class="section__contents">
 			<div class="inner-wrap">
-				<div class="section-top">
+				<div class="section-top component__a-top">
 					<h3 class="section__title">영업 활동 분석</h3>
 					<div class="input-box-wrap">
 						<div class="input-box">
@@ -14,17 +14,19 @@
 								end-placeholder="활동일자"
 							>
 							</el-date-picker>
-							<div class="input-select input-box input-box-icon">
-								<select name="" id="" class="selectbox">
-									<option value="" selected>부서명</option>
-									<option value="">사원명</option>
-								</select>
-								<span class="icon icon-arrow"></span>
+							<div>
+								<div class="input-select input-box input-box-icon">
+									<select name="" id="" class="selectbox">
+										<option value="" selected>부서명</option>
+										<option value="">사원명</option>
+									</select>
+									<span class="icon icon-arrow"></span>
+								</div>
+								<div class="input-box">
+									<input type="text" class="input" placeholder="검색어를 입력하세요" />
+								</div>
+								<button type="button" class="button button__search">조회</button>
 							</div>
-							<div class="input-box">
-								<input type="text" class="input" placeholder="검색어를 입력하세요" />
-							</div>
-							<button type="button" class="button button__search">조회</button>
 						</div>
 					</div>
 				</div>

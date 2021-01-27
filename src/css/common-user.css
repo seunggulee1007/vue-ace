@@ -401,7 +401,10 @@
 	}
 	
 
-
+	/* user-container */
+	.user-container .inner-wrap > div:nth-child(2){
+		margin-top: 0;
+	}
 
 	.lst-wrap .lst__item{
 		width: 100%;
