@@ -44,10 +44,10 @@
 }
 .table td .flex-box{
 	align-items: center;
-	justify-content: center;;
+	justify-content: center;
 }
-.table td .flex-box .button--small{
-	margin-left: 8px;
+.table td .button--small{
+	margin: 6px auto 0;
 }
 
 .table tfoot{
@@ -92,4 +92,8 @@
 	position:static;
 	background-color: #3C7DFF;
 	border-top:0;
+}
+
+@media (max-width: 1439px) {
+	
 }

@@ -118,10 +118,8 @@
 								<tbody>
 									<tr class="row">
 										<td>
-											<div class="flex-box">
-												영업1팀
-												<button type="button" class="button button--small">상세보기</button>
-											</div>
+											영업1팀
+											<button type="button" class="button button--small">상세보기</button>
 										</td>
 										<td>10</td>
 										<td>5</td>
@@ -191,10 +189,8 @@
 									</tr>
 									<tr class="row">
 										<td>
-											<div class="flex-box">
-												영업2팀
-												<button type="button" class="button button--small">상세보기</button>
-											</div>
+											영업2팀
+											<button type="button" class="button button--small">상세보기</button>
 										</td>
 										<td>12</td>
 										<td>7</td>
@@ -205,10 +201,8 @@
 									</tr>
 									<tr class="row">
 										<td>
-											<div class="flex-box">
-												영업3팀
-												<button type="button" class="button button--small">상세보기</button>
-											</div>
+											영업3팀
+											<button type="button" class="button button--small">상세보기</button>
 										</td>
 										<td>8</td>
 										<td>2</td>
@@ -265,10 +259,8 @@
 											</div>
 										</td>
 										<td>
-											<div class="flex-box">
-												3
-												<button type="button" class="button button--small">상세보기</button>
-											</div>
+											3
+											<button type="button" class="button button--small">상세보기</button>
 										</td>
 										<td>ERP 구축 (스마트팩토리)</td>
 										<td>고운세상코스메틱</td>
@@ -354,10 +346,8 @@
 											</div>
 										</td>
 										<td>
-											<div class="flex-box">
-												1
-												<button type="button" class="button button--small">상세보기</button>
-											</div>
+											1
+											<button type="button" class="button button--small">상세보기</button>
 										</td>
 										<td></td>
 										<td></td>
