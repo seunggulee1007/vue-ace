@@ -131,7 +131,7 @@
 										<td>2</td>
 										<td>2</td>
 									</tr>
-									<tr class="row__sub">
+									<tr class="row__sub show">
 										<td colspan="7">
 											<div class="table-sub-wrap">
 												<table class="table" style="table-layout: fixed">
@@ -202,6 +202,65 @@
 										<td>3</td>
 										<td>3</td>
 									</tr>
+									<tr class="row__sub">
+										<td colspan="7">
+											<div class="table-sub-wrap">
+												<table class="table" style="table-layout: fixed">
+													<thead>
+														<tr>
+															<th>담당자</th>
+															<th>방문</th>
+															<th>전화</th>
+															<th>E-mail</th>
+															<th>DM</th>
+															<th>기타</th>
+															<th>TOTAL</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="row">
+															<td>차장 김정환</td>
+															<td>5</td>
+															<td>2</td>
+															<td>3</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+														</tr>
+														<tr class="row">
+															<td>과장 최수현</td>
+															<td>3</td>
+															<td>2</td>
+															<td>2</td>
+															<td>1</td>
+															<td>1</td>
+															<td></td>
+														</tr>
+														<tr class="row">
+															<td>대리 김우중</td>
+															<td>2</td>
+															<td>1</td>
+															<td></td>
+															<td>1</td>
+															<td></td>
+															<td>1</td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr>
+															<td>TOTAL</td>
+															<td>10</td>
+															<td>5</td>
+															<td>5</td>
+															<td>3</td>
+															<td>2</td>
+															<td>2</td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+										</td>
+									</tr>
 									<tr class="row">
 										<td>
 											영업3팀
@@ -213,6 +272,65 @@
 										<td>1</td>
 										<td>1</td>
 										<td>1</td>
+									</tr>
+									<tr class="row__sub">
+										<td colspan="7">
+											<div class="table-sub-wrap">
+												<table class="table" style="table-layout: fixed">
+													<thead>
+														<tr>
+															<th>담당자</th>
+															<th>방문</th>
+															<th>전화</th>
+															<th>E-mail</th>
+															<th>DM</th>
+															<th>기타</th>
+															<th>TOTAL</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="row">
+															<td>차장 김정환</td>
+															<td>5</td>
+															<td>2</td>
+															<td>3</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+														</tr>
+														<tr class="row">
+															<td>과장 최수현</td>
+															<td>3</td>
+															<td>2</td>
+															<td>2</td>
+															<td>1</td>
+															<td>1</td>
+															<td></td>
+														</tr>
+														<tr class="row">
+															<td>대리 김우중</td>
+															<td>2</td>
+															<td>1</td>
+															<td></td>
+															<td>1</td>
+															<td></td>
+															<td>1</td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr>
+															<td>TOTAL</td>
+															<td>10</td>
+															<td>5</td>
+															<td>5</td>
+															<td>3</td>
+															<td>2</td>
+															<td>2</td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 								<tfoot>
@@ -268,7 +386,7 @@
 										<td>ERP 구축 (스마트팩토리)</td>
 										<td>고운세상코스메틱</td>
 									</tr>
-									<tr class="row__sub">
+									<tr class="row__sub show">
 										<td colspan="7">
 											<div class="table-sub-wrap">
 												<table class="table">
@@ -334,6 +452,54 @@
 										<td></td>
 										<td></td>
 									</tr>
+									<tr class="row__sub">
+										<td colspan="7">
+											<div class="table-sub-wrap">
+												<table class="table">
+													<thead>
+														<tr>
+															<th>방문일자</th>
+															<th>방문시간</th>
+															<th>영업 담당자</th>
+															<th>영업 활동 방법</th>
+															<th>영업 활동 목적</th>
+															<th>동행자</th>
+															<th>고객명</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="row">
+															<td>2020-12-01 화</td>
+															<td>10:00 ~ 12:00</td>
+															<td>차장 김정환</td>
+															<td>방문</td>
+															<td>업무 협의</td>
+															<td></td>
+															<td>대리 이선원</td>
+														</tr>
+														<tr class="row">
+															<td>2020-12-04 금</td>
+															<td>14:00 ~ 15:00</td>
+															<td>차장 김정환</td>
+															<td>방문</td>
+															<td>견적 제출</td>
+															<td></td>
+															<td>대리 이선원</td>
+														</tr>
+														<tr class="row">
+															<td>2020-12-10 목</td>
+															<td>09:00 ~ 11:00</td>
+															<td>차장 김정환</td>
+															<td>방문</td>
+															<td>데모 시연</td>
+															<td>수석 남재곤</td>
+															<td>대리 이선원</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
 									<tr class="row">
 										<td>2020-12-01 화</td>
 										<td>영업3팀</td>
@@ -354,6 +520,54 @@
 										</td>
 										<td></td>
 										<td></td>
+									</tr>
+									<tr class="row__sub">
+										<td colspan="7">
+											<div class="table-sub-wrap">
+												<table class="table">
+													<thead>
+														<tr>
+															<th>방문일자</th>
+															<th>방문시간</th>
+															<th>영업 담당자</th>
+															<th>영업 활동 방법</th>
+															<th>영업 활동 목적</th>
+															<th>동행자</th>
+															<th>고객명</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="row">
+															<td>2020-12-01 화</td>
+															<td>10:00 ~ 12:00</td>
+															<td>차장 김정환</td>
+															<td>방문</td>
+															<td>업무 협의</td>
+															<td></td>
+															<td>대리 이선원</td>
+														</tr>
+														<tr class="row">
+															<td>2020-12-04 금</td>
+															<td>14:00 ~ 15:00</td>
+															<td>차장 김정환</td>
+															<td>방문</td>
+															<td>견적 제출</td>
+															<td></td>
+															<td>대리 이선원</td>
+														</tr>
+														<tr class="row">
+															<td>2020-12-10 목</td>
+															<td>09:00 ~ 11:00</td>
+															<td>차장 김정환</td>
+															<td>방문</td>
+															<td>데모 시연</td>
+															<td>수석 남재곤</td>
+															<td>대리 이선원</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>

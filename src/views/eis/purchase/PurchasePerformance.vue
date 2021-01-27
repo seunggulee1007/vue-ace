@@ -84,7 +84,7 @@
 							</div>
 						</div>
 						<div>
-							<div class="component-area" stlye="padding-bottom: 17px">
+							<div class="component-area" style="padding-bottom: 17px">
 								<div class="chart-wrap" ref="chartdiv"></div>
 							</div>
 						</div>
