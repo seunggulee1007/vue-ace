@@ -56,7 +56,7 @@
 						로그아웃
 					</button>
 				</div>
-				<button class="button__close"><span class="icon icon-close"></span></button>
+				<button class="button__close mobile"><span class="icon icon-close"></span></button>
 			</div>
 		</div>
 	</header>
