@@ -1622,6 +1622,10 @@ a.link:hover::before{
 	.input-box{
 		box-sizing: border-box;
 	}
+	.input-box .input-box{
+		width: auto;
+	}
+
 	/* .input-box{
 		flex-direction: column;
 	}
@@ -1637,10 +1641,10 @@ a.link:hover::before{
 	}
 
 	/* el-date-picker */
-	/* .input-box .el-date-editor.el-input,
+	.input-box .el-date-editor.el-input,
 	.input-box .el-date-editor.el-input__inner{
-		width: 100%;
-	} */
+		max-width: 40%;
+	}
 
 	.msg-state{
 		text-align: center;

@@ -122,6 +122,14 @@
 
 
 /* eis - 영업 실적 분석 */
+.component__p-1 .lst-cards .component-area{
+	justify-content: center;
+}
+.component__p-1 .lst-cards .component-area > .component-box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .component__p-1 .status--up .bold span,
 .component__p-1 .status--down .bold span{
 	display: inline-block;
@@ -208,9 +216,18 @@
 		margin-top: 24px;
 	}
 
+	/* eis - 영업실적분석 */
+	.component__p-1 .lst-cards .status-txt--large{
+		font-size: 1.16em;
+	}
+	.component__p-1 > .flex-box:first-of-type .lst-cards__2colums .status-txt--large > span{
+		display: block;
+		margin-left: 0px;
+	}
+
 	/* eis-영업기회분석, 영업활동분석 */
-.component__o-1 .lst-cards.lst-cards__6colums, 
-.component__a-1 .lst-cards.lst-cards__6colums{
-	grid-template-columns: repeat(3, 1fr);
-}
+	.component__o-1 .lst-cards.lst-cards__6colums, 
+	.component__a-1 .lst-cards.lst-cards__6colums{
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
