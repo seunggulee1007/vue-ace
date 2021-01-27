@@ -82,6 +82,12 @@
 }
 
 /* table-sub */
+.table .row__sub{
+	display: none;
+}
+.table .row__sub.show{
+	display: table-row;
+}
 .table .row__sub > td{
 	padding: 16px;	
 }
