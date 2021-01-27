@@ -641,6 +641,9 @@ a.link:hover::before{
 .info__name{
 	letter-spacing: 0.08em;
 }
+.info__name .bold{
+	font-size: 1.2em;
+}
 .user-name .user-position,
 .user-name .user-dept{
 	letter-spacing: 0;
@@ -1561,7 +1564,7 @@ a.link:hover::before{
 		box-sizing: border-box;
 	}
 	.mypage-container{
-		height: 100%;
+		height: calc(100vh - 56px);
 		overflow: auto;
 	}
 
@@ -1670,8 +1673,11 @@ a.link:hover::before{
 	.input-box .el-date-editor.el-date-editor--month{
 		max-width: 32%;
 	}
+	.input-box-wrap > .input-box > .el-date-editor.el-date-editor--month{
+		max-width: 100%;
+	}
 	.input-box .el-date-editor.el-date-editor--daterange{
-		max-width: 74%;
+		max-width: 100%;
 	}
 	
 

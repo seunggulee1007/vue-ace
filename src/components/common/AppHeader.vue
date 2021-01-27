@@ -64,12 +64,16 @@
 						<div class="img-user">
 							<img :src="SERVER_URL + getPhoto" alt="" />
 						</div>
-						<p clas="user-name__txt">{{ this.$store.getters.getUserNm }}</p>
+						<div class="user-info-box">
+							<p class="info__name">
+								<span class="bold">{{ this.$store.getters.getUserNm }}</span> 님
+							</p>
+							<p class="info__dept">컨설팅본부</p>
+							<p class="info__id">사원번호 <span class="bold">676324</span></p>
+						</div>
+						<!-- <p clas="user-name__txt">{{ this.$store.getters.getUserNm }} 님</p> -->
 					</div>
-					<router-link to="/my/myPage" class="link-mypage flex-box">
-						<span class="icon icon-user"></span>
-						마이페이지
-					</router-link>
+					<router-link to="/my/myPage" class="link link-mypage flex-box">마이페이지</router-link>
 				</div>
 				<ul class="lst-gnb">
 					<li class="lst-gnb__item" v-for="(item, idx) in menuList" :key="idx">
