@@ -347,7 +347,7 @@
 
 	/* nav */
 	.user-header .gnb-wrap.show{
-		background-color: rgba(56, 71, 90, 0.98);
+		background-color: #0c1830;
 		color: #fff;
 		z-index: 100;
 		font-size: 1.1em;
@@ -367,15 +367,15 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding-top: 24px;
+		padding: 24px 0 16px;
+		border-bottom: 1px solid rgba(255,255,255,0.5);
+		margin-bottom: 16px;
 	}
 
 	.user-header .lst-gnb{
 		flex-direction: column;
 		font-size: 1.1em;
-		margin-top: 16px;
-		border-top: 1px solid rgba(255,255,255,0.5);
-		max-height: 84%;
+		max-height: 74%;
 		overflow: auto;
 	}
 	.user-header .gnb-sub .lst-sub__title{
