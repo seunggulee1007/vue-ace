@@ -135,7 +135,7 @@
 
 .user-container .content__title{
 	position:relative;
-	color: #2B5BC7;
+	color: #3A579B;
 	padding-left: 12px;
 }
 .user-container .content__title:before{
@@ -145,7 +145,7 @@
 	top: 2px;
 	height: 18px;
 	width: 4px;
-	background-color: #2b5bc7;
+	background-color: #3A579B;
 }
 
 
