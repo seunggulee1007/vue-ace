@@ -126,7 +126,7 @@
 				<div class="component__eis-2 component__p-2">
 					<strong class="content__title">매출 채권 연령 분석</strong>
 					<div class="component-area">
-						<div class="chart-wrap" ref="chartdiv"></div>
+						<div class="chart-wrap1" ref="chartdiv"></div>
 					</div>
 				</div>
 				<div class="component__eis-3 component__p-3">
@@ -161,7 +161,7 @@ export default {
 		];
 
 		this.chart.legend = new am4charts.Legend();
-		this.chart.legend.position = 'right';
+		this.chart.legend.position = 'bottom';
 
 		// Create axes
 		let categoryAxis = this.chart.yAxes.push(new am4charts.CategoryAxis());
@@ -178,17 +178,17 @@ export default {
 		valueAxis.renderer.baseGrid.disabled = true;
 		valueAxis.renderer.minGridDistance = 40;
 
-		this.createSeries('europe', '30일 이하');
-		this.createSeries('namerica', '30~60일');
-		this.createSeries('asia', '60~90일');
-		this.createSeries('lamerica', '90~120일');
-		this.createSeries('meast', '120일 이상');
+		this.createSeries('europe', '30일 이하', '#3A579B');
+		this.createSeries('namerica', '30~60일', '#FE8F00');
+		this.createSeries('asia', '60~90일', '#AEB9CB');
+		this.createSeries('lamerica', '90~120일', '#FFCC42');
+		this.createSeries('meast', '120일 이상', '#3C7DFF');
 
 		this.chart2 = am4core.create(this.$refs.chartdiv2, am4charts.XYChart);
 		this.chart2.colors.step = 2;
 
 		this.chart2.legend = new am4charts.Legend();
-		this.chart2.legend.position = 'top';
+		this.chart2.legend.position = 'bottom';
 		this.chart2.legend.paddingBottom = 20;
 		this.chart2.legend.labels.template.maxWidth = 95;
 
@@ -266,12 +266,14 @@ export default {
 		this.createSeries2('second', '2019년');
 	},
 	methods: {
-		createSeries(field, name) {
+		createSeries(field, name, color) {
 			let series = this.chart.series.push(new am4charts.ColumnSeries());
 			series.dataFields.valueX = field;
 			series.dataFields.categoryY = 'year';
 			series.stacked = true;
 			series.name = name;
+			series.columns.template.fill = am4core.color(color);
+			series.columns.template.stroke = am4core.color('#e7ecf0');
 
 			let labelBullet = series.bullets.push(new am4charts.LabelBullet());
 			labelBullet.locationX = 0.5;

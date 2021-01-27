@@ -7,6 +7,7 @@ let Auth = {
 		routerMenuList: [],
 		menuList: [],
 		treeData: [],
+		menuOpen: false,
 	}),
 	getters,
 	mutations,

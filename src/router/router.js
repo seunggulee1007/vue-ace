@@ -62,11 +62,15 @@ router.beforeEach((to, from, next) => {
 				message: '인증이 필요합니다',
 			});
 		}
-
 		next('/login');
 		return;
 	} else if (to.path == '/login' && store.getters.getToken) {
 		next('/');
+		return;
+	}
+	console.log(store.getters);
+	if (store.getters.getMenuOpen) {
+		store.commit('setMenuOpen');
 	}
 	next();
 });

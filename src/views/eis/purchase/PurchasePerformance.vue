@@ -87,9 +87,7 @@
 						</div>
 						<div>
 							<div class="component-area">
-								<div class="chart-wrap" ref="chartdiv">
-									chart1
-								</div>
+								<div class="chart-wrap" ref="chartdiv"></div>
 							</div>
 						</div>
 					</div>
@@ -296,7 +294,162 @@
 </template>
 
 <script>
-export default {};
+import * as am4core from '@amcharts/amcharts4/core';
+import * as am4charts from '@amcharts/amcharts4/charts';
+import am4themes_animated from '@amcharts/amcharts4/themes/animated';
+am4core.useTheme(am4themes_animated);
+export default {
+	mounted() {
+		this.chart = am4core.create(this.$refs.chartdiv, am4charts.XYChart);
+		this.chart.colors.step = 2;
+
+		this.chart.legend = new am4charts.Legend();
+		this.chart.legend.position = 'bottom';
+		this.chart.legend.paddingBottom = 20;
+		this.chart.legend.labels.template.maxWidth = 95;
+
+		this.xAxis = this.chart.xAxes.push(new am4charts.CategoryAxis());
+		this.xAxis.dataFields.category = 'category';
+		this.xAxis.renderer.cellStartLocation = 0.1;
+		this.xAxis.renderer.cellEndLocation = 0.9;
+		this.xAxis.renderer.grid.template.location = 0;
+
+		let yAxis = this.chart.yAxes.push(new am4charts.ValueAxis());
+		yAxis.min = 0;
+		this.chart.data = [
+			{
+				category: '1월',
+				first: 81,
+				second: 70,
+			},
+			{
+				category: '2월',
+				first: 62,
+				second: 62,
+			},
+			{
+				category: '3월',
+				first: 34,
+				second: 37,
+			},
+			{
+				category: '4월',
+				first: 38,
+				second: 29,
+			},
+			{
+				category: '5월',
+				first: 37,
+				second: 34,
+			},
+			{
+				category: '6월',
+				first: 67,
+				second: 41,
+			},
+			{
+				category: '7월',
+				first: 50,
+				second: 72,
+			},
+			{
+				category: '8월',
+				first: 64,
+				second: 46,
+			},
+			{
+				category: '9월',
+				first: 0,
+				second: 26,
+			},
+			{
+				category: '10월',
+				first: 0,
+				second: 34,
+			},
+			{
+				category: '11월',
+				first: 0,
+				second: 32,
+			},
+			{
+				category: '12월',
+				first: 0,
+				second: 30,
+			},
+		];
+		this.createSeries('first', '2020년');
+		this.createSeries('second', '2019년');
+	},
+	methods: {
+		createSeries(value, name) {
+			let series = this.chart.series.push(new am4charts.ColumnSeries());
+			series.dataFields.valueY = value;
+			series.dataFields.categoryX = 'category';
+			series.name = name;
+
+			series.events.on('hidden', this.arrangeColumns);
+			series.events.on('shown', this.arrangeColumns);
+
+			let bullet = series.bullets.push(new am4charts.LabelBullet());
+			bullet.interactionsEnabled = false;
+			bullet.dy = 30;
+			bullet.label.text = '{valueY}';
+			bullet.label.fill = am4core.color('#ffffff');
+
+			return series;
+		},
+		arrangeColumns() {
+			let series = this.chart.series.getIndex(0);
+
+			let w = 1 - this.xAxis.renderer.cellStartLocation - (1 - this.xAxis.renderer.cellEndLocation);
+			if (series.dataItems.length > 1) {
+				let x0 = this.xAxis.getX(series.dataItems.getIndex(0), 'categoryX');
+				let x1 = this.xAxis.getX(series.dataItems.getIndex(1), 'categoryX');
+				let delta = ((x1 - x0) / this.chart.series.length) * w;
+				if (am4core.isNumber(delta)) {
+					let middle = this.chart.series.length / 2;
+
+					let newIndex = 0;
+					this.chart.series.each(series => {
+						if (!series.isHidden && !series.isHiding) {
+							series.dummyData = newIndex;
+							newIndex++;
+						} else {
+							series.dummyData = this.chart.series.indexOf(series);
+						}
+					});
+					let visibleCount = newIndex;
+					let newMiddle = visibleCount / 2;
+
+					this.chart.series.each(series => {
+						let trueIndex = this.chart.series.indexOf(series);
+						let newIndex = series.dummyData;
+
+						let dx = (newIndex - trueIndex + middle - newMiddle) * delta;
+
+						series.animate(
+							{ property: 'dx', to: dx },
+							series.interpolationDuration,
+							series.interpolationEasing,
+						);
+						series.bulletsContainer.animate(
+							{ property: 'dx', to: dx },
+							series.interpolationDuration,
+							series.interpolationEasing,
+						);
+					});
+				}
+			}
+		},
+	},
+	data() {
+		return {
+			chart: '',
+			xAxis: '',
+		};
+	},
+};
 </script>
 
 <style></style>

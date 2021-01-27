@@ -8,4 +8,7 @@ export default {
 	getTreeData(state) {
 		return state.treeData;
 	},
+	getMenuOpen(state) {
+		return state.menuOpen;
+	},
 };

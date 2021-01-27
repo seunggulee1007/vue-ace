@@ -8,4 +8,7 @@ export default {
 	setTreeData(state, treeData) {
 		state.treeData = treeData;
 	},
+	setMenuOpen(state) {
+		state.menuOpen = !state.menuOpen;
+	},
 };

@@ -51,14 +51,14 @@
 		</div>
 		<nav class="gnb">
 			<div class="nav-icon">
-				<button type="button" class="button__nav">
+				<button type="button" class="button__nav" @click="setMenuOpen">
 					<span class="nav-bar"></span>
 					<span class="nav-bar"></span>
 					<span class="nav-bar"></span>
 				</button>
 				<p>메뉴<span class="blind">열기</span></p>
 			</div>
-			<div class="gnb-wrap">
+			<div class="gnb-wrap" :class="{ show: getMenuOpen }">
 				<div class="gnb-top mobile">
 					<div class="user-name">
 						<div class="img-user">
@@ -67,8 +67,9 @@
 						<p clas="user-name__txt">{{ this.$store.getters.getUserNm }}</p>
 					</div>
 					<router-link to="/my/myPage" class="link-mypage flex-box">
-						<span class="icon icon-user"></span>마이페이지</router-link
-					>
+						<span class="icon icon-user"></span>
+						마이페이지
+					</router-link>
 				</div>
 				<ul class="lst-gnb">
 					<li class="lst-gnb__item" v-for="(item, idx) in menuList" :key="idx">
@@ -76,7 +77,7 @@
 						<div class="gnb-sub" v-if="item.children && item.children.length > 0">
 							<ul class="lst-gnb-sub" v-for="children in item.children" :key="children.menuId">
 								<li class="lst-sub__title">
-									<p>{{ item.menuNm }}</p>
+									<p>{{ children.menuNm }}</p>
 								</li>
 								<li class="lst-sub__item" v-for="subChild in children.children" :key="subChild.menuId">
 									<router-link :to="subChild.pageUrl" class="lst-sub__link" v-if="subChild.pageUrl">
@@ -98,7 +99,9 @@
 						로그아웃
 					</button>
 				</div>
-				<button class="button__close mobile"><span class="icon icon-close"></span></button>
+				<button class="button__close mobile" @click="setMenuOpen">
+					<span class="icon icon-close"></span>
+				</button>
 			</div>
 		</nav>
 	</header>
@@ -106,14 +109,13 @@
 
 <script>
 import { selectMenuList } from '@/api/menu';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 export default {
 	created() {
-		console.log(this.$route);
 		this.selectMenuList();
 	},
 	computed: {
-		...mapGetters(['getPhoto']),
+		...mapGetters(['getPhoto', 'getMenuOpen']),
 	},
 	data() {
 		return {
@@ -122,6 +124,7 @@ export default {
 		};
 	},
 	methods: {
+		...mapMutations(['setMenuOpen']),
 		logoutUser() {
 			this.sConfirm('로그아웃 하시겠습니까?', () => {
 				this.$store.commit('clearLoginInfo');
