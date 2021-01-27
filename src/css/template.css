@@ -1632,13 +1632,14 @@ a.link:hover::before{
 	.input-box > * + *{
 		margin-left: 4px;
 	}
-	/* .input-box{
-		flex-direction: column;
+
+	.section-top > .input-box,
+	.section-top > .input-box-wrap > .input-box{
+		justify-content: flex-start;
 	}
-	.input-box .button{
-		margin-left: 0;
-		margin-top: 8px;
-	} */
+	.section-top .input-box .button{
+		padding: 8px;
+	}
 
 	/* input */
 	.input,
@@ -1650,6 +1651,9 @@ a.link:hover::before{
 	.input-box .el-date-editor.el-input,
 	.input-box .el-date-editor.el-input__inner{
 		max-width: 40%;
+	}
+	.input-box .el-date-editor.el-date-editor--month{
+		max-width: 32%;
 	}
 	.input-box .el-date-editor.el-date-editor--daterange{
 		max-width: 74%;
