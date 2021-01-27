@@ -4,14 +4,12 @@
 			<div class="inner-wrap">
 				<div class="section-top">
 					<h3 class="section__title">프로젝트 원가 분석</h3>
-					<div class="input-box-wrap">
+					<div class="input-box">
+						<el-date-picker v-model="value2" type="month" placeholder="기준년월"> </el-date-picker>
 						<div class="input-box">
-							<el-date-picker v-model="value2" type="month" placeholder="기준년월"> </el-date-picker>
-							<div class="input-box">
-								<input type="text" class="input" placeholder="프로젝트명" />
-							</div>
-							<button type="button" class="button button__search">조회</button>
+							<input type="text" class="input" placeholder="프로젝트명" />
 						</div>
+						<button type="button" class="button button__search">조회</button>
 					</div>
 				</div>
 				<div class="component__eis-2 component__ca-1">

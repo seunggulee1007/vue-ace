@@ -4,24 +4,22 @@
 			<div class="inner-wrap">
 				<div class="section-top">
 					<h3 class="section__title">구매 실적</h3>
-					<div class="input-box-wrap">
-						<div class="input-box">
-							<el-date-picker v-model="value1" type="month" placeholder="기준년월"></el-date-picker>
-							<div class="input-select input-box input-box-icon">
-								<select name="" id="" class="selectbox">
-									<option value="" selected>억원</option>
-									<option value="">백만원</option>
-									<option value="">십만원</option>
-									<option value="">만원</option>
-									<option value="">천원</option>
-									<option value="">원</option>
-								</select>
-								<span class="icon icon-arrow"></span>
-							</div>
-							<button type="button" class="button button__search">
-								조회
-							</button>
+					<div class="input-box">
+						<el-date-picker v-model="value1" type="month" placeholder="기준년월"></el-date-picker>
+						<div class="input-select input-box input-box-icon">
+							<select name="" id="" class="selectbox">
+								<option value="" selected>억원</option>
+								<option value="">백만원</option>
+								<option value="">십만원</option>
+								<option value="">만원</option>
+								<option value="">천원</option>
+								<option value="">원</option>
+							</select>
+							<span class="icon icon-arrow"></span>
 						</div>
+						<button type="button" class="button button__search">
+							조회
+						</button>
 					</div>
 				</div>
 				<div class="component__eis-1 component__pp-1">
@@ -86,7 +84,7 @@
 							</div>
 						</div>
 						<div>
-							<div class="component-area">
+							<div class="component-area" stlye="padding-bottom: 17px">
 								<div class="chart-wrap" ref="chartdiv"></div>
 							</div>
 						</div>

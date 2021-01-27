@@ -1592,7 +1592,18 @@ a.link:hover::before{
 	.component-area{
 		padding: 24px
 	}
-
+	.component-box.component-box-top{
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.component-box.component-box-top > *:first-child{
+		margin-bottom: 8px;
+	}
+	.component-box.component-box-top > .input-box{
+		width: 100%;
+	}
+	
 
 	/* popup */
 	.popup.show{
@@ -1634,6 +1645,10 @@ a.link:hover::before{
 	}
 
 	.section-top > .input-box,
+	.section-top > .input-box-wrap{
+		width: 100%;
+	}
+	.section-top > .input-box,
 	.section-top > .input-box-wrap > .input-box{
 		justify-content: flex-start;
 	}
@@ -1644,7 +1659,7 @@ a.link:hover::before{
 	/* input */
 	.input,
 	.input-select{
-		width: 100%;
+		width: 76%;
 	}
 
 	/* el-date-picker */

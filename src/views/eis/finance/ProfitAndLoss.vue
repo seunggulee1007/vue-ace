@@ -4,24 +4,19 @@
 			<div class="inner-wrap">
 				<div class="section-top">
 					<h3 class="section__title">손익 분석</h3>
-					<div class="input-box-wrap">
-						<div class="input-box">
-							<el-date-picker v-model="searchDt" type="month" placeholder="기준년월"></el-date-picker>
-							<div class="input-select input-box input-box-icon">
-								<select name="" id="" class="selectbox">
-									<option
-										v-for="item in unitList"
-										:key="item.SMQryUnitSeq"
-										:value="item.SMQryUnitSeq"
-										>{{ item.SMQryUnitName }}</option
-									>
-								</select>
-								<span class="icon icon-arrow"></span>
-							</div>
-							<button type="button" class="button button__search">
-								조회
-							</button>
+					<div class="input-box">
+						<el-date-picker v-model="searchDt" type="month" placeholder="기준년월"></el-date-picker>
+						<div class="input-select input-box input-box-icon">
+							<select name="" id="" class="selectbox">
+								<option v-for="item in unitList" :key="item.SMQryUnitSeq" :value="item.SMQryUnitSeq">{{
+									item.SMQryUnitName
+								}}</option>
+							</select>
+							<span class="icon icon-arrow"></span>
 						</div>
+						<button type="button" class="button button__search">
+							조회
+						</button>
 					</div>
 				</div>
 				<div class="component-area">

@@ -7,29 +7,31 @@
 					<div class="input-box-wrap">
 						<div class="input-box">
 							<el-date-picker v-model="value1" type="month" placeholder="기준년월"></el-date-picker>
-							<div class="input-select input-box input-box-icon">
-								<select name="" id="" class="selectbox">
-									<option value="" selected>억원</option>
-									<option value="">백만원</option>
-									<option value="">십만원</option>
-									<option value="">만원</option>
-									<option value="">천원</option>
-									<option value="">원</option>
-								</select>
-								<span class="icon icon-arrow"></span>
+							<div>
+								<div class="input-select input-box input-box-icon">
+									<select name="" id="" class="selectbox">
+										<option value="" selected>억원</option>
+										<option value="">백만원</option>
+										<option value="">십만원</option>
+										<option value="">만원</option>
+										<option value="">천원</option>
+										<option value="">원</option>
+									</select>
+									<span class="icon icon-arrow"></span>
+								</div>
+								<div class="input-select input-box input-box-icon">
+									<select name="" id="" class="selectbox">
+										<option value="">품목자산분류</option>
+										<option value="">분류1</option>
+										<option value="">분류2</option>
+										<option value="">분류3</option>
+									</select>
+									<span class="icon icon-arrow"></span>
+								</div>
+								<button type="button" class="button button__search">
+									조회
+								</button>
 							</div>
-							<div class="input-select input-box input-box-icon">
-								<select name="" id="" class="selectbox">
-									<option value="">품목자산분류</option>
-									<option value="">분류1</option>
-									<option value="">분류2</option>
-									<option value="">분류3</option>
-								</select>
-								<span class="icon icon-arrow"></span>
-							</div>
-							<button type="button" class="button button__search">
-								조회
-							</button>
 						</div>
 					</div>
 				</div>
