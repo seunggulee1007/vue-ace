@@ -103,7 +103,7 @@
 				</div>
 				<div class="component__eis-2 component__o-2">
 					<strong class="content__title">부서/담당자 파이프라인</strong>
-					<div class="component-area">
+					<!-- <div class="component-area">
 						<div class="lst-cards lst-cards__6colums">
 							<div class="flex-box">
 								<p class="component__title">영업1팀</p>
@@ -251,20 +251,10 @@
 								<p>2</p>
 							</div>
 						</div>
-					</div>
-
-					<!-- <div class="component-area">
+					</div> -->
+					<div class="component-area">
 						<div class="table-wrap">
 							<table class="table">
-								<colgroup>
-									<col />
-									<col width="14%" />
-									<col width="14%" />
-									<col width="14%" />
-									<col width="14%" />
-									<col width="14%" />
-									<col width="14%" />
-								</colgroup>
 								<thead>
 									<tr>
 										<th>부서</th>
@@ -504,7 +494,7 @@
 								</tfoot>
 							</table>
 						</div>
-					</div> -->
+					</div>
 				</div>
 				<div class="component__eis-3 component__o-3">
 					<strong class="content__title">담당자별 영업 기회 현황</strong>

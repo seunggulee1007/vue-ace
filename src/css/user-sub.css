@@ -130,7 +130,7 @@
 }
 
 /* eis-영업기회분석, 영업활동분석, 영업매출분석 */
-.component__o-2 .component-area > .lst-cards{
+/* .component__o-2 .component-area > .lst-cards{
 	padding: 16px 0;
 	border-top: 2px solid #e8ebf0;
 }
@@ -161,7 +161,7 @@
 .component__o-2 .component-area > .lst-cards.lst-cards__6colums > .detail .table th{
 	background-color: #3C7DFF;
 	box-shadow: inset -1px 0 0 #e7ecf0, inset 0 -1px 0 #e7ecf0, inset 0 1px 0 #3C7DFF;
-}
+} */
 
 .component__rp-1 .component-box-top{
 	width: 44px;
@@ -331,13 +331,13 @@
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	.component__o-2 .component-area > .lst-cards.lst-cards__6colums{
+	/* .component__o-2 .component-area > .lst-cards.lst-cards__6colums{
 		grid-template-columns: repeat(3, 1fr);
 	}
 	.component__o-2 .component-area > .lst-cards.lst-cards__6colums > .flex-box:first-child,
 	.component__o-2 .component-area > .lst-cards.lst-cards__6colums > .detail{
 		grid-column: 1 / 4;
-	}
+	} */
 
 	/* eis - 프로젝트원가분석 */
 	.component__ca-1 .lst-cards.lst-cards__4colums{
