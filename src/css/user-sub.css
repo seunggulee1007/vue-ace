@@ -275,6 +275,11 @@
 	.component__ao-1 .lst-cards.lst-cards__2colums > div.flex-box:last-child > .lst-cards.lst-cards__2colums{
 		margin-left: 0;
 	}
+
+	/* eis - 구매실적 */
+	.component__pp-1 .char-wrap{
+		height: 260px;
+	}
 }
 
 
@@ -365,9 +370,10 @@
 		margin-left: 0;
 		margin-top: 4px;
 	}
-	.component__ao-3 .component-box-top > .input-box > div .input{
-		width: 40%;
+	.component__ao-3 .component-box-top > .input-box > div > .input-box{
 		margin-right: 4px;
 	}
-	
+	.component__ao-3 .component-box-top > .input-box > div .input{
+		width: 40%;
+	}
 }

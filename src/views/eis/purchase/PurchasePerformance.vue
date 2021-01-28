@@ -140,9 +140,7 @@
 										<td class="data__number">46.7</td>
 										<td class="data__number">64.3</td>
 										<td class="data__number">50.1</td>
-										<td	class="data__number status--up">
-											<span class="icon-triangle"></span>10.7
-										</td>
+										<td class="data__number status--up"><span class="icon-triangle"></span>10.7</td>
 										<td class="data__number status--up">
 											<span class="icon-triangle"></span>27.8%
 										</td>
@@ -167,9 +165,7 @@
 										<td class="data__number">46.7</td>
 										<td class="data__number">64.3</td>
 										<td class="data__number">50.1</td>
-										<td	class="data__number status--up">
-											<span class="icon-triangle"></span>10.7
-										</td>
+										<td class="data__number status--up"><span class="icon-triangle"></span>10.7</td>
 										<td class="data__number status--up">
 											<span class="icon-triangle"></span>27.8%
 										</td>
@@ -194,8 +190,7 @@
 										<td class="data__number">46.7</td>
 										<td class="data__number">64.3</td>
 										<td class="data__number">50.1</td>
-										<td class="data__number status--up"><span class="icon-triangle"></span>10.7
-										</td>
+										<td class="data__number status--up"><span class="icon-triangle"></span>10.7</td>
 										<td class="data__number status--up">
 											<span class="icon-triangle"></span>27.8%
 										</td>
@@ -261,8 +256,7 @@
 										<td class="data__number">46.7</td>
 										<td class="data__number">64.3</td>
 										<td class="data__number">50.1</td>
-										<td class="data__number status--up"><span class="icon-triangle"></span>10.7
-										</td>
+										<td class="data__number status--up"><span class="icon-triangle"></span>10.7</td>
 										<td class="data__number status--up">
 											<span class="icon-triangle"></span>27.8%
 										</td>
@@ -287,8 +281,7 @@
 										<td class="data__number">46.7</td>
 										<td class="data__number">64.3</td>
 										<td class="data__number">50.1</td>
-										<td class="data__number status--up"><span class="icon-triangle"></span>10.7
-										</td>
+										<td class="data__number status--up"><span class="icon-triangle"></span>10.7</td>
 										<td class="data__number status--up">
 											<span class="icon-triangle"></span>27.8%
 										</td>
@@ -313,8 +306,7 @@
 										<td class="data__number">46.7</td>
 										<td class="data__number">64.3</td>
 										<td class="data__number">50.1</td>
-										<td class="data__number status--up"><span class="icon-triangle"></span>10.7
-										</td>
+										<td class="data__number status--up"><span class="icon-triangle"></span>10.7</td>
 										<td class="data__number status--up">
 											<span class="icon-triangle"></span>27.8%
 										</td>

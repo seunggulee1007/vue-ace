@@ -1340,6 +1340,7 @@ a.link:hover::before{
 .button__logout,
 .button__admin{
 	display: flex;
+	align-items: center;
 	padding: 8px 24px;
 }
 
@@ -1493,7 +1494,7 @@ a.link:hover::before{
 		position: relative;
 		height: 56px;
 		padding: 0 16px;
-		z-index: 1;
+		z-index: 100;
 		width: 100vw;
 		box-sizing: border-box;
 	}
@@ -1561,6 +1562,7 @@ a.link:hover::before{
 		width: 100vw;
 		padding: 20px 24px 56px;
 		box-sizing: border-box;
+		z-index: 500;
 	}
 
 	.gnb-wrap .button__close{

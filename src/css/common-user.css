@@ -321,14 +321,6 @@
 
 
 
-@media (max-width: 1670px){
-	
-	/* eis */
-	/* .component__eis-1 .lst-cards .box-cnt .bold{
-		font-size: 1.2em;
-	} */
-}
-
 @media (max-width: 1440px) {
 	/* eis */
 	.component__eis-1 > .flex-box{
@@ -350,7 +342,6 @@
 	.user-header .gnb-wrap.show{
 		background-color: #0c1830;
 		color: #fff;
-		z-index: 100;
 		font-size: 1.1em;
 	}
 	.user-header .gnb-top{
@@ -392,9 +383,15 @@
 		flex-direction: column;
 		align-items: flex-start;
 	}
+	.user-header .gnb .lst-gnb__item > span{
+		color: #fff;
+	}
 	.user-header .gnb-sub .lst-sub__link{
 		padding-left: 28px; 
 		padding-right: 0;
+	}
+	.user-header .gnb .lst-gnb__item:hover > span{
+		color: #fff;
 	}
 	.user-header .gnb .lst-gnb__item:hover .gnb-sub{
 		position: static;
@@ -428,6 +425,9 @@
 		margin-left: 0;
 		margin-top: 4px;
 		width: 100%;
+	}
+	.user-container .section-top .input-box-wrap > .input-box > div > .input-box{
+		margin-right: 4px;
 	}
 	
 

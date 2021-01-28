@@ -122,7 +122,7 @@
 									<tr class="row">
 										<td>
 											영업1팀
-											<button type="button" class="button button--small">상세보기</button>
+											<button type="button" class="button button--small">상세</button>
 										</td>
 										<td>10</td>
 										<td>5</td>
@@ -193,7 +193,7 @@
 									<tr class="row">
 										<td>
 											영업2팀
-											<button type="button" class="button button--small">상세보기</button>
+											<button type="button" class="button button--small">상세</button>
 										</td>
 										<td>12</td>
 										<td>7</td>
@@ -219,7 +219,7 @@
 													</thead>
 													<tbody>
 														<tr class="row">
-															<td>차장 김정환</td>
+															<td>김정환 차장</td>
 															<td>5</td>
 															<td>2</td>
 															<td>3</td>
@@ -228,7 +228,7 @@
 															<td>1</td>
 														</tr>
 														<tr class="row">
-															<td>과장 최수현</td>
+															<td>최수현 과장</td>
 															<td>3</td>
 															<td>2</td>
 															<td>2</td>
@@ -237,7 +237,7 @@
 															<td></td>
 														</tr>
 														<tr class="row">
-															<td>대리 김우중</td>
+															<td>김우중 대리</td>
 															<td>2</td>
 															<td>1</td>
 															<td></td>
@@ -264,7 +264,7 @@
 									<tr class="row">
 										<td>
 											영업3팀
-											<button type="button" class="button button--small">상세보기</button>
+											<button type="button" class="button button--small">상세</button>
 										</td>
 										<td>8</td>
 										<td>2</td>
@@ -276,7 +276,7 @@
 									<tr class="row__sub">
 										<td colspan="7">
 											<div class="table-sub-wrap">
-												<table class="table" style="table-layout: fixed">
+												<table class="table">
 													<thead>
 														<tr>
 															<th>담당자</th>
@@ -290,7 +290,7 @@
 													</thead>
 													<tbody>
 														<tr class="row">
-															<td>차장 김정환</td>
+															<td>김정환 차장</td>
 															<td>5</td>
 															<td>2</td>
 															<td>3</td>
@@ -299,7 +299,7 @@
 															<td>1</td>
 														</tr>
 														<tr class="row">
-															<td>과장 최수현</td>
+															<td>최수현 과장</td>
 															<td>3</td>
 															<td>2</td>
 															<td>2</td>
@@ -308,7 +308,7 @@
 															<td></td>
 														</tr>
 														<tr class="row">
-															<td>대리 김우중</td>
+															<td>김우중 대리</td>
 															<td>2</td>
 															<td>1</td>
 															<td></td>
@@ -368,7 +368,7 @@
 									<tr class="row">
 										<td>2020-12-01 화</td>
 										<td>영업1팀</td>
-										<td>차장 김정환</td>
+										<td>김정환 차장</td>
 										<td>
 											<div class="lst-status opt1">
 												<span class="opt1__txt opt__txt">인지</span>
@@ -380,8 +380,8 @@
 											</div>
 										</td>
 										<td>
-											3
-											<button type="button" class="button button--small">상세보기</button>
+											<span class="bold">3</span>
+											<button type="button" class="button button--small">상세</button>
 										</td>
 										<td>ERP 구축 (스마트팩토리)</td>
 										<td>고운세상코스메틱</td>
@@ -405,29 +405,29 @@
 														<tr class="row">
 															<td>2020-12-01 화</td>
 															<td>10:00 ~ 12:00</td>
-															<td>차장 김정환</td>
+															<td>김정환 차장</td>
 															<td>방문</td>
 															<td>업무 협의</td>
 															<td></td>
-															<td>대리 이선원</td>
+															<td>이선원 대리</td>
 														</tr>
 														<tr class="row">
 															<td>2020-12-04 금</td>
 															<td>14:00 ~ 15:00</td>
-															<td>차장 김정환</td>
+															<td>김정환 차장</td>
 															<td>방문</td>
 															<td>견적 제출</td>
 															<td></td>
-															<td>대리 이선원</td>
+															<td>이선원 대리</td>
 														</tr>
 														<tr class="row">
 															<td>2020-12-10 목</td>
 															<td>09:00 ~ 11:00</td>
-															<td>차장 김정환</td>
+															<td>김정환 차장</td>
 															<td>방문</td>
 															<td>데모 시연</td>
-															<td>수석 남재곤</td>
-															<td>대리 이선원</td>
+															<td>남재곤 수석</td>
+															<td>이선원 대리</td>
 														</tr>
 													</tbody>
 												</table>
@@ -437,7 +437,7 @@
 									<tr class="row">
 										<td>2020-12-01 화</td>
 										<td>영업2팀</td>
-										<td>과장 최수현</td>
+										<td>최수현 과장</td>
 										<td>
 											<div class="lst-status opt3">
 												<span class="opt1__txt opt__txt">인지</span>
@@ -471,29 +471,29 @@
 														<tr class="row">
 															<td>2020-12-01 화</td>
 															<td>10:00 ~ 12:00</td>
-															<td>차장 김정환</td>
+															<td>김정환 차장</td>
 															<td>방문</td>
 															<td>업무 협의</td>
 															<td></td>
-															<td>대리 이선원</td>
+															<td>이선원 대리</td>
 														</tr>
 														<tr class="row">
 															<td>2020-12-04 금</td>
 															<td>14:00 ~ 15:00</td>
-															<td>차장 김정환</td>
+															<td>김정환 차장</td>
 															<td>방문</td>
 															<td>견적 제출</td>
 															<td></td>
-															<td>대리 이선원</td>
+															<td>이선원 대리</td>
 														</tr>
 														<tr class="row">
 															<td>2020-12-10 목</td>
 															<td>09:00 ~ 11:00</td>
-															<td>차장 김정환</td>
+															<td>김정환 차장</td>
 															<td>방문</td>
 															<td>데모 시연</td>
-															<td>수석 남재곤</td>
-															<td>대리 이선원</td>
+															<td>남재곤 수석</td>
+															<td>이선원 대리</td>
 														</tr>
 													</tbody>
 												</table>
@@ -503,7 +503,7 @@
 									<tr class="row">
 										<td>2020-12-01 화</td>
 										<td>영업3팀</td>
-										<td>대리 김우중</td>
+										<td>김우중 대리</td>
 										<td>
 											<div class="lst-status opt4">
 												<span class="opt1__txt opt__txt">인지</span>
@@ -515,8 +515,8 @@
 											</div>
 										</td>
 										<td>
-											1
-											<button type="button" class="button button--small">상세보기</button>
+											<span class="bold">1</span>
+											<button type="button" class="button button--small">상세</button>
 										</td>
 										<td></td>
 										<td></td>
@@ -540,29 +540,29 @@
 														<tr class="row">
 															<td>2020-12-01 화</td>
 															<td>10:00 ~ 12:00</td>
-															<td>차장 김정환</td>
+															<td>김정환 차장</td>
 															<td>방문</td>
 															<td>업무 협의</td>
 															<td></td>
-															<td>대리 이선원</td>
+															<td>이선원 대리</td>
 														</tr>
 														<tr class="row">
 															<td>2020-12-04 금</td>
 															<td>14:00 ~ 15:00</td>
-															<td>차장 김정환</td>
+															<td>김정환 차장</td>
 															<td>방문</td>
 															<td>견적 제출</td>
 															<td></td>
-															<td>대리 이선원</td>
+															<td>이선원 대리</td>
 														</tr>
 														<tr class="row">
 															<td>2020-12-10 목</td>
 															<td>09:00 ~ 11:00</td>
-															<td>차장 김정환</td>
+															<td>김정환 차장</td>
 															<td>방문</td>
 															<td>데모 시연</td>
-															<td>수석 남재곤</td>
-															<td>대리 이선원</td>
+															<td>남재곤 수석</td>
+															<td>이선원 대리</td>
 														</tr>
 													</tbody>
 												</table>

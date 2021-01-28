@@ -108,7 +108,7 @@
 @media (max-width: 768px) {
 	.table th,
 	.table td{
-		padding: 4px;
+		padding: 4px 5px;
 	}
 	.table-wrap thead tr:nth-child(2) th{
 		top: 23px;
