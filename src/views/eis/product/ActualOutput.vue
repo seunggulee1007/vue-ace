@@ -510,7 +510,9 @@
 									</select>
 									<span class="icon icon-arrow"></span>
 								</div>
-								<input type="text" class="input" placeholder="품명을 입력하세요" />
+								<div class="input-box">
+									<input type="text" class="input" placeholder="품명을 입력하세요" />
+								</div>
 								<button type="button" class="button button__search">
 									조회
 								</button>
@@ -518,33 +520,15 @@
 						</div>
 					</div>
 					<div class="component-area">
-						.
 						<div class="table-wrap table--horizontal">
 							<table class="table">
-								<colgroup>
-									<col />
-									<col />
-									<col />
-									<col />
-									<col />
-									<col />
-									<col />
-									<col />
-									<col />
-									<col />
-									<col />
-									<col />
-									<col />
-									<col />
-									<col />
-								</colgroup>
 								<thead>
 									<tr>
 										<th rowspan="2">No.</th>
 										<th rowspan="2">품목 자산 분류</th>
 										<th rowspan="2">품목 유형</th>
 										<th rowspan="2">품명</th>
-										<th rowspan="2">전년동기</th>
+										<th rowspan="2">전년<br />동기</th>
 										<th rowspan="2">전월</th>
 										<th rowspan="2">당월</th>
 										<th colspan="2">전월 대비</th>
@@ -564,55 +548,85 @@
 								</thead>
 								<tbody>
 									<tr class="row">
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
+										<td>1</td>
+										<td>제품</td>
+										<td>유형1</td>
+										<td>EA</td>
+										<td class="data__number">46.7</td>
+										<td class="data__number">64.3</td>
+										<td class="data__number">50.1</td>
+										<td class="data__number status--up"><span class="icon-triangle"></span>10.7</td>
+										<td class="data__number status--up">
+											<span class="icon-triangle"></span>27.8%
+										</td>
+										<td class="data__number status--down">
+											<span class="icon-triangle"></span>27.7
+										</td>
+										<td class="data__number status--down">
+											<span class="icon-triangle"></span>38.9%
+										</td>
+										<td class="data__number">1,363.0</td>
+										<td class="data__number">1,381.0</td>
+										<td class="data__number status--down">
+											<span class="icon-triangle"></span>18.0
+										</td>
+										<td class="data__number status--down">
+											<span class="icon-triangle"></span>1.3%
+										</td>
 									</tr>
 									<tr class="row">
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
+										<td>2</td>
+										<td>제품</td>
+										<td>유형2</td>
+										<td>EA</td>
+										<td class="data__number">46.7</td>
+										<td class="data__number">64.3</td>
+										<td class="data__number">50.1</td>
+										<td class="data__number status--up"><span class="icon-triangle"></span>10.7</td>
+										<td class="data__number status--up">
+											<span class="icon-triangle"></span>27.8%
+										</td>
+										<td class="data__number status--down">
+											<span class="icon-triangle"></span>27.7
+										</td>
+										<td class="data__number status--down">
+											<span class="icon-triangle"></span>38.9%
+										</td>
+										<td class="data__number">1,363.0</td>
+										<td class="data__number">1,381.0</td>
+										<td class="data__number status--down">
+											<span class="icon-triangle"></span>18.0
+										</td>
+										<td class="data__number status--down">
+											<span class="icon-triangle"></span>1.3%
+										</td>
 									</tr>
 									<tr class="row">
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
-										<td class="data__number"></td>
+										<td>3</td>
+										<td>제품</td>
+										<td>유형3</td>
+										<td>EA</td>
+										<td class="data__number">46.7</td>
+										<td class="data__number">64.3</td>
+										<td class="data__number">50.1</td>
+										<td class="data__number status--up"><span class="icon-triangle"></span>10.7</td>
+										<td class="data__number status--up">
+											<span class="icon-triangle"></span>27.8%
+										</td>
+										<td class="data__number status--down">
+											<span class="icon-triangle"></span>27.7
+										</td>
+										<td class="data__number status--down">
+											<span class="icon-triangle"></span>38.9%
+										</td>
+										<td class="data__number">1,363.0</td>
+										<td class="data__number">1,381.0</td>
+										<td class="data__number status--down">
+											<span class="icon-triangle"></span>18.0
+										</td>
+										<td class="data__number status--down">
+											<span class="icon-triangle"></span>1.3%
+										</td>
 									</tr>
 								</tbody>
 							</table>

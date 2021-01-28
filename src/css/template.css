@@ -1010,7 +1010,7 @@ a.link:hover::before{
 
 /* el-date-picker */
 .input-box .el-input__inner{
-	height: 32px;
+	height: 36px;
 	border-radius: 6px;
 	border-color: #E8EBF0;
 }
@@ -1019,7 +1019,7 @@ a.link:hover::before{
 	border-color:  #2B5BC7;
 }
 .input-box .el-input__icon{
-	line-height: 32px;
+	line-height: 36px;
 }
 .input-box .el-input--suffix .el-input__inner{
 	padding-right: 8px;
@@ -1027,12 +1027,12 @@ a.link:hover::before{
 .input-box .el-date-editor .el-range__icon,
 .input-box .el-date-editor .el-range__close-icon,
 .input-box .el-date-editor .el-range-separator{
-	line-height: 24px;
+	line-height: 28px;
 }
-.input-box .el-date-editor.el-input,
+/* .input-box .el-date-editor.el-input,
 .input-box .el-date-editor.el-input__inner{
 	border-radius: 10px;
-}
+} */
 .input-box .el-date-editor .el-range-input,
 .input-box .el-date-editor .el-range-separator{
 	color: #1a1a2e;
@@ -1169,8 +1169,9 @@ a.link:hover::before{
 	border: 1px solid #b2bbca;
 	background-color: #fff;
 	color: #666;
-	font-size: 0.86em;
+	font-size: 0.88em;
 	display: flex;
+	align-items: center;
 }
 .button.button--small{
 	padding: 4px 6px;

@@ -43,7 +43,7 @@
 							<router-link to="/my/myPage">마이페이지</router-link>
 						</li>
 						<li>
-							<button class="button__logout" @click="logoutUser">로그아웃</button>
+							<button @click="logoutUser">로그아웃</button>
 						</li>
 					</ul>
 				</li>

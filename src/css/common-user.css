@@ -27,11 +27,11 @@
 .user-header .util-menu .account-menu{
 	display: none;
 	opacity: 0;
+	z-index: 301;
 }
 .user-header .util-menu .util-menu__link:last-child.show .account-menu{
 	display: block;
 	opacity: 1;
-	/* animation */
 }
 
 .user-header .util-menu .account-menu li{
@@ -43,7 +43,7 @@
 }
 .user-header .util-menu .account-menu li > * {
 	display: block;
-	text-align: left;
+	text-align: center;
 	width: 100%;
 	height: 100%;
 }
@@ -139,7 +139,7 @@
 	display: flex;
 }
 .user-container .section-top .input-box-wrap > .input-box > div > .input-box{
-	margin-right: 4px;
+	margin-right: 16px;
 }
 
 .user-container .content__title{
@@ -164,6 +164,7 @@
 .select-month{
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 }
 .select-month > p{
 	padding: 0 12px;
@@ -251,30 +252,28 @@
 .table .status--up .icon-triangle,
 .table .status--down .icon-triangle{
 	display: inline-block;
-	width: 16px;
-	height: 16px;
+	border-radius: 0;
+	margin-right: 4px;
+	margin-bottom: 1px;
+}
+.table .status--up .icon-triangle:after,
+.table .status--down .icon-triangle:after{
 	border: 0;
-	margin-right: 2px;
-	margin-bottom: -3px;
 }
 
-.table .status--up .icon-triangle:after{
-	left: 4px;
-	top: 5px;
+.table .status--up .icon-triangle{
 	width: 0px;
 	height: 0px;
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
-	border-bottom: 7px solid #2B5BC7;
+	border-bottom: 6px solid #2B5BC7;
 }
-.table .status--down .icon-triangle:after{
-	left: 4px;
-	top: 4px;
+.table .status--down .icon-triangle{
 	width: 0px;
 	height: 0px;
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
-	border-top: 7px solid #F41200;
+	border-top: 6px solid #F41200;
 }
 .box-cnt .status--up .icon-triangle,
 .box-cnt .status--down .icon-triangle{
