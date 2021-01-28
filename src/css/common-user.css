@@ -51,13 +51,15 @@
 /* user-gnb */
 .gnb .lst-gnb__item{
 	position: relative;
-
 	display: flex;
 	align-items: center;
 	padding: 14px 24px;
 }
 .gnb .lst-gnb__item > span{
 	position: relative;
+	font-size: 17px;
+	font-weight: 500;
+	color: #8293a7;
 }
 .gnb .lst-gnb__item > span:after{
 	content:'';
@@ -69,7 +71,7 @@
 	background-color: #3C7DFF;
 }
 .gnb .lst-gnb__item:hover > span{
-	font-weight: 700;
+	color: #1a1a2e;
 	transition: font-weight 0.14s;
 }
 

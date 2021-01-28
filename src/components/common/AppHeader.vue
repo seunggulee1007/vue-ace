@@ -50,13 +50,20 @@
 			</ul>
 		</div>
 		<nav class="gnb">
-			<div class="nav-icon">
+			<button type="button" class="lnb-icon flex-box no-mobile">
+				<div class="button__lnb">
+					<span class="nav-bar"></span>
+					<span class="nav-bar"></span>
+					<span class="nav-bar"></span>
+				</div>
+				<span>메뉴</span>
+			</button>
+			<div class="nav-icon mobile">
 				<button type="button" class="button__nav" @click="setMenuOpen">
 					<span class="nav-bar"></span>
 					<span class="nav-bar"></span>
 					<span class="nav-bar"></span>
 				</button>
-				<p>메뉴<span class="blind">열기</span></p>
 			</div>
 			<div class="gnb-wrap" :class="{ show: getMenuOpen }">
 				<div class="gnb-top mobile">
