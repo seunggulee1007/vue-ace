@@ -1567,7 +1567,7 @@ a.link:hover::before{
 
 	.gnb-wrap .button__close{
 		position: absolute;
-		right: 16px;
+		right: 0px;
 		top: 12px;
 		width: 32px;
 		height: 32px;
