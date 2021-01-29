@@ -52,6 +52,45 @@
 													<td>4시간</td>
 													<td>49.5시간</td>
 												</tr>
+												<tr class="row__sub show">
+													<td colspan="6">
+														<div class="table-sub-wrap">
+															<table class="table table__detail">
+																<thead>
+																	<tr>
+																		<th>년월</th>
+																		<th>유연 근무 유형</th>
+																		<th>사원명</th>
+																		<th>기본 근무 시간</th>
+																		<th>연장 근무 시간</th>
+																		<th>총 근무 시간</th>
+																		<th>주 평균 근로 시간</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr class="row">
+																		<td>2020-08</td>
+																		<td>시차 출퇴근제</td>
+																		<td>홍길동 차장</td>
+																		<td>169.5시간</td>
+																		<td>50.5시간</td>
+																		<td>50.5시간</td>
+																		<td>50.5시간</td>
+																	</tr>
+																	<tr class="row">
+																		<td>2020-08</td>
+																		<td>시차 출퇴근제</td>
+																		<td>최수현 과장</td>
+																		<td>188.8시간</td>
+																		<td>60.0시간</td>
+																		<td>60.0시간</td>
+																		<td>60.0시간</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</td>
+												</tr>
 												<tr class="row">
 													<td>2020-08</td>
 													<td>
@@ -65,6 +104,45 @@
 													<td>8시간</td>
 													<td>51.7시간</td>
 												</tr>
+												<tr class="row__sub">
+													<td colspan="6">
+														<div class="table-sub-wrap">
+															<table class="table table__detail">
+																<thead>
+																	<tr>
+																		<th>년월</th>
+																		<th>유연 근무 유형</th>
+																		<th>사원명</th>
+																		<th>기본 근무 시간</th>
+																		<th>연장 근무 시간</th>
+																		<th>총 근무 시간</th>
+																		<th>주 평균 근로 시간</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr class="row">
+																		<td>2020-08</td>
+																		<td>시차 출퇴근제</td>
+																		<td>홍길동 차장</td>
+																		<td>169.5시간</td>
+																		<td>50.5시간</td>
+																		<td>50.5시간</td>
+																		<td>50.5시간</td>
+																	</tr>
+																	<tr class="row">
+																		<td>2020-08</td>
+																		<td>시차 출퇴근제</td>
+																		<td>최수현 과장</td>
+																		<td>188.8시간</td>
+																		<td>60.0시간</td>
+																		<td>60.0시간</td>
+																		<td>60.0시간</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</td>
+												</tr>
 											</tbody>
 											<tfoot>
 												<tr>
@@ -77,42 +155,7 @@
 											</tfoot>
 										</table>
 									</div>
-									<div class="table-wrap">
-										<p class="component__title">개발1팀 상세 내역</p>
-										<table class="table table-hover table__detail">
-											<thead>
-												<tr>
-													<th>년월</th>
-													<th>유연 근무 유형</th>
-													<th>사원명</th>
-													<th>기본 근무 시간</th>
-													<th>연장 근무 시간</th>
-													<th>총 근무 시간</th>
-													<th>주 평균 근로 시간</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr class="row">
-													<td>2020-08</td>
-													<td>시차 출퇴근제</td>
-													<td>홍길동 차장</td>
-													<td>169.5시간</td>
-													<td>50.5시간</td>
-													<td>50.5시간</td>
-													<td>50.5시간</td>
-												</tr>
-												<tr class="row">
-													<td>2020-08</td>
-													<td>시차 출퇴근제</td>
-													<td>최수현 과장</td>
-													<td>188.8시간</td>
-													<td>60.0시간</td>
-													<td>60.0시간</td>
-													<td>60.0시간</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
+									
 								</div>
 							</el-tab-pane>
 							<el-tab-pane label="달력" name="second">

@@ -233,6 +233,17 @@
 }
 
 
+/* web주문 - 주문서*/
+.component__order-1.component__iv-1  .component-box.flex-box > div + div{
+	margin-left: 24px;
+}
+.component__order-1.component__iv-1 .component-box:first-child .company-name{
+	font-size: 1.2em;
+}
+.component__order-1.component__iv-1 .component-box:first-child p:nth-child(2){
+	padding: 8px 0 4px;
+}
+
 
 @media (max-width: 1670px) {
 	/* eis-재무분석 */
